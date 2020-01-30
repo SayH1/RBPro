@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/interface_css.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>-->
+    <script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-flash-1.6.1/b-html5-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-flash-1.6.1/b-html5-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js"></script>
+    <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.11/css/dataTables.checkboxes.css" rel="stylesheet" />
+    <script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.11/js/dataTables.checkboxes.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='picture/favicon.png') }}"/>
+    <title>RB-Pro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='picture/logo_6.png') }}" width="auto" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">RB-PRO<span class="sr-only">(current)</span></a>
+                </li>
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">RETINOBLASTOMA</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">PRECISION MEDICINE</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="http://localhost:5000/aboutus">ABOUT US</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <div class="analyze">
+            <div class="row rowgray">
+                <div class="analyzemenu col-md-2 d-none d-sm-none d-md-block">
+                    <h4 class="h6_heading"><i class="fas fa-search"></i> Steps</h4>
+                    <nav id="mainNav" class="list-group navigation">
+                        <div class="panel-heading list-group-item list-group-item-action mylist navigation__link">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist1" href="#list-item-1">
+                                <i class="fas fa-dna"></i></br>Step 1:</br>Genome Analysis
+                            </h4>
+                        </div>
+                        <div id="collapselist1" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_tablepython_div_list" href="#tablepython_div_list"><i class="fas fa-table"></i> Table of Count Reads</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_bargraphlibrary_list" href="#bargraphlibrary_list"><i class="fas fa-stream"></i> Library Size</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_graphhistogramcutoff_list" href="#graphhistogramcutoff_list"><i class="fas fa-chart-bar"></i> Histogram of Log-CPM</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_pcagraph_list" href="#pcagraph_list"><i class="fas fa-spinner"></i> PCA Plot</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_clustergrammergraph_list" href="#clustergrammergraph_list"><i class="far fa-file-alt"></i> Clustergrammer Plot</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_MDplot_list" href="#MDplot_list"><i class="fas fa-dice-five"></i> MD Plot</a>
+                            </div>
+                        </div>
+                        <div class="panel-heading list-group-item list-group-item-action mylist navigation__link">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist2" href="#list-item-2">
+                                <i class="fas fa-route"></i></br>Step 2:</br>Pathway Analysis
+                            </h4>
+                        </div>
+                        <div id="collapselist2" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_barpathwaygraph" href="#barpathwaygraph"><i class="fas fa-align-left"></i> Pathway Enrichment Analysis</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_pathwayinfo" href="#pathwayinfo"><i class="far fa-list-alt"></i> Pathway & Target Information</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_tabletarget_div_list" href="#tabletarget_div_list"><i class="far fa-check-square"></i> Targets Selection</a>
+                            </div>
+                        </div>
+                        <div class="panel-heading list-group-item list-group-item-action mylist">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist3" href="#list-item-3">
+                                <i class="fas fa-tablets"></i></br>Step 3:</br>Compound Analysis
+                            </h4>
+                        </div>
+                        <div id="collapselist3" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist protection">
+                                <br><br>Select the target and click analyse to perform these steps
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_targetinfo" href="#targetinfomation" disabled><i class="fas fa-bullseye"></i> Target Information</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_compoundclass" href="#compoundroclassify" disabled><i class="fas fa-grip-horizontal"></i> Target to Compounds Exploration</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_compoundro5" href="#compoundro5" disabled><i class="fas fa-filter"></i> Lipinski’s RO5</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_compoundtable" href="#compoundtable" disabled><i class="fas fa-border-all"></i> Compound Table</a>
+                            </div>
+                        </div>
+                        <div class="panel-heading list-group-item list-group-item-action mylist">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist4" href="#list-item-4">
+                                <i class="fas fa-pills"></i></br>Step 4:</br>Potential</br>Active Compound
+                            </h4>
+                        </div>
+                        <div id="collapselist4" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist protection">
+                                <br>Select the target and click analyse to perform these steps
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_compoundfingerprint" href="#compoundfingerprint" disabled><i class="fas fa-fingerprint"></i> Fingerprint & Descriptor</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_pacmodel" href="#pacmodel" disabled><i class="fas fa-rocket"></i> Potential Active Compound Model</a>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function() {
+                                    $('a.toolbutton').bind('click', function(e) {
+                                            e.preventDefault(); // prevent hard jump, the default behavior
+
+                                            var target = $(this).attr("href"); // Set the target as variable
+
+                                            // perform animated scrolling by getting top-position of target-element and set it as scroll target
+                                            $('html, body').stop().animate({
+                                                    scrollTop: $(target).offset().top
+                                            }, 600, function() {
+                                                    location.hash = target; //attach the hash (#jumptarget) to the pageurl
+                                            });
+
+                                            return false;
+                                    });
+                            });
+
+                            $(window).scroll(function() {
+                                    var scrollDistance = $(window).scrollTop();
+
+                                    // Show/hide menu on scroll
+                                    //if (scrollDistance >= 850) {
+                                    //		$('nav').fadeIn("fast");
+                                    //} else {
+                                    //		$('nav').fadeOut("fast");
+                                    //}
+
+                                    // Assign active class to nav links while scolling
+                                    $('.page-section').each(function(i) {
+                                            if ($(this).position().top <= scrollDistance+$(window).height()/3) {
+                                                    $('.navigation a.navigation__link.active').removeClass('active');
+                                                    $('.navigation a.navigation__link').eq(i).addClass('active');
+                                            }
+                                    });
+                            }).scroll();
+                        </script>
+                    </nav>
+                    <div class="credit">
+                        <p>Developed by Faculty of ICT,<br>Mahidol University</p>
+                    </div>
+                </div>
+                <div class="resultmenu col-md-10 col-sm-10">
+                    <div id="list-item-1" class="analysisresult">
+                          <h4 class="h6_heading"><i class="fas fa-dna"></i> Step 1: Genome Analysis</h4>
+                            <p>The process to analyze the genetic information of the human body. In this project, the analysis of genetic information of retinoblastoma patients and the normal people will be identified to distinguish the difference in the level of gene counts and gene expression.</p>
+                                <div class="analysisresult_genome">
+                                    <div class="viz page-section" id="tablepython_div_list">
+                                        <div class="vizhead">
+                                        <h6 class="sub_heading">Table of Count Reads</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_tablepython_div"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_tablepython_div" class="vizinfo panel-collapse collapse">
+                                            Table of Count Reads shows the dataset resulted from the RNA-Sequencing process that the user has uploaded to the system. This dataset is visualized as an interactive table that the user can do many manipulations in order to change the format of the table. The user can change the number of showing entries on the left top drop-down list (10, 25, 50, 100) as well as search for the particular gene name or number of read count on the search located at the top right corner. Inside the table, the user can sort by clicking at the arrow symbol on the specific column for both ascending and descending order. The user can see the number of total entries at the bottom left corner and change the page of the result using paging numbers at the bottom right corner.
+                                        </div>
+                                        <div class="table" id="tablepython_div">
+                                            {{table | safe}}
+                                        </div>
+                                        <script>
+                                            $(document).ready(function() {
+                                                var data = {{values | safe}};
+                                                var table = $('#table_div').DataTable( {
+                                                    data:           data,
+                                                    deferRender:    true,
+                                                    scrollX:        true,
+                                                    scrollCollapse: true,
+                                                    select:         true
+                                                } );
+                                                $('#table_div').on( 'click', 'tr', function () {
+                                                    if ( $(this).hasClass('selected') ) {
+                                                        $(this).removeClass('selected');
+                                                    }
+                                                    else {
+                                                        table.$('tr.selected').removeClass('selected');
+                                                        $(this).addClass('selected');
+                                                    }
+                                                } );
+                                            } );
+                                        </script>
+                                        <!--<form class ="form" action="http://localhost:5000/fulldataset" target="_blank" method="POST" enctype="multipart/form-data">-->
+                                            <!--<button type="submit" class="btn2" name="submit" id="fulldataset" value="fulldataset"><i class="fas fa-table"></i> See Full Dataset</button>-->
+                                        <!--</form>-->
+                                    </div>
+                                    <!--<div class="viz">-->
+                                        <!--<h6 class="sub_heading">Histogram of Count Reads</h6>-->
+                                        <!--<div class="chart" id="bargraph">-->
+                                            <!--<script>-->
+                                                <!--var graphs = {{plot | safe}};-->
+                                                <!--Plotly.plot('bargraph',graphs,{});-->
+                                            <!--</script>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <div class="viz">
+                                        <div class="row">
+                                            <div class="col-md-6 page-section" id="bargraphlibrary_list">
+                                                <div class="vizhead">
+                                                <h6 class="sub_heading">Library Size</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_bargraphlibrary"><i class="fas fa-info-circle"></i></a>
+                                                </div>
+                                                <div id="collapse_bargraphlibrary" class="vizinfo panel-collapse collapse">
+                                                    Library size can be called a sequencing depth which is the total number of sequenced reads that have been counted in each sample. The number of sequence reads can be used to quantify the accuracy of the differential gene expression, in other words, the higher the number of library sizes, the more precise the expression calculation. However, it also depends on the complexity level of the sample <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8#Sec3" target="_blank">[ref]</a>. The interactive bar chart is used to represent the library size of each sample distinguished by the color where the orange one is ‘Perturbation’ sample and the green one is ‘Normal’ sample.
+                                                </div>
+                                                <div class="chart" id="bargraphlibrary">
+                                                    <script>
+                                                        var graphs = {{plotlibrary | safe}};
+                                                        Plotly.plot('bargraphlibrary',graphs,{});
+                                                        window.addEventListener('resize', function() { Plotly.Plots.resize('bargraphlibrary'); });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 page-section" id="graphhistogramcutoff_list">
+                                                <div class="vizhead">
+                                                <h6 class="sub_heading">Histogram of Log-CPM</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_graphhistogramcutoff"><i class="fas fa-info-circle"></i></a>
+                                                </div>
+                                                <div id="collapse_graphhistogramcutoff" class="vizinfo panel-collapse collapse">
+                                                    Histogram of Log-CPM represents the frequency level of the gene in each bin of Log-CPM. To calculate Log-CPM, it starts with finding CPM which is the ratio between the read count of each gene in each sample with the library size of that sample per million units. Then, CPM will be added with 2 divided by the median of overall library size in million units (L) where 2 is considered as prior count in order to avoid zero of the logarithm, right after, applied Log2 function of that formula as Log2(CPM + 2/L) resulting in Log-CPM <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4937821/" target="_blank">[ref]</a>. The genes that have Log-CPM in a particular value will be counted as frequency and plot on the graph. In order to process differential gene expressions, it is common to remove significantly low-expressed genes out so that the cutoff point is eventually indicated as the dashed line. In this experiment, after cutting out the low-expressed gene, there will be around 40% - 60% of genes remaining considered as meaningful genes.
+                                                </div>
+                                                <div class="chart" id="graphhistogramcutoff">
+                                                    <script>
+                                                        var graphs = {{plothistogramcutoff | safe}};
+                                                        Plotly.plot('graphhistogramcutoff',graphs,{});
+                                                        window.addEventListener('resize', function() { Plotly.Plots.resize('graphhistogramcutoff'); });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="viz page-section" id="pcagraph_list">
+                                        <div class="vizhead">
+                                        <h6 class="sub_heading">PCA Plot</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_pcagraph"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_pcagraph" class="vizinfo panel-collapse collapse">
+                                            PCA (Principal Component Analysis) Plot is the visualization constructed by reducing the dimensions of the dataset and preserving the variability in order to illustrate the differentiation using a new variable as principal components <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792409/" target="_blank">[ref]</a>. The user can explore the interactive 3-dimension PCA plot below by revolving, zooming, and hovering to see the sample information. This PCA plot can initially guide the user about the similarity and differences between each type of sample.
+                                        </div>
+                                        <div class="chart" id="pcagraph">
+                                            <script>
+                                                var graphs = {{pcaplot | safe}};
+                                                Plotly.plot('pcagraph',graphs,{});
+                                                window.addEventListener('resize', function() { Plotly.Plots.resize('pcagraph'); });
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <div class="viz page-section" id="clustergrammergraph_list">
+                                        <div class="vizhead">
+                                        <h6 class="sub_heading">Clustergrammer Plot</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_clustergrammergraph"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_clustergrammergraph" class="vizinfo panel-collapse collapse">
+                                            Clustergrammer Plot is one of the heatmap visualizations showing the differential gene expression in an interactive clustered heatmap marked by the level of colors. To its default, the frame contains three different views including the clustered heatmap, a similarity matrix heatmap of the columns, and lastly a similarity matrix heatmap of the rows <a href="https://www.nature.com/articles/sdata2017151" target="_blank">[ref]</a>. The rows represent genes, in this case, the most 2000 expressed genes and the columns show the sample. The user can explore the group of samples and their expressions compared with other groups. The user can freely adjust the view of the Clustergrammer by changing the parameter panel on the left pane.
+                                        </div>
+                                        <div class="chart" id="clustergrammergraph">
+                                            <iframe id="myIframe" src="" style="width:100%; height: 800px; border: 0;"></iframe>
+                                            <script>
+                                                var url = "{{clustergrammerplot | safe}}";
+                                                url.replace('http://', 'https://');
+                                                document.getElementById('myIframe').src = "{{clustergrammerplot | safe}}".replace('http://', 'https://');
+                                                document.getElementById('myIframe').contentDocument.body.style.fontFamily = "Open Sans";
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <div class="viz page-section" id="MDplot_list">
+                                        <div class="vizhead">
+                                        <h6 class="sub_heading">MD Plot</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_MDplot"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_MDplot" class="vizinfo panel-collapse collapse">
+                                            MD Plot is a mean-difference plot generated by the R package called Glimma <a href="http://bioconductor.org/packages/release/bioc/html/Glimma.html" target="_blank">[ref]</a>. The left top graph represented the relationship between log-fold-change (LogFC) versus Average Log CPM.  log-fold-change is the ratio that determines how changes between the expression of the normal sample gene and perturbation sample gene in log2 format <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4937821/" target="_blank">[ref]</a>. The higher positive number of log-fold-change (Red dot) means that the perturbed gene is significantly high-expressed compared to the normal gene, otherwise, the number will be negative (Blue dot). While, the Average Log CPM, log2 of count per million, is the value indicating the expression level of the gene on average for all samples which is related to the number sequenced read of that gene. When the user hovers or clicks the mouse to a position of the gene point in the left graph, the detailed information of the expression of that corresponding gene in each sample will be automatically generated on the right graph with the gene name. In addition, there is an interactive table summarized the gene name, LogCPM, LogFC, and Adj. P-Value that the user can also find and click at the gene which will be linked with corresponding gene other graphs simultaneously in order to see more details.
+                                        </div>
+                                        <div class="chart" id="MDplot">
+                                            <iframe id="myIframe2" src="{{ url_for('static', filename='plot/MD-Plot.html') }}" style="width:100%; height: 1050px; border: 0; font-family: 'Open Sans';"></iframe>
+                                            <script>
+                                                document.getElementById('myIframe2').contentDocument.body.style.fontFamily = "Open Sans";
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div id="list-item-2" class="analysisresult">
+                          <h4 class="h6_heading"><i class="fas fa-route"></i> Step 2: Pathway Analysis</h4>
+                            <p>The process that will analyze how the biological pathway reacts to the different genes to find the potential protein target that can cause Retinoblastoma.</p>
+                                <div class="analysisresult_pathway">
+                                    <div class="viz page-section" id="barpathwaygraph">
+                                        <div class="vizhead">
+                                        <h6 class="sub_heading">Pathway Enrichment Analysis</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_barpathwaygraph"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_barpathwaygraph" class="vizinfo panel-collapse collapse">
+                                            Pathway Enrichment Analysis is the path of analyzing the significant pathways by using significant genes in the above section. The significance of the gene is computed by R scripting behind using limma <a href="https://bioconductor.org/packages/release/bioc/html/limma.html" target="_blank">[ref]</a> and edgeR packages <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html" target="_blank">[ref]</a>. The output that will be used to analyze is called gene signature. The highly significantly expressed genes will be considered as up-regulated genes (compared to the normally expressed genes), while the lowly significantly expressed genes will be considered as down-regulated genes (compared to the normally expressed genes). By default, the program orders the significance of the gene using t statistical values which is the adjustment of LogFC with standard error <a href="https://www.rdocumentation.org/packages/limma/versions/3.28.14/topics/toptable" target="_blank">[ref]</a>. The topmost 500 genes will be used to be analyzed up-regulated pathways through Enrichr API <a href="https://amp.pharm.mssm.edu/Enrichr/" target="_blank">[ref]</a>. While the bottommost 500 genes will be used to be analyzed down-regulated pathways through Enrichr API as well. Then, the top 10 significant pathways ordered by p-valued calculated from API will be retrieved visualized using a bar chart where the left pane is up-regulated pathways, and the right pane is down-regulated pathways. In this case, the program shows 6 different pathway databases to provide the user with a wide range of information including KEGG_2019_Human <a href="https://www.genome.jp/kegg/" target="_blank">[ref]</a>, WikiPathway_2019_Human <a href="https://www.wikipathways.org/index.php/WikiPathways" target="_blank">[ref]</a>, Reactome_2016 <a href="https://reactome.org/" target="_blank">[ref]</a>, BioCarta_2016 <a href="https://amp.pharm.mssm.edu/Harmonizome/dataset/Biocarta+Pathways" target="_blank">[ref]</a>, BioPlanet_2019 <a href="https://tripod.nih.gov/bioplanet/" target="_blank">[ref]</a>, and Panther_2016 <a href="http://www.pantherdb.org/" target="_blank">[ref]</a>.
+                                        </div>
+                                    </div>
+                                    <script>
+                                        var pathwaylibraries = {{pathwaydb | safe}};
+                                        var i = 0;
+                                        var plot = {{barpathwayplot | safe}};
+                                        var len = plot.length;
+                                        document.getElementById('barpathwaygraph').innerHTML += '<div class="panel-group" id="accordion">';
+                                        for (i = 0; i < len; i++) {
+                                            document.getElementById('barpathwaygraph').innerHTML += '<div class="panel panel-default">\
+                                                <div class="panel-heading">\
+                                                     <h4 class="panel-title" data-toggle="collapse" data-target="#collapse'+i+'">\
+                                                         Pathway Enrichment by '+pathwaylibraries[i]+' Pathway Database\
+                                                     </h4>\
+                                                </div>\
+                                                <div id="collapse'+i+'" class="panel-collapse collapse show">\
+                                                    <div class="panel-body chart" id="barpathwaygraph'+i+'">\
+                                                    </div>\
+                                                </div>\
+                                            </div>\
+                                            ';
+                                        }
+                                        document.getElementById('barpathwaygraph').innerHTML += '</div>';
+                                        for (i = 0; i < len; i++) {
+                                            Plotly.plot('barpathwaygraph'+i,JSON.parse(plot[i]), {});
+                                            Plotly.Plots.resize('barpathwaygraph'+i);
+                                        }
+                                        elementList = document.querySelectorAll('.panel-body');
+                                        elementList.forEach(function(div, index) {
+                                          window.addEventListener('resize', function() { Plotly.Plots.resize(div); });
+                                        });
+                                    </script>
+                                    <div class="viz page-section" id="pathwayinfo">
+                                        <div class="vizhead">
+                                        <h6 class="sub_heading">Pathway and Target Information</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_pathwayinfo"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_pathwayinfo" class="vizinfo panel-collapse collapse">
+                                            Pathway and Target Information is the summarization of the important information of each top 10 pathways in the above sections. This section contains only pathway details from the KEGG_2019_Human, WikiPathway_2019_Human, and Reactome_2016 only. The user can select the name of the pathway database using the dropdown list. The information corresponding in the chosen pathway will appear and can be described into three sections including basic information of pathway with link to the official website, the target list of the particular pathway, and the word cloud visualizing the common targets among each type of pathway. In word cloud, there will be a size-color scale representing the number of pathways in common for that particular target in which the bigger size and more orange shade, the higher number of common pathways that target presents.
+                                        </div>
+                                        <div class="groupdropdown">
+                                            <div class="form-group" style="text-align: left">
+                                              <label for="sel1">Select Pathway Database:</label>
+                                              <select class="form-control mydropdown" id="sel1">
+                                                    <script>
+                                                        //var pathwaylibraries = {{pathwaydb | safe}};
+                                                        var pathwaylibraries = ['KEGG_2019_Human', 'WikiPathways_2019_Human', 'Reactome_2016'];
+                                                        var i = 0;
+                                                        var len = pathwaylibraries.length;
+                                                        for (i = 0; i < len; i++) {
+                                                            document.getElementById('sel1').innerHTML += '<option>'+pathwaylibraries[i]+'</option>';
+                                                        }
+                                                    </script>
+                                              </select>
+                                            </div>
+                                            <div class="form-group" style="text-align: left">
+                                            <label for="sel1">Select Information:</label>
+                                            <ul class="nav nav-pills nav-justified">
+                                                  <li><a class="tag" data-toggle="pill" href="#pathwayinfotable_up" id="first">Up-regulated Pathways</a></li>
+                                                  <li><a class="tag" data-toggle="pill" href="#pathwayinfotable_down">Down-regulated Pathways</a></li>
+                                                  <li><a class="tag" data-toggle="pill" href="#targetwordcloud">Target Word Clouds</a></li>
+                                            </ul>
+                                            </div>
+                                            <br>
+                                            <div class="tab-content nav-justified">
+                                                  <div id="pathwayinfotable_up" class="tab-pane fade in active show">
+                                                  </div>
+                                                  <div id="pathwayinfotable_down" class="tab-pane fade">
+                                                  </div>
+                                                  <div id="targetwordcloud" class="tab-pane fade">
+                                                  </div>
+                                            </div>
+                                            <div id="pathwayinfotablexxx">
+                                                <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+                                                <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+                                                <script>
+                                                    //var pathwaylibraries = {{pathwaydb | safe}};
+                                                    var pathwaylibraries = ['KEGG_2019_Human', 'WikiPathways_2019_Human', 'Reactome_2016'];
+                                                    var pathwayinfo = {{pathwayinfo | safe}};
+
+                                                    var plot = {{wordcloud | safe}};
+                                                    var len = plot.length;
+
+                                                    $(document).ready(function() {
+                                                      $("#sel1").change(function() {
+                                                        var el = $("#sel1");
+                                                        document.getElementById('pathwayinfotable_up').innerHTML = '<p class="headpathwaydb">'+$("#sel1").val()+' | Up-regulated Pathways</p>';
+                                                        document.getElementById('pathwayinfotable_down').innerHTML = '<p class="headpathwaydb">'+$("#sel1").val()+'| Down-regulated Pathways</p>';
+
+                                                        var html_up = '<div class="panel-group" id="accordion">';
+                                                        var html_down = html_up;
+                                                        var html = ''
+
+                                                        var i = 0;
+                                                        var j = 0;
+                                                        var len = pathwayinfo.length;
+
+                                                        for (i = 0; i < len; i++) {
+                                                                if(pathwayinfo[i]["Pathway_DB"] === $("#sel1").val()) {
+                                                                    if (pathwayinfo[i]["Gene_Regulation"] === 'Up') {
+                                                                    html_up += '\
+                                                                        <div class="panel panel-default infocard">\
+                                                                            <div class="panel-heading infocardheader">\
+                                                                                 <div class="panel-title infocardtitle" data-toggle="collapse" data-target="#collapsepathwayinfo'+i+'">';
+                                                                                    html_up += '<div class="spanup">'+pathwayinfo[i]["Gene_Regulation"]+'</div> ';
+                                                                                    html_up += pathwayinfo[i]["Pathway_Name"]+'\
+                                                                                 </div>\
+                                                                            </div>\
+                                                                            <div id="collapsepathwayinfo'+i+'" class="panel-collapse collapse">\
+                                                                                <div class="panel-body pathwaydetailcard" id="pathwayinfo'+i+'">\
+                                                                                    <div class="row">\
+                                                                                        <div class="col-md-4">\
+                                                                                            <span class="spanbold">Pathway Details:</span><br>\
+                                                                                            <span class="spanbold">Pathway ID</span>: '+pathwayinfo[i]["Pathway_Id"]+'<br>\
+                                                                                            <span class="spanbold">Pathway Name</span>: '+pathwayinfo[i]["Pathway_Name"]+'<br>\
+                                                                                            <span class="spanbold">Gene Regulation</span>: '+pathwayinfo[i]["Gene_Regulation"]+'-regulated<br>\
+                                                                                            <span class="spanbold">Numbers of Targets</span>: '+pathwayinfo[i]["Uniprot_NumberOf"]+'<br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "KEGG_2019_Human") html_up += '<span class="spanbold">KEGG Information</span>: <a target="_blank" href="https://www.genome.jp/dbget-bin/www_bget?'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "WikiPathways_2019_Human") html_up += '<span class="spanbold">WikiPathways Website</span>: <a target="_blank" href="https://www.wikipathways.org/index.php/Pathway:'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "Reactome_2016") html_up += '<span class="spanbold">Reactome Browser</span>: <a target="_blank" href="https://reactome.org/PathwayBrowser/#/'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+
+                                                                                html_up += '</div>\
+                                                                                        <div class="col-md-8">\
+                                                                                            <span class="spanbold">Targets in Pathways:</span>\
+                                                                                            <div class="targetlist">';
+                                                                                                var targets = pathwayinfo[i]["Uniprot_Related"] + ''
+                                                                                                var target = targets.split(',');
+                                                                                                var len2 = target.length;
+                                                                                                for (j = 0; j < len2; j++) {
+                                                                                                    html_up += '<div class="spantarget"><a target="_blank" class="noeffect" href="https://www.uniprot.org/uniprot/'+target[j]+'">'+target[j]+'</a></div>';
+                                                                                                }
+                                                                                                html_up += '\
+                                                                                            </div>\
+                                                                                        </div>\
+                                                                                    </div>\
+                                                                                </div>\
+                                                                            </div>\
+                                                                        </div>\
+                                                                    ';
+                                                                    } else {
+                                                                    html_down += '\
+                                                                        <div class="panel panel-default infocard" style="z-index: 100">\
+                                                                            <div class="panel-heading infocardheader">\
+                                                                                 <div class="panel-title infocardtitle" data-toggle="collapse" data-target="#collapsepathwayinfo'+i+'">';
+                                                                                    html_down += '<div class="spandown">'+pathwayinfo[i]["Gene_Regulation"]+'</div> ';
+                                                                                    html_down += pathwayinfo[i]["Pathway_Name"]+'\
+                                                                                 </div>\
+                                                                            </div>\
+                                                                            <div id="collapsepathwayinfo'+i+'" class="panel-collapse collapse">\
+                                                                                <div class="panel-body pathwaydetailcard" id="pathwayinfo'+i+'">\
+                                                                                    <div class="row">\
+                                                                                        <div class="col-md-4">\
+                                                                                            <span class="spanbold">Pathway Details:</span><br>\
+                                                                                            <span class="spanbold">Pathway ID</span>: '+pathwayinfo[i]["Pathway_Id"]+'<br>\
+                                                                                            <span class="spanbold">Pathway Name</span>: '+pathwayinfo[i]["Pathway_Name"]+'<br>\
+                                                                                            <span class="spanbold">Gene Regulation</span>: '+pathwayinfo[i]["Gene_Regulation"]+'-regulated<br>\
+                                                                                            <span class="spanbold">Numbers of Targets</span>: '+pathwayinfo[i]["Uniprot_NumberOf"]+'<br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "KEGG_2019_Human") html_down += '<span class="spanbold">KEGG Information</span>: <a target="_blank" href="https://www.genome.jp/dbget-bin/www_bget?'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "WikiPathways_2019_Human") html_down += '<span class="spanbold">WikiPathways Website</span>: <a target="_blank" href="https://www.wikipathways.org/index.php/Pathway:'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "Reactome_2016") html_down += '<span class="spanbold">Reactome Browser</span>: <a target="_blank" href="https://reactome.org/PathwayBrowser/#/'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+
+                                                                                html_down += '</div>\
+                                                                                        <div class="col-md-8">\
+                                                                                            <span class="spanbold">Targets in Pathways:</span>\
+                                                                                            <div class="targetlist">';
+                                                                                                var targets = pathwayinfo[i]["Uniprot_Related"] + ''
+                                                                                                var target = targets.split(',');
+                                                                                                var len2 = target.length;
+                                                                                                for (j = 0; j < len2; j++) {
+                                                                                                    html_down += '<div class="spantarget"><a target="_blank" class="noeffect" href="https://www.uniprot.org/uniprot/'+target[j]+'">'+target[j]+'</a></div>';
+                                                                                                }
+                                                                                                html_down += '\
+                                                                                            </div>\
+                                                                                        </div>\
+                                                                                    </div>\
+                                                                                </div>\
+                                                                            </div>\
+                                                                        </div>\
+                                                                    ';
+                                                                                 }
+
+                                                                }
+                                                        }
+                                                        html += '</div>';
+                                                        document.getElementById('pathwayinfotable_up').innerHTML += html_up;
+                                                        document.getElementById('pathwayinfotable_down').innerHTML += html_down;
+
+                                                        var el = $(this);
+                                                        document.getElementById('targetwordcloud').innerHTML = '<p class="headpathwaydb">'+$("#sel1").val()+'</p><div class="row">\
+                                                        <div class="col-md-6 nopad"><div id="container0" style="width: 100%; height: 500px; text-transform: uppercase;"></div></div>\
+                                                        <div class="col-md-6 nopad"><div id="container1" style="width: 100%; height: 500px; text-transform: uppercase;"></div></div></div>';
+
+
+                                                        var i = 0;
+                                                        var j = 0;
+                                                        var x = this.selectedIndex;
+                                                        var lenlibrary = pathwaylibraries.length;
+
+                                                        for (i = x; i < lenlibrary*2; i+=lenlibrary) {
+                                                            anychart.onDocumentReady(function() {
+                                                                var data = JSON.parse("["+plot[i]+"]");
+
+                                                                // create a tag (word) cloud chart
+                                                                var chart = anychart.tagCloud(data);
+
+                                                                // set a chart title
+                                                                if (j==0) chart.title('Common Targets in Up-regulated Pathways');
+                                                                else chart.title('Common Target in Down-regulated Pathways');
+                                                                // set an array of angles at which the words will be laid out
+                                                                chart.angles([0]);
+
+                                                                // create and configure a color scale.
+                                                                var customColorScale = anychart.scales.ordinalColor();
+                                                                customColorScale.ranges([
+                                                                    {equal: 1},
+                                                                    {equal: 2},
+                                                                    {equal: 3},
+                                                                    {equal: 4},
+                                                                    {equal: 5},
+                                                                    {equal: 6},
+                                                                    {equal: 7},
+                                                                    {equal: 8},
+                                                                    {equal: 9},
+                                                                    {equal: 10}
+                                                                ]);
+                                                                customColorScale.colors(['#4db6ac', '#74af9c', '#8ea98b', '#a2a27b', '#b39a6a', '#c2925a', '#cf8a49', '#da8137', '#e57722', '#ef6c00']);
+
+                                                                // set the color scale as the color scale of the chart
+                                                                chart.colorScale(customColorScale);
+
+                                                                // add a color range
+                                                                chart.colorRange().enabled(true);
+
+                                                                // Change Font
+                                                                chart.fontFamily('Open Sans');
+                                                                chart.fontVariant('normal');
+
+                                                                // enable HTML for tooltips
+                                                                chart.tooltip().useHtml(true);
+
+                                                                // configure tooltips
+                                                                chart.tooltip().format(function() {
+                                                                    var cat = this.getData("pathways").toString();
+                                                                    return "Number of pathways: "+this.getData("value") + "</br>Common pathways: "+cat;
+                                                                });
+
+                                                                // add an event listener
+                                                                chart.listen("pointClick", function(e){
+                                                                    var url = "https://www.uniprot.org/uniprot/" + e.point.get("x");
+                                                                    window.open(url, "_blank");
+                                                                });
+
+                                                                // display the word cloud chart
+                                                                chart.container("container"+j);
+                                                                chart.draw();
+                                                                j++;
+                                                            });
+                                                        }
+
+                                                      });
+
+                                                        var el = $("#sel1");
+                                                        document.getElementById('pathwayinfotable_up').innerHTML = '<p class="headpathwaydb">'+$("#sel1").val()+' | Up-regulated Pathways</p>';
+                                                        document.getElementById('pathwayinfotable_down').innerHTML = '<p class="headpathwaydb">'+$("#sel1").val()+'| Down-regulated Pathways</p>';
+
+                                                        var html_up = '<div class="panel-group" id="accordion">';
+                                                        var html_down = html_up;
+                                                        var html = ''
+
+                                                        var i = 0;
+                                                        var j = 0;
+                                                        var len = pathwayinfo.length;
+
+                                                        for (i = 0; i < len; i++) {
+                                                                if(pathwayinfo[i]["Pathway_DB"] === $("#sel1").val()) {
+                                                                    if (pathwayinfo[i]["Gene_Regulation"] === 'Up') {
+                                                                    html_up += '\
+                                                                        <div class="panel panel-default infocard">\
+                                                                            <div class="panel-heading infocardheader">\
+                                                                                 <div class="panel-title infocardtitle" data-toggle="collapse" data-target="#collapsepathwayinfo'+i+'">';
+                                                                                    html_up += '<div class="spanup">'+pathwayinfo[i]["Gene_Regulation"]+'</div> ';
+                                                                                    html_up += pathwayinfo[i]["Pathway_Name"]+'\
+                                                                                 </div>\
+                                                                            </div>\
+                                                                            <div id="collapsepathwayinfo'+i+'" class="panel-collapse collapse">\
+                                                                                <div class="panel-body pathwaydetailcard" id="pathwayinfo'+i+'">\
+                                                                                    <div class="row">\
+                                                                                        <div class="col-md-4">\
+                                                                                            <span class="spanbold">Pathway Details:</span><br>\
+                                                                                            <span class="spanbold">Pathway ID</span>: '+pathwayinfo[i]["Pathway_Id"]+'<br>\
+                                                                                            <span class="spanbold">Pathway Name</span>: '+pathwayinfo[i]["Pathway_Name"]+'<br>\
+                                                                                            <span class="spanbold">Gene Regulation</span>: '+pathwayinfo[i]["Gene_Regulation"]+'-regulated<br>\
+                                                                                            <span class="spanbold">Numbers of Targets</span>: '+pathwayinfo[i]["Uniprot_NumberOf"]+'<br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "KEGG_2019_Human") html_up += '<span class="spanbold">KEGG Information</span>: <a target="_blank" href="https://www.genome.jp/dbget-bin/www_bget?'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "WikiPathways_2019_Human") html_up += '<span class="spanbold">WikiPathways Website</span>: <a target="_blank" href="https://www.wikipathways.org/index.php/Pathway:'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "Reactome_2016") html_up += '<span class="spanbold">Reactome Browser</span>: <a target="_blank" href="https://reactome.org/PathwayBrowser/#/'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+
+                                                                                html_up += '</div>\
+                                                                                        <div class="col-md-8">\
+                                                                                            <span class="spanbold">Targets in Pathways:</span>\
+                                                                                            <div class="targetlist">';
+                                                                                                var targets = pathwayinfo[i]["Uniprot_Related"] + ''
+                                                                                                var target = targets.split(',');
+                                                                                                var len2 = target.length;
+                                                                                                for (j = 0; j < len2; j++) {
+                                                                                                    html_up += '<div class="spantarget"><a target="_blank" class="noeffect" href="https://www.uniprot.org/uniprot/'+target[j]+'">'+target[j]+'</a></div>';
+                                                                                                }
+                                                                                                html_up += '\
+                                                                                            </div>\
+                                                                                        </div>\
+                                                                                    </div>\
+                                                                                </div>\
+                                                                            </div>\
+                                                                        </div>\
+                                                                    ';
+                                                                    } else {
+                                                                    html_down += '\
+                                                                        <div class="panel panel-default infocard" style="z-index: 100">\
+                                                                            <div class="panel-heading infocardheader">\
+                                                                                 <div class="panel-title infocardtitle" data-toggle="collapse" data-target="#collapsepathwayinfo'+i+'">';
+                                                                                    html_down += '<div class="spandown">'+pathwayinfo[i]["Gene_Regulation"]+'</div> ';
+                                                                                    html_down += pathwayinfo[i]["Pathway_Name"]+'\
+                                                                                 </div>\
+                                                                            </div>\
+                                                                            <div id="collapsepathwayinfo'+i+'" class="panel-collapse collapse">\
+                                                                                <div class="panel-body pathwaydetailcard" id="pathwayinfo'+i+'">\
+                                                                                    <div class="row">\
+                                                                                        <div class="col-md-4">\
+                                                                                            <span class="spanbold">Pathway Details:</span><br>\
+                                                                                            <span class="spanbold">Pathway ID</span>: '+pathwayinfo[i]["Pathway_Id"]+'<br>\
+                                                                                            <span class="spanbold">Pathway Name</span>: '+pathwayinfo[i]["Pathway_Name"]+'<br>\
+                                                                                            <span class="spanbold">Gene Regulation</span>: '+pathwayinfo[i]["Gene_Regulation"]+'-regulated<br>\
+                                                                                            <span class="spanbold">Numbers of Targets</span>: '+pathwayinfo[i]["Uniprot_NumberOf"]+'<br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "KEGG_2019_Human") html_down += '<span class="spanbold">KEGG Information</span>: <a target="_blank" href="https://www.genome.jp/dbget-bin/www_bget?'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "WikiPathways_2019_Human") html_down += '<span class="spanbold">WikiPathways Website</span>: <a target="_blank" href="https://www.wikipathways.org/index.php/Pathway:'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+                                                                                            if (pathwayinfo[i]["Pathway_DB"] === "Reactome_2016") html_down += '<span class="spanbold">Reactome Browser</span>: <a target="_blank" href="https://reactome.org/PathwayBrowser/#/'+pathwayinfo[i]["Pathway_Id"]+'">'+pathwayinfo[i]["Pathway_Id"]+' <i class="fas fa-link"></i></a><br>';
+
+                                                                                html_down += '</div>\
+                                                                                        <div class="col-md-8">\
+                                                                                            <span class="spanbold">Targets in Pathways:</span>\
+                                                                                            <div class="targetlist">';
+                                                                                                var targets = pathwayinfo[i]["Uniprot_Related"] + ''
+                                                                                                var target = targets.split(',');
+                                                                                                var len2 = target.length;
+                                                                                                for (j = 0; j < len2; j++) {
+                                                                                                    html_down += '<div class="spantarget"><a target="_blank" class="noeffect" href="https://www.uniprot.org/uniprot/'+target[j]+'">'+target[j]+'</a></div>';
+                                                                                                }
+                                                                                                html_down += '\
+                                                                                            </div>\
+                                                                                        </div>\
+                                                                                    </div>\
+                                                                                </div>\
+                                                                            </div>\
+                                                                        </div>\
+                                                                    ';
+                                                                                 }
+
+                                                                }
+                                                        }
+                                                        html += '</div>';
+                                                        document.getElementById('pathwayinfotable_up').innerHTML += html_up;
+                                                        document.getElementById('pathwayinfotable_down').innerHTML += html_down;
+
+                                                        var el = $("#sel1");
+                                                        document.getElementById('targetwordcloud').innerHTML = '<p class="headpathwaydb">'+$("#sel1").val()+'</p><div class="row">\
+                                                        <div class="col-md-6 nopad"><div id="container0" style="width: 100%; height: 500px; text-transform: uppercase;"></div></div>\
+                                                        <div class="col-md-6 nopad"><div id="container1" style="width: 100%; height: 500px; text-transform: uppercase;"></div></div></div>';
+
+
+                                                        var i = 0;
+                                                        var j = 0;
+                                                        var x = 0;
+                                                        var pathwaylibraries = ['KEGG_2019_Human', 'WikiPathways_2019_Human', 'Reactome_2016'];
+                                                        var lenlibrary = pathwaylibraries.length;
+
+                                                        for (i = x; i < lenlibrary*2; i+=lenlibrary) {
+                                                            anychart.onDocumentReady(function() {
+                                                                var data = "["+plot[i]+"]";
+
+                                                                // create a tag (word) cloud chart
+                                                                var chart = anychart.tagCloud(data);
+
+                                                                // set a chart title
+                                                                if (j==0) chart.title('Common Targets in Up-regulated Pathways');
+                                                                else chart.title('Common Target in Down-regulated Pathways');
+                                                                // set an array of angles at which the words will be laid out
+                                                                chart.angles([0]);
+
+
+                                                                // create and configure a color scale.
+                                                                var customColorScale = anychart.scales.ordinalColor();
+                                                                customColorScale.ranges([
+                                                                    {equal: 1},
+                                                                    {equal: 2},
+                                                                    {equal: 3},
+                                                                    {equal: 4},
+                                                                    {equal: 5},
+                                                                    {equal: 6},
+                                                                    {equal: 7},
+                                                                    {equal: 8},
+                                                                    {equal: 9},
+                                                                    {equal: 10}
+                                                                ]);
+                                                                customColorScale.colors(['#4db6ac', '#74af9c', '#8ea98b', '#a2a27b', '#b39a6a', '#c2925a', '#cf8a49', '#da8137', '#e57722', '#ef6c00']);
+
+                                                                // set the color scale as the color scale of the chart
+                                                                chart.colorScale(customColorScale);
+
+                                                                // add a color range
+                                                                chart.colorRange().enabled(true);
+
+                                                                // Change Font
+                                                                chart.fontFamily('Open Sans');
+                                                                chart.fontVariant('normal');
+
+                                                                // enable HTML for tooltips
+                                                                chart.tooltip().useHtml(true);
+
+                                                                // configure tooltips
+                                                                chart.tooltip().format(function() {
+                                                                  var cat = this.getData("pathways").toString();
+                                                                  return "Number of pathways: "+this.getData("value") + "</br>Common pathways: "+cat;
+                                                                });
+
+                                                                // add an event listener
+                                                                chart.listen("pointClick", function(e){
+                                                                  var url = "https://www.uniprot.org/uniprot/" + e.point.get("x");
+                                                                  window.open(url, "_blank");
+                                                                    });
+
+                                                                // display the word cloud chart
+                                                                chart.container("container"+j);
+                                                                chart.draw();
+                                                                j++;
+                                                            });
+
+                                                        }
+                                                        $("#first").addClass("active");
+
+                                                    });
+                                                </script>
+                                            </div>
+                                            <!--<div id="targetwordcloud">-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+                                    <div class="viz page-section" id="tabletarget_div_list">
+                                        <div class="vizhead">
+                                        <h6 class="sub_heading">Targets Selection</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_tabletarget_div_list"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_tabletarget_div_list" class="vizinfo panel-collapse collapse">
+                                            Target Selection table shows the list of targets in the top 10 significant pathways of three pathway databases. The table retrieved the the target detail including full name,  status whether it is Swiss_Prot (reviewed) or TrEMBL (unreviewed), and associated gene from Uniprot API <a href="https://www.uniprot.org/" target="_blank">[ref]</a>. The User can search the term of the target using search bar on the top right corner or filter by using the search bar on the bottom of each column. Besides, the users can sort the column by clicking at the arrow symbol at the header of the table. To apply multiple columns sorting, the user needs to hold the shift key when clicking the new arrow on another header. The user can see the common targets on three pathway databases by applying multiple columns sorting on columns starting ‘PathwayDB_’. The user can also filter the column to show by selecting the visibility of columns using columns visibility. Moreover, the user can export the table in PDF or CSV format to the top left corner. Last importantly, in order to process on the next step which is compound analysis, the user has to select at least one target on the table either from up-regulated pathways or down-regulated pathways and the information of that selected target will appear at the bottom of the table to ensure the user that this target is ready to be processed. After that, the Analyze Selected Target button will be enabled to let the user click to analyze that target in the new tab.
+                                        </div>
+                                        <form class ="form" id="frm" action="http://localhost:5000/compoundanalysis" target="_blank" method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" id="hiddentarget" name="hiddentarget">
+                                        <input type="hidden" id="hiddentargetname" name="hiddentargetname">
+                                        <input type="hidden" id="hiddenfilenametarget" name="hiddenfilenametarget" value="{{filename | safe}}">
+                                        <p class="headpathwaydb">Targets from up-regulated pathways</p>
+                                        <div class="table">
+                                            {{tabletargetup | safe}}
+                                        </div>
+                                        <div class="checktargetdetail textleft">
+                                            <p class="uniprotid nomargin" id="checkrow">No selected target</p>
+                                            <div class="row" style="margin-bottom: 10px">
+                                                <div class="col-md-6">
+                                                    <span class="spanbold">Full Name: </span><span class="nomargin" id="checkrow_fn">-</span><br>
+                                                    <span class="spanbold">Reviewed: </span><span class="nomargin" id="checkrow_rv">-</span><br>
+                                                    <span class="spanbold">Gene Name: </span><span class="nomargin" id="checkrow_gn">-</span><br>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="spanbold">Target presence: </span><br>
+                                                    <span class="spanbold">KEGG_2019_Human: </span><span class="nomargin" id="checkrow_ke">-</span><br>
+                                                    <span class="spanbold">WikiPathways_2019_Human: </span><span class="nomargin" id="checkrow_wi">-</span><br>
+                                                    <span class="spanbold">Reactome_2016: </span><span class="nomargin" id="checkrow_re">-</span><br>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn2" name="submit" id="frmbtn" value="fulldataset" disabled><i class="fas fa-search"></i> Analyze Selected Target</button>
+                                        </div>
+                                        <br>
+                                        <p class="headpathwaydb">Targets from down-regulated pathways</p>
+                                        <div class="table">
+                                            {{tabletargetdown | safe}}
+                                        </div>
+                                        <div class="checktargetdetail textleft">
+                                            <!--<input type="hidden" id="hiddentarget" name="hiddentarget">-->
+                                            <p class="uniprotid nomargin" id="checkrow2">No selected target</p>
+                                            <div class="row" style="margin-bottom: 10px">
+                                                <div class="col-md-6">
+                                                    <span class="spanbold">Full Name: </span><span class="nomargin" id="checkrow2_fn">-</span><br>
+                                                    <span class="spanbold">Reviewed: </span><span class="nomargin" id="checkrow2_rv">-</span><br>
+                                                    <span class="spanbold">Gene Name: </span><span class="nomargin" id="checkrow2_gn">-</span><br>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="spanbold">Target presence: </span><br>
+                                                    <span class="spanbold">KEGG_2019_Human: </span><span class="nomargin" id="checkrow2_ke">-</span><br>
+                                                    <span class="spanbold">WikiPathways_2019_Human: </span><span class="nomargin" id="checkrow2_wi">-</span><br>
+                                                    <span class="spanbold">Reactome_2016: </span><span class="nomargin" id="checkrow2_re">-</span><br>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn2" name="submit" id="frmbtn2" value="fulldataset" disabled><i class="fas fa-search"></i> Analyze Selected Target</button>
+                                        </div>
+                                        <script>
+                                            $(document).ready(function() {
+                                                var data = {{valuestarget | safe}};
+
+                                                $('#table_div_Up tfoot th').each( function () {
+                                                    var title = $(this).text();
+                                                    if (title != '') $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+                                                } );
+                                                var table = $('#table_div_Up').DataTable( {
+                                                    data:           data[0],
+                                                    deferRender:    true,
+                                                    scrollX:        true,
+                                                    scrollY:        "400px",
+                                                    scroller:       true,
+                                                    scrollCollapse: true,
+                                                    select:         true,
+                                                    paging:         true,
+                                                    fixedColumns:   {leftColumns: 2},
+                                                    colReorder:     true,
+                                                    dom:            'Bfrtip',
+                                                    buttons:        ['colvis','csvHtml5','pdfHtml5']
+                                                });
+                                                $('#table_div_Up').on( 'click', 'tr', function () {
+                                                    if ( $(this).hasClass('selected') ) {
+                                                        $(this).removeClass('selected');
+                                                        document.getElementById('frmbtn').disabled=true;
+                                                    }
+                                                    else {
+                                                        table.$('tr.selected').removeClass('selected');
+                                                        $(this).addClass('selected');
+
+                                                        document.getElementById('frmbtn').disabled=false;
+
+                                                        var rows_selected = table.column(0).checkboxes.selected();
+
+                                                        // Create a hidden element
+                                                        $('#frm').append(
+                                                            $('<input>')
+                                                                .attr('type', 'hidden')
+                                                                .attr('id', 'hiddentarget')
+                                                                .attr('name', 'hiddentarget')
+                                                                .val(Object.values(rows_selected)[0])
+                                                        );
+                                                        // Create a hidden element
+                                                        $('#frm').append(
+                                                            $('<input>')
+                                                                .attr('type', 'hidden')
+                                                                .attr('id', 'hiddentargetname')
+                                                                .attr('name', 'hiddentargetname')
+                                                                .val(Object.values(rows_selected)[0])
+                                                        );
+
+                                                        // Output form data to a console
+                                                        var uniprotid = Object.values($(this))[0];
+                                                        $('#checkrow').text(uniprotid.cells[1].innerText);
+                                                        $('#checkrow').attr('onclick', 'window.open("https://www.uniprot.org/uniprot/'+uniprotid.cells[1].innerText+'")');
+                                                        $('#hiddentarget').val(uniprotid.cells[1].innerText);
+                                                        $('#hiddentargetname').val(uniprotid.cells[2].innerText);
+                                                        $('#checkrow_fn').text(uniprotid.cells[2].innerText);
+                                                        $('#checkrow_rv').text(uniprotid.cells[3].innerText);
+                                                        $('#checkrow_gn').text(uniprotid.cells[4].innerText);
+                                                        $('#checkrow_ke').text(uniprotid.cells[5].innerText);
+                                                        $('#checkrow_wi').text(uniprotid.cells[8].innerText);
+                                                        $('#checkrow_re').text(uniprotid.cells[11].innerText);
+
+                                                    }
+
+                                                } );
+                                                // Apply the search
+                                                table.columns().every( function () {
+                                                    var that = this;
+                                                    $( 'input', this.footer() ).on( 'keyup change clear', function () {
+                                                        if ( that.search() !== this.value ) {
+                                                            that
+                                                                .search( this.value )
+                                                                .draw();
+                                                        }
+                                                    } );
+                                                } );
+
+                                                $('#table_div_Down tfoot th').each( function () {
+                                                    var title = $(this).text();
+                                                    if (title != '') $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+                                                } );
+                                                var table2 = $('#table_div_Down').DataTable( {
+                                                    data:           data[1],
+                                                    deferRender:    true,
+                                                    scrollX:        true,
+                                                    scrollY:        "400px",
+                                                    scroller:       true,
+                                                    scrollCollapse: true,
+                                                    select:         true,
+                                                    paging:         true,
+                                                    fixedColumns:   {leftColumns: 2},
+                                                    colReorder:     true,
+                                                    dom:            'Bfrtip',
+                                                    buttons:        ['colvis','csvHtml5','pdfHtml5']
+                                                } );
+                                                $('#table_div_Down').on( 'click', 'tr', function () {
+                                                    if ( $(this).hasClass('selected') ) {
+                                                        $(this).removeClass('selected');
+                                                        document.getElementById('frmbtn2').disabled=true;
+                                                    }
+                                                    else {
+                                                        table.$('tr.selected').removeClass('selected');
+                                                        $(this).addClass('selected');
+
+                                                        document.getElementById('frmbtn2').disabled=false;
+
+                                                        var rows_selected = table.column(0).checkboxes.selected();
+
+                                                        // Create a hidden element
+                                                        $('#frm').append(
+                                                            $('<input>')
+                                                                .attr('type', 'hidden')
+                                                                .attr('id', 'hiddentarget')
+                                                                .attr('name', 'hiddentarget')
+                                                                .val(Object.values(rows_selected)[0])
+                                                        );
+                                                        // Create a hidden element
+                                                        $('#frm').append(
+                                                            $('<input>')
+                                                                .attr('type', 'hidden')
+                                                                .attr('id', 'hiddentargetname')
+                                                                .attr('name', 'hiddentargetname')
+                                                                .val(Object.values(rows_selected)[0])
+                                                        );
+
+                                                        // Output form data to a console
+                                                        var uniprotid = Object.values($(this))[0];
+                                                        $('#checkrow2').text(uniprotid.cells[1].innerText);
+                                                        $('#checkrow2').attr('onclick', 'window.open("https://www.uniprot.org/uniprot/'+uniprotid.cells[1].innerText+'")');
+                                                        $('#hiddentarget').val(uniprotid.cells[1].innerText);
+                                                        $('#hiddentargetname').val(uniprotid.cells[2].innerText);
+                                                        $('#checkrow2_fn').text(uniprotid.cells[2].innerText);
+                                                        $('#checkrow2_rv').text(uniprotid.cells[3].innerText);
+                                                        $('#checkrow2_gn').text(uniprotid.cells[4].innerText);
+                                                        $('#checkrow2_ke').text(uniprotid.cells[5].innerText);
+                                                        $('#checkrow2_wi').text(uniprotid.cells[8].innerText);
+                                                        $('#checkrow2_re').text(uniprotid.cells[11].innerText);
+                                                    }
+                                                } );
+                                                // Apply the search
+                                                table.columns().every( function () {
+                                                    var that = this;
+                                                    $( 'input', this.footer() ).on( 'keyup change clear', function () {
+                                                        if ( that.search() !== this.value ) {
+                                                            that
+                                                                .search( this.value )
+                                                                .draw();
+                                                        }
+                                                    } );
+                                                } );
+                                                $("#first2").addClass("active");
+
+                                            } );
+                                        </script>
+                                        </form>
+                                        <!--<form class ="form" action="http://localhost:5000/fulldataset" target="_blank" method="POST" enctype="multipart/form-data">-->
+                                            <!--<button type="submit" class="btn2" name="submit" id="fulldataset" value="fulldataset"><i class="fas fa-table"></i> See Full Dataset</button>-->
+                                        <!--</form>-->
+                                    </div>
+                                </div>
+                    </div>
+                    <div id="list-item-3" class="analysisresult">
+                          <h4 class="h6_heading"><i class="fas fa-tablets"></i> Step 3: Compound Analysis</h4>
+                            <p>Please select a target in target selection process, then click 'Analyze Selected Target' to perform these steps.</p>
+                    </div>
+                    <!--<div id="list-item-3" class="analysisresult">-->
+                          <!--<h4 class="h6_heading"><i class="fas fa-tablets"></i> Compound Analysis</h4>-->
+                            <!--<p>The process that would analyze the compound that has the effect that can cure Retinoblastoma.</p>-->
+                                <!--<div class="viz" id="compoundfingerprint">-->
+                                    <!--<div class="vizhead">-->
+                                            <!--<h6 class="sub_heading">Compound Fingerprint and Descriptor</h6>-->
+                                            <!--<a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_compoundfingerprint"><i class="fas fa-info-circle"></i></a>-->
+                                        <!--</div>-->
+                                        <!--<div id="collapse_compoundfingerprint" class="vizinfo panel-collapse collapse">-->
+                                            <!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.-->
+                                            <!--Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.-->
+                                            <!--Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.-->
+                                        <!--</div>-->
+                                <!--</div>-->
+                    <!--</div>-->
+                    <div id="list-item-4" class="analysisresult">
+                          <h4 class="h6_heading"><i class="fas fa-pills"></i> Step 4: Potential Active Compounds</h4>
+                            <p>Please select a target in target selection process, then click 'Analyze Selected Target' to perform these steps.</p>
+                    </div>
+                            <!--<p>The process to analyse for screening and predicting potential compounds that can be developed into effective drugs</p>-->
+                                <!--<div class="analysisresult_pac">-->
+                                    <!--<div class="viz" id="pacmodel">-->
+                                        <!--<div class="vizhead">-->
+                                            <!--<h6 class="sub_heading">Potential Active Compound Model</h6>-->
+                                            <!--<a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_pacmodel"><i class="fas fa-info-circle"></i></a>-->
+                                        <!--</div>-->
+                                        <!--<div id="collapse_pacmodel" class="vizinfo panel-collapse collapse">-->
+                                            <!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.-->
+                                            <!--Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.-->
+                                            <!--Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="viz" id="evaluation">-->
+                                        <!--<div class="vizhead">-->
+                                            <!--<h6 class="sub_heading">Model Evaluation</h6>-->
+                                            <!--<a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_evaluation"><i class="fas fa-info-circle"></i></a>-->
+                                        <!--</div>-->
+                                        <!--<div id="collapse_evaluation" class="vizinfo panel-collapse collapse">-->
+                                            <!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.-->
+                                            <!--Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.-->
+                                            <!--Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

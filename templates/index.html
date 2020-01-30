@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/interface_css.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='picture/favicon.png') }}"/>
+    <title>RB-Pro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='picture/logo_6.png') }}" width="auto" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto menu">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">RB-PRO<span class="sr-only">(current)</span></a>
+                </li>
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">RETINOBLASTOMA</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">PRECISION MEDICINE</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="http://localhost:5000/aboutus">ABOUT US</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <div class="intro">
+            <img class="intro_logo" src="{{ url_for('static', filename='picture/logo_7.png') }}" width="200px" height="auto">
+            <h4>POTENTIAL ACTIVE COMPOUNDS</br>SCREENING AND PREDICTION FOR RATINOBLASTOMA</br>IN CHILDHOOD PATIENTS USING PRECISION MEDICINE</h4>
+        </div>
+        <div class="analyze" style="padding-top: 20px">
+            <div class="row" style="justify-content: center;">
+                <div class="col-md-3 maincol">
+                    <!--<h6 class="h6_heading">RB-Pro Wizard</h6>-->
+                    <!--<p>Perfrom step-by-step</br>with customization</p>-->
+                    <!--<form class="form" action="http://localhost:5000/steps/stepone" method="POST" enctype="multipart/form-data">-->
+                        <!--<button class="btn2"><i class="fa fa-file-alt"></i> Start</button>-->
+                    <!--</form>-->
+                    <h6 class="h6_heading">About RB-Pro</h6>
+                    <p>Get to know about</br>our application</p>
+                    <form class="form" action="http://localhost:5000/aboutus" method="POST" enctype="multipart/form-data">
+                        <button class="btn2"><i class="fa fa-file-alt"></i> Click</button>
+                    </form>
+                </div>
+                <div class="col-md-4 maincol">
+
+                    <h6 class="h6_heading">Your Dataset</h6>
+                    <p>Upload your of Retinoblastoma</br>containing read counts of each sampless</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModal" id="btntrigger"><i class="fas fa-file-upload"></i> Upload</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Upload Dataset</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                            <form class="form" action="http://localhost:5000/dataset" method="POST" enctype="multipart/form-data">
+                              <div class="modal-body">
+                                  <!-- The form -->
+                                  <div class="custom-file textleft">
+                                    <input type="file" class="fileupload custom-file-input" id="upload" name="upload" accept=".csv">
+                                    <label class="custom-file-label" for="upload">Choose file</label>
+                                  </div>
+                                  <script>
+                                        // Add the following code if you want the name of the file appear on select
+                                        $(".custom-file-input").on("change", function() {
+                                          var fileName = $(this).val().split("\\").pop();
+                                          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                                        });
+                                  </script>
+                                  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                                  <script type=text/javascript>
+                                        $(function() {
+                                          $('a#test').bind('click', function() {
+                                            $.getJSON('/call_test',
+                                                function(data) {
+                                                //do something
+                                                console.log(data);
+                                                document.getElementById("p1").innerHTML = data.key;
+                                            });
+                                            return false;
+                                          });
+                                        });
+                                  </script>
+                                  <p class="dddd" id="p1"></p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn3" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn" name="submit" id="analyze" value="analyze">Continue</button>
+                              </div>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3 maincol">
+                    <form class="form" action="http://localhost:5000/dataset" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" id="hiddenfilename2" name="hiddenfilename2" value="GSE111168-expression.csv">
+                        <h6 class="h6_heading">Sample Dataset</h6>
+                        <p>Use the example dataset </br>containing read counts</p>
+                        <button type="submit" class="btn2"><i class="fa fa-vial"></i> Test</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

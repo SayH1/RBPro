@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/interface_css.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>RB-Pro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='picture/logo_6.png') }}" width="auto" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">RB-PRO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">RETINOBLASTOMA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PRECISION MEDICINE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <form class="form" action="http://localhost:5000/steps/steptwo" method="POST" enctype="multipart/form-data">
+            <div class="coldiv_step">
+                <div class="row" style="justify-content: center;">
+                    <div class="col-md-6">
+                        <img class="wizard" src="{{ url_for('static', filename='picture/wizard.png') }}" width="80%" height="auto" style="padding: 100px">
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="h6_heading"><i class="fas fa-file-upload"></i> Step 1: Update Dataset of Count Reads</h4>
+                        <p>Upload the dataset containing table of count reads in this kind of format (.csv) by clicking browse button below</p>
+                        <table style="width:100%; font-size: small">
+                            <thead>
+                                <th>gene_id</th>
+                                <th>sample_1</th>
+                                <th>sample_2</th>
+                                <th>sample_3</th>
+                                <th>sample_4</th>
+                                <th>...</th>
+                            </thead>
+                            <tr>
+                                <td>PITX2</td>
+                                <td>234</td>
+                                <td>3423</td>
+                                <td>322</td>
+                                <td>432</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>ZIC4</td>
+                                <td>6744</td>
+                                <td>3383</td>
+                                <td>3562</td>
+                                <td>48562</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>CSAG4</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>MAGEA3</td>
+                                <td>24</td>
+                                <td>23</td>
+                                <td>32</td>
+                                <td>2</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                        </table>
+                        </br>
+                            <!-- The form -->
+                            <div class="custom-file textleft">
+                                <input type="file" class="fileupload custom-file-input" id="upload" name="upload" accept=".csv">
+                                <label class="custom-file-label" for="upload">Choose file</label>
+                            </div>
+                            <script>
+                                // Add the following code if you want the name of the file appear on select
+                                $(".custom-file-input").on("change", function() {
+                                  var fileName = $(this).val().split("\\").pop();
+                                  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                                });
+                            </script>
+                            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                            <script type=text/javascript>
+                                $(function() {
+                                  $('a#test').bind('click', function() {
+                                    $.getJSON('/call_test',
+                                        function(data) {
+                                        //do something
+                                        console.log(data);
+                                        document.getElementById("p1").innerHTML = data.key;
+                                    });
+                                    return false;
+                                  });
+                                });
+                            </script>
+                    </div>
+                </div>
+                <div class="nextback">
+                    <button type="button" class="btn3" data-dismiss="modal"><i class="fas fa-angle-left"></i> Back</button>
+                    <button type="submit" class="btn" name="submit" id="analyze" value="analyze">Next <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/interface_css.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+    <title>RB-Pro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='picture/logo_6.png') }}" width="auto" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">RB-PRO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">RETINOBLASTOMA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PRECISION MEDICINE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <form class ="form" action="http://localhost:5000/" method="POST" enctype="multipart/form-data">
+            <div class="coldiv_step">
+                <h4 class="h6_heading"><i class="fas fa-filter"></i> Step 3: Filtering and Normalization</h4>
+                <p>The threshold to filter the low-expressed genes out.</p>
+                <div class="row" style="justify-content: center;">
+                    <div class="col-md-6">
+                        <h6 class="sub_heading">Library Size</h6>
+                        <div class="chart" id="bargraphlibrary">
+                            <script>
+                                var graphs = {{plotlibrary | safe}};
+                                Plotly.plot('bargraphlibrary',graphs,{});
+                                window.addEventListener('resize', function() { Plotly.Plots.resize('bargraphlibrary'); });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="sub_heading">Histogram of Log-CPM</h6>
+                        <div class="chart" id="graphhistogramcutoff">
+                            <script>
+                                var graphs = {{plothistogramcutoff | safe}};
+                                Plotly.plot('graphhistogramcutoff',graphs,{editable: true});
+                                window.addEventListener('resize', function() { Plotly.Plots.resize('graphhistogramcutoff'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="nextback">
+                    <button type="button" class="btn3" data-dismiss="modal"><i class="fas fa-angle-left"></i> Back</button>
+                    <button type="submit" class="btn" name="submit" id="analyze" value="analyze">Next <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

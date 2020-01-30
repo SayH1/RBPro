@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/interface_css.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-flash-1.6.1/b-html5-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-flash-1.6.1/b-html5-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js"></script>
+    <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.11/css/dataTables.checkboxes.css" rel="stylesheet" />
+    <script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.11/js/dataTables.checkboxes.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='picture/favicon.png') }}"/>
+    <title>RB-Pro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='picture/logo_6.png') }}" width="auto" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">RB-PRO<span class="sr-only">(current)</span></a>
+                </li>
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">RETINOBLASTOMA</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">PRECISION MEDICINE</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="http://localhost:5000/aboutus">ABOUT US</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <div class="analyze">
+            <div class="row rowgray">
+                <div class="analyzemenu col-md-2 d-none d-sm-none d-md-block">
+                    <h4 class="h6_heading"><i class="fas fa-search"></i> Steps</h4>
+                    <nav id="mainNav" class="list-group navigation">
+                        <div class="panel-heading list-group-item list-group-item-action mylist navigation__link">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist1" href="#list-item-1">
+                                <i class="fas fa-dna"></i></br>Step 1:</br>Genome Analysis
+                            </h4>
+                        </div>
+                        <div id="collapselist1" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist protection">
+                                <br><br><br><br>Back to the previous tab to see previous analysis
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_tablepython_div_list" href="#tablepython_div_list" disabled><i class="fas fa-table"></i> Table of Count Reads</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_bargraphlibrary_list" href="#bargraphlibrary_list" disabled><i class="fas fa-stream"></i> Library Size</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_graphhistogramcutoff_list" href="#graphhistogramcutoff_list" disabled><i class="fas fa-chart-bar"></i> Histogram of Log-CPM</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_pcagraph_list" href="#pcagraph_list" disabled><i class="fas fa-spinner"></i> PCA Plot</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_clustergrammergraph_list" href="#clustergrammergraph_list" disabled><i class="far fa-file-alt"></i> Clustergrammer Plot</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_MDplot_list" href="#MDplot_list" disabled><i class="fas fa-dice-five"></i> MD Plot</a>
+                            </div>
+                        </div>
+                        <div class="panel-heading list-group-item list-group-item-action mylist navigation__link">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist2" href="#list-item-2">
+                                <i class="fas fa-route"></i></br>Step 2:</br>Pathway Analysis
+                            </h4>
+                        </div>
+                        <div id="collapselist2" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist protection">
+                                <br><br>Back to the previous tab to see previous targets analysis
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_barpathwaygraph" href="#barpathwaygraph" disabled><i class="fas fa-align-left"></i> Pathway Enrichment Analysis</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_pathwayinfo" href="#pathwayinfo" disabled><i class="far fa-list-alt"></i> Pathway & Target Information</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_tabletarget_div_list" href="#tabletarget_div_list" disabled><i class="far fa-check-square"></i> Targets Selection</a>
+                            </div>
+                        </div>
+                        <div class="panel-heading list-group-item list-group-item-action mylist">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist3" href="#list-item-3">
+                                <i class="fas fa-tablets"></i></br>Step 3:</br>Compound Analysis
+                            </h4>
+                        </div>
+                        <div id="collapselist3" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_targetinfo" href="#targetinfomation" ><i class="fas fa-bullseye"></i> Target Information</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_compoundclass" href="#compoundroclassify" ><i class="fas fa-chart-pie"></i> Target to Compounds Exploration</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_compoundro5" href="#compoundro5" ><i class="fas fa-filter"></i> Lipinski’s RO5</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_compoundtable" href="#compoundtable" ><i class="fas fa-th"></i> Compound Table</a>
+                            </div>
+                        </div>
+                        <div class="panel-heading list-group-item list-group-item-action mylist">
+                            <h4 class="panel-title" data-toggle="collapse" data-target="#collapselist4" href="#list-item-4">
+                                <i class="fas fa-pills"></i></br>Step 4:</br>Potential</br>Active Compound
+                            </h4>
+                        </div>
+                        <div id="collapselist4" class="panel-collapse collapse toolpane">
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_compoundfingerprint" href="#compoundfingerprint" ><i class="fas fa-fingerprint"></i> Fingerprint & Descriptor</a>
+                            </div>
+                            <div class="panel-body toollist">
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_pacmodel" href="#pacmodel" ><i class="fas fa-rocket"></i> Potential Active Compound Model</a>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function() {
+                                    $('a.toolbutton').bind('click', function(e) {
+                                            e.preventDefault(); // prevent hard jump, the default behavior
+
+                                            var target = $(this).attr("href"); // Set the target as variable
+
+                                            // perform animated scrolling by getting top-position of target-element and set it as scroll target
+                                            $('html, body').stop().animate({
+                                                    scrollTop: $(target).offset().top
+                                            }, 600, function() {
+                                                    location.hash = target; //attach the hash (#jumptarget) to the pageurl
+                                            });
+
+                                            return false;
+                                    });
+                            });
+
+                            $(window).scroll(function() {
+                                    var scrollDistance = $(window).scrollTop();
+
+                                    // Show/hide menu on scroll
+                                    //if (scrollDistance >= 850) {
+                                    //		$('nav').fadeIn("fast");
+                                    //} else {
+                                    //		$('nav').fadeOut("fast");
+                                    //}
+
+                                    // Assign active class to nav links while scolling
+                                    $('.page-section').each(function(i) {
+                                            if ($(this).position().top <= scrollDistance+$(window).height()/3) {
+                                                    $('.navigation a.navigation__link.active').removeClass('active');
+                                                    $('.navigation a.navigation__link').eq(i).addClass('active');
+                                            }
+                                    });
+                            }).scroll();
+                        </script>
+                    </nav>
+                    <div class="credit">
+                        <p>Developed by Faculty of ICT,<br>Mahidol University</p>
+                    </div>
+                </div>
+                <div class="resultmenu col-md-10 col-sm-10">
+                    <div id="list-item-3" class="analysisresult">
+                          <h4 class="h6_heading"><i class="fas fa-dna"></i> Step 3: Compound Analysis</h4>
+                            <p>The process to analyze the genetic information of the human body. In this project, the analysis of genetic information of retinoblastoma patients and the normal people will be identified to distinguish the difference in the level of gene counts and gene expression.</p>
+                                <div class="viz page-section" id="targetinfomation">
+                                    <div class="vizhead">
+                                        <h6 class="sub_heading">Target Infomation</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_targetinfo"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_targetinfo" class="vizinfo panel-collapse collapse">
+                                        Target Information shows the important details of the selected protein target. That information is retrieved from the Uniport API which provides many useful resources and related knowledge for many protein substances. The information shown in this part includes the target id and name, target’s function, target’s subunit, target’s similarity, and the reference URL. Those information are meaningful for the researcher to analyse potential targets in case the target doesn’t exist to the Chembl database and results in no associated compounds so the research can track back to the target’s family to further observe the new targets.
+                                    </div>
+                                    <div class="areasomething">
+                                        <div class="row">
+                                            <div class="col-md-5 textleft">
+                                                <p><span class="uniprotid" style="color: black">{{target | safe}}</span></p>
+                                                <p> {{targetname | safe}}</p>
+                                            </div>
+                                            <div class="col-md-7 textleft" id="targetinfo">
+                                                <script>
+                                                    var targetdetail = {{targetdetail | safe}};
+                                                    var target = '{{target | safe}}';
+                                                    document.getElementById('targetinfo').innerHTML = '<p><b>Function</b>: '+targetdetail['Function']+'</p>'
+                                                    document.getElementById('targetinfo').innerHTML += '<p><b>Subunit</b>: '+targetdetail['Subunit']+'</p>'
+                                                    document.getElementById('targetinfo').innerHTML += '<p><b>Similarity</b>: '+targetdetail['Similarity']+'</p>'
+                                                    document.getElementById('targetinfo').innerHTML += '<p><b>Uniprot URL</b>: <a href="https://www.uniprot.org/uniprot/'+target+'" target="_blank">'+target+'<i class="fas fa-link"></i></a></p>'
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <p class="responsetext">{{response | safe}}</p>
+                                </div>
+                                <div class="viz page-section" id="compoundroclassify">
+                                    <div class="vizhead">
+                                        <h6 class="sub_heading">Target to Compounds Exploration</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_targettocompound"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_targettocompound" class="vizinfo panel-collapse collapse">
+                                        In order to get the potential targets that have potential active compounds, the preprocessing of the data is an important step. The targets that the program select must satisfy with three of these condition initially including there must have associated bioactivities with other compounds at the confidence level 9, all of associated bioactivities of targets with all of their compounds must be binding type (B), and all compounds must have values type of IC50 or INH. These condition shows in the pie charts represent the compounds that have associated bioactivity with the selected target.
+                                    </div>
+                                    <div class="row" style="justify-content: center;">
+                                        <div class="col-md-4">
+                                            <div class="chart" id="bioact0">
+                                                <script>
+                                                    var graphs = {{bioact | safe}};
+                                                    Plotly.plot('bioact0',JSON.parse(graphs[0]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('bioact0'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="chart" id="bioact1">
+                                                <script>
+                                                    var graphs = {{bioact | safe}};
+                                                    Plotly.plot('bioact1',JSON.parse(graphs[1]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('bioact1'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="chart" id="bioact2">
+                                                <script>
+                                                    var graphs = {{bioact | safe}};
+                                                    Plotly.plot('bioact2',JSON.parse(graphs[2]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('bioact2'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row" style="justify-content: center;">
+                                        <div class="col-md-6">
+                                            <div class="vizhead">
+                                                <h6 class="headpathwaydb">IC50 Distribution</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_cutoffic50"><i class="fas fa-info-circle"></i></a>
+                                            </div>
+                                            <div id="collapse_cutoffic50" class="vizinfo panel-collapse collapse">
+                                                IC50 Distribution shows in the histogram of the number of compounds in each range of IC50 level (bin). Commonly, there are many ranges of IC50 and the program will show with the range width 1. This distribution is counted after the program removes the compounds that are not satisfied with the above condition, duplicates compounds, and invalid compounds.
+                                            </div>
+                                            <div class="chart" id="allgraph1">
+                                                <script>
+                                                    var graphs = {{allgraph | safe}};
+                                                    Plotly.plot('allgraph1',JSON.parse(graphs[1]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('allgraph1'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="vizhead">
+                                                <h6 class="headpathwaydb">Active and Inactive Compounds</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_activeinactive"><i class="fas fa-info-circle"></i></a>
+                                            </div>
+                                            <div id="collapse_activeinactive" class="vizinfo panel-collapse collapse">
+                                                The status of the compounds can be divided into two types including active and inactive compounds. The program will calculate the pIC50 which is the negative logarithm of the IC50 in molar. Then the compounds that have the values of pIC50 greater than the average value of pIC50 of all compounds from that target will be marked as ‘Active’, otherwise ‘Inactive’. The comparative columns chart is used to compare active and inactive of each type of the compound defined by measurement value IC50 and INH respectively.
+                                            </div>
+                                            <div class="chart" id="allgraph2">
+                                                <script>
+                                                    var graphs = {{allgraph | safe}};
+                                                    Plotly.plot('allgraph2',JSON.parse(graphs[2]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('allgraph2'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="viz page-section" id="compoundro5">
+                                    <div class="vizhead">
+                                        <h6 class="sub_heading">Lipinski's Rule of Five (RO5)</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_compoundro5"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_compoundro5" class="vizinfo panel-collapse collapse">
+                                        Lipinski’s Rule of Five (RO5) <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169409X00001290?via%3Dihub" target="_blank">[ref]</a> is a rule of thumb that is used to evaluate drug-likeness and non-drug-likeness molecules for oral drugs. It can be used to filter and remove molecules with poor drug-like properties that need to be removed or keep valuable molecules with great drug-likeness property for a successful trial. Due to the professional suggestion, the Linpinski’s rules is too strict and sometime the new discovered compound may not satisfy with the rule but has some properties to be a drug. Therefore, the program defines a new region to eliminate the unsatisfied compound to be the drug using the modified z-score with 3.5 threshold combined with Lipinski's rule. The modified z-score using the MAD (absolute deviation of the median) can solve the problem of ordinary z-score in which it reduces the effects occurring from a few extreme values in the data. <a href="http://d-scholarship.pitt.edu/7948/1/Seo.pdf" target="_blank">[ref]</a>
+                                    </div>
+                                    <div class="row" id="scatterro5" style="padding: 0px 20px 20px 20px">
+                                        <div class="vizhead">
+                                            <h6 class="headpathwaydb">Scatter Plot of Compounds Regarding pIC50 and RO5</h6>
+                                            <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_scatterro5"><i class="fas fa-info-circle"></i></a>
+                                        </div>
+                                        <div id="collapse_scatterro5" class="vizinfo panel-collapse collapse">
+                                            This scatter plot represents the individual compound information on four important properties defined by Lipinski’s rule. The y-axis represents the values of pIC50 for each compound, while the x-axis shows the values of each property including Molecular Weight, Octanol-water Partition Coefficient (logP), Hydrogen Bond Acceptors, Hydrogen Bond Donors, respectively.
+                                        </div>
+                                        <div class="chart" id="scatterro5_graph">
+                                            <script>
+                                                var graphs = {{scatterro5 | safe}};
+                                                Plotly.plot('scatterro5_graph', graphs,{});
+                                                window.addEventListener('resize', function() { Plotly.Plots.resize('scatterro5_graph'); });
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6" id="hydrogenbonddonors">
+                                            <div class="vizhead">
+                                                <h6 class="headpathwaydb">Molecular Weight</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_hydrogenbonddonors"><i class="fas fa-info-circle"></i></a>
+                                            </div>
+                                            <div id="collapse_hydrogenbonddonors" class="vizinfo panel-collapse collapse">
+                                                Molecular weight is the mass of the particular molecule measured by the unit of delton. According to Lipinski's rules, the drug-like molecule should have a molecular mass less than 500 daltons. In the graphs the thick gray dash line represents the threshold due to the Lipinski’s rules while the thin black dash line represents the outlier detection area by modified z-score that the program used to validate the compound.
+                                            </div>
+                                            <div class="chart" id="hydrogenbonddonors_graph">
+                                                <script>
+                                                    var graphs = {{graphro5 | safe}};
+                                                    Plotly.plot('hydrogenbonddonors_graph', JSON.parse(graphs[0]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('hydrogenbonddonors_graph'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" id="hydrogenbondacceptors">
+                                            <div class="vizhead">
+                                                <h6 class="headpathwaydb">Octanol-water Partition Coefficient (logP)</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_hydrogenbondacceptors"><i class="fas fa-info-circle"></i></a>
+                                            </div>
+                                            <div id="collapse_hydrogenbondacceptors" class="vizinfo panel-collapse collapse">
+                                                Octanol-water Partition Coefficient (logP) is the value of the ratio of the concentration of a solute between two phased, one in octanol-saturated aqueous phase and another one in water-saturated octanolic phase. <a href="https://www.sciencedirect.com/science/article/pii/B9780128169117000062" target="_blank">[ref]</a> According to Lipinski's rules, the drug-like molecule should have an octanol-water partition coefficient (log P) that does not exceed 5. In the graphs the thick gray dash line represents the threshold due to the Lipinski’s rules while the thin black dash line represents the outlier detection area by modified z-score that the program used to validate the compound.
+                                            </div>
+                                            <div class="chart" id="hydrogenbondacceptors_graph">
+                                                <script>
+                                                    var graphs = {{graphro5 | safe}};
+                                                    Plotly.plot('hydrogenbondacceptors_graph', JSON.parse(graphs[1]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('hydrogenbondacceptors_graph'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-6" id="molecularmass">
+                                            <div class="vizhead">
+                                                <h6 class="headpathwaydb">Hydrogen Bond Acceptors</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_molecularmass"><i class="fas fa-info-circle"></i></a>
+                                            </div>
+                                            <div id="collapse_molecularmass" class="vizinfo panel-collapse collapse">
+                                                Hydrogen Bond Acceptors are hydrogen bond that contains a lone pair of electrons. For example, those lone pairs of electrons can be classified as fluorine, oxygen, or nitrogen. According to Lipinski's rules, the drug-like molecule should have no more than 10 hydrogen bond acceptors including all oxygen or nitrogen atoms). In the graphs the thick gray dash line represents the threshold due to the Lipinski’s rules while the thin black dash line represents the outlier detection area by modified z-score that the program used to validate the compound.
+                                            </div>
+                                            <div class="chart" id="molecularmass_graph">
+                                                <script>
+                                                    var graphs = {{graphro5 | safe}};
+                                                    Plotly.plot('molecularmass_graph', JSON.parse(graphs[2]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('molecularmass_graph'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" id="logP">
+                                            <div class="vizhead">
+                                                <h6 class="headpathwaydb">Hydrogen Bond Donors</h6>
+                                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_logP"><i class="fas fa-info-circle"></i></a>
+                                            </div>
+                                            <div id="collapse_logP" class="vizinfo panel-collapse collapse">
+                                                Hydrogen Bond Donors are hydrogen bond that contains a hydrogen atom in the hydrogen bond formation. Their main role is to donate protons and is attached to a relatively electronegative atom. According to Lipinski's rules, the drug-like molecule should have no more than 5 hydrogen bond donors including the total number of nitrogen–hydrogen and oxygen–hydrogen bonds. In the graphs the thick gray dash line represents the threshold due to the Lipinski’s rules while the thin black dash line represents the outlier detection area by modified z-score that the program used to validate the compound.
+                                            </div>
+                                            <div class="chart" id="logP_graph">
+                                                <script>
+                                                    var graphs = {{graphro5 | safe}};
+                                                    Plotly.plot('logP_graph', JSON.parse(graphs[3]),{});
+                                                    window.addEventListener('resize', function() { Plotly.Plots.resize('logP_graph'); });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="viz page-section" id="compoundtable">
+                                    <div class="vizhead">
+                                        <h6 class="sub_heading">Table of Filtered Compounds</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_compoundtable"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_compoundtable" class="vizinfo panel-collapse collapse">
+                                        Table of filtered compounds show the final potential active compound analyzed by the program. The information shown in the table are Chembl Id, status, pIC50, Molecular Weight (MW), Octanol-water Partition Coefficient (logP), Hydrogen Bond Acceptors (nHAcc), Hydrogen Bond Donors (nHDon), and two new additional information which are standard Inchy Key and canonical smiles. The user can search, sort, or explore the table as well.
+                                    </div>
+                                    <div class="table" id="table_div">
+                                        {{tablecompound | safe}}
+                                    </div>
+                                    <script>
+                                        $(document).ready(function() {
+                                            var data = {{datacompound | safe}};
+                                            console.log(data);
+                                            var table = $('#tablecompound_div').DataTable( {
+                                                data:           data,
+                                                deferRender:    true,
+                                                scrollX:        true,
+                                                scrollY:        "400px",
+                                                scroller:       true,
+                                                scrollCollapse: true,
+                                                select:         true,
+                                                paging:         true
+                                            } );
+                                            $('#tablecompound_div').on( 'click', 'tr', function () {
+                                                if ( $(this).hasClass('selected') ) {
+                                                    $(this).removeClass('selected');
+                                                }
+                                                else {
+                                                    table.$('tr.selected').removeClass('selected');
+                                                    $(this).addClass('selected');
+                                                }
+                                            } );
+                                        } );
+                                    </script>
+                                </div>
+                    </div>
+                    <br>
+                    <div id="list-item-4" class="analysisresult">
+                        <h4 class="h6_heading"><i class="fas fa-pills"></i> Step 4: Potential Active Compounds</h4>
+                            <p>The process to analyze the genetic information of the human body. In this project, the analysis of genetic information of retinoblastoma patients and the normal people will be identified to distinguish the difference in the level of gene counts and gene expression.</p>
+                        <div class="viz page-section" id="pacmodel">
+                            <div class="vizhead">
+                                <h6 class="sub_heading">Potential Active Compound Model</h6>
+                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_pacmodel"><i class="fas fa-info-circle"></i></a>
+                            </div>
+                            <div id="collapse_pacmodel" class="vizinfo panel-collapse collapse">
+                                Potential Active Compound Model is a prediction model that analyzes on interaction data between targets and compounds to find any significant indicators that can help predict the outcome. Each compound is calculated for a Pubchem fingerprint, which contains 881 chemical fingerprints. RBPro uses Random Forest to fit and classify these features to get the ranking of the fingerprints, and generate the prediction model along with its evaluation. <a href="https://www.researchgate.net/publication/338674245_Prediction_models" target="_blank">[ref]</a>
+                            </div>
+                            <div class="vizhead">
+                                <h6 class="headpathwaydb">Confusion Matrix</h6>
+                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_confusionmatrix"><i class="fas fa-info-circle"></i></a>
+                            </div>
+                            <div id="collapse_confusionmatrix" class="vizinfo panel-collapse collapse">
+                                Confusion Matrix is one of many performance measurements for prediction or classification machine learning models. It is displayed on a table format. It describes how well the model is able to perform by showing the predictions on the x-axis against the actual data. The values along the diagonal mean that the prediction turns out to be true when compared to the actual data. The higher the diagonal values the better while off-diagonal values are the opposite. <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html" target="_blank">[ref]</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="chart" id="confusionmatrix0">
+                                        <script>
+                                            var graphs = {{confustionplot | safe}};
+                                            Plotly.plot('confusionmatrix0', JSON.parse(graphs[0]),{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('confusionmatrix0'); });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="chart" id="confusionmatrix1">
+                                        <script>
+                                            var graphs = {{confustionplot | safe}};
+                                            Plotly.plot('confusionmatrix1', JSON.parse(graphs[1]),{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('confusionmatrix1'); });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="chart" id="confusionmatrix2">
+                                        <script>
+                                            var graphs = {{confustionplot | safe}};
+                                            Plotly.plot('confusionmatrix2', JSON.parse(graphs[2]),{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('confusionmatrix2'); });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6" id="stat">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">Model Evaluation</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_statdata"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_statdata" class="vizinfo panel-collapse collapse">
+                                        The model evaluation is the statistical valued measure the performance of the model in training and testing data. There are many important values that help explain how well the model is. The user can use those values to evaluate the performance of the fingerprint features.
+                                    </div>
+                                    <div class="chart" id="statgraph">
+                                        <script>
+                                            var stat = '{{statvalue | safe}}';
+                                            document.getElementById('statgraph').innerHTML = '<p class="stat">'+stat+'</p>';
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="roccurve">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">ROC Curve</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_roccurvegraph"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_roccurvegraph" class="vizinfo panel-collapse collapse">
+                                        ROC Curve is a graph visualization that describes classifying or predicting performance on a model by plotting True Positive Rate (TPR) on the y-axis, and False Positive Rate (FPR) on the x-axis. The plotting can be done multiple times given the size of the dataset by plotting TPR against FPR at multiple threshold settings. The more threshold settings the more detailed the ROC curve becomes. <a href="https://www.researchgate.net/publication/336120227_Use_of_the_ROC_curves_for_the_evaluation_of_the_Guillain-Barre_pdf" target="_blank">[ref]</a>
+                                    </div>
+                                    <div class="chart" id="roccurvegraph">
+                                        <script>
+                                            var graphs = {{roccurve | safe}};
+                                            Plotly.plot('roccurvegraph', graphs,{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('roccurvegraph'); });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6" id="elimination">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">Cross Validation Score with Different Number of Features</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_eliminationgraph"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_eliminationgraph" class="vizinfo panel-collapse collapse">
+                                        The visualization is a part of feature optimization. It determines that at what amount of features that the model will be able to perform at its best. It is done by fitting the dataset to the model and recording the cross validation score for each n amount of features. Ultimately, the score of each amount of features is plotted on the y-axis, and the amount of features is on the x-axis.
+                                    </div>
+                                    <div class="chart" id="eliminationgraph">
+                                        <script>
+                                            var graphs = {{elimination | safe}};
+                                            Plotly.plot('eliminationgraph', graphs,{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('eliminationgraph'); });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="importance">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">Feature Importance of Random Forest Classifier</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_importancegraph"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_importancegraph" class="vizinfo panel-collapse collapse">
+                                        In tree classifiers such as Random Forest, one of the measurements is impurity. For Random Forest, the decrease  in impurity after each feature is added can be averaged and the features are ranked according to the calculated impurity.
+                                    </div>
+                                    <div class="chart" id="importancegraph">
+                                        <script>
+                                            var graphs = {{importance | safe}};
+                                            Plotly.plot('importancegraph', graphs,{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('importancegraph'); });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
