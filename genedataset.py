@@ -261,9 +261,9 @@ def create_histogramcutoff(filename, update):
         df = read_genedataset(filename)
         df.set_index(geneheader, inplace=True)
         lsize = [np.sum(df.iloc[:, i]) for i in range(len(df.columns))]
-        data = (df / df.sum()) * 10 ** 6
+        data = (df / df.sum()) * (10 ** 6)
         data = data.fillna(0)
-        data = np.log2(data + (2 / (np.median(lsize) / 10 ** 6)))
+        data = np.log2(data + (2 / (np.mean(lsize) / (10 ** 6))))
 
         colors = {'Normal': '#4db6ac',
                   'Perturbation': '#ef6c00'}
@@ -278,8 +278,8 @@ def create_histogramcutoff(filename, update):
                 name=data.columns[i])
             )
 
-        L = np.mean(lsize) / 10 ** 6
-        M = np.median(lsize) / 10 ** 6
+        L = np.mean(lsize) / (10 ** 6)
+        M = np.median(lsize) / (10 ** 6)
         cutoff = np.log2(10 / M + 2 / L)
 
         fig.add_shape(
@@ -804,7 +804,7 @@ def pathwayinfo(filename, update):
 
                     pathwayid = []
                     for p in pathwaystotargets['Pathway_Name']:
-                        termid = p[p.index('W'):]
+                        termid = p[p.index(' WP'):]
                         pathwayid.append(termid)
                     pathwaystotargets['Pathway_Id'] = pathwayid
 
@@ -813,12 +813,15 @@ def pathwayinfo(filename, update):
                     uniprotnumberof = []
                     for i in pathwaystotargets['Pathway_Id']:
                         r = requests.get('http://webservice.wikipathways.org/getXrefList?pwId=' + i + '&code=S')
-                        r_list = r.text.replace("ns1:", "")
                         uniprots = []
-                        root = ET.fromstring(r_list)
-                        for x in root.findall('xrefs'):
-                            if x.text[0] == 'O' or x.text[0] == 'P' or x.text[0] == 'Q':
-                                uniprots.append(x.text)
+                        if r.text != '':
+                            r_list = r.text.replace("ns1:", "")
+                            root = ET.fromstring(r_list)
+                            if root.findall('xrefs') is not None:
+                                for x in root.findall('xrefs'):
+                                    if x is not None:
+                                        if x.text[0] == 'O' or x.text[0] == 'P' or x.text[0] == 'Q':
+                                            uniprots.append(x.text)
                         uniprotnumberof.append(len(list(set(uniprots))))
                         uniprotralated.append(list(set(uniprots)))
                     pathwaystotargets['Uniprot_NumberOf'] = uniprotnumberof
@@ -854,7 +857,7 @@ def find_commontargets(pathwaystotargets):
     uniprot = []
     for p in pathwaystotargets['Uniprot_Related']:
         for u in p:
-            uniprot.append(u)
+            uniprot.append(u.strip())
     alluniprot['Uniprot'] = uniprot
 
     alluniprot_distinct = alluniprot.groupby(['Uniprot'], as_index=False).size().reset_index().rename(
@@ -930,13 +933,19 @@ def create_tabletarget(filename, update):
         alluniprot_up = combine_uniprot(cloudlist, 'Up')
         alluniprot_up.to_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_up.txt"),
                              sep='\t', encoding='utf-8')
+        # alluniprot_up = pd.read_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_up.txt"),
+        #                      sep='\t', encoding='utf-8')
+        # alluniprot_up = combine_uniprot_down(cloudlist, alluniprot_up, 'Up')
         alluniprot_down = combine_uniprot_down(cloudlist, alluniprot_up, 'Down')
         alluniprot_down.to_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_down.txt"),
                                sep='\t', encoding='utf-8')
+        # alluniprot_down = pd.read_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_down.txt"),
+        #                      sep = '\t', encoding = 'utf-8')
 
         Row_list = []
 
         df = alluniprot_up
+        # df = alluniprot_up.drop([alluniprot_up.columns[0]] ,  axis='columns')
         # Iterate over each row
         for index, rows in df.iterrows():
             # append the list to the final list
@@ -947,6 +956,7 @@ def create_tabletarget(filename, update):
         Row_list = []
 
         df = alluniprot_down
+        # df = alluniprot_down.drop([alluniprot_down.columns[0]] ,  axis='columns')
         # Iterate over each row
         for index, rows in df.iterrows():
             # append the list to the final list
@@ -957,14 +967,32 @@ def create_tabletarget(filename, update):
         with open(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget.txt"), "w") as f:
             for s in result_tabletarget:
                 f.write(str(s) + "\n")
-    else:
+
+        resulttabletemp = []
         with open(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget.txt"), "r") as f:
             for line in f:
-                i = 1;
+                i = 1
                 temp_tabletarget = []
                 newl = list(line.split('], ['))
                 for l in newl:
-                    ll = l.replace("[[", "").replace(" nan", " '-'").replace("]]", "")
+                    ll = l.replace(" nan", " '-'")
+                    ll = ll.replace("[[", "").replace("]]", "")
+                    ll = "["+str(i)+"," + ll + "]"
+                    temp_tabletarget.append(ast.literal_eval(ll))
+                    i+=1
+                resulttabletemp.append(temp_tabletarget)
+
+        result_tabletarget = resulttabletemp
+
+    else:
+        with open(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget.txt"), "r") as f:
+            for line in f:
+                i = 1
+                temp_tabletarget = []
+                newl = list(line.split('], ['))
+                for l in newl:
+                    ll = l.replace(" nan", " '-'")
+                    ll = ll.replace("[[", "").replace("]]", "")
                     ll = "["+str(i)+"," + ll + "]"
                     temp_tabletarget.append(ast.literal_eval(ll))
                     i+=1
@@ -1004,7 +1032,7 @@ def combine_uniprot(cloudlist, type):
     uniname = []
     i = 1
     for u in alluniprot['Uniprot']:
-        uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u + ".xml")
+        uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u.strip() + ".xml")
         if uniprotxml.text != '':
             root = ET.fromstring(uniprotxml.text)
             rv = root[0].attrib['dataset']
@@ -1080,8 +1108,9 @@ def combine_uniprot_down(cloudlist, alluniprot_up, type):
             gn = alluniprot_up.loc[row, 'GeneName']
             fn = alluniprot_up.loc[row, 'ProteinName']
         else:
-            uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u + ".xml")
-            if uniprotxml.text != '':
+            uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u.strip() + ".xml")
+            print(u)
+            if uniprotxml.text != '' and uniprotxml is not None:
                 root = ET.fromstring(uniprotxml.text)
                 rv = root[0].attrib['dataset']
                 gn = ''
