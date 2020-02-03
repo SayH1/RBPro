@@ -1,4 +1,4 @@
-name: export
+name: RBPro
 channels:
   - rdkit
   - r
