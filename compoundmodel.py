@@ -1,9 +1,9 @@
-import numpy as np
+# import numpy as np
 import pandas as pd
 from time import time
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import os
-import shutil
+# import shutil
 import ast
 import math
 
@@ -11,48 +11,51 @@ import logging
 import requests
 logging.getLogger("requests").setLevel(logging.ERROR)
 import xml.etree.ElementTree as ET
-from tqdm import tqdm
+# from tqdm import tqdm
 from flask import Flask
 import plotly
 import plotly.graph_objs as go
 import plotly.figure_factory as ff
 import json
 import glob
-import seaborn as sns
-from pandas.plotting import scatter_matrix
+# import seaborn as sns
+# from pandas.plotting import scatter_matrix
 from scipy import stats
 from plotly.subplots import make_subplots
 
 #from IPython.display import Image
-from sklearn.metrics import f1_score
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
+# from sklearn.metrics import f1_score
+# from sklearn.metrics import confusion_matrix
+# import seaborn as sns
 from chembl_webresource_client.new_client import new_client
 from rdkit.Chem.SaltRemover import SaltRemover
 from rdkit.Chem import MolFromSmiles, MolToSmiles
 from padelpy import padeldescriptor
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
-from functools import reduce
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import matthews_corrcoef, precision_recall_fscore_support, roc_curve, auc, confusion_matrix
+# from functools import reduce
+# from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+# from sklearn.metrics import matthews_corrcoef, precision_recall_fscore_support, roc_curve, auc, confusion_matrix
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestClassifier
-from sklearn import model_selection, tree, preprocessing, metrics, linear_model
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.feature_selection import RFE, RFECV
+from sklearn import model_selection, metrics
+# from sklearn import model_selection, tree, preprocessing, metrics, linear_model
+# from sklearn.neighbors import KNeighborsClassifier
+# from sklearn.naive_bayes import GaussianNB
+# from sklearn.tree import DecisionTreeClassifier
+# from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.feature_selection import RFECV
+# from sklearn.feature_selection import RFE, RFECV
 from sklearn.linear_model import LogisticRegression
-import time, datetime
-from hpsklearn import HyperoptEstimator, one_vs_rest, random_forest
-import hpsklearn.demo_support
-from hyperopt import tpe
+import time
+# from hpsklearn import HyperoptEstimator, one_vs_rest, random_forest
+# import hpsklearn.demo_support
+# from hyperopt import tpe
 import numpy as np
-from sklearn.metrics import roc_auc_score
-import matplotlib.pyplot as plt
-from sklearn.datasets import make_classification
+# from sklearn.metrics import roc_auc_score
+# import matplotlib.pyplot as plt
+# from sklearn.datasets import make_classification
 from sklearn.decomposition import PCA
 from sklearn.model_selection import StratifiedShuffleSplit
 from imblearn.combine import SMOTEENN
@@ -290,6 +293,7 @@ def getBioActs(filename, uniID):
     if targetsDF.empty:
         print("Bad Target: " + uniID)
         response = "Target doesn't not exist in Chembl."
+        print(response)
         return response
     targetID = targetsDF.at[0, 'target_chembl_id']
     # print(targetID)
@@ -308,6 +312,7 @@ def getBioActs(filename, uniID):
     if len(bioactsDF) == 0 or len(assayDF) == 0:
         print("Bad Target: " + uniID)
         response = "Target has no associated bioactivity or binding type assay."
+        print(response)
         return response
 
     # Merge both DFs
@@ -326,7 +331,8 @@ def getBioActs(filename, uniID):
     labels = list(bioactsDF['confidence_score'].value_counts().index)
     values = list(bioactsDF['confidence_score'].value_counts().values)
     pulling = [0] * len(values)
-    pulling[labels.index(9)] = 0.2
+    if 9 in labels:
+        pulling[labels.index(9)] = 0.2
     # pull is given as a fraction of the pie radius
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, pull=pulling)])
     fig.update_layout(height=300, margin=dict(l=10, r=20, t=30, b=10), title_text='Confidence Score')
@@ -337,7 +343,8 @@ def getBioActs(filename, uniID):
     labels = list(bioactsDF['assay_type'].value_counts().index)
     values = list(bioactsDF['assay_type'].value_counts().values)
     pulling = [0] * len(values)
-    pulling[labels.index('B')] = 0.2
+    if 'B' in labels:
+        pulling[labels.index('B')] = 0.2
     # pull is given as a fraction of the pie radius
     fig2 = go.Figure(data=[go.Pie(labels=labels, values=values, pull=pulling)])
     fig2.update_layout(height=300, margin=dict(l=10, r=20, t=30, b=10), title_text='Assay Type')
@@ -348,14 +355,20 @@ def getBioActs(filename, uniID):
     labels = list(bioactsDF['type'].value_counts().index)
     values = list(bioactsDF['type'].value_counts().values)
     pulling = [0] * len(values)
-    pulling[labels.index('IC50')] = 0.2
-    pulling[labels.index('INH')] = 0.2
+    if 'IC50' in labels:
+        pulling[labels.index('IC50')] = 0.2
+    if 'INH' in labels:
+        pulling[labels.index('INH')] = 0.2
     # pull is given as a fraction of the pie radius
     fig3 = go.Figure(data=[go.Pie(labels=labels, values=values, pull=pulling)])
     fig3.update_layout(height=300, margin=dict(l=10, r=20, t=30, b=10), title_text='Bioactivity Type')
 
     graphJSON = json.dumps(fig3, cls=plotly.utils.PlotlyJSONEncoder)
     bioact.append(graphJSON)
+
+    # Making Directory
+    if not os.path.exists(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)):
+        os.makedirs(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID))
 
     with open(os.path.join(path, "_bioact.txt"), "w") as f:
         for s in bioact:
@@ -373,6 +386,7 @@ def getBioActs(filename, uniID):
     if len(IC50) == 0 or len(Inhibition) == 0:
         print("Bad Target: " + uniID)
         response = "Target has no bioactivity type IC50 or INH."
+        print(response)
         return response
 
     # Convert to pIC50
@@ -386,9 +400,6 @@ def getBioActs(filename, uniID):
         label.append('('+str(k)+','+str(k+1)+']')
     IC50['bin'] = pd.cut(IC50['pIC50'], list(range(0, binmax)), labels=label)
 
-    # Making Directory
-    if not os.path.exists(os.path.join(server.config['UPLOAD_FOLDER'], filename+"_"+uniID)):
-        os.makedirs(os.path.join(server.config['UPLOAD_FOLDER'], filename+"_"+uniID))
 
     # Show Bar Chart before preprocessing
     # fig, ax = plt.subplots()
@@ -456,6 +467,7 @@ def getBioActs(filename, uniID):
         shutil.rmtree(path)
         print("Bad Target: " + uniID)
         response = "Target has no compound associated to activities."
+        print(response)
         return response
 
     IC50_raw.name = 'I50_Raw'
@@ -480,6 +492,7 @@ def getBioActs(filename, uniID):
     # Output Active vs. Inactive Barchart & Donut
     graphJSON3 = plot_status(IC50_clean, Inhibition_clean, path)
     allgraph.append(graphJSON3)
+
 
     with open(os.path.join(path, "_graphpreprocess.txt"), "w") as f:
         for s in allgraph:
@@ -535,10 +548,17 @@ def RO5(filename, uniID):
     nHDon = [Descriptors.NumHDonors(q) for q in mols]
     stdInChiKey = [ast.literal_eval(k)['standard_inchi_key'] for k in df['molecule_structures']]
     smiles = df['canonical_smiles']
+    preferredCompoundName = []
+    for i in df['molecule_pref_name']:
+        if i is not np.NaN:
+            preferredCompoundName.append(i)
+        else:
+            preferredCompoundName.append('-')
 
     data = pd.DataFrame(
         {'molecule_chembl_id': ID,
          'stdInChiKey': stdInChiKey,
+         'preferredCompoundName': preferredCompoundName,
          'STATUS': df.STATUS,
          'pIC50': pIC50,
          'MW': MW,
@@ -547,7 +567,7 @@ def RO5(filename, uniID):
          'nHDon': nHDon,
          'smiles': smiles
          })
-    data = data[['molecule_chembl_id', 'stdInChiKey', 'STATUS', 'pIC50', 'MW', 'LogP', 'nHAcc', 'nHDon', 'smiles']]
+    data = data[['molecule_chembl_id', 'stdInChiKey', 'preferredCompoundName', 'STATUS', 'pIC50', 'MW', 'LogP', 'nHAcc', 'nHDon', 'smiles']]
 
     data.to_csv(os.path.join(path, 'IC50_RO5.csv'), sep=',', index=False)
 
@@ -1214,8 +1234,9 @@ def RFC(X_train, y_train, X_test, y_test, path, Fp_name, data2):
     # Making Directory
     if not os.path.exists(os.path.join(path, 'model')):
         os.makedirs(os.path.join(path, 'model'))
-    pickle.dump(rfc, open(os.path.join(path+'model', uniID + '_' +filename), 'wb'))
-    pickle.dump(rfc, open(os.path.join(path, uniID + '_' +filename), 'wb'))
+    newpath = os.path.join(path, 'model')
+    pickle.dump(rfc, open(os.path.join(newpath, uniID + '_' +filename), 'wb'))
+    # pickle.dump(rfc, open(os.path.join(path, uniID + '_' +filename), 'wb'))
 
 
 
@@ -1440,6 +1461,7 @@ def create_datacompound(filename, uniID):
         for s in Row_list:
             f.write(str(s) + "\n")
 
+    Row_list = []
     with open(os.path.join(path, "_datacompound.txt"), "r") as f:
         for line in f:
             Row_list.append(ast.literal_eval(line))

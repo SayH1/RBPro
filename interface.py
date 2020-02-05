@@ -4,15 +4,15 @@ import pandas as pd
 from flask import Flask, render_template, request, jsonify, json
 from werkzeug.utils import secure_filename, redirect
 
-import dash
-from dash.dependencies import Input, Output
-import dash_table
-import dash_core_components as dcc
-import dash_html_components as html
+# import dash
+# from dash.dependencies import Input, Output
+# import dash_table
+# import dash_core_components as dcc
+# import dash_html_components as html
 
 import genedataset as gd
 import compoundmodel as cm
-import dash_plottable as dashp
+# import dash_plottable as dash
 
 dir = os.path.abspath(os.getcwd())
 dir = (dir+'\\file\\')
@@ -194,13 +194,13 @@ def result():
                                dicttarget=dicttarget) + html
 
 
-@server.route('/fulldataset', methods=['POST', 'GET'])
-def fulldataset():
-    if request.method == 'POST':
-        dashp.continuedash(filename)
-    return redirect("http://localhost:5000/dash")
-
-dashp.initdash(server)
+# @server.route('/fulldataset', methods=['POST', 'GET'])
+# def fulldataset():
+#     if request.method == 'POST':
+#         dashp.continuedash(filename)
+#     return redirect("http://localhost:5000/dash")
+#
+# dashp.initdash(server)
 
 @server.route('/steps/stepone', methods=['POST', 'GET'])
 def stepone():
@@ -283,14 +283,15 @@ def compoundanalysis():
     if request.method == 'POST':
         target = request.form.get('hiddentarget')
         targetname = request.form.get('hiddentargetname')
-        print(targetname);
+        print(targetname)
         filename = request.form.get('hiddenfilenametarget')
         response = cm.getBioActs(filename, target)
         targetdetail = cm.gettargetdetail(target)
+
         if response == 'ok':
             response = ''
-            allgraph = cm.getgraphpreprocess(filename, target)
             bioact = cm.getgraphbioact(filename, target)
+            allgraph = cm.getgraphpreprocess(filename, target)
             graphro5 = cm.RO5(filename, target)
             scatterro5 = cm.getscatterro5(filename, target)
             tablecompound = cm.create_datatablecompound(filename, target)
@@ -319,11 +320,20 @@ def compoundanalysis():
                                    roccurve=roccurve, \
                                    elimination=elimination, \
                                    importance=importance)
-        return render_template('/compoundanalysis.html', \
+        elif response == "Target doesn't not exist in Chembl." or response == "Target has no associated bioactivity or binding type assay.":
+            return render_template('/compoundanalysis.html', \
                                    target=target, \
                                    targetname=targetname, \
                                    response=response, \
                                    targetdetail=targetdetail)
+
+        bioact = cm.getgraphbioact(filename, target)
+        return render_template('/compoundanalysis.html', \
+                                   target=target, \
+                                   targetname=targetname, \
+                                   response=response, \
+                                   targetdetail=targetdetail, \
+                                   bioact=bioact)
 
 @server.route('/aboutus', methods=['POST', 'GET'])
 def aboutus():
@@ -331,4 +341,5 @@ def aboutus():
         return render_template('/aboutus.html')
 
 if __name__ == '__main__':
-    server.run(host='localhost', debug=True)
+    # server.run(host='localhost', debug=True)
+    server.run(host='0.0.0.0')
