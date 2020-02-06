@@ -603,7 +603,7 @@ tfoot input {
     box-sizing: border-box;
 }
 
-.uniprotid {
+.uniprotid, .smilesid {
     font-size: x-large;
     color: #ef6c00;
     font-weight: bolder;
@@ -632,7 +632,7 @@ button[disabled]{
     margin: 0px;
 }
 
-#table_div_Up, #table_div_Down {
+#table_div_Up, #table_div_Down, #tablecompound_div {
     cursor: pointer;
 }
 
@@ -696,4 +696,8 @@ div.coldiv {
     margin: 0px;
     font-weight: bold;
     text-align: left !important;
+}
+
+.redClass {
+    background-color: rgba(255, 0, 0, 0.2) !important;
 }

@@ -28,6 +28,9 @@ from plotly.subplots import make_subplots
 # from sklearn.metrics import confusion_matrix
 # import seaborn as sns
 from chembl_webresource_client.new_client import new_client
+from rdkit import Chem
+from rdkit.Chem import Draw
+from rdkit.Chem.Draw import IPythonConsole
 from rdkit.Chem.SaltRemover import SaltRemover
 from rdkit.Chem import MolFromSmiles, MolToSmiles
 from padelpy import padeldescriptor
@@ -60,6 +63,8 @@ from sklearn.decomposition import PCA
 from sklearn.model_selection import StratifiedShuffleSplit
 from imblearn.combine import SMOTEENN
 import shutil
+
+from biothings_client import get_client
 
 # Application
 dir = os.path.abspath(os.getcwd())
@@ -1468,3 +1473,13 @@ def create_datacompound(filename, uniID):
 
 
     return Row_list
+
+
+def getcompoundinfo(inchikey):
+    mc = get_client('chem')
+    k = inchikey
+    m = mc.query('pubchem.inchi_key:' + k, as_dataframe=True)
+    cid = m['pubchem.cid'].values[0]
+    print(cid)
+
+    return str(cid)

@@ -340,6 +340,13 @@ def aboutus():
     if request.method == 'POST':
         return render_template('/aboutus.html')
 
+@server.route('/compoundinfo')
+def compoundinfo():
+    compound = request.args.get('compound', 0, type=str)
+    moleculestructure = cm.getcompoundinfo(compound)
+    return jsonify(result=moleculestructure)
+
+
 if __name__ == '__main__':
-    # server.run(host='localhost', debug=True)
-    server.run(host='0.0.0.0')
+    server.run(host='localhost', debug=True)
+    # server.run(host='0.0.0.0')

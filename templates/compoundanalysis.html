@@ -387,6 +387,25 @@
                                     <div class="table" id="table_div">
                                         {{tablecompound | safe}}
                                     </div>
+                                    <div class="checktargetdetail textleft">
+                                        <!--<input type="hidden" id="hiddentarget" name="hiddentarget">-->
+                                        <p class="smilesid nomargin" id="checkrow">No selected compound</p>
+                                        <div class="row" style="margin-bottom: 10px">
+                                            <div class="col-md-3">
+                                                <span class="spanbold">Molecule Chembl Id: </span><br><span class="nomargin" id="checkrow_id">-</span><br>
+                                                <span class="spanbold">Standard InChiKey: </span><br><span class="nomargin" id="checkrow_in">-</span><br>
+                                                <span class="spanbold">Preferred Compound Name: </span><br><span class="nomargin" id="checkrow_cn">-</span><br>
+                                                <span class="spanbold">Status: </span><br><span class="nomargin" id="checkrow_st">-</span><br>
+                                                <span class="spanbold">Smiles: </span><br><span class="nomargin" id="checkrow_sm" style="overflow-wrap: break-word">-</span><br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span class="spanbold">Molecule Structure 2D: </span><div class="nomargin" id="checkrow_ms">-</div><br>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <span class="spanbold">Molecule Structure 3D: </span><br><div class="nomargin" id="checkrow_ms3d">-</div><br>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <script>
                                         $(document).ready(function() {
                                             var data = {{datacompound | safe}};
@@ -398,8 +417,14 @@
                                                 scrollY:        "400px",
                                                 scroller:       true,
                                                 scrollCollapse: true,
+                                                fixedColumns:   {leftColumns: 1},
                                                 select:         true,
-                                                paging:         true
+                                                paging:         true,
+                                                createdRow: function( row, data, dataIndex){
+                                                    if( data[2] ==  'active'){
+                                                        $(row).addClass('redClass');
+                                                    }
+                                                }
                                             } );
                                             $('#tablecompound_div').on( 'click', 'tr', function () {
                                                 if ( $(this).hasClass('selected') ) {
@@ -408,10 +433,78 @@
                                                 else {
                                                     table.$('tr.selected').removeClass('selected');
                                                     $(this).addClass('selected');
+
+                                                    var rows_selected = table.column(0).checkboxes.selected();
+
+
+                                                    // Output form data to a console
+                                                    var uniprotid = Object.values($(this))[0];
+                                                    $('#checkrow').text(uniprotid.cells[0].innerText);
+                                                    $('#checkrow').attr('onclick', 'window.open("xxx")');
+                                                    $('#checkrow_id').text(uniprotid.cells[0].innerText);
+                                                    $('#checkrow_in').text(uniprotid.cells[1].innerText);
+                                                    $('#checkrow_cn').text(uniprotid.cells[2].innerText);
+                                                    $('#checkrow_st').text(uniprotid.cells[3].innerText);
+                                                    $('#checkrow_sm').text(uniprotid.cells[9].innerText);
+                                                    $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px; backgroundor: #e3e4e6' src='https://www.ebi.ac.uk/chembl/api/data/image/"+uniprotid.cells[0].innerText+"'>");
+
+                                                    $.ajax({
+                                                        url: '/compoundinfo',
+                                                        data:{
+                                                          compound: $('#checkrow_in').text()
+                                                        },
+                                                        dataType: 'JSON',
+                                                        type: 'GET',
+                                                        success: function(data){
+
+                                                              //$('#checkrow_ms').text(data.result);
+
+                                                              var cidthis = data.result;
+
+                                                              <!--var options = {};-->
+                                                              <!--options['background'] = 'grey';-->
+                                                              <!--options['autorotation'] = 'right';-->
+
+                                                              <!--//Options are available at: https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html#DisplayOptions-->
+                                                              <!--//options['proteins'] = 'sphere';-->
+
+                                                              <!--var cfg = {-->
+                                                                  <!--divid: 'checkrow_ms3d',-->
+                                                                  <!--width: 'auto',-->
+                                                                  <!--height: 'auto',-->
+                                                                  <!--resize: true,-->
+                                                                  <!--rotate: 'right',-->
+                                                                  <!--mobilemenu: true,-->
+                                                                  <!--showmenu: true,-->
+                                                                  <!--showcommand: false,-->
+                                                                  <!--showtitle: false-->
+                                                              <!--};-->
+                                                              <!--cfg['cid'] = cidthis;-->
+                                                              <!--if(Object.keys(options).length > 0) cfg['options'] = options;-->
+
+                                                              <!--var icn3dui = new iCn3DUI(cfg);-->
+
+                                                              <!--//communicate with the 3D viewer with chained functions-->
+                                                              <!--$.when(icn3dui.show3DStructure()).then(function() {-->
+                                                                   <!--//icn3dui.setOption('color', 'cyan');-->
+                                                                   <!--icn3dui.rotStruc('right');-->
+                                                                   <!--icn3dui.rotStruc('right');-->
+                                                                   <!--icn3dui.resizeCanvas('auto', '400px');-->
+                                                              <!--});-->
+
+                                                              $('#checkrow_ms3d').html('<iframe src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html?cid='+cidthis+'&width=auto&height=350&showcommand=0&showmenu=0&mobilemenu=0&showtitle=0&resize=1&rotate=right" width="100%" height="350px" style="border:none; background-color: black;"></iframe>');
+                                                        }
+                                                    });
                                                 }
                                             } );
                                         } );
                                     </script>
+                                    <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui.min.css">
+                                    <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_full_ui.css">
+                                    <!--<script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery.min.js"></script>-->
+                                    <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui.min.js"></script>
+                                    <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/three.min.js"></script>
+                                    <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_full_ui.min.js"></script>
                                 </div>
                     </div>
                     <br>
