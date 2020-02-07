@@ -391,17 +391,19 @@
                                         <!--<input type="hidden" id="hiddentarget" name="hiddentarget">-->
                                         <p class="smilesid nomargin" id="checkrow">No selected compound</p>
                                         <div class="row" style="margin-bottom: 10px">
-                                            <div class="col-md-3">
-                                                <span class="spanbold">Molecule Chembl Id: </span><br><span class="nomargin" id="checkrow_id">-</span><br>
-                                                <span class="spanbold">Standard InChiKey: </span><br><span class="nomargin" id="checkrow_in">-</span><br>
-                                                <span class="spanbold">Preferred Compound Name: </span><br><span class="nomargin" id="checkrow_cn">-</span><br>
-                                                <span class="spanbold">Status: </span><br><span class="nomargin" id="checkrow_st">-</span><br>
-                                                <span class="spanbold">Smiles: </span><br><span class="nomargin" id="checkrow_sm" style="overflow-wrap: break-word">-</span><br>
+                                            <div class="col-md-4">
+                                                <!--<div class="linespacing"><span class="spanbold">Molecule Chembl ID: </span><br><span class="nomargin" id="checkrow_id">-</span></div>-->
+                                                <div class="linespacing"><span class="spanbold">Status: </span><br><span class="nomargin" id="checkrow_st">-</span></div>
+                                                <div class="linespacing"><span class="spanbold">InChiKey: </span><br><span class="nomargin" id="checkrow_in" style="overflow-wrap: break-word">-</span></div>
+                                                <div class="linespacing"><span class="spanbold">Formula: </span><br><span class="nomargin" id="checkrow_fm">-</span></div>
+                                                <div class="linespacing"><span class="spanbold">Smiles: </span><br><span class="nomargin" id="checkrow_sm" style="overflow-wrap: break-word">-</span></div>
+                                                <div class="linespacing"><span class="spanbold">IUPAC Name: </span><br><span class="nomargin" id="checkrow_db" style="overflow-wrap: break-word">-</span></div>
+                                                <div class="linespacing"><span class="spanbold">Preferred Name: </span><br><span class="nomargin" id="checkrow_cn">-</span></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <span class="spanbold">Molecule Structure 2D: </span><div class="nomargin" id="checkrow_ms">-</div><br>
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
                                                 <span class="spanbold">Molecule Structure 3D: </span><br><div class="nomargin" id="checkrow_ms3d">-</div><br>
                                             </div>
                                         </div>
@@ -421,7 +423,7 @@
                                                 select:         true,
                                                 paging:         true,
                                                 createdRow: function( row, data, dataIndex){
-                                                    if( data[2] ==  'active'){
+                                                    if( data[3] ==  'active'){
                                                         $(row).addClass('redClass');
                                                     }
                                                 }
@@ -440,12 +442,13 @@
                                                     // Output form data to a console
                                                     var uniprotid = Object.values($(this))[0];
                                                     $('#checkrow').text(uniprotid.cells[0].innerText);
-                                                    $('#checkrow').attr('onclick', 'window.open("xxx")');
+                                                    //$('#checkrow').attr('onclick', 'window.open("xxx")');
                                                     $('#checkrow_id').text(uniprotid.cells[0].innerText);
                                                     $('#checkrow_in').text(uniprotid.cells[1].innerText);
-                                                    $('#checkrow_cn').text(uniprotid.cells[2].innerText);
+                                                    $('#checkrow_fm').text(uniprotid.cells[2].innerText);
                                                     $('#checkrow_st').text(uniprotid.cells[3].innerText);
                                                     $('#checkrow_sm').text(uniprotid.cells[9].innerText);
+                                                    $('#checkrow_cn').text(uniprotid.cells[10].innerText);
                                                     $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px; backgroundor: #e3e4e6' src='https://www.ebi.ac.uk/chembl/api/data/image/"+uniprotid.cells[0].innerText+"'>");
 
                                                     $.ajax({
@@ -459,11 +462,13 @@
 
                                                               //$('#checkrow_ms').text(data.result);
 
-                                                              var cidthis = data.result;
+                                                              console.log(data.result);
+
+                                                              var cidthis = data.result[0];
+                                                              var namethis = data.result[1];
 
                                                               <!--var options = {};-->
-                                                              <!--options['background'] = 'grey';-->
-                                                              <!--options['autorotation'] = 'right';-->
+                                                              <!--options['background'] = 'white';-->
 
                                                               <!--//Options are available at: https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html#DisplayOptions-->
                                                               <!--//options['proteins'] = 'sphere';-->
@@ -471,7 +476,7 @@
                                                               <!--var cfg = {-->
                                                                   <!--divid: 'checkrow_ms3d',-->
                                                                   <!--width: 'auto',-->
-                                                                  <!--height: 'auto',-->
+                                                                  <!--height: '350',-->
                                                                   <!--resize: true,-->
                                                                   <!--rotate: 'right',-->
                                                                   <!--mobilemenu: true,-->
@@ -488,11 +493,10 @@
                                                               <!--$.when(icn3dui.show3DStructure()).then(function() {-->
                                                                    <!--//icn3dui.setOption('color', 'cyan');-->
                                                                    <!--icn3dui.rotStruc('right');-->
-                                                                   <!--icn3dui.rotStruc('right');-->
-                                                                   <!--icn3dui.resizeCanvas('auto', '400px');-->
                                                               <!--});-->
 
-                                                              $('#checkrow_ms3d').html('<iframe src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html?cid='+cidthis+'&width=auto&height=350&showcommand=0&showmenu=0&mobilemenu=0&showtitle=0&resize=1&rotate=right" width="100%" height="350px" style="border:none; background-color: black;"></iframe>');
+                                                              $('#checkrow_ms3d').html('<iframe src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html?cid='+cidthis+'&width=auto&height=350&showcommand=0&showmenu=0&mobilemenu=0&showtitle=0&resize=1&rotate=right" width="100%" height="350px" style="border:1px; background-color: black; overflow: hidden; border-radius: 20px;"></iframe>');
+                                                              $('#checkrow_db').text(namethis);
                                                         }
                                                     });
                                                 }
@@ -519,6 +523,75 @@
                             <div id="collapse_pacmodel" class="vizinfo panel-collapse collapse">
                                 Potential Active Compound Model is a prediction model that analyzes on interaction data between targets and compounds to find any significant indicators that can help predict the outcome. Each compound is calculated for a Pubchem fingerprint, which contains 881 chemical fingerprints. RBPro uses Random Forest to fit and classify these features to get the ranking of the fingerprints, and generate the prediction model along with its evaluation. <a href="https://www.researchgate.net/publication/338674245_Prediction_models" target="_blank">[ref]</a>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6" id="elimination">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">Cross Validation Score with Different Number of Features</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_eliminationgraph"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_eliminationgraph" class="vizinfo panel-collapse collapse">
+                                        The visualization is a part of feature optimization. It determines that at what amount of features that the model will be able to perform at its best. It is done by fitting the dataset to the model and recording the cross validation score for each n amount of features. Ultimately, the score of each amount of features is plotted on the y-axis, and the amount of features is on the x-axis.
+                                    </div>
+                                    <div class="chart" id="eliminationgraph">
+                                        <script>
+                                            var graphs = {{elimination | safe}};
+                                            Plotly.plot('eliminationgraph', graphs,{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('eliminationgraph'); });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="importance">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">Feature Importance of Random Forest Classifier</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_importancegraph"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_importancegraph" class="vizinfo panel-collapse collapse">
+                                        In tree classifiers such as Random Forest, one of the measurements is impurity. For Random Forest, the decrease  in impurity after each feature is added can be averaged and the features are ranked according to the calculated impurity.
+                                    </div>
+                                    <div class="chart" id="importancegraph">
+                                        <script>
+                                            var graphs = {{importance | safe}};
+                                            Plotly.plot('importancegraph', graphs,{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('importancegraph'); });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6" id="stat">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">Model Evaluation</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_statdata"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_statdata" class="vizinfo panel-collapse collapse">
+                                        The model evaluation is the statistical valued measure the performance of the model in training and testing data. There are many important values that help explain how well the model is. The user can use those values to evaluate the performance of the fingerprint features.
+                                    </div>
+                                    <div class="chart" id="statgraph">
+                                        <script>
+                                            var stat = '{{statvalue | safe}}';
+                                            document.getElementById('statgraph').innerHTML = '<div class="stat">'+stat+'</div>';
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="roccurve">
+                                    <div class="vizhead">
+                                        <h6 class="headpathwaydb">ROC Curve</h6>
+                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_roccurvegraph"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div id="collapse_roccurvegraph" class="vizinfo panel-collapse collapse">
+                                        ROC Curve is a graph visualization that describes classifying or predicting performance on a model by plotting True Positive Rate (TPR) on the y-axis, and False Positive Rate (FPR) on the x-axis. The plotting can be done multiple times given the size of the dataset by plotting TPR against FPR at multiple threshold settings. The more threshold settings the more detailed the ROC curve becomes. <a href="https://www.researchgate.net/publication/336120227_Use_of_the_ROC_curves_for_the_evaluation_of_the_Guillain-Barre_pdf" target="_blank">[ref]</a>
+                                    </div>
+                                    <div class="chart" id="roccurvegraph">
+                                        <script>
+                                            var graphs = {{roccurve | safe}};
+                                            Plotly.plot('roccurvegraph', graphs,{});
+                                            window.addEventListener('resize', function() { Plotly.Plots.resize('roccurvegraph'); });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
                             <div class="vizhead">
                                 <h6 class="headpathwaydb">Confusion Matrix</h6>
                                 <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_confusionmatrix"><i class="fas fa-info-circle"></i></a>
@@ -555,74 +628,36 @@
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-6" id="stat">
-                                    <div class="vizhead">
-                                        <h6 class="headpathwaydb">Model Evaluation</h6>
-                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_statdata"><i class="fas fa-info-circle"></i></a>
-                                    </div>
-                                    <div id="collapse_statdata" class="vizinfo panel-collapse collapse">
-                                        The model evaluation is the statistical valued measure the performance of the model in training and testing data. There are many important values that help explain how well the model is. The user can use those values to evaluate the performance of the fingerprint features.
-                                    </div>
-                                    <div class="chart" id="statgraph">
-                                        <script>
-                                            var stat = '{{statvalue | safe}}';
-                                            document.getElementById('statgraph').innerHTML = '<p class="stat">'+stat+'</p>';
-                                        </script>
-                                    </div>
-                                </div>
-                                <div class="col-md-6" id="roccurve">
-                                    <div class="vizhead">
-                                        <h6 class="headpathwaydb">ROC Curve</h6>
-                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_roccurvegraph"><i class="fas fa-info-circle"></i></a>
-                                    </div>
-                                    <div id="collapse_roccurvegraph" class="vizinfo panel-collapse collapse">
-                                        ROC Curve is a graph visualization that describes classifying or predicting performance on a model by plotting True Positive Rate (TPR) on the y-axis, and False Positive Rate (FPR) on the x-axis. The plotting can be done multiple times given the size of the dataset by plotting TPR against FPR at multiple threshold settings. The more threshold settings the more detailed the ROC curve becomes. <a href="https://www.researchgate.net/publication/336120227_Use_of_the_ROC_curves_for_the_evaluation_of_the_Guillain-Barre_pdf" target="_blank">[ref]</a>
-                                    </div>
-                                    <div class="chart" id="roccurvegraph">
-                                        <script>
-                                            var graphs = {{roccurve | safe}};
-                                            Plotly.plot('roccurvegraph', graphs,{});
-                                            window.addEventListener('resize', function() { Plotly.Plots.resize('roccurvegraph'); });
-                                        </script>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="viz page-section" id="prediction">
+                            <div class="vizhead">
+                                <h6 class="sub_heading">Potential Active Compound Prediction</h6>
+                                <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_prediction"><i class="fas fa-info-circle"></i></a>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-6" id="elimination">
-                                    <div class="vizhead">
-                                        <h6 class="headpathwaydb">Cross Validation Score with Different Number of Features</h6>
-                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_eliminationgraph"><i class="fas fa-info-circle"></i></a>
+                            <div id="collapse_prediction" class="vizinfo panel-collapse collapse">
+                                Potential Active Compound Model is a prediction model that analyzes on interaction data between targets and compounds to find any significant indicators that can help predict the outcome. Each compound is calculated for a Pubchem fingerprint, which contains 881 chemical fingerprints. RBPro uses Random Forest to fit and classify these features to get the ranking of the fingerprints, and generate the prediction model along with its evaluation. <a href="https://www.researchgate.net/publication/338674245_Prediction_models" target="_blank">[ref]</a>
+                            </div>
+                            <div>
+                                <div class="textleft">Please input the list of compound to predict in InChiKey format (.csv)</div>
+                                <form class="form" action="http://localhost:5000/compoundpredict" method="POST" target="_blank" enctype="multipart/form-data">
+                                    <div class="custom-file textleft">
+                                        <input type="file" class="fileupload custom-file-input" id="upload" name="upload" accept=".csv">
+                                        <label class="custom-file-label" for="upload">Choose file</label>
                                     </div>
-                                    <div id="collapse_eliminationgraph" class="vizinfo panel-collapse collapse">
-                                        The visualization is a part of feature optimization. It determines that at what amount of features that the model will be able to perform at its best. It is done by fitting the dataset to the model and recording the cross validation score for each n amount of features. Ultimately, the score of each amount of features is plotted on the y-axis, and the amount of features is on the x-axis.
+                                    <div>
+                                        <br>
                                     </div>
-                                    <div class="chart" id="eliminationgraph">
-                                        <script>
-                                            var graphs = {{elimination | safe}};
-                                            Plotly.plot('eliminationgraph', graphs,{});
-                                            window.addEventListener('resize', function() { Plotly.Plots.resize('eliminationgraph'); });
-                                        </script>
-                                    </div>
-                                </div>
-                                <div class="col-md-6" id="importance">
-                                    <div class="vizhead">
-                                        <h6 class="headpathwaydb">Feature Importance of Random Forest Classifier</h6>
-                                        <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_importancegraph"><i class="fas fa-info-circle"></i></a>
-                                    </div>
-                                    <div id="collapse_importancegraph" class="vizinfo panel-collapse collapse">
-                                        In tree classifiers such as Random Forest, one of the measurements is impurity. For Random Forest, the decrease  in impurity after each feature is added can be averaged and the features are ranked according to the calculated impurity.
-                                    </div>
-                                    <div class="chart" id="importancegraph">
-                                        <script>
-                                            var graphs = {{importance | safe}};
-                                            Plotly.plot('importancegraph', graphs,{});
-                                            window.addEventListener('resize', function() { Plotly.Plots.resize('importancegraph'); });
-                                        </script>
-                                    </div>
-                                </div>
+                                    <input type="hidden" id="hiddenfilenametarget" name="hiddenfilenametarget" value="{{filename | safe}}">
+                                    <input type="hidden" id="hiddentarget" name="hiddentarget" value="{{target | safe}}">
+                                    <button type="submit" class="btn2" id="predictsubmit"><i class="fa fa-vial"></i> Predict</button>
+                                    <script>
+                                        // Add the following code if you want the name of the file appear on select
+                                        $(".custom-file-input").on("change", function() {
+                                          var fileName = $(this).val().split("\\").pop();
+                                          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                                        });
+                                    </script>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -848,7 +848,12 @@
                                                     fixedColumns:   {leftColumns: 2},
                                                     colReorder:     true,
                                                     dom:            'Bfrtip',
-                                                    buttons:        ['colvis','csvHtml5','pdfHtml5']
+                                                    buttons:        ['colvis','csvHtml5','pdfHtml5'],
+                                                    createdRow: function( row, data, dataIndex){
+                                                        if(data[7] !=  '-' && data[10] !=  '-' && data[13] !=  '-'){
+                                                            $(row).addClass('orangeClass');
+                                                        }
+                                                    }
                                                 });
                                                 $('#table_div_Up').on( 'click', 'tr', function () {
                                                     if ( $(this).hasClass('selected') ) {
@@ -924,7 +929,12 @@
                                                     fixedColumns:   {leftColumns: 2},
                                                     colReorder:     true,
                                                     dom:            'Bfrtip',
-                                                    buttons:        ['colvis','csvHtml5','pdfHtml5']
+                                                    buttons:        ['colvis','csvHtml5','pdfHtml5'],
+                                                    createdRow: function( row, data, dataIndex){
+                                                        if(data[7] !=  '-' && data[10] !=  '-' && data[13] !=  '-'){
+                                                            $(row).addClass('orangeClass');
+                                                        }
+                                                    }
                                                 } );
                                                 $('#table_div_Down').on( 'click', 'tr', function () {
                                                     if ( $(this).hasClass('selected') ) {

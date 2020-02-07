@@ -1,4 +1,6 @@
 # import numpy as np
+import pickle
+
 import pandas as pd
 from time import time
 # import matplotlib.pyplot as plt
@@ -9,6 +11,8 @@ import math
 
 import logging
 import requests
+from werkzeug.utils import secure_filename
+
 logging.getLogger("requests").setLevel(logging.ERROR)
 import xml.etree.ElementTree as ET
 # from tqdm import tqdm
@@ -63,7 +67,8 @@ from sklearn.decomposition import PCA
 from sklearn.model_selection import StratifiedShuffleSplit
 from imblearn.combine import SMOTEENN
 import shutil
-
+import re
+from flask import request
 from biothings_client import get_client
 
 # Application
@@ -284,6 +289,10 @@ def getBioActs(filename, uniID):
 
     response = ""
     allgraph = []
+
+    if os.path.exists(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)):
+        response = 'ok'
+        return response
 
     pd.options.mode.chained_assignment = None
 
@@ -552,6 +561,7 @@ def RO5(filename, uniID):
     nHAcc = [Descriptors.NumHAcceptors(p) for p in mols]
     nHDon = [Descriptors.NumHDonors(q) for q in mols]
     stdInChiKey = [ast.literal_eval(k)['standard_inchi_key'] for k in df['molecule_structures']]
+    formula = [ast.literal_eval(k)['full_molformula'] for k in df['molecule_properties']]
     smiles = df['canonical_smiles']
     preferredCompoundName = []
     for i in df['molecule_pref_name']:
@@ -563,16 +573,18 @@ def RO5(filename, uniID):
     data = pd.DataFrame(
         {'molecule_chembl_id': ID,
          'stdInChiKey': stdInChiKey,
-         'preferredCompoundName': preferredCompoundName,
+         'formula': formula,
          'STATUS': df.STATUS,
          'pIC50': pIC50,
          'MW': MW,
          'LogP': LogP,
          'nHAcc': nHAcc,
          'nHDon': nHDon,
-         'smiles': smiles
+         'smiles': smiles,
+         'preferredCompoundName': preferredCompoundName
          })
-    data = data[['molecule_chembl_id', 'stdInChiKey', 'preferredCompoundName', 'STATUS', 'pIC50', 'MW', 'LogP', 'nHAcc', 'nHDon', 'smiles']]
+    data = data[['molecule_chembl_id', 'stdInChiKey', 'formula', 'STATUS', 'pIC50', 'MW', 'LogP', 'nHAcc', 'nHDon', 'smiles', 'preferredCompoundName']]
+
 
     data.to_csv(os.path.join(path, 'IC50_RO5.csv'), sep=',', index=False)
 
@@ -583,43 +595,43 @@ def RO5(filename, uniID):
                         shared_yaxes=True)
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'active'].MW, y=data[data.STATUS == 'active'].pIC50, mode='markers',
-                   marker_color='#ff3030'),
+                   marker_color='#ff3030', name='active'),
         row=1, col=1
     )
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'inactive'].MW, y=data[data.STATUS == 'inactive'].pIC50, mode='markers',
-                   marker_color='#00bfff'),
+                   marker_color='#00bfff', name='inactive'),
         row=1, col=1
     )
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'active'].LogP, y=data[data.STATUS == 'active'].pIC50, mode='markers',
-                   marker_color='#ff3030'),
+                   marker_color='#ff3030', name='active'),
         row=1, col=2
     )
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'inactive'].LogP, y=data[data.STATUS == 'inactive'].pIC50, mode='markers',
-                   marker_color='#00bfff'),
+                   marker_color='#00bfff', name='inactive'),
         row=1, col=2
     )
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'active'].nHAcc, y=data[data.STATUS == 'active'].pIC50, mode='markers',
-                   marker_color='#ff3030'),
+                   marker_color='#ff3030', name='active'),
         row=1, col=3
     )
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'inactive'].nHAcc, y=data[data.STATUS == 'inactive'].pIC50, mode='markers',
-                   marker_color='#00bfff'),
+                   marker_color='#00bfff', name='inactive'),
         row=1, col=3
     )
 
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'active'].nHDon, y=data[data.STATUS == 'active'].pIC50, mode='markers',
-                   marker_color='#ff3030'),
+                   marker_color='#ff3030', name='active'),
         row=1, col=4
     )
     fig.add_trace(
         go.Scatter(x=data[data.STATUS == 'inactive'].nHDon, y=data[data.STATUS == 'inactive'].pIC50, mode='markers',
-                   marker_color='#00bfff'),
+                   marker_color='#00bfff', name='inactive'),
         row=1, col=4
     )
     fig['layout']['xaxis1'].update(title='MW (daltons)')
@@ -890,7 +902,8 @@ def fit_ml_algo(algo, X_train, y_train, X_test, y_test, cv, path):
     fig.layout.update({'height':300, 'margin':{'l':10, 'r':10, 't':50, 'b':80}})
     fig.layout.yaxis.update({'title': 'Actual'})
     fig.layout.xaxis.update({'title': 'Predicted'})
-    fig.layout.annotations = [{'x': 0.5, 'y': -0.5, 'text': 'Confusion matrix Training<br>Sensitivity: '+str(Sensitivity)+'<br>Specificity: '+ str(Specificity), 'showarrow': False, 'xref': "paper", 'yref': "paper"},
+    fig.layout.annotations = [{'x': 0.5, 'y': -0.4, 'text': '<b>Confusion matrix Training</b><br>Sensitivity: '+str(
+        Sensitivity)+'<br>Specificity: '+ str(Specificity), 'showarrow': False, 'xref': "paper", 'yref': "paper"},
                               {'x':'Positive', 'y':'Negative', 'text': 'FN<br>'+str(fn), 'showarrow':False},
                               {'x':'Positive', 'y':'Positive', 'text': 'TP<br>'+str(tp), 'showarrow':False},
                               {'x':'Negative', 'y':'Negative', 'text': 'TN<br>'+str(tn), 'showarrow':False},
@@ -917,7 +930,8 @@ def fit_ml_algo(algo, X_train, y_train, X_test, y_test, cv, path):
     fig.layout.update({'height':300, 'margin':{'l':10, 'r':10, 't':50, 'b':80}})
     fig.layout.yaxis.update({'title': 'Actual'})
     fig.layout.xaxis.update({'title': 'Predicted'})
-    fig.layout.annotations = [{'x': 0.5, 'y': -0.5, 'text': 'Confusion matrix CV<br>Sensitivity: '+str(Sensitivity)+'<br>Specificity: '+ str(Specificity), 'showarrow': False, 'xref': "paper", 'yref': "paper"},
+    fig.layout.annotations = [{'x': 0.5, 'y': -0.4, 'text': '<b>Confusion matrix CV</b><br>Sensitivity: '+str(
+        SensitivityCV)+'<br>Specificity: '+ str(SpecificityCV), 'showarrow': False, 'xref': "paper", 'yref': "paper"},
                               {'x':'Positive', 'y':'Negative', 'text': 'FN<br>'+str(fn), 'showarrow':False},
                               {'x':'Positive', 'y':'Positive', 'text': 'TP<br>'+str(tp), 'showarrow':False},
                               {'x':'Negative', 'y':'Negative', 'text': 'TN<br>'+str(tn), 'showarrow':False},
@@ -944,8 +958,8 @@ def fit_ml_algo(algo, X_train, y_train, X_test, y_test, cv, path):
     fig.layout.update({'height': 300, 'margin': {'l': 10, 'r': 10, 't': 50, 'b': 80}})
     fig.layout.yaxis.update({'title': 'Actual'})
     fig.layout.xaxis.update({'title': 'Predicted'})
-    fig.layout.annotations = [{'x': 0.5, 'y': -0.5, 'text': 'Confusion matrix Testing<br>Sensitivity: ' + str(
-        Sensitivity) + '<br>Specificity: ' + str(Specificity), 'showarrow': False, 'xref': "paper", 'yref': "paper"},
+    fig.layout.annotations = [{'x': 0.5, 'y': -0.4, 'text': '<b>Confusion matrix Testing</b><br>Sensitivity: ' + str(
+        SensitivityTr) + '<br>Specificity: ' + str(SpecificityTr), 'showarrow': False, 'xref': "paper", 'yref': "paper"},
                               {'x': 'Positive', 'y': 'Negative', 'text': 'FN<br>'+str(fn), 'showarrow': False},
                               {'x': 'Positive', 'y': 'Positive', 'text': 'TP<br>'+str(tp), 'showarrow': False},
                               {'x': 'Negative', 'y': 'Negative', 'text': 'TN<br>'+str(tn), 'showarrow': False},
@@ -1233,15 +1247,15 @@ def RFC(X_train, y_train, X_test, y_test, path, Fp_name, data2):
      SpeTr_PC) = fit_ml_algo(rfc, X_train, y_train, X_test, y_test, 10, path)
 
     # save the model to disk
-    uniID = path.replace('dataset\\', '')
-    uniID = uniID.replace('\\', '')
-    filename = Fp_name + '_RF_model.sav'
+    # uniID = path.replace('dataset\\', '')
+    # uniID = uniID.replace('\\', '')
+    filenameX = Fp_name + '_RF_model.sav'
     # Making Directory
-    if not os.path.exists(os.path.join(path, 'model')):
-        os.makedirs(os.path.join(path, 'model'))
-    newpath = os.path.join(path, 'model')
-    pickle.dump(rfc, open(os.path.join(newpath, uniID + '_' +filename), 'wb'))
-    # pickle.dump(rfc, open(os.path.join(path, uniID + '_' +filename), 'wb'))
+    # if not os.path.exists(os.path.join(path, 'model')):
+    #     os.makedirs(os.path.join(path, 'model'))
+    # newpath = os.path.join(path, 'model')
+    # pickle.dump(rfc, open(os.path.join(newpath, '_' +filenameX), 'wb'))
+    pickle.dump(rfc, open(os.path.join(path, filenameX), 'wb'))
 
 
 
@@ -1264,14 +1278,58 @@ def RFC(X_train, y_train, X_test, y_test, path, Fp_name, data2):
     print('Classification report: Training set')
     print(metrics.classification_report(y_train, train_pred_PC))
 
-    classifyreport.append('<b class="stattitle">Classification-Report: Training-set</b>')
-    classifyreport.append(metrics.classification_report(y_train, train_pred_PC))
+    classifyreport.append('<b class="stattitle">Classification-Report: Training-set</b><br>')
+    metrics_train = str(metrics.classification_report(y_train, train_pred_PC))
+    mtrain = metrics_train.split()
+    table_train = '<table class="tablet">' \
+                  ' <tr>' \
+                  '     <th></th><th>'+mtrain[0]+'</th><th>'+mtrain[1]+'</th><th>'+mtrain[2]+'</th><th>'+mtrain[3]+'</th>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtrain[4]+'</td><td>'+mtrain[5]+'</td><td>'+mtrain[6]+'</td><td>'+mtrain[7]+'</td><td>'+mtrain[8]+'</td>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtrain[9]+'</td><td>'+mtrain[10]+'</td><td>'+mtrain[11]+'</td><td>'+mtrain[12]+'</td><td>'+mtrain[13]+'</td>' \
+                  ' </tr>'\
+                  ' <tr>' \
+                  '     <td>'+mtrain[14]+'</td><td></td><td></td><td>'+mtrain[15]+'</td><td>'+mtrain[16]+'</td>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtrain[17]+' '+mtrain[18]+'</td><td>'+mtrain[19]+'</td><td>'+mtrain[20]+'</td><td>'+mtrain[21]+'</td><td>'+mtrain[22]+'</td>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtrain[23]+' '+mtrain[24]+'</td><td>'+mtrain[25]+'</td><td>'+mtrain[26]+'</td><td>'+mtrain[27]+'</td><td>'+mtrain[28]+'</td>' \
+                  ' </tr>' \
+                  '</table>'
+    classifyreport.append(table_train)
 
     print('Classification report: Test set')
     print(metrics.classification_report(y_test, test_pred_PC))
 
-    classifyreport.append('<b class="stattitle">Classification-Report: Test-set</b>')
-    classifyreport.append(metrics.classification_report(y_test, test_pred_PC))
+    classifyreport.append('<b class="stattitle">Classification-Report: Test-set</b><br>')
+    metrics_test = str(metrics.classification_report(y_test, test_pred_PC))
+    mtest = metrics_test.split()
+    table_test = '<table class="tablet">' \
+                  ' <tr>' \
+                  '     <th></th><th>'+mtest[0]+'</th><th>'+mtest[1]+'</th><th>'+mtest[2]+'</th><th>'+mtest[3]+'</th>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtest[4]+'</td><td>'+mtest[5]+'</td><td>'+mtest[6]+'</td><td>'+mtest[7]+'</td><td>'+mtest[8]+'</td>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtest[9]+'</td><td>'+mtest[10]+'</td><td>'+mtest[11]+'</td><td>'+mtest[12]+'</td><td>'+mtest[13]+'</td>' \
+                  ' </tr>'\
+                  ' <tr>' \
+                  '     <td>'+mtest[14]+'</td><td></td><td></td><td>'+mtest[15]+'</td><td>'+mtest[16]+'</td>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtest[17]+' '+mtest[18]+'</td><td>'+mtest[19]+'</td><td>'+mtest[20]+'</td><td>'+mtest[21]+'</td><td>'+mtest[22]+'</td>' \
+                  ' </tr>' \
+                  ' <tr>' \
+                  '     <td>'+mtest[23]+' '+mtest[24]+'</td><td>'+mtest[25]+'</td><td>'+mtest[26]+'</td><td>'+mtest[27]+'</td><td>'+mtest[28]+'</td>' \
+                  ' </tr>' \
+                  '</table>'
+    classifyreport.append(table_test)
 
     with open(os.path.join(path, "_statvalue.txt"), "w") as f:
         for s in classifyreport:
@@ -1479,7 +1537,149 @@ def getcompoundinfo(inchikey):
     mc = get_client('chem')
     k = inchikey
     m = mc.query('pubchem.inchi_key:' + k, as_dataframe=True)
-    cid = m['pubchem.cid'].values[0]
-    print(cid)
+    cid = '-'
+    if 'pubchem.cid' in m.columns:
+        cid = m['pubchem.cid'].values[0]
+    iupac = '-'
+    if 'pubchem.iupac.traditional' in m.columns:
+        iupac = m['pubchem.iupac.traditional'].values[0]
+    print(cid, iupac)
 
-    return str(cid)
+    return [str(cid), str(iupac)]
+
+
+def predict(filename, uniID, filecompounds):
+    path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)
+    filename_model = 'IC50_RF_model.sav'
+    filename_feature = 'IC50 Feature Elimination.csv'
+
+    pathfilecompounds = os.path.join(path, 'compoundstest')
+
+    pathmodel = os.path.join(path, filename_model)
+    loaded_model = pickle.load(open(pathmodel, 'rb'))
+    fea_elim = pd.read_csv(os.path.join(path, filename_feature))
+    compoundstest = pd.read_csv(os.path.join(pathfilecompounds, filecompounds))
+    print(compoundstest)
+
+    features = []
+    for col in fea_elim.columns:
+        features.append(col)
+    print(features)
+
+    compoundstest = compoundstest.set_index('Name')
+    compoundstest = compoundstest.filter(features)
+    print(compoundstest)
+
+    y_pred = loaded_model.predict(compoundstest)
+    y_prob = loaded_model.predict_proba(compoundstest)
+
+    y_maxprob = []
+    for i in y_prob.tolist():
+        y_maxprob.append(max(i))
+
+    compoundstest_result = pd.DataFrame()
+    compoundstest_result['Name'] = list(compoundstest.index)
+    compoundstest_result['Status'] = y_pred.tolist()
+    compoundstest_result['Probability'] = y_maxprob
+
+    compoundstest_result.to_csv(os.path.join(pathfilecompounds, "_"+filecompounds+"_Predicted.csv"))
+
+    print(compoundstest_result)
+    graph = predictvisualize(pathfilecompounds, compoundstest_result)
+    return graph
+
+def predictvisualize(pathfilecompounds, compoundstest_result):
+
+    prediction_active = compoundstest_result[compoundstest_result['Status'] == 1]['Status']
+    prediction_inactive = compoundstest_result[compoundstest_result['Status'] == -1]['Status']
+    prediction_total = len(prediction_active)+len(prediction_inactive)
+
+    top_labels = ['Active', 'Inactive']
+    colors = ['#ff3030', '#00bfff']
+    x_data = [[len(prediction_active), len(prediction_inactive)]]
+    y_data = ['Compound']
+
+    fig = go.Figure()
+    for i in range(0, len(x_data[0])):
+        for xd, yd in zip(x_data, y_data):
+            fig.add_trace(go.Bar(
+                x=[xd[i]], y=[yd],
+                orientation='h',
+                marker=dict(
+                    color=colors[i],
+                    line=dict(color='rgb(248, 248, 249)', width=1)
+                ),
+                name=""
+            ))
+
+    fig.update_layout(
+        xaxis=dict(
+            showgrid=False,
+            showline=False,
+            showticklabels=False,
+            zeroline=False,
+            domain=[0.05, 1]
+        ),
+        yaxis=dict(
+            showgrid=False,
+            showline=False,
+            showticklabels=False,
+            zeroline=False
+        ),
+        barmode='stack',
+        paper_bgcolor='#fff',
+        plot_bgcolor='#fff',
+        margin=dict(l=10, r=10, t=50, b=10),
+        showlegend=False
+    )
+
+    annotations = []
+
+    for yd, xd in zip(y_data, x_data):
+
+        # labeling the first percentage of each bar (x_axis)
+        annotations.append(dict(xref='x', yref='y',
+                                x=xd[0] / 2, y=yd,
+                                text=str("{0:.2f}".format(xd[0]/prediction_total*100)) + '%',
+                                font=dict(size=26,
+                                          color='rgb(248, 248, 255)'),
+                                showarrow=False))
+        # labeling the first Likert scale (on the top)
+        if yd == y_data[-1]:
+            annotations.append(dict(xref='x', yref='paper',
+                                    x=xd[0] / 2, y=1.1,
+                                    text=top_labels[0],
+                                    font=dict(size=26,
+                                              color='rgb(67, 67, 67)'),
+                                    showarrow=False))
+        space = xd[0]
+        for i in range(1, len(xd)):
+            # labeling the rest of percentages for each bar (x_axis)
+            annotations.append(dict(xref='x', yref='y',
+                                    x=space + (xd[i] / 2), y=yd,
+                                    text=str("{0:.2f}".format(xd[i]/prediction_total*100)) + '%',
+                                    font=dict(size=26,
+                                              color='rgb(248, 248, 255)'),
+                                    showarrow=False))
+            # labeling the Likert scale
+            if yd == y_data[-1]:
+                annotations.append(dict(xref='x', yref='paper',
+                                        x=space + (xd[i] / 2), y=1.1,
+                                        text=top_labels[i],
+                                        font=dict(size=26,
+                                                  color='rgb(67, 67, 67)'),
+                                        showarrow=False))
+            space += xd[i]
+
+    fig.update_layout(annotations=annotations, height=250)
+    fig.update_yaxes(showticklabels=False)
+
+    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+
+    with open(os.path.join(pathfilecompounds, "_predictionratio.txt"), 'w') as outfile:
+        json.dump(graphJSON, outfile)
+
+    with open(os.path.join(pathfilecompounds, "_predictionratio.txt")) as json_file:
+        graphJSON = json.load(json_file)
+
+    return graphJSON

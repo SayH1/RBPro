@@ -684,8 +684,7 @@ div.coldiv {
 }
 
 .stat {
-    white-space: pre-wrap;
-    text-align-last: justify;
+    text-align-last: left;
     font-size: small;
     padding: 10px;
     background-color: #f8f9fa;
@@ -699,5 +698,23 @@ div.coldiv {
 }
 
 .redClass {
-    background-color: rgba(255, 0, 0, 0.2) !important;
+    background-color: #ffc3c3 !important;
+}
+
+.orangeClass {
+    background-color: #ffe1c8 !important;
+}
+
+.linespacing {
+    margin-bottom: 5px;
+}
+
+.tablet {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.tablet tr th, .tablet tr td  {
+    padding: 0px;
 }

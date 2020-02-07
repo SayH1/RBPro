@@ -305,6 +305,7 @@ def compoundanalysis():
             importance = cm.getimportance(filename, target)
 
             return render_template('/compoundanalysis.html', \
+                                   filename=filename, \
                                    target=target, \
                                    targetname=targetname, \
                                    response=response, \
@@ -345,6 +346,21 @@ def compoundinfo():
     compound = request.args.get('compound', 0, type=str)
     moleculestructure = cm.getcompoundinfo(compound)
     return jsonify(result=moleculestructure)
+
+@server.route('/compoundpredict', methods=['POST', 'GET'])
+def compoundpredict():
+    if request.method == 'POST':
+        targetunidi = request.form.get('hiddentarget')
+        filename = request.form.get('hiddenfilenametarget')
+        file = request.files['upload']
+        compoundfile = secure_filename(file.filename)
+        path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + targetunidi)
+        if not os.path.exists(os.path.join(path, 'compoundstest')):
+            os.makedirs(os.path.join(path, 'compoundstest'))
+        pathfilecompounds = os.path.join(path, 'compoundstest')
+        file.save(os.path.join(pathfilecompounds, compoundfile))
+        prediction = cm.predict(filename, targetunidi, compoundfile)
+        return render_template('/compoundpredict.html', result=prediction)
 
 
 if __name__ == '__main__':

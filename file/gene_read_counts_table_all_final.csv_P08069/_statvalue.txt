@@ -1,0 +1,20 @@
+<b class="stattitle">Classification-Report: Training-set</b>
+              precision    recall  f1-score   support
+
+          -1       1.00      1.00      1.00       309
+           1       1.00      0.99      1.00       143
+
+    accuracy                           1.00       452
+   macro avg       1.00      1.00      1.00       452
+weighted avg       1.00      1.00      1.00       452
+
+<b class="stattitle">Classification-Report: Test-set</b>
+              precision    recall  f1-score   support
+
+          -1       0.76      0.83      0.79       174
+           1       0.80      0.71      0.75       160
+
+    accuracy                           0.77       334
+   macro avg       0.78      0.77      0.77       334
+weighted avg       0.77      0.77      0.77       334
+
