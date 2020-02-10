@@ -632,7 +632,7 @@ button[disabled]{
     margin: 0px;
 }
 
-#table_div_Up, #table_div_Down, #tablecompound_div {
+#table_div_Up, #table_div_Down, #tablecompound_div, #tablepredict_div {
     cursor: pointer;
 }
 

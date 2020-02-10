@@ -1550,16 +1550,62 @@ def getcompoundinfo(inchikey):
 
 def predict(filename, uniID, filecompounds):
     path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)
-    filename_model = 'IC50_RF_model.sav'
-    filename_feature = 'IC50 Feature Elimination.csv'
 
     pathfilecompounds = os.path.join(path, 'compoundstest')
+
+    if os.path.exists(os.path.join(pathfilecompounds, "_"+filecompounds+"_Predicted.csv")):
+        compoundstest_result = pd.read_csv(os.path.join(pathfilecompounds, "_" + filecompounds + "_Predicted.csv"))
+        graph = predictvisualize(pathfilecompounds, compoundstest_result)
+        return graph
+
+    com = pd.read_csv(os.path.join(pathfilecompounds, filecompounds))
+    print(com)
+
+    duplicateRowsDF = com[com.duplicated()]
+    com = com.drop_duplicates(subset="InChIKey", keep='first', inplace=False)
+    com['InChIKey'].replace('', np.nan, inplace=True)
+    com.dropna(subset=['InChIKey'], inplace=True)
+    if not duplicateRowsDF.empty:
+        print("Duplicate Keys: " + duplicateRowsDF)
+
+    keys = ''
+    count = 0
+    df = pd.DataFrame()
+    for i in com['InChIKey']:
+        keys = keys + str(i) + ","
+        count = count + 1
+        if (count % 100) == 0 or count == len(com['InChIKey']):
+            keys = keys[:-1]
+            # /inchikey,CanonicalSMILES,IsomericSMILES,Fingerprint2D request parameters
+            resp = requests.get(
+                'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/' + keys + '/property/inchikey,CanonicalSMILES,IsomericSMILES/JSON')
+            if resp.status_code != 200:
+                # This means something went wrong.
+                print("Error: " + str((resp.status_code)))
+            keys = ''
+            res = resp.json()
+            for i in res.values():
+                for j in i.values():
+                    temp = pd.DataFrame(j)
+            df = df.append(temp)
+
+    df = df.rename(columns={'CanonicalSMILES': 'canonical_smiles', 'IsomericSMILES': 'isomeric_smiles'})
+    print(df.columns)
+    df = clean_smiles(df)
+
+    df2 = df[['SMILES_desalt', 'InChIKey']]
+    df2.to_csv(os.path.join(pathfilecompounds, filecompounds + '_test.smi'), sep='\t', header=False, index=False)
+
+    padeldescriptor(mol_dir=os.path.join(pathfilecompounds, filecompounds + '_test.smi'), d_file=os.path.join(pathfilecompounds, filecompounds + '_test.csv'), fingerprints=True, threads=6,
+                    retainorder=True, maxruntime=10000)
+
+    compoundstest = pd.read_csv(os.path.join(pathfilecompounds, filecompounds + '_test.csv'))
+    filename_model = 'IC50_RF_model.sav'
+    filename_feature = 'IC50 Feature Elimination.csv'
 
     pathmodel = os.path.join(path, filename_model)
     loaded_model = pickle.load(open(pathmodel, 'rb'))
     fea_elim = pd.read_csv(os.path.join(path, filename_feature))
-    compoundstest = pd.read_csv(os.path.join(pathfilecompounds, filecompounds))
-    print(compoundstest)
 
     features = []
     for col in fea_elim.columns:
@@ -1647,7 +1693,7 @@ def predictvisualize(pathfilecompounds, compoundstest_result):
         # labeling the first Likert scale (on the top)
         if yd == y_data[-1]:
             annotations.append(dict(xref='x', yref='paper',
-                                    x=xd[0] / 2, y=1.1,
+                                    x=xd[0] / 2, y=1.2,
                                     text=top_labels[0],
                                     font=dict(size=26,
                                               color='rgb(67, 67, 67)'),
@@ -1664,14 +1710,14 @@ def predictvisualize(pathfilecompounds, compoundstest_result):
             # labeling the Likert scale
             if yd == y_data[-1]:
                 annotations.append(dict(xref='x', yref='paper',
-                                        x=space + (xd[i] / 2), y=1.1,
+                                        x=space + (xd[i] / 2), y=1.2,
                                         text=top_labels[i],
                                         font=dict(size=26,
                                                   color='rgb(67, 67, 67)'),
                                         showarrow=False))
             space += xd[i]
 
-    fig.update_layout(annotations=annotations, height=250)
+    fig.update_layout(annotations=annotations, height=200)
     fig.update_yaxes(showticklabels=False)
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
@@ -1683,3 +1729,83 @@ def predictvisualize(pathfilecompounds, compoundstest_result):
         graphJSON = json.load(json_file)
 
     return graphJSON
+
+
+def predictiontable(filename, uniID, filenamecompound):
+
+    path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)
+    pathfilecompounds = os.path.join(path, 'compoundstest')
+
+    df = pd.read_csv(os.path.join(pathfilecompounds, "_"+filenamecompound+"_Predicted.csv"))
+    df = df.sort_values(by=['Status', 'Probability'], ascending=False)
+    df = df.iloc[:, 1:]
+
+    html = """<table id="tablepredict_div" class="table display">
+        <thead>
+            <tr>"""
+    i = 0
+    for header in df.columns.values:
+        html += "<th>" + header + "</th>"
+    html += """</tr>
+        </thead>
+    </table>"""
+
+    return html
+
+def create_datapredict(filename, uniID, filenamecompound):
+
+    path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)
+    pathfilecompounds = os.path.join(path, 'compoundstest')
+
+    df = pd.read_csv(os.path.join(pathfilecompounds, "_"+filenamecompound+"_Predicted.csv"))
+    df = df.sort_values(by=['Status', 'Probability'], ascending=False)
+    df = df.iloc[:, 1:]
+    df['Status'] = df['Status'].replace({1: 'active', -1: 'inactive'})
+
+
+    Row_list = []
+
+    # Iterate over each row
+    for index, rows in df.iterrows():
+        # append the list to the final list
+        Row_list.append(list(rows.values))
+
+    with open(os.path.join(pathfilecompounds, "_"+filenamecompound+"_datapredict.txt"), "w") as f:
+        for s in Row_list:
+            f.write(str(s) + "\n")
+
+    Row_list = []
+    with open(os.path.join(pathfilecompounds, "_"+filenamecompound+"_datapredict.txt"), "r") as f:
+        for line in f:
+            Row_list.append(ast.literal_eval(line))
+
+
+    return Row_list
+
+
+def getcompoundinfopredict(inchikey):
+    mc = get_client('chem')
+    k = inchikey
+    m = mc.query('pubchem.inchi_key:' + k, as_dataframe=True)
+    cid = '-'
+    if 'pubchem.cid' in m.columns:
+        cid = m['pubchem.cid'].values[0]
+    iupac = '-'
+    if 'pubchem.iupac.traditional' in m.columns:
+        iupac = m['pubchem.iupac.traditional'].values[0]
+    formula = '-'
+    if 'pubchem.molecular_formula' in m.columns:
+        formula = m['pubchem.molecular_formula'].values[0]
+    smiles = '-'
+    if 'pubchem.smiles.canonical' in m.columns:
+        smiles = m['pubchem.smiles.canonical'].values[0]
+    else:
+        smiles = m['pubchem.smiles.isomeric'].values[0]
+    prefname = '-'
+    if 'chembl.pref_name' in m.columns:
+        prefname = m['chembl.pref_name'].values[0]
+    chemblid = '-'
+    if 'chembl.molecule_chembl_id' in m.columns:
+        chemblid = m['chembl.molecule_chembl_id'].values[0]
+
+    return [str(cid), str(iupac), str(formula), str(smiles), str(prefname), str(chemblid)]

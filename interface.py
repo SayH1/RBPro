@@ -347,20 +347,39 @@ def compoundinfo():
     moleculestructure = cm.getcompoundinfo(compound)
     return jsonify(result=moleculestructure)
 
+@server.route('/compoundinfopredict')
+def compoundinfopredict():
+    compound = request.args.get('compound', 0, type=str)
+    moleculestructure = cm.getcompoundinfopredict(compound)
+    return jsonify(result=moleculestructure)
+
+
 @server.route('/compoundpredict', methods=['POST', 'GET'])
 def compoundpredict():
     if request.method == 'POST':
-        targetunidi = request.form.get('hiddentarget')
+        targetuniid = request.form.get('hiddentarget')
+        targetdetail = cm.gettargetdetail(targetuniid)
+        targetname = request.form.get('hiddentargetname')
         filename = request.form.get('hiddenfilenametarget')
         file = request.files['upload']
         compoundfile = secure_filename(file.filename)
-        path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + targetunidi)
+        path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + targetuniid)
         if not os.path.exists(os.path.join(path, 'compoundstest')):
             os.makedirs(os.path.join(path, 'compoundstest'))
         pathfilecompounds = os.path.join(path, 'compoundstest')
         file.save(os.path.join(pathfilecompounds, compoundfile))
-        prediction = cm.predict(filename, targetunidi, compoundfile)
-        return render_template('/compoundpredict.html', result=prediction)
+        prediction = cm.predict(filename, targetuniid, compoundfile)
+
+        tablepredict = cm.predictiontable(filename, targetuniid, compoundfile)
+        datapredict = cm.create_datapredict(filename, targetuniid, compoundfile)
+
+        return render_template('/compoundpredict.html', \
+                               target=targetuniid, \
+                               targetname=targetname, \
+                               targetdetail=targetdetail, \
+                               result=prediction, \
+                               tablepredict=tablepredict, \
+                               datapredict=datapredict)
 
 
 if __name__ == '__main__':

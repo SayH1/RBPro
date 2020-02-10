@@ -53,12 +53,180 @@
     <div class="maindiv">
         <div class="coldiv_step">
             <h4 class="h6_heading"><i class="fas fa-scroll"></i> Prediction Results</h4>
-            <div class="chart" id="predictionratio">
+            <div style="margin-left: 80px; margin-right: 60px">
+                <div class="vizhead">
+                    <h6 class="sub_heading">Target Infomation</h6>
+                    <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_targetinfo"><i class="fas fa-info-circle"></i></a>
+                </div>
+                <div id="collapse_targetinfo" class="vizinfo panel-collapse collapse">
+                    Target Information shows the important details of the selected protein target. That information is retrieved from the Uniport API which provides many useful resources and related knowledge for many protein substances. The information shown in this part includes the target id and name, target’s function, target’s subunit, target’s similarity, and the reference URL. Those information are meaningful for the researcher to analyse potential targets in case the target doesn’t exist to the Chembl database and results in no associated compounds so the research can track back to the target’s family to further observe the new targets.
+                </div>
+                <div class="areasomething">
+                    <div class="row">
+                        <div class="col-md-5 textleft">
+                            <p><span class="uniprotid" style="color: black">{{target | safe}}</span></p>
+                            <p> {{targetname | safe}}</p>
+                        </div>
+                        <div class="col-md-7 textleft" id="targetinfo">
+                            <script>
+                                var targetdetail = {{targetdetail | safe}};
+                                var target = '{{target | safe}}';
+                                document.getElementById('targetinfo').innerHTML = '<p><b>Function</b>: '+targetdetail['Function']+'</p>'
+                                document.getElementById('targetinfo').innerHTML += '<p><b>Subunit</b>: '+targetdetail['Subunit']+'</p>'
+                                document.getElementById('targetinfo').innerHTML += '<p><b>Similarity</b>: '+targetdetail['Similarity']+'</p>'
+                                document.getElementById('targetinfo').innerHTML += '<p><b>Uniprot URL</b>: <a href="https://www.uniprot.org/uniprot/'+target+'" target="_blank">'+target+'<i class="fas fa-link"></i></a></p>'
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="chart" id="predictionratio">
+                    <script>
+                        var graphs = {{result | safe}};
+                        Plotly.plot('predictionratio', graphs,{});
+                        window.addEventListener('resize', function() { Plotly.Plots.resize('predictionratio'); });
+                    </script>
+                </div>
+            </div>
+            <div style="margin-left: 80px; margin-right: 60px">
+                <div class="vizhead">
+                    <h6 class="sub_heading">Table of Predicted Potential Active Compounds</h6>
+                    <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_compoundtable"><i class="fas fa-info-circle"></i></a>
+                </div>
+                <div id="collapse_compoundtable" class="vizinfo panel-collapse collapse">
+                    Table of predicted potential active compounds
+                </div>
+                <div class="table" id="table_div">
+                    {{tablepredict | safe}}
+                </div>
+                <div class="checktargetdetail textleft">
+                    <!--<input type="hidden" id="hiddentarget" name="hiddentarget">-->
+                    <p class="smilesid nomargin" id="checkrow">No selected compound</p>
+                    <div class="row" style="margin-bottom: 10px">
+                        <div class="col-md-4">
+                            <!--<div class="linespacing"><span class="spanbold">Molecule Chembl ID: </span><br><span class="nomargin" id="checkrow_id">-</span></div>-->
+                            <div class="linespacing"><span class="spanbold">Status: </span><br><span class="nomargin" id="checkrow_st">-</span></div>
+                            <div class="linespacing"><span class="spanbold">InChiKey: </span><br><span class="nomargin" id="checkrow_in" style="overflow-wrap: break-word">-</span></div>
+                            <div class="linespacing"><span class="spanbold">Formula: </span><br><span class="nomargin" id="checkrow_fm">-</span></div>
+                            <div class="linespacing"><span class="spanbold">Smiles: </span><br><span class="nomargin" id="checkrow_sm" style="overflow-wrap: break-word">-</span></div>
+                            <div class="linespacing"><span class="spanbold">IUPAC Name: </span><br><span class="nomargin" id="checkrow_db" style="overflow-wrap: break-word">-</span></div>
+                            <div class="linespacing"><span class="spanbold">Preferred Name: </span><br><span class="nomargin" id="checkrow_cn">-</span></div>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="spanbold">Molecule Structure 2D: </span><div class="nomargin" id="checkrow_ms">-</div><br>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="spanbold">Molecule Structure 3D: </span><br><div class="nomargin" id="checkrow_ms3d">-</div><br>
+                        </div>
+                    </div>
+                </div>
                 <script>
-                    var graphs = {{result | safe}};
-                    Plotly.plot('predictionratio', graphs,{});
-                    window.addEventListener('resize', function() { Plotly.Plots.resize('predictionratio'); });
+                    $(document).ready(function() {
+                        var data = {{datapredict | safe}};
+                        console.log(data);
+                        var table = $('#tablepredict_div').DataTable( {
+                            data:           data,
+                            deferRender:    true,
+                            scrollX:        true,
+                            scrollY:        "400px",
+                            scroller:       true,
+                            scrollCollapse: true,
+                            select:         true,
+                            paging:         true,
+                            order:          [[ 1, "asc" ],[ 2, "desc" ]],
+                            createdRow: function( row, data, dataIndex){
+                                if( data[1] ==  'active'){
+                                    $(row).addClass('redClass');
+                                }
+                            }
+                        } );
+                        $('#tablepredict_div').on( 'click', 'tr', function () {
+                            if ( $(this).hasClass('selected') ) {
+                                $(this).removeClass('selected');
+                            }
+                            else {
+                                table.$('tr.selected').removeClass('selected');
+                                $(this).addClass('selected');
+
+                                var rows_selected = table.column(0).checkboxes.selected();
+
+
+                                // Output form data to a console
+                                var uniprotid = Object.values($(this))[0];
+                                $('#checkrow').text(uniprotid.cells[0].innerText);
+                                //$('#checkrow').attr('onclick', 'window.open("xxx")');
+                                $('#checkrow_id').text(uniprotid.cells[0].innerText);
+                                $('#checkrow_in').text(uniprotid.cells[0].innerText);
+                                $('#checkrow_st').text(uniprotid.cells[1].innerText);
+
+                                $.ajax({
+                                    url: '/compoundinfopredict',
+                                    data:{
+                                      compound: $('#checkrow_in').text()
+                                    },
+                                    dataType: 'JSON',
+                                    type: 'GET',
+                                    success: function(data){
+
+                                          //$('#checkrow_ms').text(data.result);
+
+                                          console.log(data.result);
+
+                                          var cidthis = data.result[0];
+                                          var namethis = data.result[1];
+                                          var formulathis = data.result[2];
+                                          var smilesthis = data.result[3];
+                                          var prefnamethis = data.result[4];
+                                          var chemblidthis = data.result[5];
+
+                                          <!--var options = {};-->
+                                          <!--options['background'] = 'white';-->
+
+                                          <!--//Options are available at: https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html#DisplayOptions-->
+                                          <!--//options['proteins'] = 'sphere';-->
+
+                                          <!--var cfg = {-->
+                                              <!--divid: 'checkrow_ms3d',-->
+                                              <!--width: 'auto',-->
+                                              <!--height: '350',-->
+                                              <!--resize: true,-->
+                                              <!--rotate: 'right',-->
+                                              <!--mobilemenu: true,-->
+                                              <!--showmenu: true,-->
+                                              <!--showcommand: false,-->
+                                              <!--showtitle: false-->
+                                          <!--};-->
+                                          <!--cfg['cid'] = cidthis;-->
+                                          <!--if(Object.keys(options).length > 0) cfg['options'] = options;-->
+
+                                          <!--var icn3dui = new iCn3DUI(cfg);-->
+
+                                          <!--//communicate with the 3D viewer with chained functions-->
+                                          <!--$.when(icn3dui.show3DStructure()).then(function() {-->
+                                               <!--//icn3dui.setOption('color', 'cyan');-->
+                                               <!--icn3dui.rotStruc('right');-->
+                                          <!--});-->
+
+                                          $('#checkrow_ms3d').html('<iframe src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html?cid='+cidthis+'&width=auto&height=350&showcommand=0&showmenu=0&mobilemenu=0&showtitle=0&resize=1&rotate=right" width="100%" height="350px" style="border:1px; background-color: black; overflow: hidden; border-radius: 20px;"></iframe>');
+                                          $('#checkrow_db').text(namethis);
+                                          $('#checkrow_fm').text(formulathis);
+                                          $('#checkrow_sm').text(smilesthis);
+                                          $('#checkrow_cn').text(prefnamethis);
+                                          $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px; backgroundor: #e3e4e6' src='https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/"+cidthis+"/PNG'>");
+
+                                    }
+                                });
+                            }
+                        } );
+                    } );
                 </script>
+                <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui.min.css">
+                <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_full_ui.css">
+                <!--<script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery.min.js"></script>-->
+                <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui.min.js"></script>
+                <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/three.min.js"></script>
+                <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_full_ui.min.js"></script>
             </div>
         </div>
     </div>
