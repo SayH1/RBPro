@@ -170,39 +170,101 @@ def select_status(df):
     return df2
 
 
-def Load_compounds(df, IC50_ready):
+def Chembl_Activity_REST(chemblID):
+    actdf = pd.DataFrame()
+    resp = requests.get('https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id__exact=' + chemblID + '&limit=1000')
+    if resp.status_code != 200:
+        # This means something went wrong.
+        print("Error: " + str((resp.status_code)))
+    res = resp.json()
+    actdf = pd.DataFrame(res.get('activities'))
+    meta = res.get('page_meta')
+    if meta['next']:
+        url = ("https://www.ebi.ac.uk" + str(meta['next']))
+    while(meta['next']):
+        resp = requests.get(url)
+        if resp.status_code != 200:
+            # This means something went wrong.
+            print("Error: " + str((resp.status_code)))
+        res = resp.json()
+        temp = pd.DataFrame(res.get('activities'))
+        actdf = actdf.append(temp)
+        meta = res.get('page_meta')
+        url = ("https://www.ebi.ac.uk" + str(meta['next']))
+    return actdf
+	
+def Chembl_Assay_REST(chemblID):
+    actdf = pd.DataFrame()
+    resp = requests.get('https://www.ebi.ac.uk/chembl/api/data/assay.json?target_chembl_id__exact=' + chemblID + '&limit=1000')
+    if resp.status_code != 200:
+        # This means something went wrong.
+        print("Error: " + str((resp.status_code)))
+    res = resp.json()
+    actdf = pd.DataFrame(res.get('assays'))
+    meta = res.get('page_meta')
+    if meta['next']:
+        url = ("https://www.ebi.ac.uk" + str(meta['next']))
+    while(meta['next']):
+        resp = requests.get(url)
+        if resp.status_code != 200:
+            # This means something went wrong.
+            print("Error: " + str((resp.status_code)))
+        res = resp.json()
+        temp = pd.DataFrame(res.get('activities'))
+        actdf = actdf.append(temp)
+        meta = res.get('page_meta')
+        url = ("https://www.ebi.ac.uk" + str(meta['next']))
+    return actdf
+
+def Load_compounds(df,IC50_ready):
+    
     from chembl_webresource_client.new_client import new_client
+    
     compound = pd.DataFrame()
+    count = 0
+    molecule = new_client.molecule
+    keys = []
     bad_key = []
-    for i in df['molecule_chembl_id']:
-        try:
-            c = new_client.molecule.get(i)
-            #             print(type(c))
-            #         c = pd.DataFrame(c)
-            compound = compound.append(c, ignore_index=True)
-        except:
-            bad_key.append(i)
-    #     print("Bad IDs: " + str(bad_key))
-    compound
-    #     try:
-    #         compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
-    #     except:
-    #                                            print(i['molecule_chembl_id'])
-    #     compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
-    #     compound = new_client.molecule.get(['CHEMBL6498', 'CHEMBL6499', 'CHEMBL6505'])
-    #     print ("##########################################################")
-    #     print('For the ' + str(df.name) + ' dataset...')
-    #     print('')
-    #     print ('There are ' + str(len(df)) + ' bioactivity...')
+    for i in tqdm(df['molecule_chembl_id']):
+        keys.append(i)
+        count = count + 1
+        if (count % 250) == 0 or count == len(df['molecule_chembl_id']):
+            records = molecule.get(keys)
+            keys = []
+            temp = pd.DataFrame(records)
+            compound = df.append(temp)
+#     for i in df['molecule_chembl_id']:
+#         try:
+#             c = new_client.molecule.get(i)
+# #             print(type(c))
+#     #         c = pd.DataFrame(c)
+#             compound = compound.append(c,ignore_index=True)
+#         except:
+#                                 bad_key.append(i)
+#     print("Bad IDs: " + str(bad_key))
+#     try:
+#         compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
+#     except:
+#                                            print(i['molecule_chembl_id'])
+#     compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
+#     compound = new_client.molecule.get(['CHEMBL6498', 'CHEMBL6499', 'CHEMBL6505'])
+
+    print ("##########################################################")
+    print('For the ' + str(df.name) + ' dataset...')
+    print('')
+    print ('There are ' + str(len(df)) + ' bioactivity...')
+
     df2 = pd.DataFrame(compound)
-    df3 = pd.merge(df2, IC50_ready, how='inner', on='molecule_chembl_id')
-    df4 = df3.drop_duplicates(subset='molecule_chembl_id')  # drop duplicate in chemblId
-    # df5 = df3.drop_duplicates(subset='smiles')   # drop duplicate SMILES
-    df6 = df4[pd.notnull(df4['canonical_smiles'])]  # drop Nan in SMILES
-    #     print ('get '+ str(len(df2)) + ' compounds')
-    #     print ('After remove duplicate ChEMBL ID there are  '+ str(len(df6)) + ' compounds')
-    #     #print ('After remove duplicate and absent SMILES there are  '+ str(len(df6)) + ' compounds')
-    #     print('')
+    df3 = pd.merge(df2, IC50_ready, how='inner', on='molecule_chembl_id', suffixes=('', '_y'))
+    df4 = df3.drop_duplicates(subset='molecule_chembl_id') # drop duplicate in chemblId
+    #df5 = df3.drop_duplicates(subset='smiles')   # drop duplicate SMILES
+    df6 = df4[pd.notnull(df4['canonical_smiles'])]         # drop Nan in SMILES
+    
+    print ('get '+ str(len(df2)) + ' compounds')
+    print ('After remove duplicate ChEMBL ID there are  '+ str(len(df6)) + ' compounds')
+    #print ('After remove duplicate and absent SMILES there are  '+ str(len(df6)) + ' compounds')
+    print('')
+    
     return df6
 
 
@@ -313,12 +375,11 @@ def getBioActs(filename, uniID):
     # print(targetID)
 
     # Get Bioactivities with targetID
-    bioactsDF = new_client.activity.filter(target_chembl_id=targetID)
-    # len(list(bioactsDF))
-
+    # bioactsDF = new_client.activity.filter(target_chembl_id=targetID)
+    bioactsDF = Chembl_Activity_REST(targetID)
     # Get Assay with targetID, for confidence score
-    assayDF = new_client.assay.filter(target_chembl_id=targetID)
-
+    # assayDF = new_client.assay.filter(target_chembl_id=targetID)
+    assayDF = Chembl_Assay_REST(targetID)
     # Convert to DF
     bioactsDF = pd.DataFrame(bioactsDF)
     assayDF = pd.DataFrame(assayDF)
