@@ -416,14 +416,15 @@
                                                 data:           data,
                                                 deferRender:    true,
                                                 scrollX:        true,
-                                                scrollY:        "400px",
+                                                scrollY:        "600px",
                                                 scroller:       true,
                                                 scrollCollapse: true,
                                                 fixedColumns:   {leftColumns: 1},
                                                 select:         true,
                                                 paging:         true,
+                                                order:          [],
                                                 createdRow: function( row, data, dataIndex){
-                                                    if( data[3] ==  'active'){
+                                                    if( data[4] ==  'active'){
                                                         $(row).addClass('redClass');
                                                     }
                                                 }
@@ -444,11 +445,11 @@
                                                     $('#checkrow').text(uniprotid.cells[0].innerText);
                                                     //$('#checkrow').attr('onclick', 'window.open("xxx")');
                                                     $('#checkrow_id').text(uniprotid.cells[0].innerText);
-                                                    $('#checkrow_in').text(uniprotid.cells[1].innerText);
-                                                    $('#checkrow_fm').text(uniprotid.cells[2].innerText);
-                                                    $('#checkrow_st').text(uniprotid.cells[3].innerText);
-                                                    $('#checkrow_sm').text(uniprotid.cells[9].innerText);
-                                                    $('#checkrow_cn').text(uniprotid.cells[10].innerText);
+                                                    $('#checkrow_in').text(uniprotid.cells[2].innerText);
+                                                    $('#checkrow_fm').text(uniprotid.cells[3].innerText);
+                                                    $('#checkrow_st').text(uniprotid.cells[4].innerText);
+                                                    $('#checkrow_sm').text(uniprotid.cells[10].innerText);
+                                                    $('#checkrow_cn').text(uniprotid.cells[11].innerText);
                                                     $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px; backgroundor: #e3e4e6' src='https://www.ebi.ac.uk/chembl/api/data/image/"+uniprotid.cells[0].innerText+"'>");
 
                                                     $.ajax({
@@ -496,6 +497,8 @@
                                                               <!--});-->
 
                                                               $('#checkrow_ms3d').html('<iframe src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html?cid='+cidthis+'&width=auto&height=350&showcommand=0&showmenu=0&mobilemenu=0&showtitle=0&resize=1&rotate=right" width="100%" height="350px" style="border:1px; background-color: black; overflow: hidden; border-radius: 20px;"></iframe>');
+                                                              <!--$('#checkrow_ms3d').html('<iframe style="width: auto; height: 350px;" frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid='+cidthis+'"></iframe>');-->
+
                                                               $('#checkrow_db').text(namethis);
                                                         }
                                                     });

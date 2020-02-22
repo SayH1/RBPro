@@ -1,20 +1,4 @@
-<b class="stattitle">Classification-Report: Training-set</b>
-              precision    recall  f1-score   support
-
-          -1       1.00      1.00      1.00       309
-           1       1.00      0.99      1.00       143
-
-    accuracy                           1.00       452
-   macro avg       1.00      1.00      1.00       452
-weighted avg       1.00      1.00      1.00       452
-
-<b class="stattitle">Classification-Report: Test-set</b>
-              precision    recall  f1-score   support
-
-          -1       0.76      0.83      0.79       174
-           1       0.80      0.71      0.75       160
-
-    accuracy                           0.77       334
-   macro avg       0.78      0.77      0.77       334
-weighted avg       0.77      0.77      0.77       334
-
+<b class="stattitle">Classification-Report: Training-set</b><br>
+<table class="tablet"> <tr>     <th></th><th>precision</th><th>recall</th><th>f1-score</th><th>support</th> </tr> <tr>     <td>-1</td><td>1.00</td><td>1.00</td><td>1.00</td><td>309</td> </tr> <tr>     <td>1</td><td>1.00</td><td>0.99</td><td>1.00</td><td>143</td> </tr> <tr>     <td>accuracy</td><td></td><td></td><td>1.00</td><td>452</td> </tr> <tr>     <td>macro avg</td><td>1.00</td><td>1.00</td><td>1.00</td><td>452</td> </tr> <tr>     <td>weighted avg</td><td>1.00</td><td>1.00</td><td>1.00</td><td>452</td> </tr></table>
+<b class="stattitle">Classification-Report: Test-set</b><br>
+<table class="tablet"> <tr>     <th></th><th>precision</th><th>recall</th><th>f1-score</th><th>support</th> </tr> <tr>     <td>-1</td><td>0.76</td><td>0.83</td><td>0.79</td><td>174</td> </tr> <tr>     <td>1</td><td>0.80</td><td>0.71</td><td>0.75</td><td>160</td> </tr> <tr>     <td>accuracy</td><td></td><td></td><td>0.77</td><td>334</td> </tr> <tr>     <td>macro avg</td><td>0.78</td><td>0.77</td><td>0.77</td><td>334</td> </tr> <tr>     <td>weighted avg</td><td>0.77</td><td>0.77</td><td>0.77</td><td>334</td> </tr></table>

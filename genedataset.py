@@ -14,6 +14,8 @@ import scipy.stats as ss
 import ast
 from IPython.display import JSON
 import xml.etree.ElementTree as ET
+from tqdm import tqdm
+from pandas import json_normalize
 
 # R Integration
 # rpy2 version 2.9.4
@@ -737,20 +739,39 @@ def pathwayinfo(filename, update):
 
                     uniprotralated = []
                     uniprotnumberof = []
-                    for i in pathwaystotargets['Pathway_Id']:
+                    for i in tqdm(pathwaystotargets['Pathway_Id']):
                         r = requests.get("http://rest.kegg.jp/link/hsa/path:" + i)
                         uniprots = []
+                        geneentry_list = []
                         prefix = 'path:' + i + '\t'
                         for c in r.text.splitlines(True):
                             if (len(c) >= len(prefix)):
                                 geneentry = c[c.index(prefix) + len(prefix):c.index('\n')]
-                                r2 = requests.get("http://rest.kegg.jp/conv/uniprot/" + geneentry)
-                                prefix2 = geneentry + '\tup:'
-                                for c2 in r2.text.splitlines(True):
-                                    if (len(c2) >= len(prefix2)):
-                                        uniprotid = c2[c2.index(prefix2) + len(prefix2):c2.index('\n')]
-                                        break
-                                uniprots.append(uniprotid)
+                                geneentry_list.append(geneentry)
+                        chunks = [geneentry_list[x:x + 50] for x in range(0, len(geneentry_list), 50)]
+                        for c in chunks:
+                            r2 = requests.get("http://rest.kegg.jp/conv/uniprot/" + str("+".join(c)))
+                            prefix2 = '\tup:'
+                            genetemp = ''
+                            for c2 in r2.text.splitlines(True):
+                                if (len(c2) >= len(prefix2) and c2[:c2.index('\t')] != genetemp):
+                                    uniprotid = c2[c2.index(prefix2) + len(prefix2):c2.index('\n')]
+                                    uniprots.append(uniprotid)
+                                    genetemp = c2[:c2.index('\t')]
+                                else:
+                                    genetemp = ''
+                            time.sleep(0.5)
+
+                        # import multiprocessing as mp
+                        # from functools import partial
+                        # print("Number of processors: ", mp.cpu_count())
+                        # pool = mp.Pool(mp.cpu_count())
+                        # uniprotid_list = pool.map(partial(keggpathwaytotargets, i=i), r.text.splitlines(True))
+                        # pool.close()
+                        # pool.join()
+                        # print(type(uniprotid_list))
+                        # uniprots.append(uniprotid_list)
+
                         uniprotnumberof.append(len(list(set(uniprots))))
                         uniprotralated.append(list(set(uniprots)))
                     pathwaystotargets['Uniprot_NumberOf'] = uniprotnumberof
@@ -850,6 +871,19 @@ def pathwayinfo(filename, update):
     print("pathwayinfo", end - start)
     return jsonfiles
 
+# def keggpathwaytotargets(c, i):
+#     prefix = 'path:' + i + '\t'
+#     print(c)
+#     if (len(c) >= len(prefix)):
+#         geneentry = c[c.index(prefix) + len(prefix):c.index('\n')]
+#         r2 = requests.get("http://rest.kegg.jp/conv/uniprot/" + geneentry)
+#         prefix2 = geneentry + '\tup:'
+#         for c2 in r2.text.splitlines(True):
+#             if (len(c2) >= len(prefix2)):
+#                 uniprotid = c2[c2.index(prefix2) + len(prefix2):c2.index('\n')]
+#                 break
+#     time.sleep(0.5)
+#     return uniprotid
 
 def find_commontargets(pathwaystotargets):
     # Common Targets
@@ -918,7 +952,7 @@ def create_datatable_target(type):
 
 
 def create_tabletarget(filename, update):
-    print("function: create_tabletarget()")
+    print("function: create_tabletarget_targetvalues()")
     start = time.time()
 
     result_tabletarget = []
@@ -930,13 +964,21 @@ def create_tabletarget(filename, update):
                 cloudlist.append(line)
         # cloudlist
 
+        print("function: create_tabletarget_targetvalues() Up")
+        start = time.time()
         alluniprot_up = combine_uniprot(cloudlist, 'Up')
+        end = time.time()
+        print("create_tabletarget_targetvalues Up", end - start)
         alluniprot_up.to_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_up.txt"),
                              sep='\t', encoding='utf-8')
         # alluniprot_up = pd.read_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_up.txt"),
         #                      sep='\t', encoding='utf-8')
         # alluniprot_up = combine_uniprot_down(cloudlist, alluniprot_up, 'Up')
-        alluniprot_down = combine_uniprot_down(cloudlist, alluniprot_up, 'Down')
+        print("function: create_tabletarget_targetvalues() Down")
+        start = time.time()
+        alluniprot_down = combine_uniprot(cloudlist, 'Down')
+        end = time.time()
+        print("create_tabletarget_targetvalues Down", end - start)
         alluniprot_down.to_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_down.txt"),
                                sep='\t', encoding='utf-8')
         # alluniprot_down = pd.read_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_down.txt"),
@@ -999,7 +1041,7 @@ def create_tabletarget(filename, update):
                 result_tabletarget.append(temp_tabletarget)
 
     end = time.time()
-    print("create_tabletarget", end - start)
+    print("create_tabletarget_targetvalues", end - start)
 
     return result_tabletarget
 
@@ -1026,128 +1068,222 @@ def combine_uniprot(cloudlist, type):
     columnnaming = [n + p for p in pathwaylibrariesloop for n in naming]
     alluniprot.columns = ['Uniprot'] + columnnaming
 
-    urluniprot = '{http://uniprot.org/uniprot}'
-    reviewed = []
-    unigene = []
-    uniname = []
-    i = 1
-    for u in alluniprot['Uniprot']:
-        uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u.strip() + ".xml")
-        if uniprotxml.text != '':
-            root = ET.fromstring(uniprotxml.text)
-            rv = root[0].attrib['dataset']
-            gn = ''
-            if root.find(urluniprot + 'entry').find(urluniprot + 'gene') is not None:
-                gn = root.find(urluniprot + 'entry').find(urluniprot + 'gene').find(urluniprot + 'name').text
-            else:
-                gn = 'No Gene'
-            fn = ''
-            if rv == 'Swiss-Prot':
-                fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
-                    urluniprot + 'recommendedName').find(
-                    urluniprot + 'fullName').text
-            elif rv == 'TrEMBL':
-                if root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
-                        urluniprot + 'submittedName') is not None:
-                    fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
-                        urluniprot + 'submittedName').find(urluniprot + 'fullName').text
-                else:
-                    fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein')[0].find(
-                        urluniprot + 'fullName').text
-        else:
-            rv = "Obsolete Entry"
-            gn = "Obsolete Entry"
-            fn = "Obsolete Entry"
-        reviewed.append(rv)
-        unigene.append(gn)
-        uniname.append(fn)
-        print(u, i)
-        i += 1
-    alluniprot['Reviewed'] = reviewed
-    alluniprot['GeneName'] = unigene
-    alluniprot['ProteinName'] = uniname
-    alluniprot
+    # urluniprot = '{http://uniprot.org/uniprot}'
+    # reviewed = []
+    # unigene = []
+    # uniname = []
+    # i = 1
+    # for u in alluniprot['Uniprot']:
+    #     uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u.strip() + ".xml")
+    #     if uniprotxml.text != '':
+    #         root = ET.fromstring(uniprotxml.text)
+    #         rv = root[0].attrib['dataset']
+    #         gn = ''
+    #         if root.find(urluniprot + 'entry').find(urluniprot + 'gene') is not None:
+    #             gn = root.find(urluniprot + 'entry').find(urluniprot + 'gene').find(urluniprot + 'name').text
+    #         else:
+    #             gn = 'No Gene'
+    #         fn = ''
+    #         if rv == 'Swiss-Prot':
+    #             fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+    #                 urluniprot + 'recommendedName').find(
+    #                 urluniprot + 'fullName').text
+    #         elif rv == 'TrEMBL':
+    #             if root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+    #                     urluniprot + 'submittedName') is not None:
+    #                 fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+    #                     urluniprot + 'submittedName').find(urluniprot + 'fullName').text
+    #             else:
+    #                 fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein')[0].find(
+    #                     urluniprot + 'fullName').text
+    #     else:
+    #         rv = "Obsolete Entry"
+    #         gn = "Obsolete Entry"
+    #         fn = "Obsolete Entry"
+    #     reviewed.append(rv)
+    #     unigene.append(gn)
+    #     uniname.append(fn)
+    #     print(u, i)
+    #     i += 1
+    # alluniprot['Reviewed'] = reviewed
+    # alluniprot['GeneName'] = unigene
+    # alluniprot['ProteinName'] = uniname
+    # alluniprot
+
+    finaldataframe = pd.DataFrame(columns=['Uniprot', 'Reviewed', 'GeneName', 'ProteinName'])
+    # keys = []
+    # count = 0
+    chunks = [alluniprot['Uniprot'][x:x + 100] for x in xrange(0, len(alluniprot['Uniprot']), 100)]
+
+    import multiprocessing as mp
+    print("Number of processors: ", mp.cpu_count())
+    pool = mp.Pool(mp.cpu_count())
+    dfframe = pool.map(requestuniprot, chunks)
+
+    # for i in tqdm(alluniprot['Uniprot']):
+    #     keys.append(i.strip())
+    #     count += 1
+    #     if (count % 100) == 0 or count == len(alluniprot['Uniprot']):
+    #         requestURL = "https://www.ebi.ac.uk/proteins/api/proteins?accession=" + ",".join(keys)
+    #         r = requests.get(requestURL, headers={"Accept": "application/json"})
+    #         keys = []
+    #         df = json_normalize(json.loads(r.text))
+    #         # print(df.columns)
+    #         u = df['accession']
+    #         rv = df['info.type']
+    #         fn = pd.Series([i[0]['name']['value'] if str(i) != "nan" else i for i in df['gene']])
+    #         gn = df['protein.recommendedName.fullName.value']
+    #         frame = {'Uniprot': u, 'Reviewed': rv, 'ProteinName': fn, 'GeneName': gn}
+    #         dfframe = pd.DataFrame(frame)
+    #         finaldataframe = finaldataframe.append(dfframe)
+
+    pool.close()
+    for d in dfframe:
+        finaldataframe = finaldataframe.append(d)
+
+    alluniprot = pd.merge(alluniprot, finaldataframe, how='outer', left_on='Uniprot', right_on='Uniprot')
+
+    # Using Multiprocessing Techniques
+    # import multiprocessing as mp
+    # print("Number of processors: ", mp.cpu_count())
+    # pool = mp.Pool(mp.cpu_count())
+    # results = pool.map(requestuniprot, alluniprot['Uniprot'])
+    # pool.close()
+    # dfresults = pd.DataFrame(results, columns=['Uniprot', 'Reviewed', 'GeneName', 'ProteinName'])
+    # alluniprot = pd.merge(alluniprot, dfresults, how='inner', left_on='Uniprot', right_on='Uniprot')
 
     alluniprot = alluniprot[['Uniprot', 'ProteinName', 'Reviewed', 'GeneName'] + columnnaming]
 
     return alluniprot
 
+# def requestuniprot(u):
+#     urluniprot = '{http://uniprot.org/uniprot}'
+#     uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u.strip() + ".xml")
+#     if uniprotxml.text != '':
+#         root = ET.fromstring(uniprotxml.text)
+#         rv = root[0].attrib['dataset']
+#         gn = ''
+#         if root.find(urluniprot + 'entry').find(urluniprot + 'gene') is not None:
+#             gn = root.find(urluniprot + 'entry').find(urluniprot + 'gene').find(urluniprot + 'name').text
+#         else:
+#             gn = 'No Gene'
+#         fn = ''
+#         if rv == 'Swiss-Prot':
+#             fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+#                 urluniprot + 'recommendedName').find(
+#                 urluniprot + 'fullName').text
+#         elif rv == 'TrEMBL':
+#             if root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+#                     urluniprot + 'submittedName') is not None:
+#                 fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+#                     urluniprot + 'submittedName').find(urluniprot + 'fullName').text
+#             else:
+#                 fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein')[0].find(
+#                     urluniprot + 'fullName').text
+#     else:
+#         rv = "Obsolete Entry"
+#         gn = "Obsolete Entry"
+#         fn = "Obsolete Entry"
+#     # reviewed.append(rv)
+#     # unigene.append(gn)
+#     # uniname.append(fn)
+#     print(u)
+#     return u, rv, gn, fn
 
-def combine_uniprot_down(cloudlist, alluniprot_up, type):
-    # pathwaylibrariesloop = ['KEGG_2019_Human', 'WikiPathways_2019_Human', 'Reactome_2016']
-    naming = ['CommonPathways_', 'Pathways_', 'PathwaysDB_']
-    alluniprot = pd.DataFrame()
+def requestuniprot(chunks):
+    # print(chunks)
+    keys = [x.strip(' ') for x in chunks]
+    requestURL = "https://www.ebi.ac.uk/proteins/api/proteins?accession=" + ",".join(keys)
+    r = requests.get(requestURL, headers={"Accept": "application/json"})
+    keys = []
+    df = json_normalize(json.loads(r.text))
+    u = df['accession']
+    rv = df['info.type']
+    gn = pd.Series([i[0]['name']['value'] if str(i) != "nan" else i for i in df['gene']])
+    fn = df['protein.recommendedName.fullName.value']
+    frame = {'Uniprot': u, 'Reviewed': rv, 'ProteinName': fn, 'GeneName': gn}
+    dfframe = pd.DataFrame(frame)
+    return dfframe
 
-    for c in range(len(pathwaylibrariesloop)):
-        if type == 'Up':
-            data = pd.read_json(cloudlist[c], lines=True)
-        elif type == 'Down':
-            data = pd.read_json(cloudlist[c + len(pathwaylibrariesloop)], lines=True)
-        data['pathwaysdb'] = pathwaylibrariesloop[c]
-        if c == 0:
-            alluniprot = data
-            alluniprot.columns = ['x'] + [str(col) + '_' + pathwaylibrariesloop[c] for col in alluniprot.columns if
-                                          col != 'x']
-        else:
-            alluniprot = pd.merge(alluniprot, data, on='x', how='outer',
-                                  suffixes=('_' + pathwaylibrariesloop[c - 1], '_' + pathwaylibrariesloop[c]))
 
-    columnnaming = [n + p for p in pathwaylibrariesloop for n in naming]
-    alluniprot.columns = ['Uniprot'] + columnnaming
+# def combine_uniprot_down(cloudlist, alluniprot_up, type):
+#     # pathwaylibrariesloop = ['KEGG_2019_Human', 'WikiPathways_2019_Human', 'Reactome_2016']
+#     naming = ['CommonPathways_', 'Pathways_', 'PathwaysDB_']
+#     alluniprot = pd.DataFrame()
+#
+#     for c in range(len(pathwaylibrariesloop)):
+#         if type == 'Up':
+#             data = pd.read_json(cloudlist[c], lines=True)
+#         elif type == 'Down':
+#             data = pd.read_json(cloudlist[c + len(pathwaylibrariesloop)], lines=True)
+#         data['pathwaysdb'] = pathwaylibrariesloop[c]
+#         if c == 0:
+#             alluniprot = data
+#             alluniprot.columns = ['x'] + [str(col) + '_' + pathwaylibrariesloop[c] for col in alluniprot.columns if
+#                                           col != 'x']
+#         else:
+#             alluniprot = pd.merge(alluniprot, data, on='x', how='outer',
+#                                   suffixes=('_' + pathwaylibrariesloop[c - 1], '_' + pathwaylibrariesloop[c]))
+#
+#     columnnaming = [n + p for p in pathwaylibrariesloop for n in naming]
+#     alluniprot.columns = ['Uniprot'] + columnnaming
 
-    urluniprot = '{http://uniprot.org/uniprot}'
-    reviewed = []
-    unigene = []
-    uniname = []
-    i = 1
-    for u in alluniprot['Uniprot']:
-        if u in list(alluniprot_up['Uniprot']):
-            print(i, u)
-            row = alluniprot_up.loc[alluniprot_up['Uniprot'] == u].index[0]
-            rv = alluniprot_up.loc[row, 'Reviewed']
-            gn = alluniprot_up.loc[row, 'GeneName']
-            fn = alluniprot_up.loc[row, 'ProteinName']
-        else:
-            uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u.strip() + ".xml")
-            print(u)
-            if uniprotxml.text != '' and uniprotxml is not None:
-                root = ET.fromstring(uniprotxml.text)
-                rv = root[0].attrib['dataset']
-                gn = ''
-                if root.find(urluniprot + 'entry').find(urluniprot + 'gene') is not None:
-                    gn = root.find(urluniprot + 'entry').find(urluniprot + 'gene').find(urluniprot + 'name').text
-                else:
-                    gn = 'No Gene'
-                fn = ''
-                if rv == 'Swiss-Prot':
-                    fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
-                        urluniprot + 'recommendedName').find(
-                        urluniprot + 'fullName').text
-                elif rv == 'TrEMBL':
-                    if root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
-                            urluniprot + 'submittedName') is not None:
-                        fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
-                            urluniprot + 'submittedName').find(urluniprot + 'fullName').text
-                    else:
-                        fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein')[0].find(
-                            urluniprot + 'fullName').text
-            else:
-                rv = "Obsolete Entry"
-                gn = "Obsolete Entry"
-                fn = "Obsolete Entry"
-        reviewed.append(rv)
-        unigene.append(gn)
-        uniname.append(fn)
-        print(u, i)
-        i += 1
-    alluniprot['Reviewed'] = reviewed
-    alluniprot['GeneName'] = unigene
-    alluniprot['ProteinName'] = uniname
-    alluniprot
+    # urluniprot = '{http://uniprot.org/uniprot}'
+    # reviewed = []
+    # unigene = []
+    # uniname = []
+    # i = 1
+    # for u in alluniprot['Uniprot']:
+    #     if u in list(alluniprot_up['Uniprot']):
+    #         print(i, u)
+    #         row = alluniprot_up.loc[alluniprot_up['Uniprot'] == u].index[0]
+    #         rv = alluniprot_up.loc[row, 'Reviewed']
+    #         gn = alluniprot_up.loc[row, 'GeneName']
+    #         fn = alluniprot_up.loc[row, 'ProteinName']
+    #     else:
+    #         uniprotxml = requests.get("https://www.uniprot.org/uniprot/" + u.strip() + ".xml")
+    #         print(u)
+    #         if uniprotxml.text != '' and uniprotxml is not None:
+    #             root = ET.fromstring(uniprotxml.text)
+    #             rv = root[0].attrib['dataset']
+    #             gn = ''
+    #             if root.find(urluniprot + 'entry').find(urluniprot + 'gene') is not None:
+    #                 gn = root.find(urluniprot + 'entry').find(urluniprot + 'gene').find(urluniprot + 'name').text
+    #             else:
+    #                 gn = 'No Gene'
+    #             fn = ''
+    #             if rv == 'Swiss-Prot':
+    #                 fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+    #                     urluniprot + 'recommendedName').find(
+    #                     urluniprot + 'fullName').text
+    #             elif rv == 'TrEMBL':
+    #                 if root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+    #                         urluniprot + 'submittedName') is not None:
+    #                     fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein').find(
+    #                         urluniprot + 'submittedName').find(urluniprot + 'fullName').text
+    #                 else:
+    #                     fn = root.find(urluniprot + 'entry').find(urluniprot + 'protein')[0].find(
+    #                         urluniprot + 'fullName').text
+    #         else:
+    #             rv = "Obsolete Entry"
+    #             gn = "Obsolete Entry"
+    #             fn = "Obsolete Entry"
+    #     reviewed.append(rv)
+    #     unigene.append(gn)
+    #     uniname.append(fn)
+    #     print(u, i)
+    #     i += 1
+    # alluniprot['Reviewed'] = reviewed
+    # alluniprot['GeneName'] = unigene
+    # alluniprot['ProteinName'] = uniname
+    # alluniprot
 
-    alluniprot = alluniprot[['Uniprot', 'ProteinName', 'Reviewed', 'GeneName'] + columnnaming]
 
-    return alluniprot
+
+    # alluniprot = alluniprot[['Uniprot', 'ProteinName', 'Reviewed', 'GeneName'] + columnnaming]
+    #
+    # return alluniprot
+
 
 def dict_target(filename):
     alluniprot_up = pd.read_csv(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_datavaluestarget_up.txt"),

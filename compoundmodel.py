@@ -1502,6 +1502,9 @@ def create_datatablecompound(filename, uniID):
     i = 0
     for header in df.columns.values:
         html += "<th>" + header + "</th>"
+        if i == 0:
+            html += "<th>2D</th>"
+            i = 1
     html += """</tr>
         </thead>
     </table>"""
@@ -1518,7 +1521,18 @@ def create_datacompound(filename, uniID):
     # Iterate over each row
     for index, rows in df.iterrows():
         # append the list to the final list
-        Row_list.append(list(rows.values))
+        templist = list(rows.values)
+        # print(templist[9], end=' ')
+        from rdkit.Chem import AllChem, Draw
+        m = Chem.MolFromSmiles(str(templist[9]))
+        fig = Draw.MolToImage(m)
+        import base64
+        from io import BytesIO
+        buff = BytesIO()
+        fig.save(buff, format="PNG")
+        img_str = base64.b64encode(buff.getvalue())
+        templist.insert(1, "<img style='width: 100px; height: 100px' src='data:image/png;base64,"+str(img_str)[2:-1]+"'>")
+        Row_list.append(templist)
 
     with open(os.path.join(path, "_datacompound.txt"), "w") as f:
         for s in Row_list:
