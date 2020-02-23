@@ -172,7 +172,7 @@ def result():
         wordcloud = gd.create_wordcloud(filename)
         tabletargetup = gd.create_datatable_target('Up')
         tabletargetdown = gd.create_datatable_target('Down')
-        valuestarget = gd.create_tabletarget(filename, update)
+        valuestarget = gd.create_tabletarget(filename, True)
         dicttarget = gd.dict_target(filename)
 
         return render_template('/result.html', \

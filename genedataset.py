@@ -592,16 +592,16 @@ def enrichr(useriinput, type, filename, method):
                 f.write(chunk)
 
     df_pathway = pd.read_csv(filename_pathway, sep="\t")
-    df_pathway = df_pathway.sort_values(by=['P-value'], ascending=True)
+    df_pathway = df_pathway.sort_values(by=['Combined Score'], ascending=True)
     df_pathway = df_pathway.iloc[:10, :]
-    df_pathway = df_pathway.sort_values(by=['P-value'], ascending=False)
+    df_pathway = df_pathway.sort_values(by=['Combined Score'], ascending=False)
 
     return df_pathway
 
 
 def plotenrichf(df_up, df_down):
-    pvlog_up = [-math.log10(x) for x in df_up['P-value'].tolist()]
-    pvlog_down = [-math.log10(x) for x in df_down['P-value'].tolist()]
+    pvlog_up = [-math.log10(x) for x in df_up['Combined Score'].tolist()]
+    pvlog_down = [-math.log10(x) for x in df_down['Combined Score'].tolist()]
 
     from plotly.subplots import make_subplots
     fig = make_subplots(rows=1, cols=2, horizontal_spacing=0.05)
@@ -699,7 +699,7 @@ def plotenrichf(df_up, df_down):
         autosize=True,
         showlegend=False
     )
-    fig.update_xaxes(title_text='-10log(P-value)')
+    fig.update_xaxes(title_text='Enrichment Score (Combined Score)')
     fig.update_yaxes(showticklabels=False)
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
@@ -1193,13 +1193,15 @@ def combine_uniprot(cloudlist, type):
 def requestuniprot(chunks):
     # print(chunks)
     keys = [x.strip(' ') for x in chunks]
+    keys = [x for x in keys if len(x) > 5]
+    print(",".join(keys))
     requestURL = "https://www.ebi.ac.uk/proteins/api/proteins?accession=" + ",".join(keys)
     r = requests.get(requestURL, headers={"Accept": "application/json"})
     keys = []
     df = json_normalize(json.loads(r.text))
     u = df['accession']
     rv = df['info.type']
-    gn = pd.Series([i[0]['name']['value'] if str(i) != "nan" else i for i in df['gene']])
+    gn = pd.Series([i[0]['name']['value'] if str(i) != "nan" and 'name' in i[0].keys() else np.nan for i in df['gene']])
     fn = df['protein.recommendedName.fullName.value']
     frame = {'Uniprot': u, 'Reviewed': rv, 'ProteinName': fn, 'GeneName': gn}
     dfframe = pd.DataFrame(frame)

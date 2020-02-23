@@ -1,0 +1,1241 @@
+	Uniprot	ProteinName	Reviewed	GeneName	CommonPathways_KEGG_2019_Human	Pathways_KEGG_2019_Human	PathwaysDB_KEGG_2019_Human	CommonPathways_WikiPathways_2019_Human	Pathways_WikiPathways_2019_Human	PathwaysDB_WikiPathways_2019_Human	CommonPathways_Reactome_2016	Pathways_Reactome_2016	PathwaysDB_Reactome_2016
+0	P17568	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 7	Swiss-Prot	NDUFB7	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+1	P08574	Cytochrome c1, heme protein, mitochondrial	Swiss-Prot	CYC1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+2	Q6YFQ2	Cytochrome c oxidase subunit 6B2	Swiss-Prot	COX6B2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+3	O43678	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2	Swiss-Prot	NDUFA2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+4	O43677	NADH dehydrogenase [ubiquinone] 1 subunit C1, mitochondrial	Swiss-Prot	NDUFC1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+5	O43676	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3	Swiss-Prot	NDUFB3	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP4324']	WikiPathways_2019_Human			
+6	O43674	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 5, mitochondrial	Swiss-Prot	NDUFB5	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+7	Q9P0J0	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13	Swiss-Prot	NDUFA13	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP4324']	WikiPathways_2019_Human			
+8	Q96KJ9	Cytochrome c oxidase subunit 4 isoform 2, mitochondrial	Swiss-Prot	COX4I2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+9	O43181	NADH dehydrogenase [ubiquinone] iron-sulfur protein 4, mitochondrial	Swiss-Prot	NDUFS4	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+10	Q9UDW1	Cytochrome b-c1 complex subunit 9	Swiss-Prot	UQCR10	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+11	Q16795	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9, mitochondrial	Swiss-Prot	NDUFA9	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP623']	WikiPathways_2019_Human			
+12	O96000	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10	Swiss-Prot	NDUFB10	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+13	Q9UI09	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 12	Swiss-Prot	NDUFA12	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP4324']	WikiPathways_2019_Human			
+14	O15239	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1	Swiss-Prot	NDUFA1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP4324']	WikiPathways_2019_Human			
+15	Q16718	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 5	Swiss-Prot	NDUFA5	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+16	P20674	Cytochrome c oxidase subunit 5A, mitochondrial	Swiss-Prot	COX5A	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP678']	WikiPathways_2019_Human			
+17	O14957	Cytochrome b-c1 complex subunit 10	Swiss-Prot	UQCR11	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+18	O14949	Cytochrome b-c1 complex subunit 8	Swiss-Prot	UQCRQ	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+19	P31930	Cytochrome b-c1 complex subunit 1, mitochondrial	Swiss-Prot	UQCRC1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+20	P51970	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8	Swiss-Prot	NDUFA8	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+21	P07919	Cytochrome b-c1 complex subunit 6, mitochondrial	Swiss-Prot	UQCRH	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+22	Q7Z4L0	Cytochrome c oxidase subunit 8C, mitochondrial	Swiss-Prot	COX8C	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+23	P47985	Cytochrome b-c1 complex subunit Rieske, mitochondrial	Swiss-Prot	UQCRFS1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+24	O14561	Acyl carrier protein, mitochondrial	Swiss-Prot	NDUFAB1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+25	O43920	NADH dehydrogenase [ubiquinone] iron-sulfur protein 5	Swiss-Prot	NDUFS5	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+26	P28331	NADH-ubiquinone oxidoreductase 75 kDa subunit, mitochondrial	Swiss-Prot	NDUFS1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+27	Q02221	Cytochrome c oxidase subunit 6A2, mitochondrial	Swiss-Prot	COX6A2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+28	O95167	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 3	Swiss-Prot	NDUFA3	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+29	P49821	NADH dehydrogenase [ubiquinone] flavoprotein 1, mitochondrial	Swiss-Prot	NDUFV1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+30	P00156	Cytochrome b	Swiss-Prot	MT-CYB	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+31	P24310	Cytochrome c oxidase subunit 7A1, mitochondrial	Swiss-Prot	COX7A1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+32	P24311	Cytochrome c oxidase subunit 7B, mitochondrial	Swiss-Prot	COX7B	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+33	O95299	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 10, mitochondrial	Swiss-Prot	NDUFA10	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+34	O95298	NADH dehydrogenase [ubiquinone] 1 subunit C2	Swiss-Prot	NDUFC2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+35	O95182	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 7	Swiss-Prot	NDUFA7	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+36	O95178	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 2, mitochondrial	Swiss-Prot	NDUFB2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+37	O95169	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8, mitochondrial	Swiss-Prot	NDUFB8	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+38	O95168	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 4	Swiss-Prot	NDUFB4	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+39	P00395	Cytochrome c oxidase subunit 1	Swiss-Prot	MT-CO1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+40	Q9NX14	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 11, mitochondrial	Swiss-Prot	NDUFB11	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP4324']	WikiPathways_2019_Human			
+41	O95139	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 6	Swiss-Prot	NDUFB6	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+42	P00403	Cytochrome c oxidase subunit 2	Swiss-Prot	MT-CO2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+43	P00414	Cytochrome c oxidase subunit 3	Swiss-Prot	MT-CO3	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+44	Q9NRX3	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 4-like 2	Swiss-Prot	NDUFA4L2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP623']	WikiPathways_2019_Human			
+45	O75489	NADH dehydrogenase [ubiquinone] iron-sulfur protein 3, mitochondrial	Swiss-Prot	NDUFS3	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+46	O75438	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1	Swiss-Prot	NDUFB1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+47	P21912	Succinate dehydrogenase [ubiquinone] iron-sulfur subunit, mitochondrial	Swiss-Prot	SDHB	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+48	O75380	NADH dehydrogenase [ubiquinone] iron-sulfur protein 6, mitochondrial	Swiss-Prot	NDUFS6	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+49	O75306	NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial	Swiss-Prot	NDUFS2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+50	O75251	NADH dehydrogenase [ubiquinone] iron-sulfur protein 7, mitochondrial	Swiss-Prot	NDUFS7	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP623']	WikiPathways_2019_Human			
+51	O14548	Cytochrome c oxidase subunit 7A-related protein, mitochondrial	Swiss-Prot	COX7A2L	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+52	P31040	Succinate dehydrogenase [ubiquinone] flavoprotein subunit, mitochondrial	Swiss-Prot	SDHA	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+53	O14521	Succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial	Swiss-Prot	SDHD	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+54	P14854	Cytochrome c oxidase subunit 6B1	Swiss-Prot	COX6B1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+55	E9PQ53	NADH dehydrogenase [ubiquinone] 1 subunit C2, isoform 2	Swiss-Prot	NDUFC2-KCTD14	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+56	D6W5A1		TrEMBL	COX7A2L	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+57	D3DPT9		TrEMBL	NDUFS5	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+58	Q86Y39	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 11	Swiss-Prot	NDUFA11	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP623']	WikiPathways_2019_Human			
+59	P12074	Cytochrome c oxidase subunit 6A1, mitochondrial	Swiss-Prot	COX6A1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+60	P13073	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	Swiss-Prot	COX4I1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+61	P14406	Cytochrome c oxidase subunit 7A2, mitochondrial	Swiss-Prot	COX7A2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+62	P14927	Cytochrome b-c1 complex subunit 7	Swiss-Prot	UQCRB	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+63	Q8TF08	Cytochrome c oxidase subunit 7B2, mitochondrial	Swiss-Prot	COX7B2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+64	P15954	Cytochrome c oxidase subunit 7C, mitochondrial	Swiss-Prot	COX7C	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+65	Q9Y6M9	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 9	Swiss-Prot	NDUFB9	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+66	A0A1X7RBG2		TrEMBL	COX1	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+67	A0A1X7RBF0		TrEMBL	COX3	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+68	A0A096LP55	Cytochrome b-c1 complex subunit 6-like, mitochondrial	Swiss-Prot	UQCRHL	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+69	U5Z487	Cytochrome c oxidase subunit 2	TrEMBL	COX2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human						
+70	Q99643	Succinate dehydrogenase cytochrome b560 subunit, mitochondrial	Swiss-Prot	SDHC	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+71	P10606	Cytochrome c oxidase subunit 5B, mitochondrial	Swiss-Prot	COX5B	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+72	P22695	Cytochrome b-c1 complex subunit 2, mitochondrial	Swiss-Prot	UQCRC2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+73	P56556	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 6	Swiss-Prot	NDUFA6	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+74	P56181	NADH dehydrogenase [ubiquinone] flavoprotein 3, mitochondrial	Swiss-Prot	NDUFV3	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+75	P09669	Cytochrome c oxidase subunit 6C	Swiss-Prot	COX6C	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+76	P10176	Cytochrome c oxidase subunit 8A, mitochondrial	Swiss-Prot	COX8A	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP678']	WikiPathways_2019_Human			
+77	P19404	NADH dehydrogenase [ubiquinone] flavoprotein 2, mitochondrial	Swiss-Prot	NDUFV2	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+78	O00217	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8, mitochondrial	Swiss-Prot	NDUFS8	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP623']	WikiPathways_2019_Human			
+79	O00483	Cytochrome c oxidase subunit NDUFA4	Swiss-Prot	NDUFA4	6.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012', 'hsa04932']	KEGG_2019_Human	3.0	[' WP111', ' WP4396', ' WP623']	WikiPathways_2019_Human			
+80	P03928	ATP synthase protein 8	Swiss-Prot	MT-ATP8	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+81	P24539	ATP synthase F(0) complex subunit B1, mitochondrial	Swiss-Prot	ATP5PB	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+82	O75947	ATP synthase subunit d, mitochondrial	Swiss-Prot	ATP5PD	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+83	P48201	ATP synthase F(0) complex subunit C3, mitochondrial	Swiss-Prot	ATP5MC3	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+84	P00846	ATP synthase subunit a	Swiss-Prot	MT-ATP6	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+85	P30049	ATP synthase subunit delta, mitochondrial	Swiss-Prot	ATP5F1D	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+86	Q6NZ59	ATP synthase-coupling factor 6, mitochondrial	TrEMBL	ATP5J	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human						
+87	P25705	ATP synthase subunit alpha, mitochondrial	Swiss-Prot	ATP5F1A	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+88	P36542	ATP synthase subunit gamma, mitochondrial	Swiss-Prot	ATP5F1C	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+89	P48047	ATP synthase subunit O, mitochondrial	Swiss-Prot	ATP5PO	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+90	P56381	ATP synthase subunit epsilon, mitochondrial	Swiss-Prot	ATP5F1E	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+91	P18859	ATP synthase-coupling factor 6, mitochondrial	Swiss-Prot	ATP5PF	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+92	U5YV54	ATP synthase protein 8	TrEMBL	ATP8	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human						
+93	Q06055	ATP synthase F(0) complex subunit C2, mitochondrial	Swiss-Prot	ATP5MC2	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+94	P05496	ATP synthase F(0) complex subunit C1, mitochondrial	Swiss-Prot	ATP5MC1	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+95	A0A024R0E1		TrEMBL		5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human						
+96	P06576	ATP synthase subunit beta, mitochondrial	Swiss-Prot	ATP5F1B	5.0	['hsa05016', 'hsa04714', 'hsa05010', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+97	P99999	Cytochrome c	Swiss-Prot	CYCS	4.0	['hsa05016', 'hsa05010', 'hsa05012', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+98	P42574	Caspase-3	Swiss-Prot	CASP3	4.0	['hsa05016', 'hsa05010', 'hsa05012', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+99	A0A1X7RBG6		TrEMBL	ND2	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human						
+100	P03886	NADH-ubiquinone oxidoreductase chain 1	Swiss-Prot	MT-ND1	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+101	O14727	Apoptotic protease-activating factor 1	Swiss-Prot	APAF1	3.0	['hsa05016', 'hsa05010', 'hsa05012']	KEGG_2019_Human						
+102	Q99683	Mitogen-activated protein kinase kinase kinase 5	Swiss-Prot	MAP3K5	3.0	['hsa05016', 'hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+103	U5Z977	NADH-ubiquinone oxidoreductase chain 6	TrEMBL	ND6	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human						
+104	O75460	Serine/threonine-protein kinase/endoribonuclease IRE1	Swiss-Prot	ERN1	3.0	['hsa05016', 'hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+105	H9EC08	NADH-ubiquinone oxidoreductase chain 4	TrEMBL	ND4	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human						
+106	P03891	NADH-ubiquinone oxidoreductase chain 2	Swiss-Prot	MT-ND2	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+107	P03901	NADH-ubiquinone oxidoreductase chain 4L	Swiss-Prot	MT-ND4L	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+108	Q7GXZ4	NADH-ubiquinone oxidoreductase chain 4L	TrEMBL	ND4L	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+109	P03923	NADH-ubiquinone oxidoreductase chain 6	Swiss-Prot	MT-ND6	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+110	P03915	NADH-ubiquinone oxidoreductase chain 5	Swiss-Prot	MT-ND5	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+111	Q14790	Caspase-8	Swiss-Prot	CASP8	3.0	['hsa05016', 'hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+112	P03905	NADH-ubiquinone oxidoreductase chain 4	Swiss-Prot	MT-ND4	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+113	P03897	NADH-ubiquinone oxidoreductase chain 3	Swiss-Prot	MT-ND3	3.0	['hsa04714', 'hsa00190', 'hsa05012']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+114	P55211	Caspase-9	Swiss-Prot	CASP9	3.0	['hsa05016', 'hsa05010', 'hsa05012']	KEGG_2019_Human						
+115	Q68CJ9	Cyclic AMP-responsive element-binding protein 3-like protein 3	Swiss-Prot	CREB3L3	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+116	P12235	ADP/ATP translocase 1	Swiss-Prot	SLC25A4	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+117	Q7KZN9	Cytochrome c oxidase assembly protein COX15 homolog	Swiss-Prot	COX15	2.0	['hsa04714', 'hsa00190']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+118	P55957	BH3-interacting domain death agonist	Swiss-Prot	BID	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+119	P56134	ATP synthase subunit f, mitochondrial	Swiss-Prot	ATP5MF	2.0	['hsa04714', 'hsa00190']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+120	P05141	ADP/ATP translocase 2	Swiss-Prot	SLC25A5	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+121	P56385	ATP synthase subunit e, mitochondrial	Swiss-Prot	ATP5ME	2.0	['hsa04714', 'hsa00190']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+122	Q9H0C2	ADP/ATP translocase 4	Swiss-Prot	SLC25A31	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human						
+123	Q8N5L8	Ribonuclease P protein subunit p25-like protein	Swiss-Prot	RPP25L	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+124	P05198	Eukaryotic translation initiation factor 2 subunit 1	Swiss-Prot	EIF2S1	2.0	['hsa04932', 'hsa03013']	KEGG_2019_Human	2.0	[' WP4396', ' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+125	P55210	Caspase-7	Swiss-Prot	CASP7	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+126	Q99575	Ribonucleases P/MRP protein subunit POP1	Swiss-Prot	POP1	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+127	Q9GZY0	Nuclear RNA export factor 2	Swiss-Prot	NXF2	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+128	P22694	cAMP-dependent protein kinase catalytic subunit beta	Swiss-Prot	PRKACB	2.0	['hsa04714', 'hsa05012']	KEGG_2019_Human						
+129	Q70SY1	Cyclic AMP-responsive element-binding protein 3-like protein 2	Swiss-Prot	CREB3L2	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+130	P16220	Cyclic AMP-responsive element-binding protein 1	Swiss-Prot	CREB1	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human	1.0	[' WP585']	WikiPathways_2019_Human			
+131	P12236	ADP/ATP translocase 3	Swiss-Prot	SLC25A6	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+132	P54619	5'-AMP-activated protein kinase subunit gamma-1	Swiss-Prot	PRKAG1	2.0	['hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+133	Q9H1B4	Nuclear RNA export factor 5	Swiss-Prot	NXF5	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+134	P21796	Voltage-dependent anion-selective channel protein 1	Swiss-Prot	VDAC1	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human						
+135	P62826	GTP-binding nuclear protein Ran	Swiss-Prot	RAN	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+136	P54646	5'-AMP-activated protein kinase catalytic subunit alpha-2	Swiss-Prot	PRKAA2	2.0	['hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+137	P50148	Guanine nucleotide-binding protein G(q) subunit alpha	Swiss-Prot	GNAQ	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+138	P01584	Interleukin-1 beta	Swiss-Prot	IL1B	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+139	Q9H4D5	Nuclear RNA export factor 3	Swiss-Prot	NXF3	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+140	P01375	Tumor necrosis factor	Swiss-Prot	TNF	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+141	P19438	Tumor necrosis factor receptor superfamily member 1A	Swiss-Prot	TNFRSF1A	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+142	P53779	Mitogen-activated protein kinase 10	Swiss-Prot	MAPK10	2.0	['hsa05016', 'hsa04932']	KEGG_2019_Human						
+143	Q9BUL9	Ribonuclease P protein subunit p25	Swiss-Prot	RPP25	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+144	P22612	cAMP-dependent protein kinase catalytic subunit gamma	Swiss-Prot	PRKACG	2.0	['hsa04714', 'hsa05012']	KEGG_2019_Human						
+145	O75818	Ribonuclease P protein subunit p40	Swiss-Prot	RPP40	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+146	P49841	Glycogen synthase kinase-3 beta	Swiss-Prot	GSK3B	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+147	Q969H6	Ribonuclease P/MRP protein subunit POP5	Swiss-Prot	POP5	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+148	P45983	Mitogen-activated protein kinase 8	Swiss-Prot	MAPK8	2.0	['hsa05016', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+149	Q12933	TNF receptor-associated factor 2	Swiss-Prot	TRAF2	2.0	['hsa05016', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+150	Q12887	Protoheme IX farnesyltransferase, mitochondrial	Swiss-Prot	COX10	2.0	['hsa04714', 'hsa00190']	KEGG_2019_Human						
+151	Q9Y277	Voltage-dependent anion-selective channel protein 3	Swiss-Prot	VDAC3	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human						
+152	P45984	Mitogen-activated protein kinase 9	Swiss-Prot	MAPK9	2.0	['hsa05016', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+153	Q8TEY5	Cyclic AMP-responsive element-binding protein 3-like protein 4	Swiss-Prot	CREB3L4	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+154	Q9UKK6	NTF2-related export protein 1	Swiss-Prot	NXT1	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+155	O43741	5'-AMP-activated protein kinase subunit beta-2	Swiss-Prot	PRKAB2	2.0	['hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+156	Q96BA8	Cyclic AMP-responsive element-binding protein 3-like protein 1	Swiss-Prot	CREB3L1	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+157	Q9UGJ0	5'-AMP-activated protein kinase subunit gamma-2	Swiss-Prot	PRKAG2	2.0	['hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+158	Q9UGI9	5'-AMP-activated protein kinase subunit gamma-3	Swiss-Prot	PRKAG3	2.0	['hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+159	Q07812	Apoptosis regulator BAX	Swiss-Prot	BAX	2.0	['hsa05016', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+160	Q9UBU9	Nuclear RNA export factor 1	Swiss-Prot	NXF1	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+161	Q9UBK2	Peroxisome proliferator-activated receptor gamma coactivator 1-alpha	Swiss-Prot	PPARGC1A	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+162	Q13131	5'-AMP-activated protein kinase catalytic subunit alpha-1	Swiss-Prot	PRKAA1	2.0	['hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+163	P45880	Voltage-dependent anion-selective channel protein 2	Swiss-Prot	VDAC2	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human						
+164	Q15147	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4	Swiss-Prot	PLCB4	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+165	Q13224	Glutamate receptor ionotropic, NMDA 2B	Swiss-Prot	GRIN2B	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+166	D3DT10		TrEMBL	PRKACB	2.0	['hsa04714', 'hsa05012']	KEGG_2019_Human						
+167	D3DN88		TrEMBL	GSK3B	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human						
+168	P37231	Peroxisome proliferator-activated receptor gamma	Swiss-Prot	PPARG	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+169	Q9Y478	5'-AMP-activated protein kinase subunit beta-1	Swiss-Prot	PRKAB1	2.0	['hsa04714', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+170	P37840	Alpha-synuclein	Swiss-Prot	SNCA	2.0	['hsa05010', 'hsa05012']	KEGG_2019_Human						
+171	Q14643	Inositol 1,4,5-trisphosphate receptor type 1	Swiss-Prot	ITPR1	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+172	B3KTS5		TrEMBL		2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human						
+173	B3KT21	BH3-interacting domain death agonist	TrEMBL		2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human						
+174	P42345	Serine/threonine-protein kinase mTOR	Swiss-Prot	MTOR	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human	1.0	[' WP585']	WikiPathways_2019_Human			
+175	A0A384P5Q5	Adenylate cyclase	TrEMBL		2.0	['hsa04714', 'hsa05012']	KEGG_2019_Human						
+176	Q9Y6N1	Cytochrome c oxidase assembly protein COX11, mitochondrial	Swiss-Prot	COX11	2.0	['hsa04714', 'hsa00190']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+177	A0A024R401		TrEMBL	CREB1	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+178	Q14061	Cytochrome c oxidase copper chaperone	Swiss-Prot	COX17	2.0	['hsa04714', 'hsa00190']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+179	P30405	Peptidyl-prolyl cis-trans isomerase F, mitochondrial	Swiss-Prot	PPIF	2.0	['hsa05016', 'hsa05012']	KEGG_2019_Human						
+180	O14980	Exportin-1	Swiss-Prot	XPO1	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+181	O43889	Cyclic AMP-responsive element-binding protein 3	Swiss-Prot	CREB3	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+182	Q02930	Cyclic AMP-responsive element-binding protein 5	Swiss-Prot	CREB5	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human						
+183	O95707	Ribonuclease P protein subunit p29	Swiss-Prot	POP4	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+184	O95622	Adenylate cyclase type 5	Swiss-Prot	ADCY5	2.0	['hsa04714', 'hsa05012']	KEGG_2019_Human						
+185	Q9NPJ8	NTF2-related export protein 2	Swiss-Prot	NXT2	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+186	Q9NQ66	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1	Swiss-Prot	PLCB1	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+187	P78345	Ribonuclease P protein subunit p38	Swiss-Prot	RPP38	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+188	P78346	Ribonuclease P protein subunit p30	Swiss-Prot	RPP30	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+189	O75964	ATP synthase subunit g, mitochondrial	Swiss-Prot	ATP5MG	2.0	['hsa04714', 'hsa00190']	KEGG_2019_Human	2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+190	P25445	Tumor necrosis factor receptor superfamily member 6	Swiss-Prot	FAS	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+191	P17612	cAMP-dependent protein kinase catalytic subunit alpha	Swiss-Prot	PRKACA	2.0	['hsa04714', 'hsa05012']	KEGG_2019_Human						
+192	P25874	Mitochondrial brown fat uncoupling protein 1	Swiss-Prot	UCP1	2.0	['hsa05016', 'hsa04714']	KEGG_2019_Human	1.0	[' WP111']	WikiPathways_2019_Human			
+193	Q00722	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-2	Swiss-Prot	PLCB2	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+194	Q01970	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-3	Swiss-Prot	PLCB3	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+195	O75817	Ribonuclease P protein subunit p20	Swiss-Prot	POP7	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+196	Q96D46	60S ribosomal export protein NMD3	Swiss-Prot	NMD3	2.0	['hsa03008', 'hsa03013']	KEGG_2019_Human						
+197	Q9NZJ5	Eukaryotic translation initiation factor 2-alpha kinase 3	Swiss-Prot	EIF2AK3	2.0	['hsa05010', 'hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP107']	WikiPathways_2019_Human			
+198	Q05586	Glutamate receptor ionotropic, NMDA 1	Swiss-Prot	GRIN1	2.0	['hsa05016', 'hsa05010']	KEGG_2019_Human						
+199	Q8N6T7	NAD-dependent protein deacetylase sirtuin-6	Swiss-Prot	SIRT6	1.0	['hsa04714']	KEGG_2019_Human						
+200	Q8TD57	Dynein heavy chain 3, axonemal	Swiss-Prot	DNAH3	1.0	['hsa05016']	KEGG_2019_Human						
+201	Q8NFM4	Adenylate cyclase type 4	Swiss-Prot	ADCY4	1.0	['hsa04714']	KEGG_2019_Human						
+202	Q8N183	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex assembly factor 2	Swiss-Prot	NDUFAF2	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP4324']	WikiPathways_2019_Human			
+203	Q8WUM0	Nuclear pore complex protein Nup133	Swiss-Prot	NUP133	1.0	['hsa03013']	KEGG_2019_Human						
+204	Q8TD86	Calmodulin-like protein 6	Swiss-Prot	CALML6	1.0	['hsa05010']	KEGG_2019_Human						
+205	Q8WW43	Gamma-secretase subunit APH-1B	Swiss-Prot	APH1B	1.0	['hsa05010']	KEGG_2019_Human						
+206	Q8N122	Regulatory-associated protein of mTOR	Swiss-Prot	RPTOR	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP585']	WikiPathways_2019_Human			
+207	Q8N8Y2	V-type proton ATPase subunit d 2	Swiss-Prot	ATP6V0D2	1.0	['hsa00190']	KEGG_2019_Human						
+208	Q8WXD5	Gem-associated protein 6	Swiss-Prot	GEMIN6	1.0	['hsa03013']	KEGG_2019_Human						
+209	Q8WXX0	Dynein heavy chain 7, axonemal	Swiss-Prot	DNAH7	1.0	['hsa05016']	KEGG_2019_Human						
+210	Q8WZ48		TrEMBL	CPT1A	1.0	['hsa04714']	KEGG_2019_Human						
+211	Q92523	Carnitine O-palmitoyltransferase 1, muscle isoform	Swiss-Prot	CPT1B	1.0	['hsa04714']	KEGG_2019_Human						
+212	Q8IZH2	5'-3' exoribonuclease 1	Swiss-Prot	XRN1	1.0	['hsa03008']	KEGG_2019_Human						
+213	Q8TE73	Dynein heavy chain 5, axonemal	Swiss-Prot	DNAH5	1.0	['hsa05016']	KEGG_2019_Human						
+214	Q8NEB9	Phosphatidylinositol 3-kinase catalytic subunit type 3	Swiss-Prot	PIK3C3	1.0	['hsa05016']	KEGG_2019_Human						
+215	Q8TDY2	RB1-inducible coiled-coil protein 1	Swiss-Prot	RB1CC1	1.0	['hsa05016']	KEGG_2019_Human						
+216	Q8NFH5	Nucleoporin NUP35	Swiss-Prot	NUP35	1.0	['hsa03013']	KEGG_2019_Human						
+217	Q8NHE4	V-type proton ATPase subunit e 2	Swiss-Prot	ATP6V0E2	1.0	['hsa00190']	KEGG_2019_Human						
+218	Q8NFH3	Nucleoporin Nup43	Swiss-Prot	NUP43	1.0	['hsa03013']	KEGG_2019_Human						
+219	Q8N8Q8	Cytochrome c oxidase assembly protein COX18, mitochondrial	Swiss-Prot	COX18	1.0	['hsa04714']	KEGG_2019_Human						
+220	Q8WU20	Fibroblast growth factor receptor substrate 2	Swiss-Prot	FRS2	1.0	['hsa04714']	KEGG_2019_Human						
+221	Q8TED1	Probable glutathione peroxidase 8	Swiss-Prot	GPX8	1.0	['hsa05016']	KEGG_2019_Human						
+222	Q8TEM1	Nuclear pore membrane glycoprotein 210	Swiss-Prot	NUP210	1.0	['hsa03013']	KEGG_2019_Human						
+223	Q8TED0	U3 small nucleolar RNA-associated protein 15 homolog	Swiss-Prot	UTP15	1.0	['hsa03008']	KEGG_2019_Human						
+224	Q8N2K1	Ubiquitin-conjugating enzyme E2 J2	Swiss-Prot	UBE2J2	1.0	['hsa05012']	KEGG_2019_Human						
+225	Q8TEQ6	Gem-associated protein 5	Swiss-Prot	GEMIN5	1.0	['hsa03013']	KEGG_2019_Human						
+226	Q8TCG5	Carnitine O-palmitoyltransferase 1, brain isoform	Swiss-Prot	CPT1C	1.0	['hsa04714']	KEGG_2019_Human						
+227	Q8TAQ2	SWI/SNF complex subunit SMARCC2	Swiss-Prot	SMARCC2	1.0	['hsa04714']	KEGG_2019_Human						
+228	Q8NI36	WD repeat-containing protein 36	Swiss-Prot	WDR36	1.0	['hsa03008']	KEGG_2019_Human						
+229	Q8N1G1	RNA exonuclease 1 homolog	Swiss-Prot	REXO1	1.0	['hsa03008']	KEGG_2019_Human						
+230	Q8N8R3	Mitochondrial basic amino acids transporter	Swiss-Prot	SLC25A29	1.0	['hsa04714']	KEGG_2019_Human						
+231	Q8NI27	THO complex subunit 2	Swiss-Prot	THOC2	1.0	['hsa03013']	KEGG_2019_Human						
+232	Q8NFH4	Nucleoporin Nup37	Swiss-Prot	NUP37	1.0	['hsa03013']	KEGG_2019_Human						
+233	Q8NB90	ATPase family protein 2 homolog	Swiss-Prot	SPATA5	1.0	['hsa03008']	KEGG_2019_Human						
+234	Q8NEV1	Casein kinase II subunit alpha 3	Swiss-Prot	CSNK2A3	1.0	['hsa03008']	KEGG_2019_Human						
+235	Q8NEY4	V-type proton ATPase subunit C 2	Swiss-Prot	ATP6V1C2	1.0	['hsa00190']	KEGG_2019_Human						
+236	Q8NFD5	AT-rich interactive domain-containing protein 1B	Swiss-Prot	ARID1B	1.0	['hsa04714']	KEGG_2019_Human						
+237	Q8N1F7	Nuclear pore complex protein Nup93	Swiss-Prot	NUP93	1.0	['hsa03013']	KEGG_2019_Human						
+238	A0A024QZE3		TrEMBL	CPT1C	1.0	['hsa04714']	KEGG_2019_Human						
+239	Q6PEY2	Tubulin alpha-3E chain	Swiss-Prot	TUBA3E	1.0	['hsa05016']	KEGG_2019_Human						
+240	Q8IYT8	Serine/threonine-protein kinase ULK2	Swiss-Prot	ULK2	1.0	['hsa05016']	KEGG_2019_Human						
+241	Q1ZYQ1	Tubulin alpha chain	TrEMBL	TUBA2	1.0	['hsa05016']	KEGG_2019_Human						
+242	Q15904	V-type proton ATPase subunit S1	Swiss-Prot	ATP6AP1	1.0	['hsa00190']	KEGG_2019_Human	1.0	[' WP623']	WikiPathways_2019_Human			
+243	Q16539	Mitogen-activated protein kinase 14	Swiss-Prot	MAPK14	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP585']	WikiPathways_2019_Human			
+244	Q16584	Mitogen-activated protein kinase kinase kinase 11	Swiss-Prot	MAP3K11	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+245	Q16623	Syntaxin-1A	Swiss-Prot	STX1A	1.0	['hsa05016']	KEGG_2019_Human						
+246	Q16637	Survival motor neuron protein	Swiss-Prot	SMN1	1.0	['hsa03013']	KEGG_2019_Human						
+247	Q16656	Nuclear respiratory factor 1	Swiss-Prot	NRF1	1.0	['hsa05016']	KEGG_2019_Human						
+248	Q16762	Thiosulfate sulfurtransferase	Swiss-Prot	TST	1.0	['hsa04122']	KEGG_2019_Human						
+249	Q16864	V-type proton ATPase subunit F	Swiss-Prot	ATP6V1F	1.0	['hsa00190']	KEGG_2019_Human						
+250	Q2TAZ0	Autophagy-related protein 2 homolog A	Swiss-Prot	ATG2A	1.0	['hsa05016']	KEGG_2019_Human						
+251	Q8IYB3	Serine/arginine repetitive matrix protein 1	Swiss-Prot	SRRM1	1.0	['hsa03013']	KEGG_2019_Human						
+252	Q2VPK5	Cytoplasmic tRNA 2-thiolation protein 2	Swiss-Prot	CTU2	1.0	['hsa04122']	KEGG_2019_Human						
+253	Q330K2	NADH dehydrogenase (ubiquinone) complex I, assembly factor 6	Swiss-Prot	NDUFAF6	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP4324']	WikiPathways_2019_Human			
+254	Q3SY69	Mitochondrial 10-formyltetrahydrofolate dehydrogenase	Swiss-Prot	ALDH1L2	1.0	['hsa00670']	KEGG_2019_Human						
+255	Q3ZCM7	Tubulin beta-8 chain	Swiss-Prot	TUBB8	1.0	['hsa05016']	KEGG_2019_Human						
+256	Q499G7	Mitogen-activated protein kinase	TrEMBL	MAPK1	1.0	['hsa05010']	KEGG_2019_Human						
+257	Q49B96	Cytochrome c oxidase assembly protein COX19	Swiss-Prot	COX19	1.0	['hsa04714']	KEGG_2019_Human						
+258	Q4F7X0	Adenylate cyclase	TrEMBL	ADCY8	1.0	['hsa04714']	KEGG_2019_Human						
+259	Q4LDG9	Dynein light chain 1, axonemal	Swiss-Prot	DNAL1	1.0	['hsa05016']	KEGG_2019_Human						
+260	Q15848	Adiponectin	Swiss-Prot	ADIPOQ	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+261	Q15759	Mitogen-activated protein kinase 11	Swiss-Prot	MAPK11	1.0	['hsa04714']	KEGG_2019_Human						
+262	Q15418	Ribosomal protein S6 kinase alpha-1	Swiss-Prot	RPS6KA1	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP477']	WikiPathways_2019_Human			
+263	Q15413	Ryanodine receptor 3	Swiss-Prot	RYR3	1.0	['hsa05010']	KEGG_2019_Human						
+264	Q14152	Eukaryotic translation initiation factor 3 subunit A	Swiss-Prot	EIF3A	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+265	Q14203	Dynactin subunit 1	Swiss-Prot	DCTN1	1.0	['hsa05016']	KEGG_2019_Human						
+266	Q14232	Translation initiation factor eIF-2B subunit alpha	Swiss-Prot	EIF2B1	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+267	Q14240	Eukaryotic initiation factor 4A-II	Swiss-Prot	EIF4A2	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+268	Q14457	Beclin-1	Swiss-Prot	BECN1	1.0	['hsa05016']	KEGG_2019_Human						
+269	Q14571	Inositol 1,4,5-trisphosphate receptor type 2	Swiss-Prot	ITPR2	1.0	['hsa05010']	KEGG_2019_Human						
+270	Q14573	Inositol 1,4,5-trisphosphate receptor type 3	Swiss-Prot	ITPR3	1.0	['hsa05010']	KEGG_2019_Human						
+271	Q14692	Ribosome biogenesis protein BMS1 homolog	Swiss-Prot	BMS1	1.0	['hsa03008']	KEGG_2019_Human						
+272	Q14957	Glutamate receptor ionotropic, NMDA 2C	Swiss-Prot	GRIN2C	1.0	['hsa05010']	KEGG_2019_Human						
+273	Q14974	Importin subunit beta-1	Swiss-Prot	KPNB1	1.0	['hsa03013']	KEGG_2019_Human						
+274	Q15061	WD repeat-containing protein 43	Swiss-Prot	WDR43	1.0	['hsa03008']	KEGG_2019_Human						
+275	Q15078	Cyclin-dependent kinase 5 activator 1	Swiss-Prot	CDK5R1	1.0	['hsa05010']	KEGG_2019_Human						
+276	Q15181	Inorganic pyrophosphatase	Swiss-Prot	PPA1	1.0	['hsa00190']	KEGG_2019_Human						
+277	Q15269	Periodic tryptophan protein 2 homolog	Swiss-Prot	PWP2	1.0	['hsa03008']	KEGG_2019_Human						
+278	Q15287	RNA-binding protein with serine-rich domain 1	Swiss-Prot	RNPS1	1.0	['hsa03013']	KEGG_2019_Human						
+279	Q15349	Ribosomal protein S6 kinase alpha-2	Swiss-Prot	RPS6KA2	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP477']	WikiPathways_2019_Human			
+280	Q15382	GTP-binding protein Rheb	Swiss-Prot	RHEB	1.0	['hsa04714']	KEGG_2019_Human						
+281	Q53GA5		TrEMBL		1.0	['hsa05016']	KEGG_2019_Human						
+282	Q59ES2		TrEMBL		1.0	['hsa05010']	KEGG_2019_Human						
+283	Q59GJ6	Methylenetetrahydrofolate reductase	TrEMBL		1.0	['hsa00670']	KEGG_2019_Human						
+284	Q6UXS9	Inactive caspase-12	Swiss-Prot	CASP12	1.0	['hsa05010']	KEGG_2019_Human						
+285	Q6ZR08	Dynein heavy chain 12, axonemal	Swiss-Prot	DNAH12	1.0	['hsa05016']	KEGG_2019_Human						
+286	Q71U36	Tubulin alpha-1A chain	Swiss-Prot	TUBA1A	1.0	['hsa05016']	KEGG_2019_Human						
+287	Q7L576	Cytoplasmic FMR1-interacting protein 1	Swiss-Prot	CYFIP1	1.0	['hsa03013']	KEGG_2019_Human						
+288	Q7L592	Protein arginine methyltransferase NDUFAF7, mitochondrial	Swiss-Prot	NDUFAF7	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP4324']	WikiPathways_2019_Human			
+289	Q7LBC6	Lysine-specific demethylase 3B	Swiss-Prot	KDM3B	1.0	['hsa04714']	KEGG_2019_Human						
+290	Q7Z2Z2	Elongation factor-like GTPase 1	Swiss-Prot	EFL1	1.0	['hsa03008']	KEGG_2019_Human						
+291	Q7Z3B4	Nucleoporin p54	Swiss-Prot	NUP54	1.0	['hsa03013']	KEGG_2019_Human						
+292	Q7Z5Y6	Bone morphogenetic protein 8A	Swiss-Prot	BMP8A	1.0	['hsa04714']	KEGG_2019_Human						
+293	Q7Z7A3	Cytoplasmic tRNA 2-thiolation protein 1	Swiss-Prot	CTU1	1.0	['hsa04122']	KEGG_2019_Human						
+294	Q86V24	Adiponectin receptor protein 2	Swiss-Prot	ADIPOR2	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+295	Q86V81	THO complex subunit 4	Swiss-Prot	ALYREF	1.0	['hsa03013']	KEGG_2019_Human						
+296	Q86W42	THO complex subunit 6 homolog	Swiss-Prot	THOC6	1.0	['hsa03013']	KEGG_2019_Human						
+297	Q86WW8	Cytochrome c oxidase assembly factor 5	Swiss-Prot	COA5	1.0	['hsa04714']	KEGG_2019_Human						
+298	Q86XF0	Dihydrofolate reductase 2, mitochondrial	Swiss-Prot	DHFR2	1.0	['hsa00670']	KEGG_2019_Human						
+299	Q86Z14	Beta-klotho	Swiss-Prot	KLB	1.0	['hsa04714']	KEGG_2019_Human						
+300	Q8IVF4	Dynein heavy chain 10, axonemal	Swiss-Prot	DNAH10	1.0	['hsa05016']	KEGG_2019_Human						
+301	Q8IWA0	WD repeat-containing protein 75	Swiss-Prot	WDR75	1.0	['hsa03008']	KEGG_2019_Human						
+302	Q6ZNE5	Beclin 1-associated autophagy-related key regulator	Swiss-Prot	ATG14	1.0	['hsa05016']	KEGG_2019_Human						
+303	Q6UB35	Monofunctional C1-tetrahydrofolate synthase, mitochondrial	Swiss-Prot	MTHFD1L	1.0	['hsa00670']	KEGG_2019_Human						
+304	Q5BJF5	Serine hydroxymethyltransferase	TrEMBL	SHMT2	1.0	['hsa00670']	KEGG_2019_Human						
+305	Q6STE5	SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily D member 3	Swiss-Prot	SMARCD3	1.0	['hsa04714']	KEGG_2019_Human						
+306	Q5JQF8	Polyadenylate-binding protein 1-like 2	Swiss-Prot	PABPC1L2A	1.0	['hsa03013']	KEGG_2019_Human						
+307	Q5JTJ3	Cytochrome c oxidase assembly factor 6 homolog	Swiss-Prot	COA6	1.0	['hsa04714']	KEGG_2019_Human						
+308	Q5MNZ9	WD repeat domain phosphoinositide-interacting protein 1	Swiss-Prot	WIPI1	1.0	['hsa05016']	KEGG_2019_Human						
+309	Q5RI15	Cytochrome c oxidase assembly protein COX20, mitochondrial	Swiss-Prot	COX20	1.0	['hsa04714']	KEGG_2019_Human						
+310	Q5S007	Leucine-rich repeat serine/threonine-protein kinase 2	Swiss-Prot	LRRK2	1.0	['hsa05012']	KEGG_2019_Human						
+311	Q5SRE5	Nucleoporin NUP188 homolog	Swiss-Prot	NUP188	1.0	['hsa03013']	KEGG_2019_Human						
+312	Q5TAP6	U3 small nucleolar RNA-associated protein 14 homolog C	Swiss-Prot	UTP14C	1.0	['hsa03008']	KEGG_2019_Human						
+313	Q5TEU4	Arginine-hydroxylase NDUFAF5, mitochondrial	Swiss-Prot	NDUFAF5	1.0	['hsa04714']	KEGG_2019_Human						
+314	Q5U091		TrEMBL	NRAS	1.0	['hsa04714']	KEGG_2019_Human						
+315	Q5V9X9		TrEMBL	CACNA1C	1.0	['hsa05010']	KEGG_2019_Human						
+316	Q5VU65	Nuclear pore membrane glycoprotein 210-like	Swiss-Prot	NUP210L	1.0	['hsa03013']	KEGG_2019_Human						
+317	Q6EEV6	Small ubiquitin-related modifier 4	Swiss-Prot	SUMO4	1.0	['hsa03013']	KEGG_2019_Human						
+318	Q6I9Y2	THO complex subunit 7 homolog	Swiss-Prot	THOC7	1.0	['hsa03013']	KEGG_2019_Human						
+319	Q6P3U7		TrEMBL	RXRA	1.0	['hsa04932']	KEGG_2019_Human						
+320	Q6P597	Kinesin light chain 3	Swiss-Prot	KLC3	1.0	['hsa05016']	KEGG_2019_Human						
+321	Q92569	Phosphatidylinositol 3-kinase regulatory subunit gamma	Swiss-Prot	PIK3R3	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+322	Q6SJ96	TATA box-binding protein-like protein 2	Swiss-Prot	TBPL2	1.0	['hsa05016']	KEGG_2019_Human						
+323	Q92542	Nicastrin	Swiss-Prot	NCSTN	1.0	['hsa05010']	KEGG_2019_Human						
+324	Q96PN6	Adenylate cyclase type 10	Swiss-Prot	ADCY10	1.0	['hsa04714']	KEGG_2019_Human						
+325	Q92574	Hamartin	Swiss-Prot	TSC1	1.0	['hsa04714']	KEGG_2019_Human						
+326	Q9P032	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex assembly factor 4	Swiss-Prot	NDUFAF4	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP4324']	WikiPathways_2019_Human			
+327	Q9NRG9	Aladin	Swiss-Prot	AAAS	1.0	['hsa03013']	KEGG_2019_Human						
+328	Q9NRR4	Ribonuclease 3	Swiss-Prot	DROSHA	1.0	['hsa03008']	KEGG_2019_Human						
+329	Q9NSA1	Fibroblast growth factor 21	Swiss-Prot	FGF21	1.0	['hsa04714']	KEGG_2019_Human						
+330	Q9NSJ5		TrEMBL	DKFZp761J032	1.0	['hsa05016']	KEGG_2019_Human						
+331	Q9NSK0	Kinesin light chain 4	Swiss-Prot	KLC4	1.0	['hsa05016']	KEGG_2019_Human						
+332	Q9NU22	Midasin	Swiss-Prot	MDN1	1.0	['hsa03008']	KEGG_2019_Human						
+333	Q9NV31	U3 small nucleolar ribonucleoprotein protein IMP3	Swiss-Prot	IMP3	1.0	['hsa03008']	KEGG_2019_Human						
+334	Q9NVN8	Guanine nucleotide-binding protein-like 3-like protein	Swiss-Prot	GNL3L	1.0	['hsa03008']	KEGG_2019_Human						
+335	Q9NW13	RNA-binding protein 28	Swiss-Prot	RBM28	1.0	['hsa03008']	KEGG_2019_Human						
+336	Q9NWB7	Intraflagellar transport protein 57 homolog	Swiss-Prot	IFT57	1.0	['hsa05016']	KEGG_2019_Human						
+337	Q9NWZ8	Gem-associated protein 8	Swiss-Prot	GEMIN8	1.0	['hsa03013']	KEGG_2019_Human						
+338	Q9NX24	H/ACA ribonucleoprotein complex subunit 2	Swiss-Prot	NHP2	1.0	['hsa03008']	KEGG_2019_Human						
+339	Q9NY12	H/ACA ribonucleoprotein complex subunit 1	Swiss-Prot	GAR1	1.0	['hsa03008']	KEGG_2019_Human						
+340	Q9NY65	Tubulin alpha-8 chain	Swiss-Prot	TUBA8	1.0	['hsa05016']	KEGG_2019_Human						
+341	Q9NYC9	Dynein heavy chain 9, axonemal	Swiss-Prot	DNAH9	1.0	['hsa05016']	KEGG_2019_Human						
+342	Q9NYH9	U3 small nucleolar RNA-associated protein 6 homolog	Swiss-Prot	UTP6	1.0	['hsa03008']	KEGG_2019_Human						
+343	Q9NYJ1	Cytochrome c oxidase assembly factor 4 homolog, mitochondrial	Swiss-Prot	COA4	1.0	['hsa04714']	KEGG_2019_Human						
+344	Q9NZ32	Actin-related protein 10	Swiss-Prot	ACTR10	1.0	['hsa05016']	KEGG_2019_Human						
+345	Q9NZ42	Gamma-secretase subunit PEN-2	Swiss-Prot	PSENEN	1.0	['hsa05010']	KEGG_2019_Human						
+346	Q9NR50	Translation initiation factor eIF-2B subunit gamma	Swiss-Prot	EIF2B3	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+347	Q9NQC3	Reticulon-4	Swiss-Prot	RTN4	1.0	['hsa05010']	KEGG_2019_Human						
+348	Q9NPE3	H/ACA ribonucleoprotein complex subunit 3	Swiss-Prot	NOP10	1.0	['hsa03008']	KEGG_2019_Human						
+349	Q9H6R4	Nucleolar protein 6	Swiss-Prot	NOL6	1.0	['hsa03008']	KEGG_2019_Human						
+350	Q9H0D6	5'-3' exoribonuclease 2	Swiss-Prot	XRN2	1.0	['hsa03008']	KEGG_2019_Human						
+351	Q9H1J1	Regulator of nonsense transcripts 3A	Swiss-Prot	UPF3A	1.0	['hsa03013']	KEGG_2019_Human						
+352	Q9H2U2	Inorganic pyrophosphatase 2, mitochondrial	Swiss-Prot	PPA2	1.0	['hsa00190']	KEGG_2019_Human						
+353	Q9H307	Pinin	Swiss-Prot	PNN	1.0	['hsa03013']	KEGG_2019_Human						
+354	Q9H361	Polyadenylate-binding protein 3	Swiss-Prot	PABPC3	1.0	['hsa03013']	KEGG_2019_Human						
+355	Q9H4B7	Tubulin beta-1 chain	Swiss-Prot	TUBB1	1.0	['hsa05016']	KEGG_2019_Human						
+356	Q9H583	HEAT repeat-containing protein 1	Swiss-Prot	HEATR1	1.0	['hsa03008']	KEGG_2019_Human						
+357	Q9H633	Ribonuclease P protein subunit p21	Swiss-Prot	RPP21	1.0	['hsa03013']	KEGG_2019_Human						
+358	Q9H777	Zinc phosphodiesterase ELAC protein 1	Swiss-Prot	ELAC1	1.0	['hsa03013']	KEGG_2019_Human						
+359	Q9NP71	Carbohydrate-responsive element-binding protein	Swiss-Prot	MLXIPL	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+360	Q9H814	Phosphorylated adapter RNA export protein	Swiss-Prot	PHAX	1.0	['hsa03013']	KEGG_2019_Human						
+361	Q9H840	Gem-associated protein 7	Swiss-Prot	GEMIN7	1.0	['hsa03013']	KEGG_2019_Human						
+362	Q9H903	Probable bifunctional methylenetetrahydrofolate dehydrogenase/cyclohydrolase 2	Swiss-Prot	MTHFD2L	1.0	['hsa00670']	KEGG_2019_Human						
+363	Q9HAP2	MLX-interacting protein	Swiss-Prot	MLXIP	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+364	Q9HAV4	Exportin-5	Swiss-Prot	XPO5	1.0	['hsa03013']	KEGG_2019_Human						
+365	Q9HAZ2	Histone-lysine N-methyltransferase PRDM16	Swiss-Prot	PRDM16	1.0	['hsa04714']	KEGG_2019_Human						
+366	Q9HBG4	V-type proton ATPase 116 kDa subunit a isoform 4	Swiss-Prot	ATP6V0A4	1.0	['hsa00190']	KEGG_2019_Human						
+367	Q9HC62	Sentrin-specific protease 2	Swiss-Prot	SENP2	1.0	['hsa03013']	KEGG_2019_Human						
+368	Q9NZT1	Calmodulin-like protein 5	Swiss-Prot	CALML5	1.0	['hsa05010']	KEGG_2019_Human						
+369	Q9P0S2	Cytochrome c oxidase assembly protein COX16 homolog, mitochondrial	Swiss-Prot	COX16	1.0	['hsa04714']	KEGG_2019_Human						
+370	Q9H0A0	RNA cytidine acetyltransferase	Swiss-Prot	NAT10	1.0	['hsa03008']	KEGG_2019_Human						
+371	Q9P225	Dynein heavy chain 2, axonemal	Swiss-Prot	DNAH2	1.0	['hsa05016']	KEGG_2019_Human						
+372	Q9Y375	Complex I intermediate-associated protein 30, mitochondrial	Swiss-Prot	NDUFAF1	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP4324']	WikiPathways_2019_Human			
+373	Q9Y385	Ubiquitin-conjugating enzyme E2 J1	Swiss-Prot	UBE2J1	1.0	['hsa05012']	KEGG_2019_Human						
+374	Q9Y3A4	Ribosomal RNA-processing protein 7 homolog A	Swiss-Prot	RRP7A	1.0	['hsa03008']	KEGG_2019_Human						
+375	Q9Y3A5	Ribosome maturation protein SBDS	Swiss-Prot	SBDS	1.0	['hsa03008']	KEGG_2019_Human						
+376	Q9Y3B8	Oligoribonuclease, mitochondrial	Swiss-Prot	REXO2	1.0	['hsa03008']	KEGG_2019_Human						
+377	Q9Y3D8	Adenylate kinase isoenzyme 6	Swiss-Prot	AK6	1.0	['hsa03008']	KEGG_2019_Human						
+378	Q9Y3F4	Serine-threonine kinase receptor-associated protein	Swiss-Prot	STRAP	1.0	['hsa03013']	KEGG_2019_Human						
+379	Q9Y487	V-type proton ATPase 116 kDa subunit a isoform 2	Swiss-Prot	ATP6V0A2	1.0	['hsa00190']	KEGG_2019_Human						
+380	Q9Y4C1	Lysine-specific demethylase 3A	Swiss-Prot	KDM3A	1.0	['hsa04714']	KEGG_2019_Human						
+381	Q9Y4H2	Insulin receptor substrate 2	Swiss-Prot	IRS2	1.0	['hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+382	Q9Y4P8	WD repeat domain phosphoinositide-interacting protein 2	Swiss-Prot	WIPI2	1.0	['hsa05016']	KEGG_2019_Human						
+383	Q9Y5J1	U3 small nucleolar RNA-associated protein 18 homolog	Swiss-Prot	UTP18	1.0	['hsa03008']	KEGG_2019_Human						
+384	Q9Y5K8	V-type proton ATPase subunit D	Swiss-Prot	ATP6V1D	1.0	['hsa00190']	KEGG_2019_Human						
+385	Q9Y5S9	RNA-binding protein 8A	Swiss-Prot	RBM8A	1.0	['hsa03013']	KEGG_2019_Human						
+386	Q9Y5Z0	Beta-secretase 2	Swiss-Prot	BACE2	1.0	['hsa05010']	KEGG_2019_Human						
+387	Q9Y697	Cysteine desulfurase, mitochondrial	Swiss-Prot	NFS1	1.0	['hsa04122']	KEGG_2019_Human						
+388	Q9Y6A5	Transforming acidic coiled-coil-containing protein 3	Swiss-Prot	TACC3	1.0	['hsa03013']	KEGG_2019_Human						
+389	Q9Y6H5	Synphilin-1	Swiss-Prot	SNCAIP	1.0	['hsa05012']	KEGG_2019_Human						
+390	V9HW29	Kinesin-like protein	TrEMBL	HEL-S-61	1.0	['hsa05016']	KEGG_2019_Human						
+391	Q9Y324	rRNA-processing protein FCF1 homolog	Swiss-Prot	FCF1	1.0	['hsa03008']	KEGG_2019_Human						
+392	Q9Y2X3	Nucleolar protein 58	Swiss-Prot	NOP58	1.0	['hsa03008']	KEGG_2019_Human						
+393	Q9Y2R0	Cytochrome c oxidase assembly factor 3 homolog, mitochondrial	Swiss-Prot	COA3	1.0	['hsa04714']	KEGG_2019_Human						
+394	Q9UJW0	Dynactin subunit 4	Swiss-Prot	DCTN4	1.0	['hsa05016']	KEGG_2019_Human						
+395	Q9P2D7	Dynein heavy chain 1, axonemal	Swiss-Prot	DNAH1	1.0	['hsa05016']	KEGG_2019_Human						
+396	Q9UBS0	Ribosomal protein S6 kinase beta-2	Swiss-Prot	RPS6KB2	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP477']	WikiPathways_2019_Human			
+397	Q9UFH2	Dynein heavy chain 17, axonemal	Swiss-Prot	DNAH17	1.0	['hsa05016']	KEGG_2019_Human						
+398	Q9UH92	Max-like protein X	Swiss-Prot	MLX	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+399	Q9UHI6	Probable ATP-dependent RNA helicase DDX20	Swiss-Prot	DDX20	1.0	['hsa03013']	KEGG_2019_Human						
+400	Q9UI10	Translation initiation factor eIF-2B subunit delta	Swiss-Prot	EIF2B4	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+401	Q9UI12	V-type proton ATPase subunit H	Swiss-Prot	ATP6V1H	1.0	['hsa00190']	KEGG_2019_Human						
+402	Q9UI46	Dynein intermediate chain 1, axonemal	Swiss-Prot	DNAI1	1.0	['hsa05016']	KEGG_2019_Human						
+403	Q9UK32	Ribosomal protein S6 kinase alpha-6	Swiss-Prot	RPS6KA6	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP477']	WikiPathways_2019_Human			
+404	Q9Y2P8	RNA 3'-terminal phosphate cyclase-like protein	Swiss-Prot	RCL1	1.0	['hsa03008']	KEGG_2019_Human						
+405	Q9UKL0	REST corepressor 1	Swiss-Prot	RCOR1	1.0	['hsa05016']	KEGG_2019_Human						
+406	Q9UKU0	Long-chain-fatty-acid--CoA ligase 6	Swiss-Prot	ACSL6	1.0	['hsa04714']	KEGG_2019_Human						
+407	Q9UKV3	Apoptotic chromatin condensation inducer in the nucleus	Swiss-Prot	ACIN1	1.0	['hsa03013']	KEGG_2019_Human						
+408	Q9UKX7	Nuclear pore complex protein Nup50	Swiss-Prot	NUP50	1.0	['hsa03013']	KEGG_2019_Human						
+409	Q9ULC5	Long-chain-fatty-acid--CoA ligase 5	Swiss-Prot	ACSL5	1.0	['hsa04714']	KEGG_2019_Human						
+410	Q9ULX3	RNA-binding protein NOB1	Swiss-Prot	NOB1	1.0	['hsa03008']	KEGG_2019_Human						
+411	Q9UNX4	WD repeat-containing protein 3	Swiss-Prot	WDR3	1.0	['hsa03008']	KEGG_2019_Human						
+412	Q9Y243	RAC-gamma serine/threonine-protein kinase	Swiss-Prot	AKT3	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+413	Q9H0B6	Kinesin light chain 2	Swiss-Prot	KLC2	1.0	['hsa05016']	KEGG_2019_Human						
+414	Q9H089	Large subunit GTPase 1 homolog	Swiss-Prot	LSG1	1.0	['hsa03008']	KEGG_2019_Human						
+415	Q92618	Zinc finger protein 516	Swiss-Prot	ZNF516	1.0	['hsa04714']	KEGG_2019_Human						
+416	Q96LZ3	Calcineurin subunit B type 2	Swiss-Prot	PPP3R2	1.0	['hsa05010']	KEGG_2019_Human						
+417	Q96BY7	Autophagy-related protein 2 homolog B	Swiss-Prot	ATG2B	1.0	['hsa05016']	KEGG_2019_Human						
+418	Q96CW1	AP-2 complex subunit mu	Swiss-Prot	AP2M1	1.0	['hsa05016']	KEGG_2019_Human						
+419	Q96DP5	Methionyl-tRNA formyltransferase, mitochondrial	Swiss-Prot	MTFMT	1.0	['hsa00670']	KEGG_2019_Human						
+420	Q96DT5	Dynein heavy chain 11, axonemal	Swiss-Prot	DNAH11	1.0	['hsa05016']	KEGG_2019_Human						
+421	Q96DU9	Polyadenylate-binding protein 5	Swiss-Prot	PABPC5	1.0	['hsa03013']	KEGG_2019_Human						
+422	Q96EE3	Nucleoporin SEH1	Swiss-Prot	SEH1L	1.0	['hsa03013']	KEGG_2019_Human						
+423	Q96F07	Cytoplasmic FMR1-interacting protein 2	Swiss-Prot	CYFIP2	1.0	['hsa03013']	KEGG_2019_Human						
+424	Q96F24	Nuclear receptor-binding factor 2	Swiss-Prot	NRBF2	1.0	['hsa05016']	KEGG_2019_Human						
+425	Q96FV9	THO complex subunit 1	Swiss-Prot	THOC1	1.0	['hsa03013']	KEGG_2019_Human						
+426	Q96G21	U3 small nucleolar ribonucleoprotein protein IMP4	Swiss-Prot	IMP4	1.0	['hsa03008']	KEGG_2019_Human						
+427	Q96GE6	Calmodulin-like protein 4	Swiss-Prot	CALML4	1.0	['hsa05010']	KEGG_2019_Human						
+428	Q96GM5	SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily D member 1	Swiss-Prot	SMARCD1	1.0	['hsa04714']	KEGG_2019_Human						
+429	Q96HA1	Nuclear envelope pore membrane protein POM 121	Swiss-Prot	POM121	1.0	['hsa03013']	KEGG_2019_Human						
+430	Q96I36	Cytochrome c oxidase assembly protein COX14	Swiss-Prot	COX14	1.0	['hsa04714']	KEGG_2019_Human						
+431	Q96IC2	RNA exonuclease 5	Swiss-Prot	REXO5	1.0	['hsa03008']	KEGG_2019_Human						
+432	Q96J01	THO complex subunit 3	Swiss-Prot	THOC3	1.0	['hsa03013']	KEGG_2019_Human						
+433	Q96J02	E3 ubiquitin-protein ligase Itchy homolog	Swiss-Prot	ITCH	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+434	Q96JB1	Dynein heavy chain 8, axonemal	Swiss-Prot	DNAH8	1.0	['hsa05016']	KEGG_2019_Human						
+435	Q96KW2	POM121-like protein 2	Swiss-Prot	POM121L2	1.0	['hsa03013']	KEGG_2019_Human						
+436	Q96BR5	Cytochrome c oxidase assembly factor 7	Swiss-Prot	COA7	1.0	['hsa04714']	KEGG_2019_Human						
+437	Q96BI3	Gamma-secretase subunit APH-1A	Swiss-Prot	APH1A	1.0	['hsa05010']	KEGG_2019_Human						
+438	Q96B36	Proline-rich AKT1 substrate 1	Swiss-Prot	AKT1S1	1.0	['hsa04714']	KEGG_2019_Human						
+439	Q92925	SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily D member 2	Swiss-Prot	SMARCD2	1.0	['hsa04714']	KEGG_2019_Human						
+440	Q92621	Nuclear pore complex protein Nup205	Swiss-Prot	NUP205	1.0	['hsa03013']	KEGG_2019_Human						
+441	Q92750	Transcription initiation factor TFIID subunit 4B	Swiss-Prot	TAF4B	1.0	['hsa05016']	KEGG_2019_Human						
+442	Q92769	Histone deacetylase 2	Swiss-Prot	HDAC2	1.0	['hsa05016']	KEGG_2019_Human						
+443	Q92782	Zinc finger protein neuro-d4	Swiss-Prot	DPF1	1.0	['hsa04714']	KEGG_2019_Human						
+444	Q92784	Zinc finger protein DPF3	Swiss-Prot	DPF3	1.0	['hsa04714']	KEGG_2019_Human						
+445	Q92793	CREB-binding protein	Swiss-Prot	CREBBP	1.0	['hsa05016']	KEGG_2019_Human						
+446	Q92900	Regulator of nonsense transcripts 1	Swiss-Prot	UPF1	1.0	['hsa03013']	KEGG_2019_Human				1.0	['R-HSA-975956']	Reactome_2016
+447	Q92922	SWI/SNF complex subunit SMARCC1	Swiss-Prot	SMARCC1	1.0	['hsa04714']	KEGG_2019_Human						
+448	Q92934	Bcl2-associated agonist of cell death	Swiss-Prot	BAD	1.0	['hsa05010']	KEGG_2019_Human						
+449	Q96AD5	Patatin-like phospholipase domain-containing protein 2	Swiss-Prot	PNPLA2	1.0	['hsa04714']	KEGG_2019_Human						
+450	Q92979	Ribosomal RNA small subunit methyltransferase NEP1	Swiss-Prot	EMG1	1.0	['hsa03008']	KEGG_2019_Human						
+451	Q93050	V-type proton ATPase 116 kDa subunit a isoform 1	Swiss-Prot	ATP6V0A1	1.0	['hsa00190']	KEGG_2019_Human						
+452	Q93084	Sarcoplasmic/endoplasmic reticulum calcium ATPase 3	Swiss-Prot	ATP2A3	1.0	['hsa05010']	KEGG_2019_Human						
+453	Q969G3	SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily E member 1	Swiss-Prot	SMARCE1	1.0	['hsa04714']	KEGG_2019_Human						
+454	Q969X6	U3 small nucleolar RNA-associated protein 4 homolog	Swiss-Prot	UTP4	1.0	['hsa03008']	KEGG_2019_Human						
+455	Q96A05	V-type proton ATPase subunit E 2	Swiss-Prot	ATP6V1E2	1.0	['hsa00190']	KEGG_2019_Human						
+456	Q96A54	Adiponectin receptor protein 1	Swiss-Prot	ADIPOR1	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+457	Q96A72	Protein mago nashi homolog 2	Swiss-Prot	MAGOHB	1.0	['hsa03013']	KEGG_2019_Human						
+458	Q96LB4	V-type proton ATPase subunit G 3	Swiss-Prot	ATP6V1G3	1.0	['hsa00190']	KEGG_2019_Human						
+459	Q96NT7		TrEMBL		1.0	['hsa05016']	KEGG_2019_Human						
+460	Q9H074	Polyadenylate-binding protein-interacting protein 1	Swiss-Prot	PAIP1	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+461	Q96PG8	Bcl-2-binding component 3, isoforms 3/4	Swiss-Prot	BBC3	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+462	Q9BTX1	Nucleoporin NDC1	Swiss-Prot	NDC1	1.0	['hsa03013']	KEGG_2019_Human						
+463	Q9BU61	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex assembly factor 3	Swiss-Prot	NDUFAF3	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP4324']	WikiPathways_2019_Human			
+464	Q9BUF5	Tubulin beta-6 chain	Swiss-Prot	TUBB6	1.0	['hsa05016']	KEGG_2019_Human						
+465	Q9BVA1	Tubulin beta-2B chain	Swiss-Prot	TUBB2B	1.0	['hsa05016']	KEGG_2019_Human						
+466	Q9BVC4	Target of rapamycin complex subunit LST8	Swiss-Prot	MLST8	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP585']	WikiPathways_2019_Human			
+467	Q9BVJ6	U3 small nucleolar RNA-associated protein 14 homolog A	Swiss-Prot	UTP14A	1.0	['hsa03008']	KEGG_2019_Human						
+468	Q9BVL2	Nucleoporin p58/p45	Swiss-Prot	NUP58	1.0	['hsa03013']	KEGG_2019_Human						
+469	Q9BVP2	Guanine nucleotide-binding protein-like 3	Swiss-Prot	GNL3	1.0	['hsa03008']	KEGG_2019_Human						
+470	Q9BVS4	Serine/threonine-protein kinase RIO2	Swiss-Prot	RIOK2	1.0	['hsa03008']	KEGG_2019_Human						
+471	Q9BW27	Nuclear pore complex protein Nup85	Swiss-Prot	NUP85	1.0	['hsa03013']	KEGG_2019_Human						
+472	Q9BXM7	Serine/threonine-protein kinase PINK1, mitochondrial	Swiss-Prot	PINK1	1.0	['hsa05012']	KEGG_2019_Human						
+473	Q9BZE4	Nucleolar GTP-binding protein 1	Swiss-Prot	GTPBP4	1.0	['hsa03008']	KEGG_2019_Human						
+474	Q9BZI7	Regulator of nonsense transcripts 3B	Swiss-Prot	UPF3B	1.0	['hsa03013']	KEGG_2019_Human						
+475	Q9C0C7	Activating molecule in BECN1-regulated autophagy protein 1	Swiss-Prot	AMBRA1	1.0	['hsa05016']	KEGG_2019_Human						
+476	Q9C0G6	Dynein heavy chain 6, axonemal	Swiss-Prot	DNAH6	1.0	['hsa05016']	KEGG_2019_Human						
+477	Q9GZM3	DNA-directed RNA polymerase II subunit RPB11-b1	Swiss-Prot	POLR2J2	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+478	Q9GZS0	Dynein intermediate chain 2, axonemal	Swiss-Prot	DNAI2	1.0	['hsa05016']	KEGG_2019_Human						
+479	Q9GZY4	Cytochrome c oxidase assembly factor 1 homolog	Swiss-Prot	COA1	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP4324']	WikiPathways_2019_Human			
+480	Q9H008	Phospholysine phosphohistidine inorganic pyrophosphate phosphatase	Swiss-Prot	LHPP	1.0	['hsa00190']	KEGG_2019_Human						
+481	Q9BTM9	Ubiquitin-related modifier 1	Swiss-Prot	URM1	1.0	['hsa04122']	KEGG_2019_Human						
+482	Q9BTE1	Dynactin subunit 5	Swiss-Prot	DCTN5	1.0	['hsa05016']	KEGG_2019_Human						
+483	Q9BSK3	RanGAP1_C domain-containing protein	TrEMBL		1.0	['hsa03013']	KEGG_2019_Human						
+484	Q99570	Phosphoinositide 3-kinase regulatory subunit 4	Swiss-Prot	PIK3R4	1.0	['hsa05016']	KEGG_2019_Human						
+485	Q13936	Voltage-dependent L-type calcium channel subunit alpha-1C	Swiss-Prot	CACNA1C	1.0	['hsa05010']	KEGG_2019_Human						
+486	Q96Q11	CCA tRNA nucleotidyltransferase 1, mitochondrial	Swiss-Prot	TRNT1	1.0	['hsa03013']	KEGG_2019_Human						
+487	Q96RS0	Trimethylguanosine synthase	Swiss-Prot	TGS1	1.0	['hsa03013']	KEGG_2019_Human						
+488	Q96SL4	Glutathione peroxidase 7	Swiss-Prot	GPX7	1.0	['hsa05016']	KEGG_2019_Human						
+489	Q96ST3	Paired amphipathic helix protein Sin3a	Swiss-Prot	SIN3A	1.0	['hsa05016']	KEGG_2019_Human						
+490	Q99437	V-type proton ATPase 21 kDa proteolipid subunit	Swiss-Prot	ATP6V0B	1.0	['hsa00190']	KEGG_2019_Human						
+491	Q99497	Protein/nucleic acid deglycase DJ-1	Swiss-Prot	PARK7	1.0	['hsa05012']	KEGG_2019_Human						
+492	Q99567	Nuclear pore complex protein Nup88	Swiss-Prot	NUP88	1.0	['hsa03013']	KEGG_2019_Human						
+493	Q99613	Eukaryotic translation initiation factor 3 subunit C	Swiss-Prot	EIF3C	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+494	Q9BSB4	Autophagy-related protein 101	Swiss-Prot	ATG101	1.0	['hsa05016']	KEGG_2019_Human						
+495	Q99685	Monoglyceride lipase	Swiss-Prot	MGLL	1.0	['hsa04714']	KEGG_2019_Human						
+496	Q99707	Methionine synthase	Swiss-Prot	MTR	1.0	['hsa00670']	KEGG_2019_Human						
+497	Q99714	3-hydroxyacyl-CoA dehydrogenase type-2	Swiss-Prot	HSD17B10	1.0	['hsa05010']	KEGG_2019_Human						
+498	Q99719	Septin-5	Swiss-Prot	SEPTIN5	1.0	['hsa05012']	KEGG_2019_Human						
+499	Q9BQ52	Zinc phosphodiesterase ELAC protein 2	Swiss-Prot	ELAC2	1.0	['hsa03013']	KEGG_2019_Human						
+500	Q9BQE3	Tubulin alpha-1C chain	Swiss-Prot	TUBA1C	1.0	['hsa05016']	KEGG_2019_Human						
+501	Q9BRP8	Partner of Y14 and mago	Swiss-Prot	PYM1	1.0	['hsa03013']	KEGG_2019_Human						
+502	Q9BRS2	Serine/threonine-protein kinase RIO1	Swiss-Prot	RIOK1	1.0	['hsa03008']	KEGG_2019_Human						
+503	Q13976	cGMP-dependent protein kinase 1	Swiss-Prot	PRKG1	1.0	['hsa04714']	KEGG_2019_Human						
+504	P67870	Casein kinase II subunit beta	Swiss-Prot	CSNK2B	1.0	['hsa03008']	KEGG_2019_Human						
+505	Q13885	Tubulin beta-2A chain	Swiss-Prot	TUBB2A	1.0	['hsa05016']	KEGG_2019_Human						
+506	O95573	Long-chain-fatty-acid--CoA ligase 3	Swiss-Prot	ACSL3	1.0	['hsa04714']	KEGG_2019_Human						
+507	P05067	Amyloid-beta precursor protein	Swiss-Prot	APP	1.0	['hsa05010']	KEGG_2019_Human						
+508	P05181	Cytochrome P450 2E1	Swiss-Prot	CYP2E1	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+509	P05231	Interleukin-6	Swiss-Prot	IL6	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+510	P05412	Transcription factor AP-1	Swiss-Prot	JUN	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+511	P06213	Insulin receptor	Swiss-Prot	INSR	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+512	P06730	Eukaryotic translation initiation factor 4E	Swiss-Prot	EIF4E	1.0	['hsa03013']	KEGG_2019_Human	2.0	[' WP107', ' WP585']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+513	P06858	Lipoprotein lipase	Swiss-Prot	LPL	1.0	['hsa05010']	KEGG_2019_Human						
+514	P07101	Tyrosine 3-monooxygenase	Swiss-Prot	TH	1.0	['hsa05012']	KEGG_2019_Human						
+515	P07203	Glutathione peroxidase 1	Swiss-Prot	GPX1	1.0	['hsa05016']	KEGG_2019_Human						
+516	P07384	Calpain-1 catalytic subunit	Swiss-Prot	CAPN1	1.0	['hsa05010']	KEGG_2019_Human						
+517	P07437	Tubulin beta chain	Swiss-Prot	TUBB	1.0	['hsa05016']	KEGG_2019_Human						
+518	P08047	Transcription factor Sp1	Swiss-Prot	SP1	1.0	['hsa05016']	KEGG_2019_Human						
+519	P08473	Neprilysin	Swiss-Prot	MME	1.0	['hsa05010']	KEGG_2019_Human						
+520	P08754	Guanine nucleotide-binding protein G(i) subunit alpha	Swiss-Prot	GNAI3	1.0	['hsa05012']	KEGG_2019_Human						
+521	P08887	Interleukin-6 receptor subunit alpha	Swiss-Prot	IL6R	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+522	P09496	Clathrin light chain A	Swiss-Prot	CLTA	1.0	['hsa05016']	KEGG_2019_Human						
+523	P09497	Clathrin light chain B	Swiss-Prot	CLTB	1.0	['hsa05016']	KEGG_2019_Human						
+524	P09936	Ubiquitin carboxyl-terminal hydrolase isozyme L1	Swiss-Prot	UCHL1	1.0	['hsa05012']	KEGG_2019_Human						
+525	P0CG47	Polyubiquitin-B	Swiss-Prot	UBB	1.0	['hsa05012']	KEGG_2019_Human						
+526	P04899	Guanine nucleotide-binding protein G(i) subunit alpha-2	Swiss-Prot	GNAI2	1.0	['hsa05012']	KEGG_2019_Human						
+527	P04818	Thymidylate synthase	Swiss-Prot	TYMS	1.0	['hsa00670']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+528	P04637	Cellular tumor antigen p53	Swiss-Prot	TP53	1.0	['hsa05016']	KEGG_2019_Human						
+529	P01112	GTPase HRas	Swiss-Prot	HRAS	1.0	['hsa04714']	KEGG_2019_Human						
+530	O95782	AP-2 complex subunit alpha-1	Swiss-Prot	AP2A1	1.0	['hsa05016']	KEGG_2019_Human						
+531	O95954	Formimidoyltransferase-cyclodeaminase	Swiss-Prot	FTCD	1.0	['hsa00670']	KEGG_2019_Human						
+532	O96007	Molybdopterin synthase catalytic subunit	Swiss-Prot	MOCS2	1.0	['hsa04122']	KEGG_2019_Human						
+533	O96015	Dynein light chain 4, axonemal	Swiss-Prot	DNAL4	1.0	['hsa05016']	KEGG_2019_Human						
+534	O96019	Actin-like protein 6A	Swiss-Prot	ACTL6A	1.0	['hsa04714']	KEGG_2019_Human						
+535	P00374	Dihydrofolate reductase	Swiss-Prot	DHFR	1.0	['hsa00670']	KEGG_2019_Human						
+536	P00441	Superoxide dismutase [Cu-Zn]	Swiss-Prot	SOD1	1.0	['hsa05016']	KEGG_2019_Human						
+537	P01111	GTPase NRas	Swiss-Prot	NRAS	1.0	['hsa04714']	KEGG_2019_Human						
+538	P01116	GTPase KRas	Swiss-Prot	KRAS	1.0	['hsa04714']	KEGG_2019_Human						
+539	P04406	Glyceraldehyde-3-phosphate dehydrogenase	Swiss-Prot	GAPDH	1.0	['hsa05010']	KEGG_2019_Human						
+540	P01137	Transforming growth factor beta-1 proprotein	Swiss-Prot	TGFB1	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+541	P01160	Natriuretic peptides A	Swiss-Prot	NPPA	1.0	['hsa04714']	KEGG_2019_Human						
+542	P01275	Glucagon	Swiss-Prot	GCG	1.0	['hsa04714']	KEGG_2019_Human						
+543	P01308	Insulin	Swiss-Prot	INS	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+544	P01583	Interleukin-1 alpha	Swiss-Prot	IL1A	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+545	P02649	Apolipoprotein E	Swiss-Prot	APOE	1.0	['hsa05010']	KEGG_2019_Human						
+546	P04179	Superoxide dismutase [Mn], mitochondrial	Swiss-Prot	SOD2	1.0	['hsa05016']	KEGG_2019_Human						
+547	P04350	Tubulin beta-4A chain	Swiss-Prot	TUBB4A	1.0	['hsa05016']	KEGG_2019_Human						
+548	P0DP23	Calmodulin-1	Swiss-Prot	CALM1	1.0	['hsa05010']	KEGG_2019_Human						
+549	P0DP25	Calmodulin-3	Swiss-Prot	CALM3	1.0	['hsa05010']	KEGG_2019_Human						
+550	P0DPH7	Tubulin alpha-3C chain	Swiss-Prot	TUBA3C	1.0	['hsa05016']	KEGG_2019_Human						
+551	P21554	Cannabinoid receptor 1	Swiss-Prot	CNR1	1.0	['hsa04714']	KEGG_2019_Human						
+552	P19784	Casein kinase II subunit alpha'	Swiss-Prot	CSNK2A2	1.0	['hsa03008']	KEGG_2019_Human						
+553	P19793	Retinoic acid receptor RXR-alpha	Swiss-Prot	RXRA	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+554	P19838	Nuclear factor NF-kappa-B p105 subunit	Swiss-Prot	NFKB1	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+555	P20042	Eukaryotic translation initiation factor 2 subunit 2	Swiss-Prot	EIF2S2	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+556	P20226	TATA-box-binding protein	Swiss-Prot	TBP	1.0	['hsa05016']	KEGG_2019_Human						
+557	P20648	Potassium-transporting ATPase alpha chain 1	Swiss-Prot	ATP4A	1.0	['hsa00190']	KEGG_2019_Human						
+558	P21281	V-type proton ATPase subunit B, brain isoform	Swiss-Prot	ATP6V1B2	1.0	['hsa00190']	KEGG_2019_Human						
+559	P21283	V-type proton ATPase subunit C 1	Swiss-Prot	ATP6V1C1	1.0	['hsa00190']	KEGG_2019_Human						
+560	P21728	D(1A) dopamine receptor	Swiss-Prot	DRD1	1.0	['hsa05012']	KEGG_2019_Human						
+561	P19387	DNA-directed RNA polymerase II subunit RPB3	Swiss-Prot	POLR2C	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+562	P21980	Protein-glutamine gamma-glutamyltransferase 2	Swiss-Prot	TGM2	1.0	['hsa05016']	KEGG_2019_Human						
+563	P22087	rRNA 2'-O-methyltransferase fibrillarin	Swiss-Prot	FBL	1.0	['hsa03008']	KEGG_2019_Human						
+564	P22102	Trifunctional purine biosynthetic protein adenosine-3	Swiss-Prot	GART	1.0	['hsa00670']	KEGG_2019_Human						
+565	P22314	Ubiquitin-like modifier-activating enzyme 1	Swiss-Prot	UBA1	1.0	['hsa05012']	KEGG_2019_Human						
+566	P22352	Glutathione peroxidase 3	Swiss-Prot	GPX3	1.0	['hsa05016']	KEGG_2019_Human						
+567	P23443	Ribosomal protein S6 kinase beta-1	Swiss-Prot	RPS6KB1	1.0	['hsa04714']	KEGG_2019_Human	2.0	[' WP477', ' WP585']	WikiPathways_2019_Human			
+568	P23560	Brain-derived neurotrophic factor	Swiss-Prot	BDNF	1.0	['hsa05016']	KEGG_2019_Human						
+569	P23588	Eukaryotic translation initiation factor 4B	Swiss-Prot	EIF4B	1.0	['hsa03013']	KEGG_2019_Human	2.0	[' WP107', ' WP585']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+570	P19388	DNA-directed RNA polymerases I, II, and III subunit RPABC1	Swiss-Prot	POLR2E	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+571	P18850	Cyclic AMP-dependent transcription factor ATF-6 alpha	Swiss-Prot	ATF6	1.0	['hsa05010']	KEGG_2019_Human						
+572	P10145	Interleukin-8	Swiss-Prot	CXCL8	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+573	P14735	Insulin-degrading enzyme	Swiss-Prot	IDE	1.0	['hsa05010']	KEGG_2019_Human						
+574	P10636	Microtubule-associated protein tau	Swiss-Prot	MAPT	1.0	['hsa05010']	KEGG_2019_Human						
+575	P11362	Fibroblast growth factor receptor 1	Swiss-Prot	FGFR1	1.0	['hsa04714']	KEGG_2019_Human						
+576	P11586	C-1-tetrahydrofolate synthase, cytoplasmic	Swiss-Prot	MTHFD1	1.0	['hsa00670']	KEGG_2019_Human						
+577	P11940	Polyadenylate-binding protein 1	Swiss-Prot	PABPC1	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-975956', 'R-HSA-156827']	Reactome_2016
+578	P12270	Nucleoprotein TPR	Swiss-Prot	TPR	1.0	['hsa03013']	KEGG_2019_Human						
+579	P13945	Beta-3 adrenergic receptor	Swiss-Prot	ADRB3	1.0	['hsa04714']	KEGG_2019_Human						
+580	P13995	Bifunctional methylenetetrahydrofolate dehydrogenase/cyclohydrolase, mitochondrial	Swiss-Prot	MTHFD2	1.0	['hsa00670']	KEGG_2019_Human						
+581	P14416	D(2) dopamine receptor	Swiss-Prot	DRD2	1.0	['hsa05012']	KEGG_2019_Human						
+582	P15313	V-type proton ATPase subunit B, kidney isoform	Swiss-Prot	ATP6V1B1	1.0	['hsa00190']	KEGG_2019_Human						
+583	P18848	Cyclic AMP-dependent transcription factor ATF-4	Swiss-Prot	ATF4	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+584	P15336	Cyclic AMP-dependent transcription factor ATF-2	Swiss-Prot	ATF2	1.0	['hsa04714']	KEGG_2019_Human						
+585	P16066	Atrial natriuretic peptide receptor 1	Swiss-Prot	NPR1	1.0	['hsa04714']	KEGG_2019_Human						
+586	P16298	Serine/threonine-protein phosphatase 2B catalytic subunit beta isoform	Swiss-Prot	PPP3CB	1.0	['hsa05010']	KEGG_2019_Human						
+587	P16615	Sarcoplasmic/endoplasmic reticulum calcium ATPase 2	Swiss-Prot	ATP2A2	1.0	['hsa05010']	KEGG_2019_Human						
+588	P16860	Natriuretic peptides B	Swiss-Prot	NPPB	1.0	['hsa04714']	KEGG_2019_Human						
+589	P17655	Calpain-2 catalytic subunit	Swiss-Prot	CAPN2	1.0	['hsa05010']	KEGG_2019_Human						
+590	P17861	X-box-binding protein 1	Swiss-Prot	XBP1	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+591	P18283	Glutathione peroxidase 2	Swiss-Prot	GPX2	1.0	['hsa05016']	KEGG_2019_Human						
+592	O95670	V-type proton ATPase subunit G 2	Swiss-Prot	ATP6V1G2	1.0	['hsa00190']	KEGG_2019_Human						
+593	O95396	Adenylyltransferase and sulfurtransferase MOCS3	Swiss-Prot	MOCS3	1.0	['hsa04122']	KEGG_2019_Human						
+594	Q13838	Spliceosome RNA helicase DDX39B	Swiss-Prot	DDX39B	1.0	['hsa03013']	KEGG_2019_Human						
+595	O95197	Reticulon-3	Swiss-Prot	RTN3	1.0	['hsa05010']	KEGG_2019_Human						
+596	O00213	Amyloid-beta A4 precursor protein-binding family B member 1	Swiss-Prot	APBB1	1.0	['hsa05010']	KEGG_2019_Human						
+597	O00268	Transcription initiation factor TFIID subunit 4	Swiss-Prot	TAF4	1.0	['hsa05016']	KEGG_2019_Human						
+598	O00291	Huntingtin-interacting protein 1	Swiss-Prot	HIP1	1.0	['hsa05016']	KEGG_2019_Human						
+599	O00303	Eukaryotic translation initiation factor 3 subunit F	Swiss-Prot	EIF3F	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+600	O00329	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform	Swiss-Prot	PIK3CD	1.0	['hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+601	O00399	Dynactin subunit 6	Swiss-Prot	DCTN6	1.0	['hsa05016']	KEGG_2019_Human						
+602	O00422	Histone deacetylase complex subunit SAP18	Swiss-Prot	SAP18	1.0	['hsa03013']	KEGG_2019_Human						
+603	O00459	Phosphatidylinositol 3-kinase regulatory subunit beta	Swiss-Prot	PIK3R2	1.0	['hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+604	O00566	U3 small nucleolar ribonucleoprotein protein MPP10	Swiss-Prot	MPHOSPH10	1.0	['hsa03008']	KEGG_2019_Human						
+605	O00567	Nucleolar protein 56	Swiss-Prot	NOP56	1.0	['hsa03008']	KEGG_2019_Human						
+606	O14497	AT-rich interactive domain-containing protein 1A	Swiss-Prot	ARID1A	1.0	['hsa04714']	KEGG_2019_Human						
+607	O14543	Suppressor of cytokine signaling 3	Swiss-Prot	SOCS3	1.0	['hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+608	O14602	Eukaryotic translation initiation factor 1A, Y-chromosomal	Swiss-Prot	EIF1AY	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+609	O14645	Axonemal dynein light intermediate polypeptide 1	Swiss-Prot	DNALI1	1.0	['hsa05016']	KEGG_2019_Human						
+610	O14672	Disintegrin and metalloproteinase domain-containing protein 10	Swiss-Prot	ADAM10	1.0	['hsa05010']	KEGG_2019_Human						
+611	O14733	Dual specificity mitogen-activated protein kinase kinase 7	Swiss-Prot	MAP2K7	1.0	['hsa05016']	KEGG_2019_Human						
+612	O14744	Protein arginine N-methyltransferase 5	Swiss-Prot	PRMT5	1.0	['hsa03013']	KEGG_2019_Human						
+613	O14893	Gem-associated protein 2	Swiss-Prot	GEMIN2	1.0	['hsa03013']	KEGG_2019_Human						
+614	O14920	Inhibitor of nuclear factor kappa-B kinase subunit beta	Swiss-Prot	IKBKB	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+615	I1SRC5		TrEMBL		1.0	['hsa04714']	KEGG_2019_Human						
+616	F1D8N1		TrEMBL	NR1H3	1.0	['hsa04932']	KEGG_2019_Human						
+617	D3DPP9		TrEMBL	HDAC1	1.0	['hsa05016']	KEGG_2019_Human						
+618	A6NHL2	Tubulin alpha chain-like 3	Swiss-Prot	TUBAL3	1.0	['hsa05016']	KEGG_2019_Human						
+619	A0A024R0G6		TrEMBL	WDR3	1.0	['hsa03008']	KEGG_2019_Human						
+620	A0A024R2V6		TrEMBL	EIF1B	1.0	['hsa03013']	KEGG_2019_Human						
+621	A0A075B6F3		TrEMBL	DNAH8	1.0	['hsa05016']	KEGG_2019_Human						
+622	A0A0A6YYL1	5-formyltetrahydrofolate cyclo-ligase	TrEMBL	ST20-MTHFS	1.0	['hsa00670']	KEGG_2019_Human						
+623	A0A0S2Z3H8		TrEMBL	GNAS	1.0	['hsa04714']	KEGG_2019_Human						
+624	A0A384MR29	Sodium/potassium-transporting ATPase subunit alpha	TrEMBL		1.0	['hsa00190']	KEGG_2019_Human						
+625	A2VDI1		TrEMBL	HEATR1	1.0	['hsa03008']	KEGG_2019_Human						
+626	A5PLL0		TrEMBL	CPT1B	1.0	['hsa04714']	KEGG_2019_Human						
+627	A6NMX2	Eukaryotic translation initiation factor 4E type 1B	Swiss-Prot	EIF4E1B	1.0	['hsa03013']	KEGG_2019_Human						
+628	B5ME19	Eukaryotic translation initiation factor 3 subunit C-like protein	Swiss-Prot	EIF3CL	1.0	['hsa03013']	KEGG_2019_Human						
+629	A8MW95	Beclin-2	Swiss-Prot	BECN2	1.0	['hsa05016']	KEGG_2019_Human						
+630	B2R773		TrEMBL		1.0	['hsa04932']	KEGG_2019_Human						
+631	B3KVQ4	Adenosine receptor A2	TrEMBL		1.0	['hsa05012']	KEGG_2019_Human						
+632	B3KY55		TrEMBL		1.0	['hsa03013']	KEGG_2019_Human						
+633	B4DDR5		TrEMBL		1.0	['hsa03013']	KEGG_2019_Human						
+634	B4DG68	Nitric oxide synthase	TrEMBL		1.0	['hsa05010']	KEGG_2019_Human						
+635	B4DSC8		TrEMBL		1.0	['hsa04714']	KEGG_2019_Human						
+636	B4DVM1		TrEMBL		1.0	['hsa04932']	KEGG_2019_Human						
+637	O14933	Ubiquitin/ISG15-conjugating enzyme E2 L6	Swiss-Prot	UBE2L6	1.0	['hsa05012']	KEGG_2019_Human						
+638	O14983	Sarcoplasmic/endoplasmic reticulum calcium ATPase 1	Swiss-Prot	ATP2A1	1.0	['hsa05010']	KEGG_2019_Human						
+639	O15234	Protein CASC3	Swiss-Prot	CASC3	1.0	['hsa03013']	KEGG_2019_Human						
+640	O75694	Nuclear pore complex protein Nup155	Swiss-Prot	NUP155	1.0	['hsa03013']	KEGG_2019_Human						
+641	O60573	Eukaryotic translation initiation factor 4E type 2	Swiss-Prot	EIF4E2	1.0	['hsa03013']	KEGG_2019_Human						
+642	O60739	Eukaryotic translation initiation factor 1b	Swiss-Prot	EIF1B	1.0	['hsa03013']	KEGG_2019_Human						
+643	O60832	H/ACA ribonucleoprotein complex subunit DKC1	Swiss-Prot	DKC1	1.0	['hsa03008']	KEGG_2019_Human						
+644	O60840	Voltage-dependent L-type calcium channel subunit alpha-1F	Swiss-Prot	CACNA1F	1.0	['hsa05010']	KEGG_2019_Human						
+645	O60841	Eukaryotic translation initiation factor 5B	Swiss-Prot	EIF5B	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	1.0	['R-HSA-72706']	Reactome_2016
+646	O75143	Autophagy-related protein 13	Swiss-Prot	ATG13	1.0	['hsa05016']	KEGG_2019_Human						
+647	O75348	V-type proton ATPase subunit G 1	Swiss-Prot	ATP6V1G1	1.0	['hsa00190']	KEGG_2019_Human						
+648	O75385	Serine/threonine-protein kinase ULK1	Swiss-Prot	ULK1	1.0	['hsa05016']	KEGG_2019_Human						
+649	O75715	Epididymal secretory glutathione peroxidase	Swiss-Prot	GPX5	1.0	['hsa05016']	KEGG_2019_Human						
+650	O60503	Adenylate cyclase type 9	Swiss-Prot	ADCY9	1.0	['hsa04714']	KEGG_2019_Human						
+651	O75821	Eukaryotic translation initiation factor 3 subunit G	Swiss-Prot	EIF3G	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+652	O75822	Eukaryotic translation initiation factor 3 subunit J	Swiss-Prot	EIF3J	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+653	O75891	Cytosolic 10-formyltetrahydrofolate dehydrogenase	Swiss-Prot	ALDH1L1	1.0	['hsa00670']	KEGG_2019_Human						
+654	O75935	Dynactin subunit 3	Swiss-Prot	DCTN3	1.0	['hsa05016']	KEGG_2019_Human						
+655	O94805	Actin-like protein 6B	Swiss-Prot	ACTL6B	1.0	['hsa04714']	KEGG_2019_Human						
+656	O94973	AP-2 complex subunit alpha-2	Swiss-Prot	AP2A2	1.0	['hsa05016']	KEGG_2019_Human						
+657	O95059	Ribonuclease P protein subunit p14	Swiss-Prot	RPP14	1.0	['hsa03013']	KEGG_2019_Human						
+658	O95149	Snurportin-1	Swiss-Prot	SNUPN	1.0	['hsa03013']	KEGG_2019_Human						
+659	O60516	Eukaryotic translation initiation factor 4E-binding protein 3	Swiss-Prot	EIF4EBP3	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+660	O60488	Long-chain-fatty-acid--CoA ligase 4	Swiss-Prot	ACSL4	1.0	['hsa04714']	KEGG_2019_Human						
+661	O15264	Mitogen-activated protein kinase 13	Swiss-Prot	MAPK13	1.0	['hsa04714']	KEGG_2019_Human						
+662	O43306	Adenylate cyclase type 6	Swiss-Prot	ADCY6	1.0	['hsa04714']	KEGG_2019_Human						
+663	O15342	V-type proton ATPase subunit e 1	Swiss-Prot	ATP6V0E1	1.0	['hsa00190']	KEGG_2019_Human						
+664	O15354	Prosaposin receptor GPR37	Swiss-Prot	GPR37	1.0	['hsa05012']	KEGG_2019_Human						
+665	O15371	Eukaryotic translation initiation factor 3 subunit D	Swiss-Prot	EIF3D	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+666	O15372	Eukaryotic translation initiation factor 3 subunit H	Swiss-Prot	EIF3H	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+667	O15381	Nuclear valosin-containing protein-like	Swiss-Prot	NVL	1.0	['hsa03008']	KEGG_2019_Human						
+668	O15399	Glutamate receptor ionotropic, NMDA 2D	Swiss-Prot	GRIN2D	1.0	['hsa05010']	KEGG_2019_Human						
+669	O15504	Nucleoporin NUP42	Swiss-Prot	NUP42	1.0	['hsa03013']	KEGG_2019_Human						
+670	O15514	DNA-directed RNA polymerase II subunit RPB4	Swiss-Prot	POLR2D	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+671	O43432	Eukaryotic translation initiation factor 4 gamma 3	Swiss-Prot	EIF4G3	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+672	O60341	Lysine-specific histone demethylase 1A	Swiss-Prot	KDM1A	1.0	['hsa04714']	KEGG_2019_Human						
+673	O43464	Serine protease HTRA2, mitochondrial	Swiss-Prot	HTRA2	1.0	['hsa05012']	KEGG_2019_Human						
+674	O43521	Bcl-2-like protein 11	Swiss-Prot	BCL2L11	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+675	O43592	Exportin-T	Swiss-Prot	XPOT	1.0	['hsa03013']	KEGG_2019_Human						
+676	O43772	Mitochondrial carnitine/acylcarnitine carrier protein	Swiss-Prot	SLC25A20	1.0	['hsa04714']	KEGG_2019_Human						
+677	O60240	Perilipin-1	Swiss-Prot	PLIN1	1.0	['hsa04714']	KEGG_2019_Human						
+678	O60260	E3 ubiquitin-protein ligase parkin	Swiss-Prot	PRKN	1.0	['hsa05012']	KEGG_2019_Human						
+679	O60266	Adenylate cyclase type 3	Swiss-Prot	ADCY3	1.0	['hsa04714']	KEGG_2019_Human						
+680	O60282	Kinesin heavy chain isoform 5C	Swiss-Prot	KIF5C	1.0	['hsa05016']	KEGG_2019_Human						
+681	P23786	Carnitine O-palmitoyltransferase 2, mitochondrial	Swiss-Prot	CPT2	1.0	['hsa04714']	KEGG_2019_Human						
+682	P24928	DNA-directed RNA polymerase II subunit RPB1	Swiss-Prot	POLR2A	1.0	['hsa05016']	KEGG_2019_Human						
+683	P25325	3-mercaptopyruvate sulfurtransferase	Swiss-Prot	MPST	1.0	['hsa04122']	KEGG_2019_Human						
+684	P27361	Mitogen-activated protein kinase 3	Swiss-Prot	MAPK3	1.0	['hsa05010']	KEGG_2019_Human						
+685	P63165	Small ubiquitin-related modifier 1	Swiss-Prot	SUMO1	1.0	['hsa03013']	KEGG_2019_Human						
+686	P63261	Actin, cytoplasmic 2	Swiss-Prot	ACTG1	1.0	['hsa04714']	KEGG_2019_Human						
+687	P63279	SUMO-conjugating enzyme UBC9	Swiss-Prot	UBE2I	1.0	['hsa03013']	KEGG_2019_Human						
+688	A0A024R050	Amino acid transporter	TrEMBL	SLC1A3	1.0	['hsa05016']	KEGG_2019_Human						
+689	P68036	Ubiquitin-conjugating enzyme E2 L3	Swiss-Prot	UBE2L3	1.0	['hsa05012']	KEGG_2019_Human						
+690	P68104	Elongation factor 1-alpha 1	Swiss-Prot	EEF1A1	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-156842', 'R-HSA-156902']	Reactome_2016
+691	P68363	Tubulin alpha-1B chain	Swiss-Prot	TUBA1B	1.0	['hsa05016']	KEGG_2019_Human						
+692	P68366	Tubulin alpha-4A chain	Swiss-Prot	TUBA4A	1.0	['hsa05016']	KEGG_2019_Human						
+693	P68371	Tubulin beta-4B chain	Swiss-Prot	TUBB4B	1.0	['hsa05016']	KEGG_2019_Human						
+694	P68400	Casein kinase II subunit alpha	Swiss-Prot	CSNK2A1	1.0	['hsa03008']	KEGG_2019_Human						
+695	P78344	Eukaryotic translation initiation factor 4 gamma 2	Swiss-Prot	EIF4G2	1.0	['hsa03013']	KEGG_2019_Human						
+696	P78352	Disks large homolog 4	Swiss-Prot	DLG4	1.0	['hsa05016']	KEGG_2019_Human						
+697	P78406	mRNA export factor	Swiss-Prot	RAE1	1.0	['hsa03013']	KEGG_2019_Human						
+698	P78508	ATP-sensitive inward rectifier potassium channel 10	Swiss-Prot	KCNJ10	1.0	['hsa05016']	KEGG_2019_Human						
+699	P78536	Disintegrin and metalloproteinase domain-containing protein 17	Swiss-Prot	ADAM17	1.0	['hsa05010']	KEGG_2019_Human						
+700	Q00059	Transcription factor A, mitochondrial	Swiss-Prot	TFAM	1.0	['hsa05016']	KEGG_2019_Human						
+701	Q00535	Cyclin-dependent-like kinase 5	Swiss-Prot	CDK5	1.0	['hsa05010']	KEGG_2019_Human						
+702	Q00610	Clathrin heavy chain 1	Swiss-Prot	CLTC	1.0	['hsa05016']	KEGG_2019_Human						
+703	Q00975	Voltage-dependent N-type calcium channel subunit alpha-1B	Swiss-Prot	CACNA1B	1.0	['hsa05016']	KEGG_2019_Human						
+704	P63098	Calcineurin subunit B type 1	Swiss-Prot	PPP3R1	1.0	['hsa05010']	KEGG_2019_Human						
+705	P63096	Guanine nucleotide-binding protein G(i) subunit alpha-1	Swiss-Prot	GNAI1	1.0	['hsa05012']	KEGG_2019_Human						
+706	P63092	Guanine nucleotide-binding protein G(s) subunit alpha isoforms short	Swiss-Prot	GNAS	1.0	['hsa04714']	KEGG_2019_Human						
+707	P61326	Protein mago nashi homolog	Swiss-Prot	MAGOH	1.0	['hsa03013']	KEGG_2019_Human						
+708	P59796	Glutathione peroxidase 6	Swiss-Prot	GPX6	1.0	['hsa05016']	KEGG_2019_Human						
+709	P60228	Eukaryotic translation initiation factor 3 subunit E	Swiss-Prot	EIF3E	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+710	P60604	Ubiquitin-conjugating enzyme E2 G2	Swiss-Prot	UBE2G2	1.0	['hsa05012']	KEGG_2019_Human						
+711	P60709	Actin, cytoplasmic 1	Swiss-Prot	ACTB	1.0	['hsa04714']	KEGG_2019_Human						
+712	P60842	Eukaryotic initiation factor 4A-I	Swiss-Prot	EIF4A1	1.0	['hsa03013']	KEGG_2019_Human	2.0	[' WP107', ' WP585']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+713	P60953	Cell division control protein 42 homolog	Swiss-Prot	CDC42	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+714	P61163	Alpha-centractin	Swiss-Prot	ACTR1A	1.0	['hsa05016']	KEGG_2019_Human						
+715	P61218	DNA-directed RNA polymerases I, II, and III subunit RPABC2	Swiss-Prot	POLR2F	1.0	['hsa05016']	KEGG_2019_Human						
+716	P61421	V-type proton ATPase subunit d 1	Swiss-Prot	ATP6V0D1	1.0	['hsa00190']	KEGG_2019_Human						
+717	P63010	AP-2 complex subunit beta	Swiss-Prot	AP2B1	1.0	['hsa05016']	KEGG_2019_Human						
+718	P61956	Small ubiquitin-related modifier 2	Swiss-Prot	SUMO2	1.0	['hsa03013']	KEGG_2019_Human						
+719	P62253	Ubiquitin-conjugating enzyme E2 G1	Swiss-Prot	UBE2G1	1.0	['hsa05012']	KEGG_2019_Human						
+720	P62380	TATA box-binding protein-like protein 1	Swiss-Prot	TBPL1	1.0	['hsa05016']	KEGG_2019_Human						
+721	P62487	DNA-directed RNA polymerase II subunit RPB7	Swiss-Prot	POLR2G	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+722	P62753	40S ribosomal protein S6	Swiss-Prot	RPS6	1.0	['hsa04714']	KEGG_2019_Human	2.0	[' WP477', ' WP585']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+723	P62875	DNA-directed RNA polymerases I, II, and III subunit RPABC5	Swiss-Prot	POLR2L	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+724	P62993	Growth factor receptor-bound protein 2	Swiss-Prot	GRB2	1.0	['hsa04714']	KEGG_2019_Human						
+725	P63000	Ras-related C3 botulinum toxin substrate 1	Swiss-Prot	RAC1	1.0	['hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+726	Q01668	Voltage-dependent L-type calcium channel subunit alpha-1D	Swiss-Prot	CACNA1D	1.0	['hsa05010']	KEGG_2019_Human						
+727	Q01959	Sodium-dependent dopamine transporter	Swiss-Prot	SLC6A3	1.0	['hsa05012']	KEGG_2019_Human						
+728	Q02779	Mitogen-activated protein kinase kinase kinase 10	Swiss-Prot	MAP3K10	1.0	['hsa05016']	KEGG_2019_Human						
+729	Q13488	V-type proton ATPase 116 kDa subunit a isoform 3	Swiss-Prot	TCIRG1	1.0	['hsa00190']	KEGG_2019_Human						
+730	Q13127	RE1-silencing transcription factor	Swiss-Prot	REST	1.0	['hsa05016']	KEGG_2019_Human						
+731	Q13133	Oxysterols receptor LXR-alpha	Swiss-Prot	NR1H3	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+732	Q13144	Translation initiation factor eIF-2B subunit epsilon	Swiss-Prot	EIF2B5	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+733	Q13158	FAS-associated death domain protein	Swiss-Prot	FADD	1.0	['hsa05010']	KEGG_2019_Human						
+734	Q13237	cGMP-dependent protein kinase 2	Swiss-Prot	PRKG2	1.0	['hsa04714']	KEGG_2019_Human						
+735	Q13310	Polyadenylate-binding protein 4	Swiss-Prot	PABPC4	1.0	['hsa03013']	KEGG_2019_Human						
+736	Q13347	Eukaryotic translation initiation factor 3 subunit I	Swiss-Prot	EIF3I	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+737	Q13428	Treacle protein	Swiss-Prot	TCOF1	1.0	['hsa03008']	KEGG_2019_Human						
+738	Q13509	Tubulin beta-3 chain	Swiss-Prot	TUBB3	1.0	['hsa05016']	KEGG_2019_Human						
+739	Q12840	Kinesin heavy chain isoform 5A	Swiss-Prot	KIF5A	1.0	['hsa05016']	KEGG_2019_Human						
+740	Q13541	Eukaryotic translation initiation factor 4E-binding protein 1	Swiss-Prot	EIF4EBP1	1.0	['hsa03013']	KEGG_2019_Human	2.0	[' WP107', ' WP585']	WikiPathways_2019_Human			
+741	Q13542	Eukaryotic translation initiation factor 4E-binding protein 2	Swiss-Prot	EIF4EBP2	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+742	Q13547	Histone deacetylase 1	Swiss-Prot	HDAC1	1.0	['hsa05016']	KEGG_2019_Human						
+743	Q13561	Dynactin subunit 2	Swiss-Prot	DCTN2	1.0	['hsa05016']	KEGG_2019_Human						
+744	Q13564	NEDD8-activating enzyme E1 regulatory subunit	Swiss-Prot	NAE1	1.0	['hsa05010']	KEGG_2019_Human						
+745	Q13698	Voltage-dependent L-type calcium channel subunit alpha-1S	Swiss-Prot	CACNA1S	1.0	['hsa05010']	KEGG_2019_Human						
+746	Q13769	THO complex subunit 5 homolog	Swiss-Prot	THOC5	1.0	['hsa03013']	KEGG_2019_Human						
+747	Q13823	Nucleolar GTP-binding protein 2	Swiss-Prot	GNL2	1.0	['hsa03008']	KEGG_2019_Human						
+748	Q12879	Glutamate receptor ionotropic, NMDA 2A	Swiss-Prot	GRIN2A	1.0	['hsa05010']	KEGG_2019_Human						
+749	Q12824	SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily B member 1	Swiss-Prot	SMARCB1	1.0	['hsa04714']	KEGG_2019_Human						
+750	Q04206	Transcription factor p65	Swiss-Prot	RELA	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+751	Q07889	Son of sevenless homolog 1	Swiss-Prot	SOS1	1.0	['hsa04714']	KEGG_2019_Human						
+752	Q04637	Eukaryotic translation initiation factor 4 gamma 1	Swiss-Prot	EIF4G1	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+753	Q05469	Hormone-sensitive lipase	Swiss-Prot	LIPE	1.0	['hsa04714']	KEGG_2019_Human						
+754	Q05639	Elongation factor 1-alpha 2	Swiss-Prot	EEF1A2	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	1.0	['R-HSA-156842']	Reactome_2016
+755	Q05940	Synaptic vesicular amine transporter	Swiss-Prot	SLC18A2	1.0	['hsa05012']	KEGG_2019_Human						
+756	Q05DU1		TrEMBL	GNL3L	1.0	['hsa03008']	KEGG_2019_Human						
+757	Q06787	Synaptic functional regulator FMR1	Swiss-Prot	FMR1	1.0	['hsa03013']	KEGG_2019_Human						
+758	Q07866	Kinesin light chain 1	Swiss-Prot	KLC1	1.0	['hsa05016']	KEGG_2019_Human						
+759	Q07869	Peroxisome proliferator-activated receptor alpha	Swiss-Prot	PPARA	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+760	Q07890	Son of sevenless homolog 2	Swiss-Prot	SOS2	1.0	['hsa04714']	KEGG_2019_Human						
+761	Q12788	Transducin beta-like protein 3	Swiss-Prot	TBL3	1.0	['hsa03008']	KEGG_2019_Human						
+762	Q07954	Prolow-density lipoprotein receptor-related protein 1	Swiss-Prot	LRP1	1.0	['hsa05010']	KEGG_2019_Human						
+763	Q08209	Serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform	Swiss-Prot	PPP3CA	1.0	['hsa05010']	KEGG_2019_Human						
+764	Q08462	Adenylate cyclase type 2	Swiss-Prot	ADCY2	1.0	['hsa04714']	KEGG_2019_Human						
+765	Q08828	Adenylate cyclase type 1	Swiss-Prot	ADCY1	1.0	['hsa04714']	KEGG_2019_Human						
+766	Q09161	Nuclear cap-binding protein subunit 1	Swiss-Prot	NCBP1	1.0	['hsa03013']	KEGG_2019_Human				1.0	['R-HSA-975956']	Reactome_2016
+767	Q09472	Histone acetyltransferase p300	Swiss-Prot	EP300	1.0	['hsa05016']	KEGG_2019_Human						
+768	Q0VDD8	Dynein heavy chain 14, axonemal	Swiss-Prot	DNAH14	1.0	['hsa05016']	KEGG_2019_Human						
+769	Q12769	Nuclear pore complex protein Nup160	Swiss-Prot	NUP160	1.0	['hsa03013']	KEGG_2019_Human						
+770	P57740	Nuclear pore complex protein Nup107	Swiss-Prot	NUP107	1.0	['hsa03013']	KEGG_2019_Human						
+771	P57678	Gem-associated protein 4	Swiss-Prot	GEMIN4	1.0	['hsa03013']	KEGG_2019_Human						
+772	P56817	Beta-secretase 1	Swiss-Prot	BACE1	1.0	['hsa05010']	KEGG_2019_Human						
+773	P41567	Eukaryotic translation initiation factor 1	Swiss-Prot	EIF1	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+774	P37198	Nuclear pore glycoprotein p62	Swiss-Prot	NUP62	1.0	['hsa03013']	KEGG_2019_Human						
+775	P38405	Guanine nucleotide-binding protein G(olf) subunit alpha	Swiss-Prot	GNAL	1.0	['hsa05012']	KEGG_2019_Human						
+776	P38606	V-type proton ATPase catalytic subunit A	Swiss-Prot	ATP6V1A	1.0	['hsa00190']	KEGG_2019_Human						
+777	P38919	Eukaryotic initiation factor 4A-III	Swiss-Prot	EIF4A3	1.0	['hsa03013']	KEGG_2019_Human						
+778	P40145	Adenylate cyclase type 8	Swiss-Prot	ADCY8	1.0	['hsa04714']	KEGG_2019_Human						
+779	P41091	Eukaryotic translation initiation factor 2 subunit 3	Swiss-Prot	EIF2S3	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+780	P41159	Leptin	Swiss-Prot	LEP	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+781	P41226	Ubiquitin-like modifier-activating enzyme 7	Swiss-Prot	UBA7	1.0	['hsa05012']	KEGG_2019_Human						
+782	P41594	Metabotropic glutamate receptor 5	Swiss-Prot	GRM5	1.0	['hsa05016']	KEGG_2019_Human						
+783	P36954	DNA-directed RNA polymerase II subunit RPB9	Swiss-Prot	POLR2I	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+784	P42025	Beta-centractin	Swiss-Prot	ACTR1B	1.0	['hsa05016']	KEGG_2019_Human						
+785	P42261	Glutamate receptor 1	Swiss-Prot	GRIA1	1.0	['hsa05016']	KEGG_2019_Human						
+786	P42262	Glutamate receptor 2	Swiss-Prot	GRIA2	1.0	['hsa05016']	KEGG_2019_Human						
+787	P42263	Glutamate receptor 3	Swiss-Prot	GRIA3	1.0	['hsa05016']	KEGG_2019_Human						
+788	P42336	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform	Swiss-Prot	PIK3CA	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+789	P42338	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit beta isoform	Swiss-Prot	PIK3CB	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+790	P42858	Huntingtin	Swiss-Prot	HTT	1.0	['hsa05016']	KEGG_2019_Human						
+791	P42898	Methylenetetrahydrofolate reductase	Swiss-Prot	MTHFR	1.0	['hsa00670']	KEGG_2019_Human						
+792	P36956	Sterol regulatory element-binding protein 1	Swiss-Prot	SREBF1	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+793	P36543	V-type proton ATPase subunit E 1	Swiss-Prot	ATP6V1E1	1.0	['hsa00190']	KEGG_2019_Human						
+794	P43004	Excitatory amino acid transporter 2	Swiss-Prot	SLC1A2	1.0	['hsa05016']	KEGG_2019_Human						
+795	P31749	RAC-alpha serine/threonine-protein kinase	Swiss-Prot	AKT1	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+796	P27449	V-type proton ATPase 16 kDa proteolipid subunit	Swiss-Prot	ATP6V0C	1.0	['hsa00190']	KEGG_2019_Human						
+797	P27482	Calmodulin-like protein 3	Swiss-Prot	CALML3	1.0	['hsa05010']	KEGG_2019_Human						
+798	P27986	Phosphatidylinositol 3-kinase regulatory subunit alpha	Swiss-Prot	PIK3R1	1.0	['hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+799	P28482	Mitogen-activated protein kinase 1	Swiss-Prot	MAPK1	1.0	['hsa05010']	KEGG_2019_Human						
+800	P29274	Adenosine receptor A2a	Swiss-Prot	ADORA2A	1.0	['hsa05012']	KEGG_2019_Human						
+801	P29475	Nitric oxide synthase, brain	Swiss-Prot	NOS1	1.0	['hsa05010']	KEGG_2019_Human						
+802	P30613	Pyruvate kinase PKLR	Swiss-Prot	PKLR	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+803	P30876	DNA-directed RNA polymerase II subunit RPB2	Swiss-Prot	POLR2B	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+804	P31751	RAC-beta serine/threonine-protein kinase	Swiss-Prot	AKT2	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+805	P35658	Nuclear pore complex protein Nup214	Swiss-Prot	NUP214	1.0	['hsa03013']	KEGG_2019_Human						
+806	P31939	Bifunctional purine biosynthesis protein PURH	Swiss-Prot	ATIC	1.0	['hsa00670']	KEGG_2019_Human						
+807	P33121	Long-chain-fatty-acid--CoA ligase 1	Swiss-Prot	ACSL1	1.0	['hsa04714']	KEGG_2019_Human						
+808	P33176	Kinesin-1 heavy chain	Swiss-Prot	KIF5B	1.0	['hsa05016']	KEGG_2019_Human						
+809	P34820	Bone morphogenetic protein 8B	Swiss-Prot	BMP8B	1.0	['hsa04714']	KEGG_2019_Human						
+810	P34896	Serine hydroxymethyltransferase, cytosolic	Swiss-Prot	SHMT1	1.0	['hsa00670']	KEGG_2019_Human						
+811	P34897	Serine hydroxymethyltransferase, mitochondrial	Swiss-Prot	SHMT2	1.0	['hsa00670']	KEGG_2019_Human						
+812	P35568	Insulin receptor substrate 1	Swiss-Prot	IRS1	1.0	['hsa04932']	KEGG_2019_Human	2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+813	P35638	DNA damage-inducible transcript 3 protein	Swiss-Prot	DDIT3	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+814	P43003	Excitatory amino acid transporter 1	Swiss-Prot	SLC1A3	1.0	['hsa05016']	KEGG_2019_Human						
+815	P46060	Ran GTPase-activating protein 1	Swiss-Prot	RANGAP1	1.0	['hsa03013']	KEGG_2019_Human						
+816	P56537	Eukaryotic translation initiation factor 6	Swiss-Prot	EIF6	1.0	['hsa03008']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+817	P53803	DNA-directed RNA polymerases I, II, and III subunit RPABC4	Swiss-Prot	POLR2K	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+818	P51828	Adenylate cyclase type 7	Swiss-Prot	ADCY7	1.0	['hsa04714']	KEGG_2019_Human						
+819	P52298	Nuclear cap-binding protein subunit 2	Swiss-Prot	NCBP2	1.0	['hsa03013']	KEGG_2019_Human				1.0	['R-HSA-975956']	Reactome_2016
+820	P52434	DNA-directed RNA polymerases I, II, and III subunit RPABC3	Swiss-Prot	POLR2H	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+821	P52435	DNA-directed RNA polymerase II subunit RPB11-a	Swiss-Prot	POLR2J	1.0	['hsa05016']	KEGG_2019_Human	1.0	[' WP4022']	WikiPathways_2019_Human			
+822	P52948	Nuclear pore complex protein Nup98-Nup96	Swiss-Prot	NUP98	1.0	['hsa03013']	KEGG_2019_Human						
+823	P53675	Clathrin heavy chain 2	Swiss-Prot	CLTCL1	1.0	['hsa05016']	KEGG_2019_Human						
+824	P53680	AP-2 complex subunit sigma	Swiss-Prot	AP2S1	1.0	['hsa05016']	KEGG_2019_Human						
+825	P53778	Mitogen-activated protein kinase 12	Swiss-Prot	MAPK12	1.0	['hsa04714']	KEGG_2019_Human						
+826	P54105	Methylosome subunit pICln	Swiss-Prot	CLNS1A	1.0	['hsa03013']	KEGG_2019_Human						
+827	P51532	Transcription activator BRG1	Swiss-Prot	SMARCA4	1.0	['hsa04714']	KEGG_2019_Human						
+828	P54219	Chromaffin granule amine transporter	Swiss-Prot	SLC18A1	1.0	['hsa05012']	KEGG_2019_Human						
+829	P54257	Huntingtin-associated protein 1	Swiss-Prot	HAP1	1.0	['hsa05016']	KEGG_2019_Human						
+830	P54707	Potassium-transporting ATPase alpha chain 2	Swiss-Prot	ATP12A	1.0	['hsa00190']	KEGG_2019_Human						
+831	P55010	Eukaryotic translation initiation factor 5	Swiss-Prot	EIF5	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	1.0	['R-HSA-72706']	Reactome_2016
+832	P55735	Protein SEC13 homolog	Swiss-Prot	SEC13	1.0	['hsa03013']	KEGG_2019_Human						
+833	P55769	NHP2-like protein 1	Swiss-Prot	SNU13	1.0	['hsa03008']	KEGG_2019_Human						
+834	P55854	Small ubiquitin-related modifier 3	Swiss-Prot	SUMO3	1.0	['hsa03013']	KEGG_2019_Human						
+835	P55884	Eukaryotic translation initiation factor 3 subunit B	Swiss-Prot	EIF3B	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+836	P51812	Ribosomal protein S6 kinase alpha-3	Swiss-Prot	RPS6KA3	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP477']	WikiPathways_2019_Human			
+837	P51531	Probable global transcription activator SNF2L2	Swiss-Prot	SMARCA2	1.0	['hsa04714']	KEGG_2019_Human						
+838	P46734	Dual specificity mitogen-activated protein kinase kinase 3	Swiss-Prot	MAP2K3	1.0	['hsa04714']	KEGG_2019_Human	1.0	[' WP585']	WikiPathways_2019_Human			
+839	P49770	Translation initiation factor eIF-2B subunit beta	Swiss-Prot	EIF2B2	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human			
+840	P47813	Eukaryotic translation initiation factor 1A, X-chromosomal	Swiss-Prot	EIF1AX	1.0	['hsa03013']	KEGG_2019_Human	1.0	[' WP107']	WikiPathways_2019_Human	3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+841	P48023	Tumor necrosis factor ligand superfamily member 6	Swiss-Prot	FASLG	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+842	P48058	Glutamate receptor 4	Swiss-Prot	GRIA4	1.0	['hsa05016']	KEGG_2019_Human						
+843	P48357	Leptin receptor	Swiss-Prot	LEPR	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+844	P48454	Serine/threonine-protein phosphatase 2B catalytic subunit gamma isoform	Swiss-Prot	PPP3CC	1.0	['hsa05010']	KEGG_2019_Human						
+845	P48728	Aminomethyltransferase, mitochondrial	Swiss-Prot	AMT	1.0	['hsa00670']	KEGG_2019_Human						
+846	P49715	CCAAT/enhancer-binding protein alpha	Swiss-Prot	CEBPA	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+847	P49768	Presenilin-1	Swiss-Prot	PSEN1	1.0	['hsa05010']	KEGG_2019_Human						
+848	P49790	Nuclear pore complex protein Nup153	Swiss-Prot	NUP153	1.0	['hsa03013']	KEGG_2019_Human						
+849	P51164	Potassium-transporting ATPase subunit beta	Swiss-Prot	ATP4B	1.0	['hsa00190']	KEGG_2019_Human						
+850	P49792	E3 SUMO-protein ligase RanBP2	Swiss-Prot	RANBP2	1.0	['hsa03013']	KEGG_2019_Human						
+851	P49810	Presenilin-2	Swiss-Prot	PSEN2	1.0	['hsa05010']	KEGG_2019_Human						
+852	P49815	Tuberin	Swiss-Prot	TSC2	1.0	['hsa04714']	KEGG_2019_Human						
+853	P49840	Glycogen synthase kinase-3 alpha	Swiss-Prot	GSK3A	1.0	['hsa04932']	KEGG_2019_Human	1.0	[' WP4396']	WikiPathways_2019_Human			
+854	P49914	5-formyltetrahydrofolate cyclo-ligase	Swiss-Prot	MTHFS	1.0	['hsa00670']	KEGG_2019_Human						
+855	P50416	Carnitine O-palmitoyltransferase 1, liver isoform	Swiss-Prot	CPT1A	1.0	['hsa04714']	KEGG_2019_Human						
+856	P51114	Fragile X mental retardation syndrome-related protein 1	Swiss-Prot	FXR1	1.0	['hsa03013']	KEGG_2019_Human						
+857	P51116	Fragile X mental retardation syndrome-related protein 2	Swiss-Prot	FXR2	1.0	['hsa03013']	KEGG_2019_Human						
+858	X5D9D2		TrEMBL	TSC1	1.0	['hsa04714']	KEGG_2019_Human						
+859	Q8N1B9		TrEMBL	NDUFA10				4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+860	Q6IBC4	NADH dehydrogenase [ubiquinone] iron-sulfur protein 6, mitochondrial	TrEMBL	NDUFS6				4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+861	Q6IBA0		TrEMBL	NDUFS5				4.0	[' WP111', ' WP4396', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+862	Q53XN1		TrEMBL	COX8				3.0	[' WP111', ' WP4396', ' WP678']	WikiPathways_2019_Human			
+863	Q7LD69		TrEMBL					3.0	[' WP111', ' WP4396', ' WP623']	WikiPathways_2019_Human			
+864	Q6IBB5		TrEMBL	ZNF183				3.0	[' WP111', ' WP4396', ' WP4324']	WikiPathways_2019_Human			
+865	Q7GXY9	NADH-ubiquinone oxidoreductase chain 2	TrEMBL	ND2				3.0	[' WP111', ' WP4324', ' WP623']	WikiPathways_2019_Human			
+866	Q08E91		TrEMBL	NDUFS8				3.0	[' WP111', ' WP4396', ' WP623']	WikiPathways_2019_Human			
+867	Q8WXQ4		TrEMBL					2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+868	Q99766	ATP synthase subunit s, mitochondrial	Swiss-Prot	DMAC2L				2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+869	Q6FGA0		TrEMBL	COX7A2L				2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+870	Q5SR50	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit	TrEMBL	PIK3CD				2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+871	Q6FGI7		TrEMBL	COX7A1				2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+872	Q5QNZ2		TrEMBL	ATP5PB				2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+873	Q6FI39		TrEMBL	SOCS3				2.0	[' WP4396', ' WP585']	WikiPathways_2019_Human			
+874	Q6FIH7		TrEMBL	ATP5G1				2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+875	Q6IB54	ATP synthase-coupling factor 6, mitochondrial	TrEMBL	ATP5J				2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+876	Q7GIM7	Cytochrome c oxidase subunit 3	TrEMBL	COX3				2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+877	Q7GXZ5	NADH-ubiquinone oxidoreductase chain 3	TrEMBL	ND3				2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+878	Q53XC0		TrEMBL	EIF2S1				2.0	[' WP4396', ' WP107']	WikiPathways_2019_Human			
+879	Q86WV2		TrEMBL	COX4I1				2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+880	Q08ET0		TrEMBL					2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+881	Q0ZFE3	ATP synthase subunit a	TrEMBL	ATP6				2.0	[' WP111', ' WP623']	WikiPathways_2019_Human			
+882	Q0ZFD6	Cytochrome b	TrEMBL	CYB				2.0	[' WP111', ' WP4396']	WikiPathways_2019_Human			
+883	Q04864	Proto-oncogene c-Rel	Swiss-Prot	REL				1.0	[' WP585']	WikiPathways_2019_Human			
+884	Q53ZZ1		TrEMBL	TNFSF6				1.0	[' WP4396']	WikiPathways_2019_Human			
+885	Q06124	Tyrosine-protein phosphatase non-receptor type 11	Swiss-Prot	PTPN11				1.0	[' WP585']	WikiPathways_2019_Human			
+886	Q5T8U2		TrEMBL	RPL7A				1.0	[' WP477']	WikiPathways_2019_Human			
+887	Q5STB3		TrEMBL	TNF-alpha				1.0	[' WP4396']	WikiPathways_2019_Human			
+888	Q5T4P3		TrEMBL	PIK3R3				1.0	[' WP4396']	WikiPathways_2019_Human			
+889	Q5SVL2		TrEMBL	CASP7				1.0	[' WP4396']	WikiPathways_2019_Human			
+890	Q02543	60S ribosomal protein L18a	Swiss-Prot	RPL18A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+891	Q02878	60S ribosomal protein L6	Swiss-Prot	RPL6				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+892	Q5T0D2		TrEMBL	CMPK1				1.0	[' WP4022']	WikiPathways_2019_Human			
+893	Q573B4	Tyrosine-protein kinase	TrEMBL	LCK				1.0	[' WP585']	WikiPathways_2019_Human			
+894	Q5SVM6		TrEMBL	RPS6KA1				1.0	[' WP477']	WikiPathways_2019_Human			
+895	Q5SVM7		TrEMBL	RPS6KA1				1.0	[' WP477']	WikiPathways_2019_Human			
+896	Q53Z07		TrEMBL	RPL9				1.0	[' WP477']	WikiPathways_2019_Human			
+897	Q5DSZ5	UDP-glucuronosyltransferase	TrEMBL	UGT1A9				1.0	[' WP697']	WikiPathways_2019_Human			
+898	Q02127	Dihydroorotate dehydrogenase (quinone), mitochondrial	Swiss-Prot	DHODH				1.0	[' WP4022']	WikiPathways_2019_Human			
+899	Q5JWV1		TrEMBL	UCKL1				1.0	[' WP4022']	WikiPathways_2019_Human			
+900	Q5JUE9		TrEMBL	RAPGEF1				1.0	[' WP585']	WikiPathways_2019_Human			
+901	Q5JR95		TrEMBL	RPS8				1.0	[' WP477']	WikiPathways_2019_Human			
+902	Q5JR94	40S ribosomal protein S8	TrEMBL	RPS8				1.0	[' WP477']	WikiPathways_2019_Human			
+903	Q5JR01		TrEMBL	EEF1A1				1.0	[' WP107']	WikiPathways_2019_Human			
+904	P83881	60S ribosomal protein L36a	Swiss-Prot	RPL36A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+905	Q5J9B1		TrEMBL	CYP1A1				1.0	[' WP697']	WikiPathways_2019_Human			
+906	P84098	60S ribosomal protein L19	Swiss-Prot	RPL19				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+907	Q5EBM0	UMP-CMP kinase 2, mitochondrial	Swiss-Prot	CMPK2				1.0	[' WP4022']	WikiPathways_2019_Human			
+908	Q5JY88		TrEMBL	SLC25A14				1.0	[' WP111']	WikiPathways_2019_Human			
+909	P83731	60S ribosomal protein L24	Swiss-Prot	RPL24				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+910	Q07020	60S ribosomal protein L18	Swiss-Prot	RPL18				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+911	Q5JYX0		TrEMBL	CDC42				1.0	[' WP4396']	WikiPathways_2019_Human			
+912	Q							1.0	[' WP4324']	WikiPathways_2019_Human			
+913	Q00978	Interferon regulatory factor 9	Swiss-Prot	IRF9				1.0	[' WP585']	WikiPathways_2019_Human			
+914	Q5DT03	UDP-glucuronosyltransferase	TrEMBL	UGT1A1				1.0	[' WP697']	WikiPathways_2019_Human			
+915	Q5DT01	UDP-glucuronosyltransferase	TrEMBL	UGT1A3				1.0	[' WP697']	WikiPathways_2019_Human			
+916	Q5DSZ8	UDP-glucuronosyltransferase	TrEMBL	UGT1A6				1.0	[' WP697']	WikiPathways_2019_Human			
+917	Q07864	DNA polymerase epsilon catalytic subunit A	Swiss-Prot	POLE				1.0	[' WP4022']	WikiPathways_2019_Human			
+918	Q53YD7		TrEMBL	EEF1G				1.0	[' WP107']	WikiPathways_2019_Human			
+919	Q13232	Nucleoside diphosphate kinase 3	Swiss-Prot	NME3				1.0	[' WP4022']	WikiPathways_2019_Human			
+920	Q15526	Surfeit locus protein 1	Swiss-Prot	SURF1				1.0	[' WP111']	WikiPathways_2019_Human			
+921	Q13233	Mitogen-activated protein kinase kinase kinase 1	Swiss-Prot	MAP3K1				1.0	[' WP585']	WikiPathways_2019_Human			
+922	Q15056	Eukaryotic translation initiation factor 4H	Swiss-Prot	EIF4H				1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+923	Q5TFK1		TrEMBL	EIF3I				1.0	[' WP107']	WikiPathways_2019_Human			
+924	Q13905	Rap guanine nucleotide exchange factor 1	Swiss-Prot	RAPGEF1				1.0	[' WP585']	WikiPathways_2019_Human			
+925	Q15054	DNA polymerase delta subunit 3	Swiss-Prot	POLD3				1.0	[' WP4022']	WikiPathways_2019_Human			
+926	Q14117	Dihydropyrimidinase	Swiss-Prot	DPYS				1.0	[' WP4022']	WikiPathways_2019_Human			
+927	Q14181	DNA polymerase alpha subunit B	Swiss-Prot	POLA2				1.0	[' WP4022']	WikiPathways_2019_Human			
+928	Q16611	Bcl-2 homologous antagonist/killer	Swiss-Prot	BAK1				1.0	[' WP4396']	WikiPathways_2019_Human			
+929	Q16678	Cytochrome P450 1B1	Swiss-Prot	CYP1B1				1.0	[' WP697']	WikiPathways_2019_Human			
+930	Q4JHT5		TrEMBL	SOCS1				1.0	[' WP585']	WikiPathways_2019_Human			
+931	Q53YD1	DNA damage-inducible transcript 3 protein	TrEMBL	DDIT3				1.0	[' WP4396']	WikiPathways_2019_Human			
+932	Q53Y97		TrEMBL	TYMS				1.0	[' WP4022']	WikiPathways_2019_Human			
+933	Q53XS4	Tyrosine-protein phosphatase non-receptor type	TrEMBL	PTPN6				1.0	[' WP585']	WikiPathways_2019_Human			
+934	Q14765	Signal transducer and activator of transcription 4	Swiss-Prot	STAT4				1.0	[' WP585']	WikiPathways_2019_Human			
+935	Q53XC2		TrEMBL	EIF2B2				1.0	[' WP107']	WikiPathways_2019_Human			
+936	Q53X93		TrEMBL	CREB1				1.0	[' WP585']	WikiPathways_2019_Human			
+937	Q53X91	Sulfotransferase	TrEMBL	SULT1E1				1.0	[' WP697']	WikiPathways_2019_Human			
+938	Q53EL6	Programmed cell death protein 4	Swiss-Prot	PDCD4				1.0	[' WP585']	WikiPathways_2019_Human			
+939	Q4TT34	Nucleoside diphosphate kinase	TrEMBL	NME4				1.0	[' WP4022']	WikiPathways_2019_Human			
+940	Q49A90		TrEMBL	RPS27A				1.0	[' WP477']	WikiPathways_2019_Human			
+941	Q3MIH3		TrEMBL	UBA52				1.0	[' WP477']	WikiPathways_2019_Human			
+942	Q3B726	DNA-directed RNA polymerase I subunit RPA43	Swiss-Prot	TWISTNB				1.0	[' WP4022']	WikiPathways_2019_Human			
+943	Q32Q12	Nucleoside diphosphate kinase	TrEMBL	NME1-NME2				1.0	[' WP4022']	WikiPathways_2019_Human			
+944	Q2TAM5		TrEMBL	RELA				1.0	[' WP4396']	WikiPathways_2019_Human			
+945	Q2L6J2	DNA-directed RNA polymerase subunit	TrEMBL	ZNRD1				1.0	[' WP4022']	WikiPathways_2019_Human			
+946	Q2I378		TrEMBL	NT5M				1.0	[' WP4022']	WikiPathways_2019_Human			
+947	Q16831	Uridine phosphorylase 1	Swiss-Prot	UPP1				1.0	[' WP4022']	WikiPathways_2019_Human			
+948	Q12882	Dihydropyrimidine dehydrogenase [NADP(+)]	Swiss-Prot	DPYD				1.0	[' WP4022']	WikiPathways_2019_Human			
+949	Q5T8U3		TrEMBL	RPL7A				1.0	[' WP477']	WikiPathways_2019_Human			
+950	O							1.0	[' WP4324']	WikiPathways_2019_Human			
+951	Q5U0F4	Eukaryotic translation initiation factor 3 subunit I	TrEMBL	EIF3S2				1.0	[' WP107']	WikiPathways_2019_Human			
+952	Q9HCU8	DNA polymerase delta subunit 4	Swiss-Prot	POLD4				1.0	[' WP4022']	WikiPathways_2019_Human			
+953	Q9HA47	Uridine-cytidine kinase 1	Swiss-Prot	UCK1				1.0	[' WP4022']	WikiPathways_2019_Human			
+954	Q9H9Y6	DNA-directed RNA polymerase I subunit RPA2	Swiss-Prot	POLR1B				1.0	[' WP4022']	WikiPathways_2019_Human			
+955	Q9H845	Complex I assembly factor ACAD9, mitochondrial	Swiss-Prot	ACAD9				1.0	[' WP4324']	WikiPathways_2019_Human			
+956	Q9H773	dCTP pyrophosphatase 1	Swiss-Prot	DCTPP1				1.0	[' WP4022']	WikiPathways_2019_Human			
+957	Q9H1D9	DNA-directed RNA polymerase III subunit RPC6	Swiss-Prot	POLR3F				1.0	[' WP4022']	WikiPathways_2019_Human			
+958	Q9H1A7	DNA-directed RNA polymerase II subunit RPB11-b2	Swiss-Prot	POLR2J3				1.0	[' WP4022']	WikiPathways_2019_Human			
+959	Q9GZS1	DNA-directed RNA polymerase I subunit RPA49	Swiss-Prot	POLR1E				1.0	[' WP4022']	WikiPathways_2019_Human			
+960	Q9BZX2	Uridine-cytidine kinase 2	Swiss-Prot	UCK2				1.0	[' WP4022']	WikiPathways_2019_Human			
+961	Q9NPL8	Complex I assembly factor TIMMDC1, mitochondrial	Swiss-Prot	TIMMDC1				1.0	[' WP4324']	WikiPathways_2019_Human			
+962	Q9BYK2		TrEMBL	RPS21				1.0	[' WP477']	WikiPathways_2019_Human			
+963	Q9BYK1		TrEMBL	RPS21				1.0	[' WP477']	WikiPathways_2019_Human			
+964	Q9BXH1	Bcl-2-binding component 3, isoforms 1/2	Swiss-Prot	BBC3				1.0	[' WP4396']	WikiPathways_2019_Human			
+965	Q9BUI4	DNA-directed RNA polymerase III subunit RPC3	Swiss-Prot	POLR3C				1.0	[' WP4022']	WikiPathways_2019_Human			
+966	Q9BUB7	Transmembrane protein 70, mitochondrial	Swiss-Prot	TMEM70				1.0	[' WP4324']	WikiPathways_2019_Human			
+967	Q9BT43	DNA-directed RNA polymerase III subunit RPC7-like	Swiss-Prot	POLR3GL				1.0	[' WP4022']	WikiPathways_2019_Human			
+968	Q9BQI3	Eukaryotic translation initiation factor 2-alpha kinase 1	Swiss-Prot	EIF2AK1				1.0	[' WP107']	WikiPathways_2019_Human			
+969	Q9BQ95	Evolutionarily conserved signaling intermediate in Toll pathway, mitochondrial	Swiss-Prot	ECSIT				1.0	[' WP4324']	WikiPathways_2019_Human			
+970	Q9BPZ7	Target of rapamycin complex 2 subunit MAPKAP1	Swiss-Prot	MAPKAP1				1.0	[' WP585']	WikiPathways_2019_Human			
+971	Q99873	Protein arginine N-methyltransferase 1	Swiss-Prot	PRMT1				1.0	[' WP585']	WikiPathways_2019_Human			
+972	Q9NPB1	5'(3')-deoxyribonucleotidase, mitochondrial	Swiss-Prot	NT5M				1.0	[' WP4022']	WikiPathways_2019_Human			
+973	Q9NR33	DNA polymerase epsilon subunit 4	Swiss-Prot	POLE4				1.0	[' WP4022']	WikiPathways_2019_Human			
+974	Q9Y5B8	Nucleoside diphosphate kinase 7	Swiss-Prot	NME7				1.0	[' WP4022']	WikiPathways_2019_Human			
+975	Q9Y535	DNA-directed RNA polymerase III subunit RPC8	Swiss-Prot	POLR3H				1.0	[' WP4022']	WikiPathways_2019_Human			
+976	Q9Y3U8	60S ribosomal protein L36	Swiss-Prot	RPL36				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+977	Q9Y2Y1	DNA-directed RNA polymerase III subunit RPC10	Swiss-Prot	POLR3K				1.0	[' WP4022']	WikiPathways_2019_Human			
+978	Q9Y2S0							1.0	[' WP4022']	WikiPathways_2019_Human			
+979	Q9UQC2	GRB2-associated-binding protein 2	Swiss-Prot	GAB2				1.0	[' WP585']	WikiPathways_2019_Human			
+980	Q9UII2	ATPase inhibitor, mitochondrial	Swiss-Prot	ATP5IF1				1.0	[' WP111']	WikiPathways_2019_Human			
+981	Q9UBR1	Beta-ureidopropionase	Swiss-Prot	UPB1				1.0	[' WP4022']	WikiPathways_2019_Human			
+982	Q9P1U0	DNA-directed RNA polymerase I subunit RPA12	Swiss-Prot	ZNRD1				1.0	[' WP4022']	WikiPathways_2019_Human			
+983	Q9NWZ5	Uridine-cytidine kinase-like 1	Swiss-Prot	UCKL1				1.0	[' WP4022']	WikiPathways_2019_Human			
+984	Q9NW81	Distal membrane-arm assembly complex protein 2	Swiss-Prot	DMAC2				1.0	[' WP4324']	WikiPathways_2019_Human			
+985	Q9NW08	DNA-directed RNA polymerase III subunit RPC2	Swiss-Prot	POLR3B				1.0	[' WP4022']	WikiPathways_2019_Human			
+986	Q9NVU0	DNA-directed RNA polymerase III subunit RPC5	Swiss-Prot	POLR3E				1.0	[' WP4022']	WikiPathways_2019_Human			
+987	Q9NRF9	DNA polymerase epsilon subunit 3	Swiss-Prot	POLE3				1.0	[' WP4022']	WikiPathways_2019_Human			
+988	Q9NRF8	CTP synthase 2	Swiss-Prot	CTPS2				1.0	[' WP4022']	WikiPathways_2019_Human			
+989	Q96RI1	Bile acid receptor	Swiss-Prot	NR1H4				1.0	[' WP4396']	WikiPathways_2019_Human			
+990	Q5U0J5		TrEMBL	CREB1				1.0	[' WP585']	WikiPathways_2019_Human			
+991	Q6GRK0		TrEMBL	CYP3A4				1.0	[' WP697']	WikiPathways_2019_Human			
+992	Q75MH2		TrEMBL	IL6				1.0	[' WP4396']	WikiPathways_2019_Human			
+993	Q71UM5	40S ribosomal protein S27-like	Swiss-Prot	RPS27L				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+994	Q6XGZ2		TrEMBL	GZMB				1.0	[' WP623']	WikiPathways_2019_Human			
+995	Q6P4E4		TrEMBL	RPL37A				1.0	[' WP477']	WikiPathways_2019_Human			
+996	Q6IPX4		TrEMBL	RPS16				1.0	[' WP477']	WikiPathways_2019_Human			
+997	Q6IPS9	Elongation factor 1-alpha	TrEMBL	EEF1A1				1.0	[' WP107']	WikiPathways_2019_Human			
+998	Q6IBR8		TrEMBL	EIF2S2				1.0	[' WP107']	WikiPathways_2019_Human			
+999	Q6IB98	Eukaryotic translation initiation factor 3 subunit H	TrEMBL	EIF3S3				1.0	[' WP107']	WikiPathways_2019_Human			
+1000	Q6IAX2		TrEMBL	RPL21				1.0	[' WP477']	WikiPathways_2019_Human			
+1001	Q6IAV3		TrEMBL	SUI1				1.0	[' WP107']	WikiPathways_2019_Human			
+1002	Q6I9V5		TrEMBL	SLC25A6				1.0	[' WP111']	WikiPathways_2019_Human			
+1003	Q6FI27		TrEMBL	GSK3B				1.0	[' WP4396']	WikiPathways_2019_Human			
+1004	Q6FI23		TrEMBL	MAP2K3				1.0	[' WP585']	WikiPathways_2019_Human			
+1005	Q6FHN3	Nucleoside diphosphate kinase	TrEMBL	NME2				1.0	[' WP4022']	WikiPathways_2019_Human			
+1006	Q6FGU2		TrEMBL	DTYMK				1.0	[' WP4022']	WikiPathways_2019_Human			
+1007	Q6FGR6		TrEMBL	POLR2C				1.0	[' WP4022']	WikiPathways_2019_Human			
+1008	Q6FGH5		TrEMBL	RPS21				1.0	[' WP477']	WikiPathways_2019_Human			
+1009	Q6AHZ8		TrEMBL	UPB1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1010	Q68DL0		TrEMBL	PIK3CB				1.0	[' WP4396']	WikiPathways_2019_Human			
+1011	Q5VZS7		TrEMBL	PDCD4				1.0	[' WP585']	WikiPathways_2019_Human			
+1012	Q5VVD0		TrEMBL	RPL11				1.0	[' WP477']	WikiPathways_2019_Human			
+1013	Q5VVC9							1.0	[' WP477']	WikiPathways_2019_Human			
+1014	Q5VVC8		TrEMBL	RPL11				1.0	[' WP477']	WikiPathways_2019_Human			
+1015	Q5VTS8		TrEMBL	SLC25A27				1.0	[' WP111']	WikiPathways_2019_Human			
+1016	P63241	Eukaryotic translation initiation factor 5A-1	Swiss-Prot	EIF5A				1.0	[' WP107']	WikiPathways_2019_Human			
+1017	Q96GE9	Distal membrane-arm assembly complex protein 1	Swiss-Prot	DMAC1				1.0	[' WP4324']	WikiPathways_2019_Human			
+1018	Q96E92		TrEMBL	PRKAA1				1.0	[' WP4396']	WikiPathways_2019_Human			
+1019	Q96D37		TrEMBL	VAV1				1.0	[' WP585']	WikiPathways_2019_Human			
+1020	Q96CU9	FAD-dependent oxidoreductase domain-containing protein 1	Swiss-Prot	FOXRED1				1.0	[' WP4324']	WikiPathways_2019_Human			
+1021	Q96BW1	Uracil phosphoribosyltransferase homolog	Swiss-Prot	UPRT				1.0	[' WP4022']	WikiPathways_2019_Human			
+1022	Q96B77	Transmembrane protein 186	Swiss-Prot	TMEM186				1.0	[' WP4324']	WikiPathways_2019_Human			
+1023	Q92901	60S ribosomal protein L3-like	Swiss-Prot	RPL3L				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1024	Q8WVC2	40S ribosomal protein S21	TrEMBL	RPS21				1.0	[' WP477']	WikiPathways_2019_Human			
+1025	Q8TCS8	Polyribonucleotide nucleotidyltransferase 1, mitochondrial	Swiss-Prot	PNPT1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1026	Q7LG56	Ribonucleoside-diphosphate reductase subunit M2 B	Swiss-Prot	RRM2B				1.0	[' WP4022']	WikiPathways_2019_Human			
+1027	Q8TCD5	5'(3')-deoxyribonucleotidase, cytosolic type	Swiss-Prot	NT5C				1.0	[' WP4022']	WikiPathways_2019_Human			
+1028	Q8TB37	Iron-sulfur protein NUBPL	Swiss-Prot	NUBPL				1.0	[' WP4324']	WikiPathways_2019_Human			
+1029	Q8J015		TrEMBL	RPL13A				1.0	[' WP477']	WikiPathways_2019_Human			
+1030	Q8IYD1	Eukaryotic peptide chain release factor GTP-binding subunit ERF3B	Swiss-Prot	GSPT2				1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-72764', 'R-HSA-975956']	Reactome_2016
+1031	Q8IUX1	Complex I assembly factor TMEM126B, mitochondrial	Swiss-Prot	TMEM126B				1.0	[' WP4324']	WikiPathways_2019_Human			
+1032	Q86SF0		TrEMBL	PPARA				1.0	[' WP4396']	WikiPathways_2019_Human			
+1033	Q7Z776		TrEMBL	POLR1D				1.0	[' WP4022']	WikiPathways_2019_Human			
+1034	Q7Z755		TrEMBL	POLR3A				1.0	[' WP4022']	WikiPathways_2019_Human			
+1035	P63244	Receptor of activated protein C kinase 1	Swiss-Prot	RACK1				1.0	[' WP585']	WikiPathways_2019_Human			
+1036	P63220	40S ribosomal protein S21	Swiss-Prot	RPS21				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1037	P15531	Nucleoside diphosphate kinase A	Swiss-Prot	NME1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1038	P19320	Vascular cell adhesion protein 1	Swiss-Prot	VCAM1				1.0	[' WP4396']	WikiPathways_2019_Human			
+1039	P19224	UDP-glucuronosyltransferase 1-6	Swiss-Prot	UGT1A6				1.0	[' WP697']	WikiPathways_2019_Human			
+1040	P18621	60S ribosomal protein L17	Swiss-Prot	RPL17				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1041	P18124	60S ribosomal protein L7	Swiss-Prot	RPL7				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1042	P18077	60S ribosomal protein L35a	Swiss-Prot	RPL35A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1043	P17812	CTP synthase 1	Swiss-Prot	CTPS1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1044	P17181	Interferon alpha/beta receptor 1	Swiss-Prot	IFNAR1				1.0	[' WP585']	WikiPathways_2019_Human			
+1045	P16662	UDP-glucuronosyltransferase 2B7	Swiss-Prot	UGT2B7				1.0	[' WP697']	WikiPathways_2019_Human			
+1046	P15880	40S ribosomal protein S2	Swiss-Prot	RPS2				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1047	P15559	NAD(P)H dehydrogenase [quinone] 1	Swiss-Prot	NQO1				1.0	[' WP697']	WikiPathways_2019_Human			
+1048	P15498	Proto-oncogene vav	Swiss-Prot	VAV1				1.0	[' WP585']	WikiPathways_2019_Human			
+1049	P08865	40S ribosomal protein SA	Swiss-Prot	RPSA				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1050	P13639	Elongation factor 2	Swiss-Prot	EEF2				1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-156842', 'R-HSA-156902']	Reactome_2016
+1051	P13500	C-C motif chemokine 2	Swiss-Prot	CCL2				1.0	[' WP4396']	WikiPathways_2019_Human			
+1052	P11712	Cytochrome P450 2C9	Swiss-Prot	CYP2C9				1.0	[' WP678']	WikiPathways_2019_Human			
+1053	P11172	Uridine 5'-monophosphate synthase	Swiss-Prot	UMPS				1.0	[' WP4022']	WikiPathways_2019_Human			
+1054	P10632	Cytochrome P450 2C8	Swiss-Prot	CYP2C8				1.0	[' WP678']	WikiPathways_2019_Human			
+1055	P10144	Granzyme B	Swiss-Prot	GZMB				1.0	[' WP623']	WikiPathways_2019_Human			
+1056	P09884	DNA polymerase alpha catalytic subunit	Swiss-Prot	POLA1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1057	P09488	Glutathione S-transferase Mu 1	Swiss-Prot	GSTM1				1.0	[' WP697']	WikiPathways_2019_Human			
+1058	P09211	Glutathione S-transferase P	Swiss-Prot	GSTP1				1.0	[' WP678']	WikiPathways_2019_Human			
+1059	P19525	Interferon-induced, double-stranded RNA-activated protein kinase	Swiss-Prot	EIF2AK2				1.0	[' WP107']	WikiPathways_2019_Human			
+1060	P29692	Elongation factor 1-delta	Swiss-Prot	EEF1D				1.0	[' WP107']	WikiPathways_2019_Human	1.0	['R-HSA-156842']	Reactome_2016
+1061	P29597	Non-receptor tyrosine-protein kinase TYK2	Swiss-Prot	TYK2				1.0	[' WP585']	WikiPathways_2019_Human			
+1062	P29350	Tyrosine-protein phosphatase non-receptor type 6	Swiss-Prot	PTPN6				1.0	[' WP585']	WikiPathways_2019_Human			
+1063	P28340	DNA polymerase delta catalytic subunit	Swiss-Prot	POLD1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1064	P27708	CAD protein	Swiss-Prot	CAD				1.0	[' WP4022']	WikiPathways_2019_Human			
+1065	P27707	Deoxycytidine kinase	Swiss-Prot	DCK				1.0	[' WP4022']	WikiPathways_2019_Human			
+1066	P27635	60S ribosomal protein L10	Swiss-Prot	RPL10				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1067	P26641	Elongation factor 1-gamma	Swiss-Prot	EEF1G				1.0	[' WP107']	WikiPathways_2019_Human	1.0	['R-HSA-156842']	Reactome_2016
+1068	P26373	60S ribosomal protein L13	Swiss-Prot	RPL13				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1069	P25398	40S ribosomal protein S12	Swiss-Prot	RPS12				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1070	P24534	Elongation factor 1-beta	Swiss-Prot	EEF1B2				1.0	[' WP107']	WikiPathways_2019_Human	1.0	['R-HSA-156842']	Reactome_2016
+1071	P23921	Ribonucleoside-diphosphate reductase large subunit	Swiss-Prot	RRM1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1072	P23919	Thymidylate kinase	Swiss-Prot	DTYMK				1.0	[' WP4022']	WikiPathways_2019_Human			
+1073	P23458	Tyrosine-protein kinase JAK1	Swiss-Prot	JAK1				1.0	[' WP585']	WikiPathways_2019_Human			
+1074	P23396	40S ribosomal protein S3	Swiss-Prot	RPS3				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1075	P22681	E3 ubiquitin-protein ligase CBL	Swiss-Prot	CBL				1.0	[' WP585']	WikiPathways_2019_Human			
+1076	P22413	Ectonucleotide pyrophosphatase/phosphodiesterase family member 1	Swiss-Prot	ENPP1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1077	P22392	Nucleoside diphosphate kinase B	Swiss-Prot	NME2				1.0	[' WP4022']	WikiPathways_2019_Human			
+1078	P22309	UDP-glucuronosyltransferase 1-1	Swiss-Prot	UGT1A1				1.0	[' WP697']	WikiPathways_2019_Human			
+1079	P22090	40S ribosomal protein S4, Y isoform 1	Swiss-Prot	RPS4Y1				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1080	P21964	Catechol O-methyltransferase	Swiss-Prot	COMT				1.0	[' WP697']	WikiPathways_2019_Human			
+1081	P19971	Thymidine phosphorylase	Swiss-Prot	TYMP				1.0	[' WP4022']	WikiPathways_2019_Human			
+1082	P08842	Steryl-sulfatase	Swiss-Prot	STS				1.0	[' WP697']	WikiPathways_2019_Human			
+1083	P30085	UMP-CMP kinase	Swiss-Prot	CMPK1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1084	O75787	Renin receptor	Swiss-Prot	ATP6AP2				1.0	[' WP623']	WikiPathways_2019_Human			
+1085	O75676	Ribosomal protein S6 kinase alpha-4	Swiss-Prot	RPS6KA4				1.0	[' WP585']	WikiPathways_2019_Human			
+1086	O75582	Ribosomal protein S6 kinase alpha-5	Swiss-Prot	RPS6KA5				1.0	[' WP585']	WikiPathways_2019_Human			
+1087	O75414	Nucleoside diphosphate kinase 6	Swiss-Prot	NME6				1.0	[' WP4022']	WikiPathways_2019_Human			
+1088	O75355	Ectonucleoside triphosphate diphosphohydrolase 3	Swiss-Prot	ENTPD3				1.0	[' WP4022']	WikiPathways_2019_Human			
+1089	O75153	Clustered mitochondria protein homolog	Swiss-Prot	CLUH				1.0	[' WP107']	WikiPathways_2019_Human			
+1090	O60656	UDP-glucuronosyltransferase 1-9	Swiss-Prot	UGT1A9				1.0	[' WP697']	WikiPathways_2019_Human			
+1091	O60397	Putative cytochrome c oxidase subunit 7A3, mitochondrial	Swiss-Prot	COX7A2P2				1.0	[' WP111']	WikiPathways_2019_Human			
+1092	O15524	Suppressor of cytokine signaling 1	Swiss-Prot	SOCS1				1.0	[' WP585']	WikiPathways_2019_Human			
+1093	P08708	40S ribosomal protein S17	Swiss-Prot	RPS17				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1094	O15318	DNA-directed RNA polymerase III subunit RPC7	Swiss-Prot	POLR3G				1.0	[' WP4022']	WikiPathways_2019_Human			
+1095	O15160	DNA-directed RNA polymerases I and III subunit RPAC1	Swiss-Prot	POLR1C				1.0	[' WP4022']	WikiPathways_2019_Human			
+1096	O15105	Mothers against decapentaplegic homolog 7	Swiss-Prot	SMAD7				1.0	[' WP4396']	WikiPathways_2019_Human			
+1097	O14802	DNA-directed RNA polymerase III subunit RPC1	Swiss-Prot	POLR3A				1.0	[' WP4022']	WikiPathways_2019_Human			
+1098	O14638	Ectonucleotide pyrophosphatase/phosphodiesterase family member 3	Swiss-Prot	ENPP3				1.0	[' WP4022']	WikiPathways_2019_Human			
+1099	O00746	Nucleoside diphosphate kinase, mitochondrial	Swiss-Prot	NME4				1.0	[' WP4022']	WikiPathways_2019_Human			
+1100	O00418	Eukaryotic elongation factor 2 kinase	Swiss-Prot	EEF2K				1.0	[' WP107']	WikiPathways_2019_Human			
+1101	O75880	Protein SCO1 homolog, mitochondrial	Swiss-Prot	SCO1				1.0	[' WP111']	WikiPathways_2019_Human			
+1102	O75925	E3 SUMO-protein ligase PIAS1	Swiss-Prot	PIAS1				1.0	[' WP585']	WikiPathways_2019_Human			
+1103	P08684	Cytochrome P450 3A4	Swiss-Prot	CYP3A4				1.0	[' WP697']	WikiPathways_2019_Human			
+1104	P08263	Glutathione S-transferase A1	Swiss-Prot	GSTA1				1.0	[' WP697']	WikiPathways_2019_Human			
+1105	P06241	Tyrosine-protein kinase Fyn	Swiss-Prot	FYN				1.0	[' WP585']	WikiPathways_2019_Human			
+1106	P06239	Tyrosine-protein kinase Lck	Swiss-Prot	LCK				1.0	[' WP585']	WikiPathways_2019_Human			
+1107	P05423	DNA-directed RNA polymerase III subunit RPC4	Swiss-Prot	POLR3D				1.0	[' WP4022']	WikiPathways_2019_Human			
+1108	P05388	60S acidic ribosomal protein P0	Swiss-Prot	RPLP0				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1109	P05387	60S acidic ribosomal protein P2	Swiss-Prot	RPLP2				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1110	P05386	60S acidic ribosomal protein P1	Swiss-Prot	RPLP1				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1111	P05177	Cytochrome P450 1A2	Swiss-Prot	CYP1A2				1.0	[' WP697']	WikiPathways_2019_Human			
+1112	P04798	Cytochrome P450 1A1	Swiss-Prot	CYP1A1				1.0	[' WP697']	WikiPathways_2019_Human			
+1113	P04183	Thymidine kinase, cytosolic	Swiss-Prot	TK1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1114	O95847	Mitochondrial uncoupling protein 4	Swiss-Prot	SLC25A27				1.0	[' WP111']	WikiPathways_2019_Human			
+1115	O95602	DNA-directed RNA polymerase I subunit RPA1	Swiss-Prot	POLR1A				1.0	[' WP4022']	WikiPathways_2019_Human			
+1116	O95258	Brain mitochondrial carrier protein 1	Swiss-Prot	SLC25A14				1.0	[' WP111']	WikiPathways_2019_Human			
+1117	P30050	60S ribosomal protein L12	Swiss-Prot	RPL12				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1118	P63173	60S ribosomal protein L38	Swiss-Prot	RPL38				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1119	P56282	DNA polymerase epsilon subunit 2	Swiss-Prot	POLE2				1.0	[' WP4022']	WikiPathways_2019_Human			
+1120	P62244	40S ribosomal protein S15a	Swiss-Prot	RPS15A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1121	P62241	40S ribosomal protein S8	Swiss-Prot	RPS8				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1122	P62081	40S ribosomal protein S7	Swiss-Prot	RPS7				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1123	P61927	60S ribosomal protein L37	Swiss-Prot	RPL37				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1124	P61513	60S ribosomal protein L37a	Swiss-Prot	RPL37A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1125	P61353	60S ribosomal protein L27	Swiss-Prot	RPL27				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1126	P61313	60S ribosomal protein L15	Swiss-Prot	RPL15				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1127	P61254	60S ribosomal protein L26	Swiss-Prot	RPL26				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1128	P61247	40S ribosomal protein S3a	Swiss-Prot	RPS3A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1129	O00142	Thymidine kinase 2, mitochondrial	Swiss-Prot	TK2				1.0	[' WP4022']	WikiPathways_2019_Human			
+1130	P60866	40S ribosomal protein S20	Swiss-Prot	RPS20				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1131	P51689	Arylsulfatase D	Swiss-Prot	ARSD				1.0	[' WP697']	WikiPathways_2019_Human			
+1132	P55916	Mitochondrial uncoupling protein 3	Swiss-Prot	UCP3				1.0	[' WP111']	WikiPathways_2019_Human			
+1133	P55851	Mitochondrial uncoupling protein 2	Swiss-Prot	UCP2				1.0	[' WP111']	WikiPathways_2019_Human			
+1134	P52630	Signal transducer and activator of transcription 2	Swiss-Prot	STAT2				1.0	[' WP585']	WikiPathways_2019_Human			
+1135	P52564	Dual specificity mitogen-activated protein kinase kinase 6	Swiss-Prot	MAP2K6				1.0	[' WP585']	WikiPathways_2019_Human			
+1136	P62249	40S ribosomal protein S16	Swiss-Prot	RPS16				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1137	P62263	40S ribosomal protein S14	Swiss-Prot	RPS14				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1138	P62266	40S ribosomal protein S23	Swiss-Prot	RPS23				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1139	P62269	40S ribosomal protein S18	Swiss-Prot	RPS18				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1140	P62987	Ubiquitin-60S ribosomal protein L40	Swiss-Prot	UBA52				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1141	P62979	Ubiquitin-40S ribosomal protein S27a	Swiss-Prot	RPS27A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1142	P62945	60S ribosomal protein L41	Swiss-Prot	RPL41				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1143	P62917	60S ribosomal protein L8	Swiss-Prot	RPL8				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1144	P62913	60S ribosomal protein L11	Swiss-Prot	RPL11				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1145	P62910	60S ribosomal protein L32	Swiss-Prot	RPL32				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1146	P62906	60S ribosomal protein L10a	Swiss-Prot	RPL10A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1147	P62899	60S ribosomal protein L31	Swiss-Prot	RPL31				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1148	P62891	60S ribosomal protein L39	Swiss-Prot	RPL39				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1149	P62888	60S ribosomal protein L30	Swiss-Prot	RPL30				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1150	P62861	40S ribosomal protein S30	Swiss-Prot	FAU				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1151	P62857	40S ribosomal protein S28	Swiss-Prot	RPS28				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1152	P62854	40S ribosomal protein S26	Swiss-Prot	RPS26				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1153	P62851	40S ribosomal protein S25	Swiss-Prot	RPS25				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1154	P62847	40S ribosomal protein S24	Swiss-Prot	RPS24				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1155	P62841	40S ribosomal protein S15	Swiss-Prot	RPS15				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1156	P62834	Ras-related protein Rap-1A	Swiss-Prot	RAP1A				1.0	[' WP585']	WikiPathways_2019_Human			
+1157	P62829	60S ribosomal protein L23	Swiss-Prot	RPL23				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1158	P62750	60S ribosomal protein L23a	Swiss-Prot	RPL23A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1159	P62701	40S ribosomal protein S4, X isoform	Swiss-Prot	RPS4X				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1160	P62495	Eukaryotic peptide chain release factor subunit 1	Swiss-Prot	ETF1				1.0	[' WP107']	WikiPathways_2019_Human	2.0	['R-HSA-72764', 'R-HSA-975956']	Reactome_2016
+1161	P62424	60S ribosomal protein L7a	Swiss-Prot	RPL7A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1162	P62280	40S ribosomal protein S11	Swiss-Prot	RPS11				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1163	P62277	40S ribosomal protein S13	Swiss-Prot	RPS13				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1164	P62273	40S ribosomal protein S29	Swiss-Prot	RPS29				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1165	P51690	Arylsulfatase E	Swiss-Prot	ARSE				1.0	[' WP697']	WikiPathways_2019_Human			
+1166	P51589	Cytochrome P450 2J2	Swiss-Prot	CYP2J2				1.0	[' WP678']	WikiPathways_2019_Human			
+1167	P42229	Signal transducer and activator of transcription 5A	Swiss-Prot	STAT5A				1.0	[' WP585']	WikiPathways_2019_Human			
+1168	P42224	Signal transducer and activator of transcription 1-alpha/beta	Swiss-Prot	STAT1				1.0	[' WP585']	WikiPathways_2019_Human			
+1169	P40763	Signal transducer and activator of transcription 3	Swiss-Prot	STAT3				1.0	[' WP585']	WikiPathways_2019_Human			
+1170	P40429	60S ribosomal protein L13a	Swiss-Prot	RPL13A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1171	P39023	60S ribosomal protein L3	Swiss-Prot	RPL3				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1172	P39019	40S ribosomal protein S19	Swiss-Prot	RPS19				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1173	P36578	60S ribosomal protein L4	Swiss-Prot	RPL4				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1174	P50914	60S ribosomal protein L14	Swiss-Prot	RPL14				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1175	P35544	Ubiquitin-like protein FUBI	Swiss-Prot	FAU				1.0	[' WP477']	WikiPathways_2019_Human			
+1176	P35503	UDP-glucuronosyltransferase 1-3	Swiss-Prot	UGT1A3				1.0	[' WP697']	WikiPathways_2019_Human			
+1177	P35268	60S ribosomal protein L22	Swiss-Prot	RPL22				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1178	P34913	Bifunctional epoxide hydrolase 2	Swiss-Prot	EPHX2				1.0	[' WP678']	WikiPathways_2019_Human			
+1179	P33316	Deoxyuridine 5'-triphosphate nucleotidohydrolase, mitochondrial	Swiss-Prot	DUT				1.0	[' WP4022']	WikiPathways_2019_Human			
+1180	P32969	60S ribosomal protein L9	Swiss-Prot	RPL9				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1181	P32321	Deoxycytidylate deaminase	Swiss-Prot	DCTD				1.0	[' WP4022']	WikiPathways_2019_Human			
+1182	P32320	Cytidine deaminase	Swiss-Prot	CDA				1.0	[' WP4022']	WikiPathways_2019_Human			
+1183	P31350	Ribonucleoside-diphosphate reductase subunit M2	Swiss-Prot	RRM2				1.0	[' WP4022']	WikiPathways_2019_Human			
+1184	P42766	60S ribosomal protein L35	Swiss-Prot	RPL35				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1185	P43403	Tyrosine-protein kinase ZAP-70	Swiss-Prot	ZAP70				1.0	[' WP585']	WikiPathways_2019_Human			
+1186	P50225	Sulfotransferase 1A1	Swiss-Prot	SULT1A1				1.0	[' WP697']	WikiPathways_2019_Human			
+1187	P49961	Ectonucleoside triphosphate diphosphohydrolase 1	Swiss-Prot	ENTPD1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1188	P49888	Sulfotransferase 1E1	Swiss-Prot	SULT1E1				1.0	[' WP697']	WikiPathways_2019_Human			
+1189	P49643	DNA primase large subunit	Swiss-Prot	PRIM2				1.0	[' WP4022']	WikiPathways_2019_Human			
+1190	P49642	DNA primase small subunit	Swiss-Prot	PRIM1				1.0	[' WP4022']	WikiPathways_2019_Human			
+1191	P49406	39S ribosomal protein L19, mitochondrial	Swiss-Prot	MRPL19				1.0	[' WP477']	WikiPathways_2019_Human			
+1192	P49207	60S ribosomal protein L34	Swiss-Prot	RPL34				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1193	P49005	DNA polymerase delta subunit 2	Swiss-Prot	POLD2				1.0	[' WP4022']	WikiPathways_2019_Human			
+1194	P48551	Interferon alpha/beta receptor 2	Swiss-Prot	IFNAR2				1.0	[' WP585']	WikiPathways_2019_Human			
+1195	P47914	60S ribosomal protein L29	Swiss-Prot	RPL29				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1196	P46783	40S ribosomal protein S10	Swiss-Prot	RPS10				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1197	P46782	40S ribosomal protein S5	Swiss-Prot	RPS5				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1198	P46781	40S ribosomal protein S9	Swiss-Prot	RPS9				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1199	P46779	60S ribosomal protein L28	Swiss-Prot	RPL28				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1200	P46778	60S ribosomal protein L21	Swiss-Prot	RPL21				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1201	P46776	60S ribosomal protein L27a	Swiss-Prot	RPL27A				1.0	[' WP477']	WikiPathways_2019_Human	9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1202	P46109	Crk-like protein	Swiss-Prot	CRKL				1.0	[' WP585']	WikiPathways_2019_Human			
+1203	P46108	Adapter molecule crk	Swiss-Prot	CRK				1.0	[' WP585']	WikiPathways_2019_Human			
+1204	Q9Y6X2	E3 SUMO-protein ligase PIAS3	Swiss-Prot	PIAS3				1.0	[' WP585']	WikiPathways_2019_Human			
+1205	P46777	60S ribosomal protein L5	Swiss-Prot	RPL5							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1206	P42677	40S ribosomal protein S27	Swiss-Prot	RPS27							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1207	Q6P5R6	60S ribosomal protein L22-like 1	Swiss-Prot	RPL22L1							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1208	Q8TD47	40S ribosomal protein S4, Y isoform 2	Swiss-Prot	RPS4Y2							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1209	Q969Q0	60S ribosomal protein L36a-like	Swiss-Prot	RPL36AL							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1210	Q96EH5	60S ribosomal protein L39-like	Swiss-Prot	RPL39L							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1211	Q96L21	60S ribosomal protein L10-like	Swiss-Prot	RPL10L							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1212	Q9UNX3	60S ribosomal protein L26-like 1	Swiss-Prot	RPL26L1							9.0	['R-HSA-156842', 'R-HSA-72689', 'R-HSA-192823', 'R-HSA-156902', 'R-HSA-2408557', 'R-HSA-72764', 'R-HSA-975956', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1213	Q7L2H7	Eukaryotic translation initiation factor 3 subunit M	Swiss-Prot	EIF3M							3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1214	Q9UBQ5	Eukaryotic translation initiation factor 3 subunit K	Swiss-Prot	EIF3K							3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1215	Q9Y262	Eukaryotic translation initiation factor 3 subunit L	Swiss-Prot	EIF3L							3.0	['R-HSA-72689', 'R-HSA-156827', 'R-HSA-72706']	Reactome_2016
+1216	P15170	Eukaryotic peptide chain release factor GTP-binding subunit ERF3A	Swiss-Prot	GSPT1							2.0	['R-HSA-72764', 'R-HSA-975956']	Reactome_2016
+1217	P03428	Polymerase basic protein 2	Swiss-Prot	PB2							1.0	['R-HSA-192823']	Reactome_2016
+1218	Q96T21	Selenocysteine insertion sequence-binding protein 2	Swiss-Prot	SECISBP2							1.0	['R-HSA-2408557']	Reactome_2016
+1219	P03431	RNA-directed RNA polymerase catalytic subunit	Swiss-Prot	PB1							1.0	['R-HSA-192823']	Reactome_2016
+1220	P03433	Polymerase acidic protein	Swiss-Prot	PA							1.0	['R-HSA-192823']	Reactome_2016
+1221	P03452	Hemagglutinin	Swiss-Prot	HA							1.0	['R-HSA-192823']	Reactome_2016
+1222	Q8IV42	L-seryl-tRNA(Sec) kinase	Swiss-Prot	PSTK							1.0	['R-HSA-2408557']	Reactome_2016
+1223	Q9HD40	O-phosphoseryl-tRNA(Sec) selenium transferase	Swiss-Prot	SEPSECS							1.0	['R-HSA-2408557']	Reactome_2016
+1224	Q9UI30	Multifunctional methyltransferase subunit TRM112-like protein	Swiss-Prot	TRMT112							1.0	['R-HSA-72764']	Reactome_2016
+1225	Q99611	Selenide, water dikinase 2	Swiss-Prot	SEPHS2							1.0	['R-HSA-2408557']	Reactome_2016
+1226	P03468	Neuraminidase	Swiss-Prot	NA							1.0	['R-HSA-192823']	Reactome_2016
+1227	P03466	Nucleoprotein	Swiss-Prot	NP							1.0	['R-HSA-192823']	Reactome_2016
+1228	Q13217	DnaJ homolog subfamily C member 3	Swiss-Prot	DNAJC3							1.0	['R-HSA-192823']	Reactome_2016
+1229	P03485	Matrix protein 1	Swiss-Prot	M							1.0	['R-HSA-192823']	Reactome_2016
+1230	P03496	Non-structural protein 1	Swiss-Prot	NS							1.0	['R-HSA-192823']	Reactome_2016
+1231	P57772	Selenocysteine-specific elongation factor	Swiss-Prot	EEFSEC							1.0	['R-HSA-2408557']	Reactome_2016
+1232	P49591	Serine--tRNA ligase, cytoplasmic	Swiss-Prot	SARS							1.0	['R-HSA-2408557']	Reactome_2016
+1233	P13798	Acylamino-acid-releasing enzyme	Swiss-Prot	APEH							1.0	['R-HSA-72764']	Reactome_2016
+1234	P0C0U1	Protein PB1-F2	Swiss-Prot	PB1							1.0	['R-HSA-192823']	Reactome_2016
+1235	P06821	Matrix protein 2	Swiss-Prot	M							1.0	['R-HSA-192823']	Reactome_2016
+1236	Q12849	G-rich sequence factor 1	Swiss-Prot	GRSF1							1.0	['R-HSA-192823']	Reactome_2016
+1237	Q5VTE0	Putative elongation factor 1-alpha-like 3	Swiss-Prot	EEF1A1P5							1.0	['R-HSA-156842']	Reactome_2016
+1238	P03508	Nuclear export protein	Swiss-Prot	NS							1.0	['R-HSA-192823']	Reactome_2016
+1239	Q9Y5N5	Methyltransferase N6AMT1	Swiss-Prot	N6AMT1							1.0	['R-HSA-72764']	Reactome_2016
