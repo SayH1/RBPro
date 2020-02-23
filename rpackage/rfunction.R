@@ -82,7 +82,7 @@ headofdataframe <- function(filename, dataframe, distinct, sampletype) {
     # plotMD(efit, column=1, status=edt[,1], main=colnames(efit)[1])
 
     # Plot interactive glimma MD plot
-    glMDPlot(efit, coef=1, status=edt, main=colnames(efit)[1], counts=lcpm, groups=group, path = getwd(), folder = "static/plot", html = "MD-Plot", launch=FALSE)
+    glMDPlot(efit, coef=1, status=edt, main=colnames(efit)[1], counts=lcpm, groups=group, path = getwd(), folder = "static/plot", html = paste(filename, "_MD-Plot", sep=""), launch=FALSE)
 
     # df <- data.frame(edt)
     # ups <- which(data.frame(df) == 1, arr.ind=TRUE)

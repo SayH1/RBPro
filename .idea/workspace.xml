@@ -3,9 +3,37 @@
   <component name="ChangeListManager">
     <list default="true" id="e411fb47-df25-4141-8fd4-19432aaf18f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genedataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/genedataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Down_BioCarta_2016_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Down_BioPlanet_2019_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Down_KEGG_2019_Human_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Down_Panther_2016_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Down_Reactome_2016_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Down_WikiPathways_2019_Human_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Signature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Up_BioCarta_2016_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Up_BioPlanet_2019_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Up_KEGG_2019_Human_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Up_Panther_2016_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Up_Reactome_2016_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_Up_WikiPathways_2019_Human_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_barjson.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_cluster.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_datavalues.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_datavaluestarget.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_datavaluestarget_down.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_datavaluestarget_up.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_distinct.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_enrichgraph.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_histogramcutoff.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_libraryjson.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_linkcluster.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_pathwayinfo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_pcajson.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/Thalassemia_normal_high.csv_targetcloud.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/plot/js/MD-Plot.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/plot/js/MD-Plot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpackage/rfunction.R" beforeDir="false" afterPath="$PROJECT_DIR$/rpackage/rfunction.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genedataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="1195" column="42" lean-forward="true" selection-start-line="1195" selection-start-column="42" selection-end-line="1195" selection-end-column="42" />
+            <state relative-caret-position="359">
+              <caret line="1208" selection-start-line="1208" selection-end-line="1208" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -60,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="174" column="59" selection-start-line="174" selection-start-column="59" selection-end-line="174" selection-end-column="59" />
+            <state relative-caret-position="148">
+              <caret line="167" column="41" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -85,8 +113,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="374" column="68" selection-start-line="374" selection-start-column="68" selection-end-line="374" selection-end-column="68" />
+            <state relative-caret-position="124">
+              <caret line="309" column="119" selection-start-line="309" selection-start-column="119" selection-end-line="309" selection-end-column="119" />
+              <folding>
+                <element signature="n#style#0;n#iframe#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rpackage/rfunction.R">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="84" column="171" selection-start-line="84" selection-start-column="171" selection-end-line="84" selection-end-column="171" />
             </state>
           </provider>
         </entry>
@@ -115,7 +155,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>point</find>
       <find>pointer</find>
       <find>ro5</find>
       <find>confusion</find>
@@ -145,6 +184,7 @@
       <find>t</find>
       <find>p-va</find>
       <find>QP17568</find>
+      <find>MD-p</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -159,11 +199,12 @@
         <option value="$PROJECT_DIR$/templates/dataset.html" />
         <option value="$PROJECT_DIR$/static/css/interface_css.css" />
         <option value="$PROJECT_DIR$/templates/compoundpredict.html" />
-        <option value="$PROJECT_DIR$/templates/result.html" />
         <option value="$PROJECT_DIR$/templates/compoundanalysis.html" />
         <option value="$PROJECT_DIR$/compoundmodel.py" />
-        <option value="$PROJECT_DIR$/interface.py" />
         <option value="$PROJECT_DIR$/genedataset.py" />
+        <option value="$PROJECT_DIR$/interface.py" />
+        <option value="$PROJECT_DIR$/templates/result.html" />
+        <option value="$PROJECT_DIR$/rpackage/rfunction.R" />
       </list>
     </option>
   </component>
@@ -205,6 +246,12 @@
               <item name="RBPro" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBPro" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="plot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RBPro" type="b2602c69:ProjectViewProjectNode" />
@@ -285,12 +332,12 @@
     <frame x="0" y="23" width="1440" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22903453" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22903453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2041958" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44615385" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,13 +376,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_Q15303/_bioact.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpackage/rfunction.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="138" selection-start-line="84" selection-start-column="138" selection-end-line="84" selection-end-column="138" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_O14649/IC50_Cleaned.smi">
       <provider selected="true" editor-type-id="text-editor" />
@@ -430,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="374" column="68" selection-start-line="374" selection-start-column="68" selection-end-line="374" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/compoundanalysis.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -455,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file/GSE111168-expression.csv_Up_WikiPathways_2019_Human_pathways.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -469,10 +495,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="174" column="59" selection-start-line="174" selection-start-column="59" selection-end-line="174" selection-end-column="59" />
+        <state relative-caret-position="148">
+          <caret line="167" column="41" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -481,11 +514,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/genedataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="1195" column="42" lean-forward="true" selection-start-line="1195" selection-start-column="42" selection-end-line="1195" selection-end-column="42" />
+        <state relative-caret-position="359">
+          <caret line="1208" selection-start-line="1208" selection-end-line="1208" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="309" column="119" selection-start-line="309" selection-start-column="119" selection-end-line="309" selection-end-column="119" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpackage/rfunction.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="84" column="171" selection-start-line="84" selection-start-column="171" selection-end-line="84" selection-end-column="171" />
         </state>
       </provider>
     </entry>

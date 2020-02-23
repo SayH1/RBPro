@@ -165,14 +165,14 @@ def result():
         histogramcutoff = gd.create_histogramcutoff(filename, update)
         pca = gd.create_PCA(filename, update)
         cluster = gd.create_clustergrammer(filename, update)
-        gd.rintegrate_test(filename, update)
+        gd.rintegrate_test(filename, True)
         pathwaydb = gd.get_pathwaydb()
         barpathway = gd.gene_enrichment(filename, update)
         pathwayinfo = gd.pathwayinfo(filename, update)
         wordcloud = gd.create_wordcloud(filename)
         tabletargetup = gd.create_datatable_target('Up')
         tabletargetdown = gd.create_datatable_target('Down')
-        valuestarget = gd.create_tabletarget(filename, True)
+        valuestarget = gd.create_tabletarget(filename, update)
         dicttarget = gd.dict_target(filename)
 
         return render_template('/result.html', \
