@@ -838,10 +838,65 @@ def defineoutlier_modifiedzscore(ys):
     end = ((threshold*median_absolute_deviation_y)/0.6475)+median_y
     return (start, end)
 
+# def padel(filename, uniID):
+    # path = os.path.join(server.config['UPLOAD_FOLDER'], filename+"_"+uniID)
+    # padeldescriptor(mol_dir=(os.path.join(path, 'IC50_Cleaned.smi')), d_file=(os.path.join(path, 'PubchemFingerprinter_IC50.csv')), fingerprints=True, retainorder=True, maxruntime=10000)
+    # padeldescriptor(mol_dir=(os.path.join(path, 'INH_Cleaned.smi')), d_file=(os.path.join(path, 'PubchemFingerprinter_INH.csv')), fingerprints=True, retainorder=True, maxruntime=10000)
+	
 def padel(filename, uniID):
     path = os.path.join(server.config['UPLOAD_FOLDER'], filename+"_"+uniID)
-    padeldescriptor(mol_dir=(os.path.join(path, 'IC50_Cleaned.smi')), d_file=(os.path.join(path, 'PubchemFingerprinter_IC50.csv')), fingerprints=True, retainorder=True, maxruntime=10000)
-    padeldescriptor(mol_dir=(os.path.join(path, 'INH_Cleaned.smi')), d_file=(os.path.join(path, 'PubchemFingerprinter_INH.csv')), fingerprints=True, retainorder=True, maxruntime=10000)
+    com = pd.read_csv(os.path.join(path, 'IC50_Cleaned.csv'))
+    stdInChiKey = [ast.literal_eval(k)['standard_inchi_key'] if str(k) != "nan" else "-" for k in com['molecule_structures']]
+    com['InChIKey'] = stdInChiKey
+    keys = ''
+    count = 0
+    fp_raw = pd.DataFrame()
+    for i in tqdm(com['InChIKey']):
+        keys = keys + str(i) + ","
+        count = count + 1
+        if (count % 100) == 0 or count == len(com['InChIKey']):
+            keys = keys[:-1]
+            #/inchikey,CanonicalSMILES,IsomericSMILES,Fingerprint2D request parameters
+            #inchikey for input type
+            resp = requests.get('https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/' + keys + '/property/inchikey,CanonicalSMILES,IsomericSMILES,Fingerprint2D/JSON')
+            if resp.status_code != 200:
+                # This means something went wrong.
+                print("Error: " + str((resp.status_code)))
+            keys = ''
+            res = resp.json()
+            for i in res.values():
+                for j in i.values():
+                    temp = pd.DataFrame(j)
+            fp_raw = fp_raw.append(temp)
+    # fp = pd.DataFrame()
+    col_names = []
+    # fp['InChIKey'] = fp_raw['InChIKey']
+    for i in range(881):
+        col_name = 'PubchemFP' + str(i)
+        col_names.append(col_name)
+    #     fp[col_name] = 0
+    fp = pd.DataFrame(columns=['molecule_chembl_id']+col_names)
+    fp_list = []
+    for i in fp_raw['Fingerprint2D'].tolist():
+        fp_list.append(decodeFP(i))
+    fp_raw['hexFP'] = fp_list
+    merge = pd.merge(com, fp_raw[['InChIKey', 'hexFP']], on='InChIKey', how='inner')
+    merge.drop_duplicates(subset='molecule_chembl_id', keep = 'first', inplace = True)
+    compound_index = 0
+    fp_index = 1
+    # for i in tqdm(fp_raw['hexFP']):
+    simple = []
+    for i in tqdm(range(len(merge['hexFP']))):
+        fp_index = 1
+        # print(list(fp_raw.iloc[i]['hexFP']))
+        simple.append([merge.iloc[i]['molecule_chembl_id']]+list(merge.iloc[i]['hexFP']))
+        # for j in list(i):
+        #     fp.iloc[compound_index, fp_index] = j
+        #     fp_index += 1
+        # compound_index += 1
+    fp = pd.DataFrame(simple, columns=['molecule_chembl_id']+col_names)
+    # fp.to_csv('fp.csv')
+    fp.to_csv(os.path.join(path, 'PubchemFingerprinter_IC50.csv'), index=False)
 
 
 def appendStatus(path):
