@@ -130,10 +130,10 @@
                                 <br>Select the target and click analyse to perform these steps
                             </div>
                             <div class="panel-body toollist">
-                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_compoundfingerprint" href="#compoundfingerprint" disabled><i class="fas fa-fingerprint"></i> Fingerprint & Descriptor</a>
+                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_pacmodel" href="#pacmodel" disabled><i class="fas fa-rocket"></i> Potential Active Compound Model</a>
                             </div>
                             <div class="panel-body toollist">
-                                <a class="toolbutton list-group-item list-group-item-action " id="toolbutton_pacmodel" href="#pacmodel" disabled><i class="fas fa-rocket"></i> Potential Active Compound Model</a>
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_compoundprediction" href="#compoundprediction" ><i class="fas fa-fingerprint"></i> Potential Active Compound Model Prediction</a>
                             </div>
                         </div>
                         <script>
@@ -849,6 +849,7 @@
                                                     colReorder:     true,
                                                     dom:            'Bfrtip',
                                                     buttons:        ['colvis','csvHtml5','pdfHtml5'],
+                                                    asStripeClasses:[],
                                                     createdRow: function( row, data, dataIndex){
                                                         if(data[7] !=  '-' && data[10] !=  '-' && data[13] !=  '-'){
                                                             $(row).addClass('orangeClass');
@@ -930,6 +931,7 @@
                                                     colReorder:     true,
                                                     dom:            'Bfrtip',
                                                     buttons:        ['colvis','csvHtml5','pdfHtml5'],
+                                                    asStripeClasses:[],
                                                     createdRow: function( row, data, dataIndex){
                                                         if(data[7] !=  '-' && data[10] !=  '-' && data[13] !=  '-'){
                                                             $(row).addClass('orangeClass');

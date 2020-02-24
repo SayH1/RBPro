@@ -1,4 +1,5 @@
 # import numpy as np
+import base64
 import pickle
 
 import pandas as pd
@@ -192,7 +193,8 @@ def Chembl_Activity_REST(chemblID):
         meta = res.get('page_meta')
         url = ("https://www.ebi.ac.uk" + str(meta['next']))
     return actdf
-	
+
+
 def Chembl_Assay_REST(chemblID):
     actdf = pd.DataFrame()
     resp = requests.get('https://www.ebi.ac.uk/chembl/api/data/assay.json?target_chembl_id__exact=' + chemblID + '&limit=1000')
@@ -232,27 +234,27 @@ def Load_compounds(df,IC50_ready):
             records = molecule.get(keys)
             keys = []
             temp = pd.DataFrame(records)
-            compound = df.append(temp)
-#     for i in df['molecule_chembl_id']:
-#         try:
-#             c = new_client.molecule.get(i)
-# #             print(type(c))
-#     #         c = pd.DataFrame(c)
-#             compound = compound.append(c,ignore_index=True)
-#         except:
-#                                 bad_key.append(i)
-#     print("Bad IDs: " + str(bad_key))
-#     try:
-#         compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
-#     except:
-#                                            print(i['molecule_chembl_id'])
-#     compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
-#     compound = new_client.molecule.get(['CHEMBL6498', 'CHEMBL6499', 'CHEMBL6505'])
+            compound = compound.append(temp)
+    # for i in df['molecule_chembl_id']:
+    #     try:
+    #         c = new_client.molecule.get(i)
+    #          print(type(c))
+    #          c = pd.DataFrame(c)
+    #         compound = compound.append(c,ignore_index=True)
+    #     except:
+    #                             bad_key.append(i)
+    # print("Bad IDs: " + str(bad_key))
+    # try:
+    #     compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
+    # except:
+    #                                        print(i['molecule_chembl_id'])
+    # compound = new_client.molecule.get(list(df['molecule_chembl_id'].head(5)))
+    # compound = new_client.molecule.get(['CHEMBL6498', 'CHEMBL6499', 'CHEMBL6505'])
 
-    print ("##########################################################")
+    print("##########################################################")
     print('For the ' + str(df.name) + ' dataset...')
     print('')
-    print ('There are ' + str(len(df)) + ' bioactivity...')
+    print('There are ' + str(len(df)) + ' bioactivity...')
 
     df2 = pd.DataFrame(compound)
     df3 = pd.merge(df2, IC50_ready, how='inner', on='molecule_chembl_id', suffixes=('', '_y'))
@@ -260,8 +262,8 @@ def Load_compounds(df,IC50_ready):
     #df5 = df3.drop_duplicates(subset='smiles')   # drop duplicate SMILES
     df6 = df4[pd.notnull(df4['canonical_smiles'])]         # drop Nan in SMILES
     
-    print ('get '+ str(len(df2)) + ' compounds')
-    print ('After remove duplicate ChEMBL ID there are  '+ str(len(df6)) + ' compounds')
+    print('get '+ str(len(df2)) + ' compounds')
+    print('After remove duplicate ChEMBL ID there are  '+ str(len(df6)) + ' compounds')
     #print ('After remove duplicate and absent SMILES there are  '+ str(len(df6)) + ' compounds')
     print('')
     
@@ -285,8 +287,8 @@ def clean_smiles(df):
 
 def drop_duplicate (df):
     df2 = df.drop_duplicates(subset='SMILES_desalt')
-#     print ("RAW data of " + str(len(df)) + \
-#           " SMILES has been reduced to "+ str(len(df2)) + " SMILES.")
+    # print ("RAW data of " + str(len(df)) + \
+    #       " SMILES has been reduced to "+ str(len(df2)) + " SMILES.")
     return df2
 
 
@@ -333,7 +335,7 @@ def plot_status(IC50, INH, path):
 
     axisx = ['Active', 'Inactive']
     fig = go.Figure(data=[
-        go.Bar(name='IC50', x=axisx, y=[n_ActIC50, n_InactIC50], marker_color='#ef6c00'),
+        go.Bar(name='IC<sub>50</sub>', x=axisx, y=[n_ActIC50, n_InactIC50], marker_color='#ef6c00'),
         go.Bar(name='INH', x=axisx, y=[n_ActINH, n_InactINH], marker_color='#4db6ac')
     ])
     # Change the bar mode
@@ -1558,7 +1560,7 @@ def create_datatablecompound(filename, uniID):
     path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)
 
     df = pd.read_csv(os.path.join(path, "IC50_RO5_filter.csv"))
-    html = """<table id="tablecompound_div" class="table display">
+    html = """<table id="tablecompound_div" class="table display row-border">
         <thead>
             <tr>"""
     i = 0
@@ -1624,15 +1626,21 @@ def getcompoundinfo(inchikey):
     return [str(cid), str(iupac)]
 
 
+def decodeFP(str):
+   fp_hex = base64.b64decode(str).hex()
+   return '{0:020b}'.format(int(fp_hex[8:], 16))[:-7].zfill(881)
+
+
 def predict(filename, uniID, filecompounds):
+
     path = os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)
 
     pathfilecompounds = os.path.join(path, 'compoundstest')
 
-    if os.path.exists(os.path.join(pathfilecompounds, "_"+filecompounds+"_Predicted.csv")):
-        compoundstest_result = pd.read_csv(os.path.join(pathfilecompounds, "_" + filecompounds + "_Predicted.csv"))
-        graph = predictvisualize(pathfilecompounds, compoundstest_result)
-        return graph
+    # if os.path.exists(os.path.join(pathfilecompounds, "_"+filecompounds+"_Predicted.csv")):
+    #     compoundstest_result = pd.read_csv(os.path.join(pathfilecompounds, "_" + filecompounds + "_Predicted.csv"))
+    #     graph = predictvisualize(pathfilecompounds, compoundstest_result)
+    #     return graph
 
     com = pd.read_csv(os.path.join(pathfilecompounds, filecompounds))
     print(com)
@@ -1647,14 +1655,14 @@ def predict(filename, uniID, filecompounds):
     keys = ''
     count = 0
     df = pd.DataFrame()
-    for i in com['InChIKey']:
+    for i in tqdm(com['InChIKey']):
         keys = keys + str(i) + ","
         count = count + 1
         if (count % 100) == 0 or count == len(com['InChIKey']):
             keys = keys[:-1]
             # /inchikey,CanonicalSMILES,IsomericSMILES,Fingerprint2D request parameters
             resp = requests.get(
-                'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/' + keys + '/property/inchikey,CanonicalSMILES,IsomericSMILES/JSON')
+                'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/' + keys + '/property/inchikey,CanonicalSMILES,IsomericSMILES,Fingerprint2D/JSON')
             if resp.status_code != 200:
                 # This means something went wrong.
                 print("Error: " + str((resp.status_code)))
@@ -1665,15 +1673,43 @@ def predict(filename, uniID, filecompounds):
                     temp = pd.DataFrame(j)
             df = df.append(temp)
 
-    df = df.rename(columns={'CanonicalSMILES': 'canonical_smiles', 'IsomericSMILES': 'isomeric_smiles'})
-    print(df.columns)
-    df = clean_smiles(df)
+    # fp = pd.DataFrame()
+    col_names = []
+    # fp['InChIKey'] = df['InChIKey']
+    for i in range(881):
+        col_name = 'PubchemFP' + str(i)
+        col_names.append(col_name)
+    #     fp[col_name] = 0
+    fp = pd.DataFrame(columns=['InChIKey']+col_names)
+    fp_list = []
+    for i in df['Fingerprint2D'].tolist():
+        fp_list.append(decodeFP(i))
+    df['hexFP'] = fp_list
+    compound_index = 0
+    fp_index = 1
+    # for i in tqdm(df['hexFP']):
+    simple = []
+    for i in tqdm(range(len(df['hexFP']))):
+        fp_index = 1
+        # print(list(df.iloc[i]['hexFP']))
+        simple.append([df.iloc[i]['InChIKey']]+list(df.iloc[i]['hexFP']))
+        # for j in list(i):
+        #     fp.iloc[compound_index, fp_index] = j
+        #     fp_index += 1
+        # compound_index += 1
+    fp = pd.DataFrame(simple, columns=['InChIKey']+col_names)
+    fp.to_csv(os.path.join(pathfilecompounds, filecompounds + '_test.csv'), index=False)
 
-    df2 = df[['SMILES_desalt', 'InChIKey']]
-    df2.to_csv(os.path.join(pathfilecompounds, filecompounds + '_test.smi'), sep='\t', header=False, index=False)
-
-    padeldescriptor(mol_dir=os.path.join(pathfilecompounds, filecompounds + '_test.smi'), d_file=os.path.join(pathfilecompounds, filecompounds + '_test.csv'), fingerprints=True, threads=6,
-                    retainorder=True, maxruntime=10000)
+    ### Old Fingerprint Calculation ##
+    # df = df.rename(columns={'CanonicalSMILES': 'canonical_smiles', 'IsomericSMILES': 'isomeric_smiles'})
+    # print(df.columns)
+    # df = clean_smiles(df)
+    #
+    # df2 = df[['SMILES_desalt', 'InChIKey']]
+    # df2.to_csv(os.path.join(pathfilecompounds, filecompounds + '_test.smi'), sep='\t', header=False, index=False)
+    #
+    # padeldescriptor(mol_dir=os.path.join(pathfilecompounds, filecompounds + '_test.smi'), d_file=os.path.join(pathfilecompounds, filecompounds + '_test.csv'), fingerprints=True, threads=6,
+    #                 retainorder=True, maxruntime=10000)
 
     compoundstest = pd.read_csv(os.path.join(pathfilecompounds, filecompounds + '_test.csv'))
     filename_model = 'IC50_RF_model.sav'
@@ -1688,7 +1724,7 @@ def predict(filename, uniID, filecompounds):
         features.append(col)
     print(features)
 
-    compoundstest = compoundstest.set_index('Name')
+    compoundstest = compoundstest.set_index('InChIKey')
     compoundstest = compoundstest.filter(features)
     print(compoundstest)
 
@@ -1700,9 +1736,11 @@ def predict(filename, uniID, filecompounds):
         y_maxprob.append(max(i))
 
     compoundstest_result = pd.DataFrame()
-    compoundstest_result['Name'] = list(compoundstest.index)
+    compoundstest_result['InChIKey'] = list(compoundstest.index)
+    compoundstest_result['CanonicalSMILES'] = list(df['CanonicalSMILES'])
+    print(compoundstest_result['CanonicalSMILES'])
     compoundstest_result['Status'] = y_pred.tolist()
-    compoundstest_result['Probability'] = y_maxprob
+    compoundstest_result['Confidence Score'] = y_maxprob
 
     compoundstest_result.to_csv(os.path.join(pathfilecompounds, "_"+filecompounds+"_Predicted.csv"))
 
@@ -1813,15 +1851,18 @@ def predictiontable(filename, uniID, filenamecompound):
     pathfilecompounds = os.path.join(path, 'compoundstest')
 
     df = pd.read_csv(os.path.join(pathfilecompounds, "_"+filenamecompound+"_Predicted.csv"))
-    df = df.sort_values(by=['Status', 'Probability'], ascending=False)
+    df = df.sort_values(by=['Status', 'Confidence Score'], ascending=False)
     df = df.iloc[:, 1:]
 
-    html = """<table id="tablepredict_div" class="table display">
+    html = """<table id="tablepredict_div" class="table display row-border">
         <thead>
             <tr>"""
     i = 0
     for header in df.columns.values:
         html += "<th>" + header + "</th>"
+        if i == 0:
+            html += "<th>2D</th>"
+            i = 1
     html += """</tr>
         </thead>
     </table>"""
@@ -1834,7 +1875,7 @@ def create_datapredict(filename, uniID, filenamecompound):
     pathfilecompounds = os.path.join(path, 'compoundstest')
 
     df = pd.read_csv(os.path.join(pathfilecompounds, "_"+filenamecompound+"_Predicted.csv"))
-    df = df.sort_values(by=['Status', 'Probability'], ascending=False)
+    df = df.sort_values(by=['Status', 'Confidence Score'], ascending=False)
     df = df.iloc[:, 1:]
     df['Status'] = df['Status'].replace({1: 'active', -1: 'inactive'})
 
@@ -1844,7 +1885,22 @@ def create_datapredict(filename, uniID, filenamecompound):
     # Iterate over each row
     for index, rows in df.iterrows():
         # append the list to the final list
-        Row_list.append(list(rows.values))
+        templist = list(rows.values)
+        # print(templist[9], end=' ')
+        mc = get_client('chem')
+        k = templist[1]
+        m = Chem.MolFromSmiles(str(k))
+        fig = Draw.MolToImage(m)
+        import base64
+        from io import BytesIO
+        buff = BytesIO()
+        fig.save(buff, format="PNG")
+        img_str = base64.b64encode(buff.getvalue())
+        templist.insert(1, "<img style='width: 100px; height: 100px' src='data:image/png;base64," + str(img_str)[
+                                                                                                2:-1] + "'>")
+        # templist.insert(1, "No image")
+        templist[-1] = "{0:.2f}".format(templist[-1])
+        Row_list.append(templist)
 
     with open(os.path.join(pathfilecompounds, "_"+filenamecompound+"_datapredict.txt"), "w") as f:
         for s in Row_list:
@@ -1883,5 +1939,4 @@ def getcompoundinfopredict(inchikey):
     chemblid = '-'
     if 'chembl.molecule_chembl_id' in m.columns:
         chemblid = m['chembl.molecule_chembl_id'].values[0]
-
     return [str(cid), str(iupac), str(formula), str(smiles), str(prefname), str(chemblid)]

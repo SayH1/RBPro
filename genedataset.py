@@ -934,7 +934,7 @@ def create_datatable_target(type):
     columnnaming = [n + p for p in pathwaylibrariesloop for n in naming]
 
     html = ""
-    html += "<table id='table_div_" + type + "' class='table display'>"
+    html += "<table id='table_div_" + type + "' class='table display row-border'>"
     html += "<thead><tr><th class='firstth'></th>"
     html += "<th>Uniprot</th>"
     html += "<th>ProteinName</th>"

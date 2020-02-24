@@ -698,7 +698,19 @@ div.coldiv {
 }
 
 .redClass {
-    background-color: #ffc3c3 !important;
+    background-color: #ff3030 !important;
+    display: block;
+    border-radius: 50px;
+    margin: 45% 0 0 0 !important;
+    color: white;
+}
+
+.blueClass {
+    background-color: #00bfff !important;
+    display: block;
+    border-radius: 50px;
+    margin: 45% 0 0 0 !important;
+    color: white;
 }
 
 .orangeClass {
@@ -717,4 +729,8 @@ div.coldiv {
 
 .tablet tr th, .tablet tr td  {
     padding: 0px;
+}
+
+.table tr td {
+    vertical-align: middle !important;
 }

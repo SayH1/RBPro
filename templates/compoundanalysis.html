@@ -129,10 +129,10 @@
                         </div>
                         <div id="collapselist4" class="panel-collapse collapse toolpane">
                             <div class="panel-body toollist">
-                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_compoundfingerprint" href="#compoundfingerprint" ><i class="fas fa-fingerprint"></i> Fingerprint & Descriptor</a>
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_pacmodel" href="#pacmodel" ><i class="fas fa-rocket"></i> Potential Active Compound Model</a>
                             </div>
                             <div class="panel-body toollist">
-                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_pacmodel" href="#pacmodel" ><i class="fas fa-rocket"></i> Potential Active Compound Model</a>
+                                <a class="toolbutton list-group-item list-group-item-action navigation__link" id="toolbutton_compoundprediction" href="#compoundprediction" ><i class="fas fa-fingerprint"></i> Potential Active Compound Model Prediction</a>
                             </div>
                         </div>
                         <script>
@@ -215,7 +215,7 @@
                                         <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_targettocompound"><i class="fas fa-info-circle"></i></a>
                                     </div>
                                     <div id="collapse_targettocompound" class="vizinfo panel-collapse collapse">
-                                        In order to get the potential targets that have potential active compounds, the preprocessing of the data is an important step. The targets that the program select must satisfy with three of these condition initially including there must have associated bioactivities with other compounds at the confidence level 9, all of associated bioactivities of targets with all of their compounds must be binding type (B), and all compounds must have values type of IC50 or INH. These condition shows in the pie charts represent the compounds that have associated bioactivity with the selected target.
+                                        In order to get the potential targets that have potential active compounds, the preprocessing of the data is an important step. The targets that the program select must satisfy with three of these condition initially including there must have associated bioactivities with other compounds at the confidence level 9, all of associated bioactivities of targets with all of their compounds must be binding type (B), and all compounds must have values type of IC<sub>50</sub> or INH. These condition shows in the pie charts represent the compounds that have associated bioactivity with the selected target.
                                     </div>
                                     <div class="row" style="justify-content: center;">
                                         <div class="col-md-4">
@@ -250,11 +250,11 @@
                                     <div class="row" style="justify-content: center;">
                                         <div class="col-md-6">
                                             <div class="vizhead">
-                                                <h6 class="headpathwaydb">IC50 Distribution</h6>
+                                                <h6 class="headpathwaydb">pIC<sub>50</sub> Distribution</h6>
                                                 <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_cutoffic50"><i class="fas fa-info-circle"></i></a>
                                             </div>
                                             <div id="collapse_cutoffic50" class="vizinfo panel-collapse collapse">
-                                                IC50 Distribution shows in the histogram of the number of compounds in each range of IC50 level (bin). Commonly, there are many ranges of IC50 and the program will show with the range width 1. This distribution is counted after the program removes the compounds that are not satisfied with the above condition, duplicates compounds, and invalid compounds.
+                                                IC<sub>50</sub> Distribution shows in the histogram of the number of compounds in each range of IC<sub>50</sub> level (bin). Commonly, there are many ranges of IC<sub>50</sub> and the program will show with the range width 1. This distribution is counted after the program removes the compounds that are not satisfied with the above condition, duplicates compounds, and invalid compounds.
                                             </div>
                                             <div class="chart" id="allgraph1">
                                                 <script>
@@ -270,7 +270,7 @@
                                                 <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_activeinactive"><i class="fas fa-info-circle"></i></a>
                                             </div>
                                             <div id="collapse_activeinactive" class="vizinfo panel-collapse collapse">
-                                                The status of the compounds can be divided into two types including active and inactive compounds. The program will calculate the pIC50 which is the negative logarithm of the IC50 in molar. Then the compounds that have the values of pIC50 greater than the average value of pIC50 of all compounds from that target will be marked as ‘Active’, otherwise ‘Inactive’. The comparative columns chart is used to compare active and inactive of each type of the compound defined by measurement value IC50 and INH respectively.
+                                                The status of the compounds can be divided into two types including active and inactive compounds. The program will calculate the pIC<sub>50</sub> which is the negative logarithm of the IC<sub>50</sub> in molar. Then the compounds that have the values of pIC<sub>50</sub> greater than the average value of pIC<sub>50</sub> of all compounds from that target will be marked as ‘Active’, otherwise ‘Inactive’. The comparative columns chart is used to compare active and inactive of each type of the compound defined by measurement value IC<sub>50</sub> and INH respectively.
                                             </div>
                                             <div class="chart" id="allgraph2">
                                                 <script>
@@ -292,11 +292,11 @@
                                     </div>
                                     <div class="row" id="scatterro5" style="padding: 0px 20px 20px 20px">
                                         <div class="vizhead">
-                                            <h6 class="headpathwaydb">Scatter Plot of Compounds Regarding pIC50 and RO5</h6>
+                                            <h6 class="headpathwaydb">Scatter Plot of Compounds Regarding pIC<sub>50</sub> and RO5</h6>
                                             <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_scatterro5"><i class="fas fa-info-circle"></i></a>
                                         </div>
                                         <div id="collapse_scatterro5" class="vizinfo panel-collapse collapse">
-                                            This scatter plot represents the individual compound information on four important properties defined by Lipinski’s rule. The y-axis represents the values of pIC50 for each compound, while the x-axis shows the values of each property including Molecular Weight, Octanol-water Partition Coefficient (logP), Hydrogen Bond Acceptors, Hydrogen Bond Donors, respectively.
+                                            This scatter plot represents the individual compound information on four important properties defined by Lipinski’s rule. The y-axis represents the values of pIC<sub>50</sub> for each compound, while the x-axis shows the values of each property including Molecular Weight, Octanol-water Partition Coefficient (logP), Hydrogen Bond Acceptors, Hydrogen Bond Donors, respectively.
                                         </div>
                                         <div class="chart" id="scatterro5_graph">
                                             <script>
@@ -382,7 +382,7 @@
                                         <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_compoundtable"><i class="fas fa-info-circle"></i></a>
                                     </div>
                                     <div id="collapse_compoundtable" class="vizinfo panel-collapse collapse">
-                                        Table of filtered compounds show the final potential active compound analyzed by the program. The information shown in the table are Chembl Id, status, pIC50, Molecular Weight (MW), Octanol-water Partition Coefficient (logP), Hydrogen Bond Acceptors (nHAcc), Hydrogen Bond Donors (nHDon), and two new additional information which are standard Inchy Key and canonical smiles. The user can search, sort, or explore the table as well.
+                                        Table of filtered compounds show the final potential active compound analyzed by the program. The information shown in the table are Chembl Id, status, pIC<sub>50</sub>, Molecular Weight (MW), Octanol-water Partition Coefficient (logP), Hydrogen Bond Acceptors (nHAcc), Hydrogen Bond Donors (nHDon), and two new additional information which are standard Inchy Key and canonical smiles. The user can search, sort, or explore the table as well.
                                     </div>
                                     <div class="table" id="table_div">
                                         {{tablecompound | safe}}
@@ -423,9 +423,15 @@
                                                 select:         true,
                                                 paging:         true,
                                                 order:          [],
-                                                createdRow: function( row, data, dataIndex){
+                                                asStripeClasses:[],
+                                                dom:            'Bfrtip',
+                                                buttons:        ['csvHtml5','pdfHtml5'],
+                                                createdRow: function( row, data, dataIndex, cells){
                                                     if( data[4] ==  'active'){
-                                                        $(row).addClass('redClass');
+                                                        $(cells[4]).addClass('redClass');
+                                                    }
+                                                    if( data[4] ==  'inactive'){
+                                                        $(cells[4]).addClass('blueClass');
                                                     }
                                                 }
                                             } );
@@ -450,7 +456,7 @@
                                                     $('#checkrow_st').text(uniprotid.cells[4].innerText);
                                                     $('#checkrow_sm').text(uniprotid.cells[10].innerText);
                                                     $('#checkrow_cn').text(uniprotid.cells[11].innerText);
-                                                    $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px; backgroundor: #e3e4e6' src='https://www.ebi.ac.uk/chembl/api/data/image/"+uniprotid.cells[0].innerText+"'>");
+                                                    $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px;' src='https://www.ebi.ac.uk/chembl/api/data/image/"+uniprotid.cells[0].innerText+"'>");
 
                                                     $.ajax({
                                                         url: '/compoundinfo',
@@ -467,34 +473,6 @@
 
                                                               var cidthis = data.result[0];
                                                               var namethis = data.result[1];
-
-                                                              <!--var options = {};-->
-                                                              <!--options['background'] = 'white';-->
-
-                                                              <!--//Options are available at: https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html#DisplayOptions-->
-                                                              <!--//options['proteins'] = 'sphere';-->
-
-                                                              <!--var cfg = {-->
-                                                                  <!--divid: 'checkrow_ms3d',-->
-                                                                  <!--width: 'auto',-->
-                                                                  <!--height: '350',-->
-                                                                  <!--resize: true,-->
-                                                                  <!--rotate: 'right',-->
-                                                                  <!--mobilemenu: true,-->
-                                                                  <!--showmenu: true,-->
-                                                                  <!--showcommand: false,-->
-                                                                  <!--showtitle: false-->
-                                                              <!--};-->
-                                                              <!--cfg['cid'] = cidthis;-->
-                                                              <!--if(Object.keys(options).length > 0) cfg['options'] = options;-->
-
-                                                              <!--var icn3dui = new iCn3DUI(cfg);-->
-
-                                                              <!--//communicate with the 3D viewer with chained functions-->
-                                                              <!--$.when(icn3dui.show3DStructure()).then(function() {-->
-                                                                   <!--//icn3dui.setOption('color', 'cyan');-->
-                                                                   <!--icn3dui.rotStruc('right');-->
-                                                              <!--});-->
 
                                                               $('#checkrow_ms3d').html('<iframe src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html?cid='+cidthis+'&width=auto&height=350&showcommand=0&showmenu=0&mobilemenu=0&showtitle=0&resize=1&rotate=right" width="100%" height="350px" style="border:1px; background-color: black; overflow: hidden; border-radius: 20px;"></iframe>');
                                                               <!--$('#checkrow_ms3d').html('<iframe style="width: auto; height: 350px;" frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid='+cidthis+'"></iframe>');-->
@@ -632,7 +610,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="viz page-section" id="prediction">
+                        <div class="viz page-section" id="compoundprediction">
                             <div class="vizhead">
                                 <h6 class="sub_heading">Potential Active Compound Prediction</h6>
                                 <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_prediction"><i class="fas fa-info-circle"></i></a>

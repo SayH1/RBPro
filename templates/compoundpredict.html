@@ -134,10 +134,16 @@
                             scrollCollapse: true,
                             select:         true,
                             paging:         true,
-                            order:          [[ 1, "asc" ],[ 2, "desc" ]],
-                            createdRow: function( row, data, dataIndex){
-                                if( data[1] ==  'active'){
-                                    $(row).addClass('redClass');
+                            dom:            'Bfrtip',
+                            order:          [[ 3, "asc" ],[ 4, "desc" ]],
+                            buttons:        ['csvHtml5','pdfHtml5'],
+                            asStripeClasses:[],
+                            createdRow: function( row, data, dataIndex, cells){
+                                if( data[3] ==  'active'){
+                                    $(cells[3]).addClass('redClass');
+                                }
+                                if( data[3] ==  'inactive'){
+                                    $(cells[3]).addClass('blueClass');
                                 }
                             }
                         } );
@@ -158,7 +164,7 @@
                                 //$('#checkrow').attr('onclick', 'window.open("xxx")');
                                 $('#checkrow_id').text(uniprotid.cells[0].innerText);
                                 $('#checkrow_in').text(uniprotid.cells[0].innerText);
-                                $('#checkrow_st').text(uniprotid.cells[1].innerText);
+                                $('#checkrow_st').text(uniprotid.cells[3].innerText);
 
                                 $.ajax({
                                     url: '/compoundinfopredict',
@@ -180,40 +186,13 @@
                                           var prefnamethis = data.result[4];
                                           var chemblidthis = data.result[5];
 
-                                          <!--var options = {};-->
-                                          <!--options['background'] = 'white';-->
-
-                                          <!--//Options are available at: https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html#DisplayOptions-->
-                                          <!--//options['proteins'] = 'sphere';-->
-
-                                          <!--var cfg = {-->
-                                              <!--divid: 'checkrow_ms3d',-->
-                                              <!--width: 'auto',-->
-                                              <!--height: '350',-->
-                                              <!--resize: true,-->
-                                              <!--rotate: 'right',-->
-                                              <!--mobilemenu: true,-->
-                                              <!--showmenu: true,-->
-                                              <!--showcommand: false,-->
-                                              <!--showtitle: false-->
-                                          <!--};-->
-                                          <!--cfg['cid'] = cidthis;-->
-                                          <!--if(Object.keys(options).length > 0) cfg['options'] = options;-->
-
-                                          <!--var icn3dui = new iCn3DUI(cfg);-->
-
-                                          <!--//communicate with the 3D viewer with chained functions-->
-                                          <!--$.when(icn3dui.show3DStructure()).then(function() {-->
-                                               <!--//icn3dui.setOption('color', 'cyan');-->
-                                               <!--icn3dui.rotStruc('right');-->
-                                          <!--});-->
 
                                           $('#checkrow_ms3d').html('<iframe src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html?cid='+cidthis+'&width=auto&height=350&showcommand=0&showmenu=0&mobilemenu=0&showtitle=0&resize=1&rotate=right" width="100%" height="350px" style="border:1px; background-color: black; overflow: hidden; border-radius: 20px;"></iframe>');
                                           $('#checkrow_db').text(namethis);
                                           $('#checkrow_fm').text(formulathis);
                                           $('#checkrow_sm').text(smilesthis);
                                           $('#checkrow_cn').text(prefnamethis);
-                                          $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px; backgroundor: #e3e4e6' src='https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/"+cidthis+"/PNG'>");
+                                          $('#checkrow_ms').html("<img style='width: 100%;  padding: 10px;' src='https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/"+cidthis+"/PNG'>");
 
                                     }
                                 });
