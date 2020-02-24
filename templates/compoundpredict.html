@@ -95,7 +95,7 @@
                     <a type="button" class="panel-heading btn4" data-toggle="collapse" data-target="#collapse_compoundtable"><i class="fas fa-info-circle"></i></a>
                 </div>
                 <div id="collapse_compoundtable" class="vizinfo panel-collapse collapse">
-                    Table of predicted potential active compounds
+                    Table of predicted potential active compounds. The status column show the prediction result of each compound according to the model. The confidence score column show how likelihood of the candidate compound is in that status. The bigger number, the more likelihood it will be that status.
                 </div>
                 <div class="table" id="table_div">
                     {{tablepredict | safe}}

@@ -1,0 +1,6 @@
+CS(=O)(=O)c1ccc(F)cc1C(=O)N1CCC(N(C2CC2)S(=O)(=O)c2cccc(C(F)(F)F)c2)CC1	CHEMBL2180905
+COc1cc(CNCc2ccc(-c3cccc(C(F)(F)F)c3)o2)cc(OC)c1OC	CHEMBL3613804
+COc1cc(CNCc2ccc(-c3ccc(Cl)cc3)o2)cc(OC)c1OC	CHEMBL3613806
+COc1ccc(-c2ccc(CNCc3cc(OC)c(OC)c(OC)c3)o2)cc1Cl	CHEMBL3613808
+COc1cc(CNCc2ccc(Oc3ccc(C#N)cc3)cc2)cc(OC)c1OC	CHEMBL3613810
+COc1cc(CNCc2c[nH]c3ccc(Cl)cc23)cc(OC)c1OC	CHEMBL3613811

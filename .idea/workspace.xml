@@ -3,22 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e411fb47-df25-4141-8fd4-19432aaf18f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compoundmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/compoundmodel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_O14649/IC50_Cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_O14649/IC50_Cleaned.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_O14649/INH_Cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_O14649/INH_Cleaned.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_Cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_Cleaned.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_RO5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_RO5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_RO5_filter.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_RO5_filter.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_RF_model.sav" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/IC50_RF_model.sav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/INH_Cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/INH_Cleaned.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/_bioact.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/_bioact.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/_datacompound.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/_datacompound.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/_graphpreprocess.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/_graphpreprocess.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/External_Inchi.csv_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/External_Inchi.csv_test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/_External_Inchi.csv_Predicted.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/_External_Inchi.csv_Predicted.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/_External_Inchi.csv_datapredict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/_External_Inchi.csv_datapredict.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/_predictionratio.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/_predictionratio.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genedataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/genedataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/interface_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/interface_css.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/compoundanalysis.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/compoundanalysis.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/compoundpredict.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/compoundpredict.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
@@ -34,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genedataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="1118" column="4" selection-start-line="1118" selection-start-column="4" selection-end-line="1118" selection-end-column="93" />
+            <state relative-caret-position="-1173">
+              <caret line="594" column="55" selection-start-line="594" selection-start-column="47" selection-end-line="594" selection-end-column="55" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -46,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compoundmodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="1898" column="47" selection-start-line="1898" selection-start-column="47" selection-end-line="1898" selection-end-column="47" />
+            <state relative-caret-position="624">
+              <caret line="1959" column="44" selection-start-line="1959" selection-start-column="27" selection-end-line="1959" selection-end-column="44" />
               <folding>
                 <element signature="e#21#34#0" expanded="true" />
               </folding>
@@ -58,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2792">
+            <state relative-caret-position="2310">
               <caret line="167" column="41" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -67,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/compoundpredict.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
+            <state relative-caret-position="238">
+              <caret line="103" column="86" lean-forward="true" selection-start-line="103" selection-start-column="86" selection-end-line="103" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -83,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rpackage/rfunction.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
+            <state relative-caret-position="930">
               <caret line="62" column="75" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
             </state>
           </provider>
@@ -92,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="931" column="52" selection-start-line="931" selection-start-column="52" selection-end-line="931" selection-end-column="77" />
+            <state relative-caret-position="168">
+              <caret line="768" column="57" lean-forward="true" selection-start-line="768" selection-start-column="57" selection-end-line="768" selection-end-column="57" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -101,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/compoundanalysis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
-              <caret line="426" column="73" selection-start-line="426" selection-start-column="73" selection-end-line="426" selection-end-column="73" />
+            <state relative-caret-position="465">
+              <caret line="563" column="488" selection-start-line="563" selection-start-column="488" selection-end-line="563" selection-end-column="488" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -117,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/interface_css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
+            <state relative-caret-position="10620">
               <caret line="708" column="41" selection-start-line="708" selection-start-column="41" selection-end-line="708" selection-end-column="41" />
             </state>
           </provider>
@@ -134,7 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pathway</find>
       <find>importan</find>
       <find>target</find>
       <find>left</find>
@@ -152,7 +139,6 @@
       <find>create_datac</find>
       <find>datacompound</find>
       <find>t</find>
-      <find>p-va</find>
       <find>QP17568</find>
       <find>MD-p</find>
       <find>_graphpreprocess</find>
@@ -164,6 +150,8 @@
       <find>IC50</find>
       <find>predictiontable</find>
       <find>datatable</find>
+      <find>p-va</find>
+      <find>combined</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -180,8 +168,8 @@
         <option value="$PROJECT_DIR$/rpackage/rfunction.R" />
         <option value="$PROJECT_DIR$/static/css/interface_css.css" />
         <option value="$PROJECT_DIR$/genedataset.py" />
-        <option value="$PROJECT_DIR$/templates/result.html" />
         <option value="$PROJECT_DIR$/compoundmodel.py" />
+        <option value="$PROJECT_DIR$/templates/result.html" />
         <option value="$PROJECT_DIR$/templates/compoundanalysis.html" />
         <option value="$PROJECT_DIR$/templates/compoundpredict.html" />
       </list>
@@ -198,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,19 +198,6 @@
               <item name="RBPro" type="b2602c69:ProjectViewProjectNode" />
               <item name="RBPro" type="462c0819:PsiDirectoryNode" />
               <item name="file" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RBPro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RBPro" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
-              <item name="gene_read_counts_table_all_final.csv_P08069" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RBPro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RBPro" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
-              <item name="gene_read_counts_table_all_final.csv_P08069" type="462c0819:PsiDirectoryNode" />
-              <item name="compoundstest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RBPro" type="b2602c69:ProjectViewProjectNode" />
@@ -260,7 +236,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,12 +300,12 @@
     <frame x="29" y="23" width="1411" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23381294" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23381294" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,33 +428,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpackage/rfunction.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="62" column="75" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_O14649/IC50_Cleaned.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2792">
-          <caret line="167" column="41" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/interface_css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="708" column="41" selection-start-line="708" selection-start-column="41" selection-end-line="708" selection-end-column="41" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file/gene_read_counts_table_all_final.csv_P08069/compoundstest/_External_Inchi.csv_datapredict.txt">
@@ -495,10 +446,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="167" column="41" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpackage/rfunction.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="75" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/interface_css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10620">
+          <caret line="708" column="41" selection-start-line="708" selection-start-column="41" selection-end-line="708" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/compoundmodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="1898" column="47" selection-start-line="1898" selection-start-column="47" selection-end-line="1898" selection-end-column="47" />
+        <state relative-caret-position="624">
+          <caret line="1959" column="44" selection-start-line="1959" selection-start-column="27" selection-end-line="1959" selection-end-column="44" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
           </folding>
@@ -507,8 +482,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/genedataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="1118" column="4" selection-start-line="1118" selection-start-column="4" selection-end-line="1118" selection-end-column="93" />
+        <state relative-caret-position="-1173">
+          <caret line="594" column="55" selection-start-line="594" selection-start-column="47" selection-end-line="594" selection-end-column="55" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -517,32 +492,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="931" column="52" selection-start-line="931" selection-start-column="52" selection-end-line="931" selection-end-column="77" />
+        <state relative-caret-position="168">
+          <caret line="768" column="57" lean-forward="true" selection-start-line="768" selection-start-column="57" selection-end-line="768" selection-end-column="57" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/compoundpredict.html">
+    <entry file="file://$PROJECT_DIR$/templates/compoundanalysis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
+        <state relative-caret-position="465">
+          <caret line="563" column="488" selection-start-line="563" selection-start-column="488" selection-end-line="563" selection-end-column="488" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/compoundanalysis.html">
+    <entry file="file://$PROJECT_DIR$/templates/compoundpredict.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="426" column="73" selection-start-line="426" selection-start-column="73" selection-end-line="426" selection-end-column="73" />
+        <state relative-caret-position="238">
+          <caret line="103" column="86" lean-forward="true" selection-start-line="103" selection-start-column="86" selection-end-line="103" selection-end-column="86" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
