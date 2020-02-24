@@ -15,7 +15,7 @@ from werkzeug.utils import secure_filename
 
 logging.getLogger("requests").setLevel(logging.ERROR)
 import xml.etree.ElementTree as ET
-# from tqdm import tqdm
+from tqdm import tqdm
 from flask import Flask
 import plotly
 import plotly.graph_objs as go
@@ -352,9 +352,9 @@ def getBioActs(filename, uniID):
     response = ""
     allgraph = []
 
-    if os.path.exists(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)):
-        response = 'ok'
-        return response
+    # if os.path.exists(os.path.join(server.config['UPLOAD_FOLDER'], filename + "_" + uniID)):
+    #     response = 'ok'
+    #     return response
 
     pd.options.mode.chained_assignment = None
 
@@ -621,8 +621,9 @@ def RO5(filename, uniID):
     LogP = [Descriptors.MolLogP(o) for o in mols]
     nHAcc = [Descriptors.NumHAcceptors(p) for p in mols]
     nHDon = [Descriptors.NumHDonors(q) for q in mols]
-    stdInChiKey = [ast.literal_eval(k)['standard_inchi_key'] for k in df['molecule_structures']]
-    formula = [ast.literal_eval(k)['full_molformula'] for k in df['molecule_properties']]
+    print(df['molecule_structures'])
+    stdInChiKey = [ast.literal_eval(k)['standard_inchi_key'] if str(k) != "nan" else "-" for k in df['molecule_structures']]
+    formula = [ast.literal_eval(k)['full_molformula'] if str(k) != "nan" else "-" for k in df['molecule_properties']]
     smiles = df['canonical_smiles']
     preferredCompoundName = []
     for i in df['molecule_pref_name']:
@@ -1194,7 +1195,7 @@ def PCA_plot(data, Fp_name, path):
                         lw=lw,
                         label=target_name)
         plt.legend(loc='best', shadow=False, scatterpoints=1)
-        plt.title('First two PCA directions');
+        plt.title('First two PCA directions')
 
         # 3 Components PCA
         ax = plt.subplot(1, 2, 2, projection='3d')

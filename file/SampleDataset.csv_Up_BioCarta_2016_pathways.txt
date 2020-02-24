@@ -1,0 +1,90 @@
+Term	Overlap	P-value	Adjusted P-value	Old P-value	Old Adjusted P-value	Odds Ratio	Combined Score	Genes
+CDK Regulation of DNA Replication Homo sapiens h mcmPathway	6/18	3.4058763759439143E-6	8.071927010987077E-4	0	0	13.333333333333332	167.86677696463045	KITLG;MCM7;ORC1;MCM5;CDC6;MCM6
+Role of Ran in mitotic spindle regulation Homo sapiens h ranMSpathway	4/11	1.1075885677255863E-4	0.013124924527548197	0	0	14.545454545454545	132.48225718368306	TPX2;RANBP1;RCC1;RAN
+Cycling of Ran in nucleocytoplasmic transport Homo sapiens h ranPathway	3/9	0.0011659135205622756	0.09210716812441977	0	0	13.333333333333332	90.05667148557625	RANBP1;RCC1;RAN
+Antigen Processing and Presentation Homo sapiens h mhcPathway	3/12	0.0028874338160908373	0.17108045360338212	0	0	10.0	58.47387124231253	CD74;HLA-DRA;HLA-DRB1
+Mechanism of Protein Import into the Nucleus Homo sapiens h npcPathway	3/12	0.0028874338160908373	0.1368643628827057	0	0	10.0	58.47387124231253	RANBP1;RCC1;RAN
+NFAT and Hypertrophy of the heart Homo sapiens h nfatPathway	4/44	0.02382609847412197	0.9411308897278179	0	0	3.6363636363636362	13.58899536203803	CAMK4;LIF;GATA4;HDAC9
+Overview of telomerase protein component gene hTert Transcriptional Regulation  Homo sapiens h tertpathway	2/10	0.02457569018526242	0.8320626534153134	0	0	8.0	29.64798022792225	TERT;WT1
+Lck and Fyn tyrosine kinases in initiation of TCR Activation Homo sapiens h tcraPathway	2/13	0.040550197611673826	1.0	0	0	6.153846153846154	19.724397693220933	HLA-DRA;HLA-DRB1
+Sumoylation by RanBP2 Regulates Transcriptional Repression Homo sapiens h ranbp2Pathway	2/14	0.04654140207685347	1.0	0	0	5.7142857142857135	17.52807425877975	HDAC9;RAN
+IL 4 signaling pathway Homo sapiens h il4Pathway	2/15	0.05283270093282616	1.0	0	0	5.333333333333333	15.683333035361262	HLA-DRA;HLA-DRB1
+Telomeres, Telomerase, Cellular Aging, and  Immortality Homo sapiens h telPathway	2/15	0.05283270093282616	1.0	0	0	5.333333333333333	15.683333035361262	XRCC6;TERT
+uCalpain and friends in Cell spread Homo sapiens h ucalpainPathway	2/17	0.0662415915707929	1.0	0	0	4.705882352941176	12.773867020503221	ACTN1;ACTN4
+ER?associated degradation (ERAD) Pathway Homo sapiens h eradPathway	2/19	0.08063617099611983	1.0	0	0	4.2105263157894735	10.601296667256518	SAE1;UGGT1
+The Co-Stimulatory Signal During T-cell Activation Homo sapiens h ctla4Pathway	2/20	0.08816218183787267	1.0	0	0	4.0	9.714308741076266	HLA-DRA;HLA-DRB1
+Downregulated of MTA-3 in ER-negative Breast Tumors Homo sapiens h mta3Pathway	2/20	0.08816218183787267	1.0	0	0	4.0	9.714308741076266	TUBA1C;SNAI1
+Sprouty regulation of tyrosine kinase signals Homo sapiens h spryPathway	2/20	0.08816218183787267	1.0	0	0	4.0	9.714308741076266	EGF;SPRY2
+Phospholipase C Signaling Pathway Homo sapiens h plcPathway	1/5	0.11891526936765551	1.0	0	0	8.0	17.03475249279432	PLCB1
+Stathmin and breast cancer resistance to antimicrotubule agents Homo sapiens h stathminPathway	2/24	0.12010982001247623	1.0	0	0	3.333333333333333	7.064495959797489	TUBA1C;CAMK4
+Proteolysis and Signaling Pathway of Notch  Homo sapiens h notchpathway	1/6	0.14094786294456849	1.0	0	0	6.666666666666666	13.062434822233206	ADAM17
+Basic Mechanisms of SUMOylation Homo sapiens h sumoPathway	1/6	0.14094786294456849	1.0	0	0	6.666666666666666	13.062434822233206	SAE1
+Deregulation of CDK5 in Alzheimers Disease Homo sapiens h p35alzheimersPathway	1/7	0.16243058031155067	1.0	0	0	5.7142857142857135	10.385740380401181	APP
+NFkB activation by Nontypeable Hemophilus influenzae Homo sapiens h nthiPathway	2/29	0.16320629383915272	1.0	0	0	2.758620689655172	5.000662819323756	MAPK11;CXCL8
+Role of MEF2D in T-cell Apoptosis Homo sapiens h mef2dPathway	2/30	0.17213040735200277	1.0	0	0	2.6666666666666665	4.692007752438898	HLA-DRA;HLA-DRB1
+Erk and PI-3 Kinase Are Necessary for Collagen Binding in Corneal Epithelia Homo sapiens h ecmPathway	2/31	0.18113203111493761	1.0	0	0	2.5806451612903225	4.40910725152166	ACTN1;ACTN4
+CBL mediated ligand-induced downregulation of EGF receptors Homo sapiens h cblPathway	1/8	0.18337711757031785	1.0	0	0	5.0	8.481052474133024	EGF
+Ca++/ Calmodulin-dependent Protein Kinase Activation Homo sapiens h CaCaMPathway	1/8	0.18337711757031785	1.0	0	0	5.0	8.481052474133024	CAMK4
+Signal Dependent Regulation of Myogenesis by Corepressor MITR Homo sapiens h MITRPathway	1/8	0.18337711757031785	1.0	0	0	5.0	8.481052474133024	HDAC9
+g-Secretase mediated ErbB4 Signaling Pathway  Homo sapiens h erbB4pathway	1/8	0.18337711757031785	1.0	0	0	5.0	8.481052474133024	ADAM17
+Spliceosomal Assembly Homo sapiens h smPathway	1/8	0.18337711757031785	1.0	0	0	5.0	8.481052474133024	SNRPA1
+Integrin Signaling Pathway Homo sapiens h integrinPathway	2/33	0.19933052198776197	1.0	0	0	2.4242424242424243	3.9097961637318743	ACTN1;ACTN4
+NO2-dependent IL 12 Pathway in NK cells Homo sapiens h no2il12Pathway	1/9	0.20380083047636524	1.0	0	0	4.444444444444444	7.069387036640817	IL12A
+BTG family proteins and cell cycle regulation Homo sapiens h btg2Pathway	1/9	0.20380083047636524	1.0	0	0	4.444444444444444	7.069387036640817	HOXB9
+IL22 Soluble Receptor Signaling Pathway  Homo sapiens h il22bppathway	1/11	0.2431315551769016	1.0	0	0	3.6363636363636362	5.142373101111616	IL22RA1
+Regulation of eIF2 Homo sapiens h eif2Pathway	1/11	0.2431315551769016	1.0	0	0	3.6363636363636362	5.142373101111616	EIF2S2
+Activation of PKC through G-protein coupled receptors Homo sapiens h pkcPathway	1/11	0.2431315551769016	1.0	0	0	3.6363636363636362	5.142373101111616	PLCB1
+Cardiac Protection Against ROS  Homo sapiens h flumazenilPathway	1/11	0.2431315551769016	1.0	0	0	3.6363636363636362	5.142373101111616	GABRA3
+Granzyme A mediated Apoptosis Pathway Homo sapiens h setPathway	1/12	0.26206365162305645	1.0	0	0	3.333333333333333	4.463892865337529	NME1
+B Cell Survival Pathway Homo sapiens h bcellsurvivalPathway	1/13	0.28052310882224873	1.0	0	0	3.076923076923077	3.911074378522308	CCT4
+Visual Signal Transduction Homo sapiens h rhodopsinPathway	1/13	0.28052310882224873	1.0	0	0	3.076923076923077	3.911074378522308	SLC25A22
+The 4-1BB-dependent immune response Homo sapiens h 41bbPathway	1/13	0.28052310882224873	1.0	0	0	3.076923076923077	3.911074378522308	TNFSF9
+Regulation of p27 Phosphorylation during Cell Cycle Progression Homo sapiens h p27Pathway	1/13	0.28052310882224873	1.0	0	0	3.076923076923077	3.911074378522308	UBE2M
+Melanocyte Development and Pigmentation Pathway Homo sapiens h melanocytepathway	1/13	0.28052310882224873	1.0	0	0	3.076923076923077	3.911074378522308	KITLG
+Activation of Csk by cAMP-dependent Protein Kinase Inhibits Signaling through the T Cell Receptor Homo sapiens h CSKPathway	2/43	0.2921586298875362	1.0	0	0	1.8604651162790697	2.2892248766192735	HLA-DRA;HLA-DRB1
+Platelet Amyloid Precursor Protein Pathway Homo sapiens h plateletAppPathway	1/14	0.29852170306951037	1.0	0	0	2.8571428571428568	3.4540361191199316	APP
+Double Stranded RNA Induced Gene Expression Homo sapiens h rnaPathway	1/14	0.29852170306951037	1.0	0	0	2.8571428571428568	3.4540361191199316	EIF2S2
+Eukaryotic protein translation Homo sapiens h eifPathway	1/14	0.29852170306951037	1.0	0	0	2.8571428571428568	3.4540361191199316	EIF2S2
+IL12 and Stat4 Dependent Signaling Pathway in Th1 Development Homo sapiens h IL12Pathway	1/15	0.3160709178495968	1.0	0	0	2.6666666666666665	3.0714364453326795	IL12A
+IL-7 Signal Transduction Homo sapiens h il7Pathway	1/15	0.3160709178495968	1.0	0	0	2.6666666666666665	3.0714364453326795	NMI
+Gamma-aminobutyric Acid Receptor Life Cycle Homo sapiens h gabaPathway	1/15	0.3160709178495968	1.0	0	0	2.6666666666666665	3.0714364453326795	GABRA3
+Endocytotic role of NDK, Phosphins and Dynamin Homo sapiens h ndkDynaminPathway	1/16	0.33318195100730313	1.0	0	0	2.5	2.7476663470054308	NME1
+Hypoxia-Inducible Factor in the Cardiovascular System Homo sapiens h hifPathway	1/16	0.33318195100730313	1.0	0	0	2.5	2.7476663470054308	ASPH
+Cadmium induces DNA synthesis and proliferation in macrophages Homo sapiens h cdMacPathway	1/16	0.33318195100730313	1.0	0	0	2.5	2.7476663470054308	PLCB1
+Map Kinase Inactivation of SMRT Corepressor Homo sapiens h egfr smrtePathway	1/17	0.3498657220916832	1.0	0	0	2.352941176470588	2.4710725865370216	EGF
+Aspirin Blocks Signaling Pathway Involved in Platelet Activation Homo sapiens h sppaPathway	1/17	0.3498657220916832	1.0	0	0	2.352941176470588	2.4710725865370216	PLCB1
+Role of nicotinic acetylcholine receptors in the regulation of apoptosis Homo sapiens h achPathway	1/17	0.3498657220916832	1.0	0	0	2.352941176470588	2.4710725865370216	TERT
+Chaperones modulate interferon Signaling Pathway Homo sapiens h tidPathway	1/18	0.3661328787804519	1.0	0	0	2.222222222222222	2.232797677094987	WT1
+Regulation of cell cycle progression by Plk3 Homo sapiens h plk3Pathway	1/18	0.3661328787804519	1.0	0	0	2.222222222222222	2.232797677094987	PLK3
+Regulation of PGC-1a Homo sapiens h pgc1aPathway	1/20	0.39745862307532415	1.0	0	0	2.0	1.8453288863961157	CAMK4
+FAS signaling pathway ( CD95 ) Homo sapiens h fasPathway	1/20	0.39745862307532415	1.0	0	0	2.0	1.8453288863961157	PRKDC
+EGF Signaling Pathway Homo sapiens h egfPathway	1/20	0.39745862307532415	1.0	0	0	2.0	1.8453288863961157	EGF
+T Cell Receptor Signaling Pathway Homo sapiens h tcrPathway	2/55	0.40132045183103177	1.0	0	0	1.4545454545454544	1.3279927840918175	HLA-DRA;HLA-DRB1
+NF-kB Signaling Pathway Homo sapiens h nfkbPathway	1/21	0.41253720829731133	1.0	0	0	1.9047619047619047	1.6865311911285241	IRAK1
+PKC-catalyzed phosphorylation of inhibitory phosphoprotein of myosin phosphatase Homo sapiens h myosinPathway	1/21	0.41253720829731133	1.0	0	0	1.9047619047619047	1.6865311911285241	PLCB1
+Hypoxia and p53 in the Cardiovascular system Homo sapiens h p53hypoxiaPathway	1/21	0.41253720829731133	1.0	0	0	1.9047619047619047	1.6865311911285241	FHL2
+Cell Cycle: G2/M Checkpoint Homo sapiens h g2Pathway	1/22	0.42723918724304594	1.0	0	0	1.8181818181818181	1.5462023001914358	PRKDC
+Erk1/Erk2 Mapk Signaling pathway Homo sapiens h erkPathway	1/22	0.42723918724304594	1.0	0	0	1.8181818181818181	1.5462023001914358	TERT
+Eicosanoid Metabolism Homo sapiens h eicosanoidPathway	1/23	0.4415739476417069	1.0	0	0	1.7391304347826086	1.4215822280628116	PLCB1
+Intrinsic Prothrombin Activation Pathway Homo sapiens h intrinsicPathway	1/23	0.4415739476417069	1.0	0	0	1.7391304347826086	1.4215822280628116	F12
+Regulation of BAD phosphorylation Homo sapiens h badPathway	1/23	0.4415739476417069	1.0	0	0	1.7391304347826086	1.4215822280628116	KITLG
+CCR3 signaling in Eosinophils Homo sapiens h CCR3Pathway	1/23	0.4415739476417069	1.0	0	0	1.7391304347826086	1.4215822280628116	PLCB1
+Regulation of ck1/cdk5 by type 1 glutamate receptors Homo sapiens h ck1Pathway	1/24	0.455550643812525	1.0	0	0	1.6666666666666665	1.310413975931712	PLCB1
+Segmentation Clock Homo sapiens h hesPathway	1/24	0.455550643812525	1.0	0	0	1.6666666666666665	1.310413975931712	ADAM17
+Corticosteroids and cardioprotection Homo sapiens h gcrPathway	1/25	0.4691782022031496	1.0	0	0	1.5999999999999999	1.2108361930392557	ANXA1
+Skeletal muscle hypertrophy is regulated via AKT/mTOR pathway Homo sapiens h igf1mtorpathway	1/25	0.4691782022031496	1.0	0	0	1.5999999999999999	1.2108361930392557	EIF2S2
+ALK in cardiac myocytes Homo sapiens h alkPathway	1/27	0.49542050679657673	1.0	0	0	1.4814814814814814	1.0405161012766946	GATA4
+Thrombin signaling and protease-activated receptors Homo sapiens h Par1Pathway	1/27	0.49542050679657673	1.0	0	0	1.4814814814814814	1.0405161012766946	PLCB1
+Control of Gene Expression by Vitamin D Receptor Homo sapiens h vdrPathway	1/27	0.49542050679657673	1.0	0	0	1.4814814814814814	1.0405161012766946	ACTL6A
+Multi-step Regulation of Transcription by Pitx2 Homo sapiens h pitx2Pathway	1/27	0.49542050679657673	1.0	0	0	1.4814814814814814	1.0405161012766946	PITX2
+mCalpain and friends in Cell motility Homo sapiens h mCalpainPathway	1/30	0.5323761135569396	1.0	0	0	1.3333333333333333	0.8405400787509358	EGF
+p38 MAPK Signaling Pathway  Homo sapiens h p38mapkPathway	1/30	0.5323761135569396	1.0	0	0	1.3333333333333333	0.8405400787509358	MAP3K9
+fMLP induced chemokine gene expression in HMC-1 cells Homo sapiens h fMLPpathway	1/30	0.5323761135569396	1.0	0	0	1.3333333333333333	0.8405400787509358	PLCB1
+Role of EGF Receptor Transactivation by GPCRs in Cardiac Hypertrophy Homo sapiens h cardiacegfPathway	1/33	0.5666300836000462	1.0	0	0	1.2121212121212122	0.6885437552033686	EGF
+Toll-Like Receptor Pathway Homo sapiens h tollPathway	1/35	0.5880631079793313	1.0	0	0	1.1428571428571428	0.6067668689681428	IRAK1
+Signal transduction through IL1R Homo sapiens h il1rPathway	1/36	0.5983795526602211	1.0	0	0	1.111111111111111	0.5705889143615132	IRAK1
+Inactivation of Gsk3 by AKT causes accumulation of b-catenin in Alveolar Macrophages Homo sapiens h gsk3Pathway	1/39	0.6278072988155387	1.0	0	0	1.0256410256410255	0.4774584703811021	IRAK1
+IL-2 Receptor Beta Chain in T cell Activation Homo sapiens h il2rbPathway	1/49	0.7112169323217401	1.0	0	0	0.8163265306122448	0.27818594854238055	NMI
+HIV-1 Nef: negative effector of Fas and TNF Homo sapiens h HivnefPathway	1/53	0.7390978494043314	1.0	0	0	0.7547169811320754	0.22816978033568033	PRKDC
+Keratinocyte Differentiation Homo sapiens h keratinocytePathway	1/53	0.7390978494043314	1.0	0	0	0.7547169811320754	0.22816978033568033	EGF
+MAPKinase Signaling Pathway Homo sapiens h mapkPathway	1/56	0.758230644178816	1.0	0	0	0.7142857142857142	0.19769118550302078	MAPK11

@@ -591,20 +591,26 @@ def enrichr(useriinput, type, filename, method):
             if chunk:
                 f.write(chunk)
 
+    # df_pathway = pd.read_csv(filename_pathway, sep="\t")
+    # df_pathway = df_pathway.sort_values(by=['Combined Score'], ascending=True)
+    # df_pathway = df_pathway.iloc[:10, :]
+    # df_pathway = df_pathway.sort_values(by=['Combined Score'], ascending=False)
     df_pathway = pd.read_csv(filename_pathway, sep="\t")
-    df_pathway = df_pathway.sort_values(by=['Combined Score'], ascending=True)
-    df_pathway = df_pathway.iloc[:10, :]
     df_pathway = df_pathway.sort_values(by=['Combined Score'], ascending=False)
+    df_pathway = df_pathway.iloc[:10, :]
+    df_pathway = df_pathway.sort_values(by=['Combined Score'], ascending=True)
 
     return df_pathway
 
 
 def plotenrichf(df_up, df_down):
-    pvlog_up = [-math.log10(x) for x in df_up['Combined Score'].tolist()]
-    pvlog_down = [-math.log10(x) for x in df_down['Combined Score'].tolist()]
+    # pvlog_up = [-math.log10(x) for x in df_up['Combined Score'].tolist()]
+    # pvlog_down = [-math.log10(x) for x in df_down['Combined Score'].tolist()]
+    pvlog_up = [x for x in df_up['Combined Score'].tolist()]
+    pvlog_down = [x for x in df_down['Combined Score'].tolist()]
 
     from plotly.subplots import make_subplots
-    fig = make_subplots(rows=1, cols=2, horizontal_spacing=0.05)
+    fig = make_subplots(rows=1, cols=2, horizontal_spacing=0.05, subplot_titles=("Up-regulated Pathways", "Down-regulated Pathways"))
 
     columns_up = df_up.columns.tolist()
     valueslist_up = df_up.values.tolist()
@@ -1194,7 +1200,7 @@ def requestuniprot(chunks):
     # print(chunks)
     keys = [x.strip(' ') for x in chunks]
     keys = [x for x in keys if len(x) > 5]
-    print(",".join(keys))
+    # print(",".join(keys))
     requestURL = "https://www.ebi.ac.uk/proteins/api/proteins?accession=" + ",".join(keys)
     r = requests.get(requestURL, headers={"Accept": "application/json"})
     keys = []
