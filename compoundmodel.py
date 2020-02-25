@@ -296,29 +296,29 @@ import matplotlib.pyplot as plt
 import numpy
 
 
-def plot_status(IC50, INH, path):
+def plot_status(IC50, path):
     # Calculate number of compounds
     n_compoundsIC50 = len(IC50)
-    n_compoundsINH = len(INH)
+    # n_compoundsINH = len(INH)
 
     # Calculate number of features
     # n_features = All_data_ER_alpha.shape[1] -1
 
     # Calculate active compounds
     n_ActIC50 = len(IC50[IC50.STATUS == 'active'])
-    n_ActINH = len(INH[INH.STATUS == 'active'])
+    # n_ActINH = len(INH[INH.STATUS == 'active'])
 
     # Calculate inactive compounds
     n_InactIC50 = len(IC50[IC50.STATUS == 'inactive'])
-    n_InactINH = len(INH[INH.STATUS == 'inactive'])
+    # n_InactINH = len(INH[INH.STATUS == 'inactive'])
 
     # Calculate active compounds
     n_interIC50 = len(IC50[IC50.STATUS == 'intermediate'])
-    n_interINH = len(INH[INH.STATUS == 'intermediate'])
+    # n_interINH = len(INH[INH.STATUS == 'intermediate'])
 
     # Calculate graduation rate
     Active_rateIC50 = (n_ActIC50 / float(n_compoundsIC50)) * 100.
-    Active_rateINH = (n_ActINH / float(n_compoundsINH)) * 100.
+    # Active_rateINH = (n_ActINH / float(n_compoundsINH)) * 100.
     # Print the results
     #     print ("Total number of compounds: {}".format(n_compounds))
     #     #print "Number of features: {}".format(n_features))
@@ -336,7 +336,7 @@ def plot_status(IC50, INH, path):
     axisx = ['Active', 'Inactive']
     fig = go.Figure(data=[
         go.Bar(name='IC<sub>50</sub>', x=axisx, y=[n_ActIC50, n_InactIC50], marker_color='#ef6c00'),
-        go.Bar(name='INH', x=axisx, y=[n_ActINH, n_InactINH], marker_color='#4db6ac')
+        # go.Bar(name='INH', x=axisx, y=[n_ActINH, n_InactINH], marker_color='#4db6ac')
     ])
     # Change the bar mode
     fig.update_layout(
@@ -434,8 +434,8 @@ def getBioActs(filename, uniID):
     pulling = [0] * len(values)
     if 'IC50' in labels:
         pulling[labels.index('IC50')] = 0.2
-    if 'INH' in labels:
-        pulling[labels.index('INH')] = 0.2
+    # if 'INH' in labels:
+    #     pulling[labels.index('INH')] = 0.2
     # pull is given as a fraction of the pie radius
     fig3 = go.Figure(data=[go.Pie(labels=labels, values=values, pull=pulling)])
     fig3.update_layout(height=300, margin=dict(l=10, r=20, t=30, b=10), title_text='Bioactivity Type')
@@ -457,10 +457,10 @@ def getBioActs(filename, uniID):
 
     # Prepare Dataset
     IC50 = bioactsDF[(bioactsDF['type'] == 'IC50')]  # 50% inhibition concentration
-    Inhibition = bioactsDF[(bioactsDF['type'] == 'INH')]
+    # Inhibition = bioactsDF[(bioactsDF['type'] == 'INH')]
 
     # Bad Targets
-    if len(IC50) == 0 or len(Inhibition) == 0:
+    if len(IC50) == 0:
         print("Bad Target: " + uniID)
         response = "Target has no bioactivity type IC50 or INH."
         print(response)
@@ -469,7 +469,7 @@ def getBioActs(filename, uniID):
     # Convert to pIC50
     IC50 = pIC50(IC50)
     IC50.name = 'IC50'
-    Inhibition.name = 'INH'
+    # Inhibition.name = 'INH'
 
     binmax = math.ceil(max(list(IC50['pIC50'].value_counts(sort=False).index)))
     label = []
@@ -537,9 +537,9 @@ def getBioActs(filename, uniID):
     # Preprecessing
     IC50_ready.name = 'IC50'
     IC50_raw = Load_compounds(IC50_ready, IC50_ready)
-    Inhibition_raw = Load_compounds(Inhibition, IC50_ready)
+    # Inhibition_raw = Load_compounds(Inhibition, IC50_ready)
     # Bad Targets
-    if len(IC50_raw) == 0 or len(Inhibition_raw) == 0:
+    if len(IC50_raw) == 0:
         # removing directory
         shutil.rmtree(path)
         print("Bad Target: " + uniID)
@@ -548,26 +548,26 @@ def getBioActs(filename, uniID):
         return response
 
     IC50_raw.name = 'I50_Raw'
-    Inhibition_raw.name = 'INH_Raw'
+    # Inhibition_raw.name = 'INH_Raw'
     IC50_clean = clean_smiles(IC50_raw)
-    Inhibition_clean = clean_smiles(Inhibition_raw)
+    # Inhibition_clean = clean_smiles(Inhibition_raw)
     IC50_clean = drop_duplicate(IC50_clean)
-    Inhibition_clean = drop_duplicate(Inhibition_clean)
+    # Inhibition_clean = drop_duplicate(Inhibition_clean)
     IC50_clean.name = 'IC50_Cleaned'
-    Inhibition_clean.name = 'INH_Cleaned'
+    # Inhibition_clean.name = 'INH_Cleaned'
 
     # Output csv files
     IC50_clean.to_csv(os.path.join(path, 'IC50_Cleaned.csv'), index=False)
-    Inhibition_clean.to_csv(os.path.join(path, 'INH_Cleaned.csv'), index=False)
+    # Inhibition_clean.to_csv(os.path.join(path, 'INH_Cleaned.csv'), index=False)
 
     # Output smi files
     tempdf = IC50_clean[['SMILES_desalt', 'molecule_chembl_id']]
     tempdf.to_csv(os.path.join(path, 'IC50_Cleaned.smi'), sep='\t', header=False, index=False)
-    tempdf = Inhibition_clean[['SMILES_desalt', 'molecule_chembl_id']]
-    tempdf.to_csv(os.path.join(path, 'INH_Cleaned.smi'), sep='\t', header=False, index=False)
+    # tempdf = Inhibition_clean[['SMILES_desalt', 'molecule_chembl_id']]
+    # tempdf.to_csv(os.path.join(path, 'INH_Cleaned.smi'), sep='\t', header=False, index=False)
 
     # Output Active vs. Inactive Barchart & Donut
-    graphJSON3 = plot_status(IC50_clean, Inhibition_clean, path)
+    graphJSON3 = plot_status(IC50_clean, path)
     allgraph.append(graphJSON3)
 
 
